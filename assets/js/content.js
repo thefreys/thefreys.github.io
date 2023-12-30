@@ -20,12 +20,18 @@ export function loadContent() {
         window.location.href = 'index.html?x=index';
         return;
     }
+    var path = queryParams['x'];
 
-    var mdContentPath = 'content/' +  queryParams['x'] + '.md'; 
+    if (path.endsWith('/')){
+        window.location.href = 'index.html?x=' + path + 'index';
+        return;
+    }
+
+    var mdContentPath = 'content/' +  path + '.md'; 
     var mdContent404 = false;
-    var htmlContentPath = 'content/' +  queryParams['x'] + '.html'; 
+    var htmlContentPath = 'content/' + path + '.html'; 
     var htmlContent404 = false;
-    var jsContentPath = 'content/' +  queryParams['x'] + '.js'; 
+    var jsContentPath = 'content/' +  path + '.js'; 
     var jsContent404 = false;
        
     var mdPromise = fetch(mdContentPath)

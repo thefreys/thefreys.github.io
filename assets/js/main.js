@@ -4,12 +4,19 @@ import * as myMenuModule from './menu.js';
 
 var sitemap_items = [
   {"label": "Home", "href": "index.html?x=index"},
-  {"label": "Recipes", "children": [
+  {"label": "Recipes", "href": "index.html?x=recipes/", "children": [
     {"label": "Rainbow Cookies", "href": "index.html?x=recipes/rainbow-cookies"},
+    {"label": "Tiramisu", "href": "index.html?x=recipes/tiramisu"},
     ]},
 ];
 
-console.log(window.location.pathname);
+var queryParams = myContentModule.getQueryParams();
+var request_path = 'index.html?x=' + queryParams['x'];
+//var arr = window.location.href.split("index.html?");
+if(request_path.endsWith('/index')){
+  request_path = request_path.slice(0, -5);
+}  
+console.log(request_path);
 myContentModule.loadContent();
 
 function watchElementForChanges(elemId, callback) {
@@ -29,7 +36,7 @@ function watchElementForChanges(elemId, callback) {
 watchElementForChanges('htmlContent', () => {
   console.log('htmlContent changed');
   mySitemapModule.buildSiteMap(sitemap_items, document.getElementById("site-map"), null);
-  //mySitemapModule.buildAreaMap('/',menu_items, document.getElementById("area-map"), null); 
+  mySitemapModule.buildAreaMap(request_path, sitemap_items, document.getElementById("area-map"), null); 
 });
 
 watchElementForChanges('mdContent', () => {
@@ -40,7 +47,6 @@ watchElementForChanges('jsContent', () => {
   console.log('jsContent changed');
 });
 
-
 //document.getElementById('menu-right').innerHTML = myMenuModule.buildMenuItems(bookmarks,'right', 'Bookmarks','menu-right', 0);
 document.getElementById('left-menu-form').style.display = 'block';
-document.getElementById('menu-left').innerHTML = myMenuModule.buildMenuItems(sitemap_items,'left', 'Sitemap','menu-left', 0);
+document.getElementById('menu-left').innerHTML = myMenuModule.buildMenuItems(sitemap_items,'left', 'Menu','menu-left', 0);

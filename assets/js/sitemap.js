@@ -24,21 +24,14 @@ export function buildSiteMap(items, parent) {
     }     
 }
 
-export function buildAreaMap(request_path,items, parent) {      
+export function buildAreaMap(request_path, items, parent) {    
     if (parent === null){
         return;
     }
-    for (var i = 0; i < items.length; i++) {      
+    for (var i = 0; i < items.length; i++) {  
         if("href" in items[i] && items[i].href.startsWith(request_path) && items[i].href != request_path){     
-            var li = document.createElement("li");     
-            li.textContent = items[i].label;    
-            if ("children" in items[i] && items[i].children.length > 0) {                  
-                var ul = document.createElement("ul");                
-                ul.setAttribute("id", parent.getAttribute("id") + "-" + i); 
-                buildSiteMap(items[i].children, ul);
-                li.append(ul);
-            }
-            parent.append(li);
+            buildSiteMap(items, parent);
+            return;
         }
         else {
             if ("children" in items[i] && items[i].children.length > 0) {  
