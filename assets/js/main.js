@@ -9,6 +9,10 @@ var sitemap_items = [
     {"label": "Tiramisu", "href": "index.html?x=recipes/tiramisu"},
     {"label": "Yeast Rolls", "href": "index.html?x=recipes/yeast-rolls"},
   ]},
+  {"label": "Web Design", "href": "index.html?x=web-design/", "children": [
+    {"label": "Sitemaps", "href": "index.html?x=web-design/sitemaps"},
+    {"label": "Hamburger Menu", "href": "index.html?x=web-design/hamburger"},
+  ]},
   {"label": "Creative Reuse", "href": "index.html?x=creative-reuse/", "children": [
     {"label": "Food Scraps", "href": "index.html?x=creative-reuse/food-scraps", "children": [
       {"label": "Tea Bags", "href": "index.html?x=creative-reuse/food-scraps/tea-bags"},
@@ -17,10 +21,6 @@ var sitemap_items = [
     {"label": "Textiles", "href": "index.html?x=creative-reuse/textiles", "children": [
       {"label": "T-Shirts", "href": "index.html?x=creative-reuse/textiles/t-shirts"},
     ]},
-  ]},
-  {"label": "Web Design", "href": "index.html?x=web-design/", "children": [
-    {"label": "Sitemaps", "href": "index.html?x=web-design/sitemaps"},
-    {"label": "Hamburger Menu", "href": "index.html?x=web-design/hamburger"},
   ]},
 ];
 
