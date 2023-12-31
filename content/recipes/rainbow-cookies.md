@@ -1,4 +1,6 @@
-#### Ingredients:
+# Rainbow Cookies
+
+## Ingredients:
 
 - 8 ounces almond paste
 - 1 cup unsalted butter, softened
@@ -12,7 +14,7 @@
 - 8 ounces semi-sweet chocolate chips
 - 2 tablespoons unsalted butter
 
-#### Instructions:
+## Instructions:
 
 1. **Preheat the Oven:**
    Preheat your oven to 350°F (175°C). Grease and line three 9x9-inch baking pans with parchment paper.

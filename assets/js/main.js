@@ -7,7 +7,12 @@ var sitemap_items = [
   {"label": "Recipes", "href": "index.html?x=recipes/", "children": [
     {"label": "Rainbow Cookies", "href": "index.html?x=recipes/rainbow-cookies"},
     {"label": "Tiramisu", "href": "index.html?x=recipes/tiramisu"},
+    {"label": "Yeast Rolls", "href": "index.html?x=recipes/yeast-rolls"},
     ]},
+    {"label": "Creative Reuse", "href": "index.html?x=creative-reuse/", "children": [
+      {"label": "Tea Bags", "href": "index.html?x=creative-reuse/tea-bags"},
+      {"label": "Coffee Grounds", "href": "index.html?x=creative-reuse/coffee-grounds"},
+      ]},
 ];
 
 var queryParams = myContentModule.getQueryParams();
