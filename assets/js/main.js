@@ -20,6 +20,7 @@ var sitemap_items = [
   ]},
   {"label": "Web Design", "href": "index.html?x=web-design/", "children": [
     {"label": "Sitemaps", "href": "index.html?x=web-design/sitemaps"},
+    {"label": "Hamburger Menu", "href": "index.html?x=web-design/hamburger"},
   ]},
 ];
 

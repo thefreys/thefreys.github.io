@@ -1,6 +1,6 @@
 const menuInnerTemplate = `<menuitem><span class="heading">{{header_label}}</span></menuitem>{{menu_items_html}}`;
 const menuItemTemplate = `<menuitem><span>{{label}}</span></menuitem>`;
-const menuItemWithLinkTemplate = `<menuitem onclick="{{onclick}}"><span>{{label}}</span></menuitem>`;
+const menuItemWithLinkTemplate = `<menuitem><span><a href="{{href}}">{{label}}</a></span></menuitem>`;
 const menuItemWithChildrenTemplate = `
 <menuitem>
   <label for="{{menu_id}}-i{{item_counter}}">{{label}}</label>
@@ -26,8 +26,9 @@ export function buildMenuItems(items, right_or_left, header_label, menu_id, item
             menu_items_html = menu_items_html.replace(/{{children}}/g, child_items_html); 
           } else if ("href" in items[i]) {
               menu_items_html = menu_items_html + menuItemWithLinkTemplate;
-              var onclick = "window.location.href = '" + items[i].href + "';";
-              menu_items_html = menu_items_html.replace(/{{onclick}}/g,onclick); 
+              //var onclick = "window.location.href = '" + items[i].href + "';";
+              //menu_items_html = menu_items_html.replace(/{{onclick}}/g,onclick); 
+              menu_items_html = menu_items_html.replace(/{{href}}/g,items[i].href); 
           } else {
             menu_items_html = menu_items_html + menuItemTemplate;
         } 
