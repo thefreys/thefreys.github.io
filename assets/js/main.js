@@ -10,8 +10,13 @@ var sitemap_items = [
     {"label": "Yeast Rolls", "href": "index.html?x=recipes/yeast-rolls"},
     ]},
     {"label": "Creative Reuse", "href": "index.html?x=creative-reuse/", "children": [
-      {"label": "Tea Bags", "href": "index.html?x=creative-reuse/tea-bags"},
-      {"label": "Coffee Grounds", "href": "index.html?x=creative-reuse/coffee-grounds"},
+      {"label": "Food Scraps", "href": "index.html?x=creative-reuse/food-scraps", "children": [
+        {"label": "Tea Bags", "href": "index.html?x=creative-reuse/food-scraps/tea-bags"},
+        {"label": "Coffee Grounds", "href": "index.html?x=creative-reuse/food-scraps/coffee-grounds"},
+        ]},
+      {"label": "Textiles", "href": "index.html?x=creative-reuse/textiles", "children": [
+        {"label": "T-Shirts", "href": "index.html?x=creative-reuse/textiles/t-shirts"},
+        ]},
       ]},
 ];
 
