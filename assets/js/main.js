@@ -8,16 +8,19 @@ var sitemap_items = [
     {"label": "Rainbow Cookies", "href": "index.html?x=recipes/rainbow-cookies"},
     {"label": "Tiramisu", "href": "index.html?x=recipes/tiramisu"},
     {"label": "Yeast Rolls", "href": "index.html?x=recipes/yeast-rolls"},
+  ]},
+  {"label": "Creative Reuse", "href": "index.html?x=creative-reuse/", "children": [
+    {"label": "Food Scraps", "href": "index.html?x=creative-reuse/food-scraps", "children": [
+      {"label": "Tea Bags", "href": "index.html?x=creative-reuse/food-scraps/tea-bags"},
+      {"label": "Coffee Grounds", "href": "index.html?x=creative-reuse/food-scraps/coffee-grounds"},
     ]},
-    {"label": "Creative Reuse", "href": "index.html?x=creative-reuse/", "children": [
-      {"label": "Food Scraps", "href": "index.html?x=creative-reuse/food-scraps", "children": [
-        {"label": "Tea Bags", "href": "index.html?x=creative-reuse/food-scraps/tea-bags"},
-        {"label": "Coffee Grounds", "href": "index.html?x=creative-reuse/food-scraps/coffee-grounds"},
-        ]},
-      {"label": "Textiles", "href": "index.html?x=creative-reuse/textiles", "children": [
-        {"label": "T-Shirts", "href": "index.html?x=creative-reuse/textiles/t-shirts"},
-        ]},
-      ]},
+    {"label": "Textiles", "href": "index.html?x=creative-reuse/textiles", "children": [
+      {"label": "T-Shirts", "href": "index.html?x=creative-reuse/textiles/t-shirts"},
+    ]},
+  ]},
+  {"label": "Web Design", "href": "index.html?x=web-design/", "children": [
+    {"label": "Sitemaps", "href": "index.html?x=web-design/sitemaps"},
+  ]},
 ];
 
 var queryParams = myContentModule.getQueryParams();
