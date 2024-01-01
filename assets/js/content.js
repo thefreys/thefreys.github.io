@@ -1,6 +1,5 @@
 var config = {
-    //contentPathPrefix: '../content/', //for local dev
-    contentPathPrefix: 'https://thefreys.github.io/content/',
+    contentPathPrefix: '../content/',
 };
 
 export function updateContentPathPrefix(newValue) {
