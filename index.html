@@ -2,57 +2,64 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel='dns-prefetch' href='//ajax.googleapis.com'>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/jquery-ui-bundle@1.12.1-migrate/jquery-ui.min.css" rel="stylesheet">
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios@0.21.4/dist/axios.min.js"></script>    
-<script src="https://cdn.jsdelivr.net/npm/jquery-ui-bundle@1.12.1-migrate/jquery-ui.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
 
 <link href="assets/css/main.css" id="dynamicMainCss" rel="stylesheet">
-<link href="assets/css/menu.css" id="dynamicMenuCss" rel="stylesheet">
 <script type="module" id="dynamicMainJs"></script>
 <script>
   var linkDate = new Date().toISOString().replace(/:/g, '').replace(/ /g, '').replace(/-/g, '');
   document.getElementById('dynamicMainCss').href = 'assets/css/main.css?date=' + linkDate;
-  document.getElementById('dynamicMenuCss').href = 'assets/css/menu.css?date=' + linkDate;
   document.getElementById('dynamicMainJs').src = 'assets/js/main.js?date=' + linkDate;
 </script>
 </head>
-<title>Welcome to thefreys.github.io</title><body>
+<title>Welcome to thefreys.github.io</title>
 
-<header>
 
-<form action="javascript:" style="display:none" id="left-menu-form">
-<input id="left-menu" type="checkbox">
-<input id="left-menu-reset" type="reset">
-<nav class="left-navigation"><main>
-<label for="left-menu" class="menu-toggle"><span>&nbsp;</span></label>
-<label for="left-menu-reset" class="menu-close"><span>&nbsp;</span></label>
-<menu id="menu-left"></menu>
-</main></nav></form>
+<body>
 
-<form action="javascript:" style="display:none" id="right-menu-form">
-<input id="right-menu" type="checkbox">
-<input id="right-menu-reset" type="reset">
-<nav class="right-navigation"><main>
-<label for="right-menu" class="menu-toggle"><span>&nbsp;</span></label>
-<label for="right-menu-reset" class="menu-close"><span>&nbsp;</span></label>
-<menu id="menu-right"></menu>
-</main></nav></form>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html?x=index">thefreys.github.io</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Recipes
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html?x=recipes/rainbow-cookies">Rainbow Cookies</a></li>
+              <li><a class="dropdown-item" href="index.html?x=recipes/tiramisu">Tiramisu</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="index.html?x=recipes/">List All</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html?x=index">Sitemap</a>
+          </li>
+        </ul><!--
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>-->
+      </div>
+    </div>
+  </nav>
 
-</header>
+
 
 <div class="container">
 <div id="mdContent"></div>
 <div id="htmlContent"></div>
 </div>
+    
 
 <script type="module" id="jsContent"></script>
 

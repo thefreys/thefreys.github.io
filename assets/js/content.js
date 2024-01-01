@@ -1,3 +1,17 @@
+var config = {
+    //contentPathPrefix: '../content/', //for local dev
+    contentPathPrefix: 'https://thefreys.github.io/content/',
+};
+
+export function updateContentPathPrefix(newValue) {
+    config.contentPathPrefix = newValue;
+}
+
+export function getValue() {
+    return config;
+}
+
+
 export function getQueryParams() {
     var queryParams = {};
     var queryString = window.location.search.substring(1); // Remove the '?' at the start
@@ -27,11 +41,11 @@ export function loadContent() {
         return;
     }
 
-    var mdContentPath = 'content/' +  path + '.md'; 
+    var mdContentPath = config.contentPathPrefix +  path + '.md'; 
     var mdContent404 = false;
-    var htmlContentPath = 'content/' + path + '.html'; 
+    var htmlContentPath = config.contentPathPrefix + path + '.html'; 
     var htmlContent404 = false;
-    var jsContentPath = 'content/' +  path + '.js'; 
+    var jsContentPath = config.contentPathPrefix +  path + '.js'; 
     var jsContent404 = false;
        
     var mdPromise = fetch(mdContentPath)
@@ -117,6 +131,12 @@ export function loadContent() {
         .then((results) => {
             console.log('All promises resolved:', results);
             if(mdContent404 && htmlContent404 && jsContent404){
+                if(path =='404'){
+                    document.getElementById('htmlContent').innerHTML = '404040404040404';
+                    //window.location.href = 'index.html?x=404';
+                    return;
+
+                }
                 window.location.href = 'index.html?x=404';
                 return;
             }
