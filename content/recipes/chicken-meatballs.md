@@ -15,11 +15,11 @@
 
 ## Instructions
 
-- Preheat oven to 400 degrees
-- Combine all ingredients except chicken in a large bowl, sitr to combine thoroughly
-- Incorporate chicken until completely combined
-- Using a small scoop or large spoon, shape 1 to 1 1/2 inch balls, place on a lined baking sheet
-- Bake for 30-35 minutes until sops are browned
+1. Preheat oven to 400 degrees
+2. Combine all ingredients except chicken in a large bowl, sitr to combine thoroughly
+3. Incorporate chicken until completely combined
+4. Using a small scoop or large spoon, shape 1 to 1 1/2 inch balls, place on a lined baking sheet
+5. Bake for 30-35 minutes until sops are browned
 
 ## Notes
 
