@@ -12,11 +12,11 @@
 
 ## Ingredients
 
-5 pounds **yellow** or **red potatoes**
-8 ounces (1 stick) **unsalted butter**
-1 1/2 cups **milk**, any kind
-1 tablespoon **table salt**
-1/3 cup **mayonnsaise**
+- 5 pounds **yellow** or **red potatoes**
+- 8 ounces (1 stick) **unsalted butter**
+- 1 1/2 cups **milk**, any kind
+- 1 tablespoon **table salt**
+- 1/3 cup **mayonnsaise**
  
 ## Directions
 
