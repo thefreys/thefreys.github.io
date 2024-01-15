@@ -9,11 +9,11 @@
 <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
 
 <link href="assets/css/main.css" id="dynamicMainCss" rel="stylesheet">
-<script type="module" id="dynamicMainJs"></script>
+<script type="module" id="dynamicContentJs"></script>
 <script>
   var linkDate = new Date().toISOString().replace(/:/g, '').replace(/ /g, '').replace(/-/g, '');
   document.getElementById('dynamicMainCss').href = 'assets/css/main.css?date=' + linkDate;
-  document.getElementById('dynamicMainJs').src = 'assets/js/main.js?date=' + linkDate;
+  document.getElementById('dynamicContentJs').src = 'assets/js/content.js?date=' + linkDate;
 </script>
 </head>
 <title>Welcome to thefreys.github.io</title>
