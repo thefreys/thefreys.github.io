@@ -77,7 +77,11 @@ function buildAreaMap(parent) {
 function buildBreadcrumbs() { 
     var breadcrumbs = '';
     console.log(page.breadcrumbs);
-    for (var i = page.breadcrumbs.length - 1; i >= 0; i--) {
+    var breadcrumbItem = breadcrumbItemTemplate;
+    breadcrumbItem = breadcrumbItem.replace(/{{title}}/g,'Home');
+    breadcrumbItem = breadcrumbItem.replace(/{{href}}/g,'index.html?x=index');
+    breadcrumbs = breadcrumbs + breadcrumbItem;
+    for (var i = 0; i < page.breadcrumbs.length; i++) {
         var breadcrumbItem = breadcrumbItemTemplate;
         var sitemapItem = sitemap[page.breadcrumbs[i]];
         breadcrumbItem = breadcrumbItem.replace(/{{title}}/g,sitemapItem.title);
@@ -167,6 +171,10 @@ export function init() {
         page.filename = page.path
         page.parentPath = '';
     }
+    page.breadcrumbs =  page.breadcrumbs.reverse();
+    if(page.filename=='index'){
+        page.breadcrumbs.pop();
+    }
     //console.log(page.breadcrumbs);
     page.href = 'index.html?x=' + page.path; 
         
@@ -235,6 +243,7 @@ export function init() {
     for (const key in sitemap) {
         if(sitemap[key].lastPath == 'index'){
             sitemap[key].children = sitemap[sitemap[key].parentKey].children;
+            sitemap[key].title = sitemap[sitemap[key].parentKey].title;
         }
     }
 
