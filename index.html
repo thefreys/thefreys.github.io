@@ -10,7 +10,6 @@
 
 <link href="assets/css/main.css" id="dynamicMainCss" rel="stylesheet">
 <script type="module" id="dynamicMainJs"></script>
-<script type="module" id="dynamicMainJs"></script>
 <script>
   var linkDate = new Date().toISOString().replace(/:/g, '').replace(/ /g, '').replace(/-/g, '');
   document.getElementById('dynamicMainCss').href = 'assets/css/main.css?date=' + linkDate;
@@ -27,37 +26,17 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Recipes
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="index.html?x=recipes/desserts/">Desserts</a></li>
-              <li><a class="dropdown-item" href="index.html?x=recipes/meats/">Meats</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="index.html?x=./recipes/">List All</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Upcycling
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="index.html?x=upcycling/food-scraps/">Food Scraps</a></li>
-              <li><a class="dropdown-item" href="index.html?x=upcycling/textiles/">Textiles</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="index.html?x=upcycling/">List All</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html?x=index">Sitemap</a>
-          </li>
-        </ul><!--
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navbarSupportedContentUl">
+
+        </ul>
+        
+        <!--
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>-->
+        </form>
+        -->
+
       </div>
     </div>
   </nav>
@@ -65,12 +44,16 @@
 
 
 <div class="container">
-<div id="mdContent"></div>
-<div id="htmlContent"></div>
+  <div id="mdContent"></div>
+  <div id="htmlContent"></div>
 </div>
-
 <script type="module" id="jsContent"></script>
 
+
+
+<div id="sitemapJsCode">
+
+</div>
 
 </body>
 </html>
