@@ -15,6 +15,8 @@ var menuItemTemplate = `<li class="nav-item dropdown">
 </li>`;
 var menuItemChildTemplate = `
   <li><a class="dropdown-item" href="{{href}}">{{title}}</a></li>`;
+var breadcrumbItemTemplate = `<li class="breadcrumb-item"><a href="{{href}}">{{title}}</a></li>`;  
+var breadcrumbItemCurrentTemplate = `<li class="breadcrumb-item active" aria-current="page">{{title}}</li>`;
 
 export function getQueryParams() {
     var queryParams = {};
@@ -27,14 +29,10 @@ export function getQueryParams() {
 
         queryParams[key] = value;
     }
-
     return queryParams;
 }
 
-function buildSiteMapItems(items, parent) {   
-    if (parent === null || parent === undefined) {
-        return;
-    } 
+function buildSiteMapItems(items, parent) {  
     var i = 0;
     for (const key in items) {
         i++;
@@ -58,11 +56,12 @@ function buildSiteMapItems(items, parent) {
 }
 
 function buildSiteMap(parent) {   
+    //console.log(sitemap[' '].children);return;
     if (parent === null || parent === undefined) {
         return;
     } 
     var ul = document.createElement("ul");
-    buildSiteMapItems(sitemap[' '].children,ul); 
+    buildSiteMapItems(sitemap['index'].children,ul); 
     parent.appendChild(ul);
 }
 
@@ -71,8 +70,47 @@ function buildAreaMap(parent) {
         return;
     } 
     var ul = document.createElement("ul");
-    buildSiteMapItems(sitemap[page.path].children,parent);    
+    buildSiteMapItems(sitemap[page.path].children,ul);    
     parent.appendChild(ul);    
+}
+
+function buildBreadcrumbs() { 
+    var breadcrumbs = '';
+    console.log(page.breadcrumbs);
+    for (var i = page.breadcrumbs.length - 1; i >= 0; i--) {
+        var breadcrumbItem = breadcrumbItemTemplate;
+        var sitemapItem = sitemap[page.breadcrumbs[i]];
+        breadcrumbItem = breadcrumbItem.replace(/{{title}}/g,sitemapItem.title);
+        breadcrumbItem = breadcrumbItem.replace(/{{href}}/g,'index.html?x='+sitemapItem.metaKey);
+        breadcrumbs = breadcrumbs + breadcrumbItem;
+    }
+    var breadcrumbItem = breadcrumbItemCurrentTemplate;
+    var sitemapItem = sitemap[page.path];
+    breadcrumbItem = breadcrumbItem.replace(/{{title}}/g,sitemapItem.title);
+    breadcrumbItem = breadcrumbItem.replace(/{{href}}/g,'index.html?x='+sitemapItem.metaKey);
+    breadcrumbs = breadcrumbs + breadcrumbItem;
+    document.getElementById('breadcrumbs').innerHTML = breadcrumbs;
+}
+
+function buildMenu() { 
+    var menu = '';
+    for (var i = 0; i < moduleConfig.hamburgerLevelOneItems.length; i++) {
+        var menuItem = menuItemTemplate;
+        var sitemapItem = sitemap[moduleConfig.hamburgerLevelOneItems[i]];
+        menuItem = menuItem.replace(/{{title}}/g,sitemapItem.title);
+        menuItem = menuItem.replace(/{{href}}/g,'index.html?x='+sitemapItem.metaKey);
+        var menuItemChildren = '';
+        for (var j = 0; j < sitemapItem.children.length; j++) {
+            var menuChildItem = menuItemChildTemplate;
+            var sitemapChildItem = sitemap[sitemapItem.children[j]];
+            menuChildItem = menuChildItem.replace(/{{title}}/g,sitemapChildItem.title);
+            menuChildItem = menuChildItem.replace(/{{href}}/g,'index.html?x='+sitemapChildItem.metaKey);
+            menuItemChildren = menuItemChildren + menuChildItem;
+        }
+        menuItem = menuItem.replace(/{{children}}/g,menuItemChildren);
+        menu = menu + menuItem;
+    }
+    document.getElementById('navbarSupportedContentUl').innerHTML = menu;
 }
 
 function watchElementForChanges(elemId, callback) {
@@ -115,15 +153,21 @@ export function init() {
         window.location.href = 'index.html?x=' + page.path + 'index';
         return;
     }
+    page.breadcrumbs = [];
     page.pathParts = page.path.split('/');
-    if(page.pathParts > 1){
+    if(page.pathParts.length > 1){
         page.filename = page.pathParts.pop();
         page.parentPath = page.pathParts.join('/');
+        for (var i = page.pathParts.length - 1; i >=0; i--) {
+            page.breadcrumbs.push(page.pathParts.join('/')); 
+            page.pathParts.pop();
+        }
     }
     else {
         page.filename = page.path
         page.parentPath = '';
     }
+    //console.log(page.breadcrumbs);
     page.href = 'index.html?x=' + page.path; 
         
     sitemap[' '] = {
@@ -188,6 +232,11 @@ export function init() {
             sitemap[key].metaKey = key;
         }
     }
+    for (const key in sitemap) {
+        if(sitemap[key].lastPath == 'index'){
+            sitemap[key].children = sitemap[sitemap[key].parentKey].children;
+        }
+    }
 
     for (const key in sitemap) {
         if(!(typeof metaObject[sitemap[key].metaKey] === 'undefined')) {
@@ -198,20 +247,20 @@ export function init() {
             if (!(typeof metaItem.exclude_from_sitemap === 'undefined')) {
                 sitemap[key].exclude_from_sitemap = metaItem.exclude_from_sitemap;
             }
-            if (!(typeof metaItem.hasMarkdown === 'undefined') && metaItem.hasMarkdown == true) {
-                sitemap[key].mdContentPath = moduleConfig.contentPathPrefix + page.path + '.md';
+            if (typeof sitemap.mdContentPath === 'undefined' && !(typeof metaItem.hasMarkdown === 'undefined') && metaItem.hasMarkdown == true) {
+                sitemap[key].mdContentPath = moduleConfig.contentPathPrefix + sitemap[key].metaKey + '.md';
             }
-            if (!(typeof metaItem.hasHtml === 'undefined') && metaItem.hasHtml == true) {
-                sitemap[key].htmlContentPath = moduleConfig.contentPathPrefix + page.path + '.html';
+            if (typeof sitemap.htmlContentPath === 'undefined' && !(typeof metaItem.hasHtml === 'undefined') && metaItem.hasHtml == true) {
+                sitemap[key].htmlContentPath = moduleConfig.contentPathPrefix + sitemap[key].metaKey + '.html';
             }
-            if (!(typeof metaItem.hasJavaScript === 'undefined') && metaItem.hasJavaScript == true) {
-                sitemap[key].jsContentPath = moduleConfig.contentPathPrefix + page.path + '.js';
+            if (typeof sitemap.jsContentPath === 'undefined' && !(typeof metaItem.hasJavaScript === 'undefined') && metaItem.hasJavaScript == true) {
+                sitemap[key].jsContentPath = moduleConfig.contentPathPrefix + sitemap[key].metaKey + '.js';
             }
         }
     }
 
     for (const key in sitemap) {
-        if (sitemap[key].metaKey != key) {
+        if (sitemap[key].metaKey != key || sitemap[key].lastPath == 'index') {
             var newChildren = sitemap[key].children;
             for (const c in sitemap[key].children) {
                 if (sitemap[sitemap[key].children[c]].lastPath == 'index'){
@@ -224,6 +273,7 @@ export function init() {
             sitemap[key].title = sitemap[key].lastPath;
         }
     }
+    //document.getElementById('debugContent').innerHTML = JSON.stringify(sitemap,null,4);
 
     if (page.path =='404' && typeof sitemap[page.path] === 'undefined'){
         document.getElementById('htmlContent').innerHTML = '404 page is missing';
@@ -232,7 +282,7 @@ export function init() {
 
     if (typeof sitemap[page.path] === 'undefined') {
         if (page.filename != 'index'){
-            window.location.href = 'index.html?x=404&reason=no-sitemap-for-'+page.path;
+            window.location.href = 'index.html?x=404&reason=no-sitemap&x2='+page.path;
             return;
         }
         window.location.href = page.parentPath;
@@ -244,20 +294,16 @@ export function init() {
         typeof sitemap[page.path].jsContentPath === 'undefined'){
 
         if(sitemap[page.path].isIndex){
-            var h = document.createElement("h1");
-            h.textContent = sitemap[page.path].title;
-            document.getElementById('htmlContent').appendChild(h);
-            var h = document.createElement("h2");
-            h.textContent = "Explore what's here:";
-            document.getElementById('htmlContent').appendChild(h);
-            var d = document.createElement("div");
-            d.id = 'area-map';  
-            buildAreaMap(d);
-            document.getElementById('htmlContent').appendChild(d);
+            document.getElementById('htmlContent').innerHTML = `
+            <h1>`+sitemap[page.path].title+`</h1>
+            <h2>Explore what's here:</h2>
+            <div id="area-map"></div>
+            `;
+            buildMenu();
+            buildBreadcrumbs();
             return;
         }
-
-        window.location.href = 'index.html?x=404';
+        window.location.href = 'index.html?x=404&reason=no-content&x2='+page.path;
         return;
     }
     
@@ -359,26 +405,9 @@ export function init() {
     }
 
     // Do stuff while fetching:
-    var menu = '';
-    for (var i = 0; i < moduleConfig.hamburgerLevelOneItems.length; i++) {
-        var menuItem = menuItemTemplate;
-        var sitemapItem = sitemap[moduleConfig.hamburgerLevelOneItems[i]];
-        menuItem = menuItem.replace(/{{title}}/g,sitemapItem.title);
-        menuItem = menuItem.replace(/{{href}}/g,'index.html?x='+sitemapItem.metaKey);
-        var menuItemChildren = '';
-        for (var j = 0; j < sitemapItem.children.length; j++) {
-            var menuChildItem = menuItemChildTemplate;
-            var sitemapChildItem = sitemap[sitemapItem.children[j]];
-            menuChildItem = menuChildItem.replace(/{{title}}/g,sitemapChildItem.title);
-            menuChildItem = menuChildItem.replace(/{{href}}/g,'index.html?x='+sitemapChildItem.metaKey);
-            menuItemChildren = menuItemChildren + menuChildItem;
-            //console.log(menuChildItem); 
-        }
-        menuItem = menuItem.replace(/{{children}}/g,menuItemChildren);
-        menu = menu + menuItem;
-    }
-    console.log(menu); 
-    document.getElementById('navbarSupportedContentUl').innerHTML = menu;
+
+    buildMenu();
+    buildBreadcrumbs();
 
     Promise.all(promises)
         .then((results) => {
@@ -388,7 +417,7 @@ export function init() {
                     document.getElementById('htmlContent').innerHTML = '404 page is missing';
                     return;
                 }
-                window.location.href = 'index.html?x=404';
+                window.location.href = 'index.html?x=404&reason=no-promise&x2='+page.path;
                 return;
             }
         })
