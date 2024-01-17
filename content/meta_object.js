@@ -86,6 +86,10 @@ hasMarkdown: true,
 title: "Yeast Rolls",
 hasMarkdown: true,
 },
+'sitemap':{
+title: "Sitemap",
+hasHtml: true,
+},
 'upcycling/food-scraps/coffee-grounds':{
 title: "Reusing Coffee Grounds",
 hasMarkdown: true,

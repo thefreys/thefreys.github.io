@@ -1,7 +1,8 @@
 import { metaObject } from '../../content/meta_object.js'; // relative to this file
 var moduleConfig = {};
+moduleConfig.siteName = 'theFreys.github.io'; // relative to root index.html
 moduleConfig.contentPathPrefix = 'content/'; // relative to root index.html
-moduleConfig.hamburgerLevelOneItems = ['blogs','recipes','upcycling'];
+moduleConfig.hamburgerLevelOneItems = ['blogs','recipes','upcycling','sitemap'];
 
 var page = {};
 var sitemap = {};
@@ -10,7 +11,7 @@ var menuItemTemplate = `<li class="nav-item dropdown">
 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 {{title}}</a><ul class="dropdown-menu">{{children}}
 <li><hr class="dropdown-divider"></li>
-<li><a class="dropdown-item" href="{{href}}">Area Map</a></li>
+<li><a class="dropdown-item" href="{{href}}">All {{title}}</a></li>
 </ul>
 </li>`;
 var menuItemChildTemplate = `
@@ -99,8 +100,11 @@ function buildBreadcrumbs() {
 function buildMenu() { 
     var menu = '';
     for (var i = 0; i < moduleConfig.hamburgerLevelOneItems.length; i++) {
-        var menuItem = menuItemTemplate;
         var sitemapItem = sitemap[moduleConfig.hamburgerLevelOneItems[i]];
+        var menuItem = menuItemChildTemplate;
+        if(sitemapItem.children.length > 0){
+            var menuItem = menuItemTemplate;
+        }
         menuItem = menuItem.replace(/{{title}}/g,sitemapItem.title);
         menuItem = menuItem.replace(/{{href}}/g,'index.html?x='+sitemapItem.metaKey);
         var menuItemChildren = '';
@@ -115,6 +119,15 @@ function buildMenu() {
         menu = menu + menuItem;
     }
     document.getElementById('navbarSupportedContentUl').innerHTML = menu;
+}
+
+function buildAfterContentLoaded() { 
+    buildSiteMap(document.getElementById("site-map"));
+    buildAreaMap(document.getElementById("area-map"));
+    var spans = document.querySelectorAll('span.site-name');
+    spans.forEach(function(span) {
+        span.textContent = moduleConfig.siteName;
+    });
 }
 
 function watchElementForChanges(elemId, callback) {
@@ -133,12 +146,12 @@ function watchElementForChanges(elemId, callback) {
   
   watchElementForChanges('htmlContent', () => {
     console.log('htmlContent changed');
-    buildSiteMap(document.getElementById("site-map"));
-    buildAreaMap(document.getElementById("area-map"));
+    buildAfterContentLoaded();
   });
   
   watchElementForChanges('mdContent', () => {
     console.log('mdContent changed');
+    buildAfterContentLoaded();
   });
   
   watchElementForChanges('jsContent', () => {
