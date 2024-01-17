@@ -1,6 +1,6 @@
-import { metaObject } from 'https://thefreys.github.io/content/meta_object.js';
+import { metaObject } from '../../content/meta_object.js'; // relative to this file
 var moduleConfig = {};
-moduleConfig.contentPathPrefix = 'https://thefreys.github.io/content/';
+moduleConfig.contentPathPrefix = 'content/'; // relative to root index.html
 moduleConfig.hamburgerLevelOneItems = ['blogs','recipes','upcycling'];
 
 var page = {};
