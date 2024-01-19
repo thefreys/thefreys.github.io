@@ -1,4 +1,4 @@
 export const meta = { 
-    title: "bing said:",
+    title: "Bard said:",
   };
   

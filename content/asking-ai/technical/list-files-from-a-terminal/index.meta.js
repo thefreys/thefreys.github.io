@@ -1,3 +1,3 @@
 export const meta = { 
-  title: "Listing file from a terminal",
+  title: "How do you list files from a terminal",
 };

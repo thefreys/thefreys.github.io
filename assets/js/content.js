@@ -7,14 +7,17 @@ moduleConfig.hamburgerLevelOneItems = ['blogs','recipes','upcycling','sitemap'];
 var page = {};
 var sitemap = {};
 
-var menuItemTemplate = `<li class="nav-item dropdown">
+
+var templateMenuItem = `
+  <li class="nav-item"><a class="nav-link" href="{{href}}">{{title}}</a></li>`;
+var templateMenuItemWithChildren = `<li class="nav-item dropdown">
 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 {{title}}</a><ul class="dropdown-menu">{{children}}
 <li><hr class="dropdown-divider"></li>
 <li><a class="dropdown-item" href="{{href}}">All {{title}}</a></li>
 </ul>
 </li>`;
-var menuItemChildTemplate = `
+var templateMenuItemChild = `
   <li><a class="dropdown-item" href="{{href}}">{{title}}</a></li>`;
 var breadcrumbItemTemplate = `<li class="breadcrumb-item"><a href="{{href}}">{{title}}</a></li>`;  
 var breadcrumbItemCurrentTemplate = `<li class="breadcrumb-item active" aria-current="page">{{title}}</li>`;
@@ -101,15 +104,15 @@ function buildMenu() {
     var menu = '';
     for (var i = 0; i < moduleConfig.hamburgerLevelOneItems.length; i++) {
         var sitemapItem = sitemap[moduleConfig.hamburgerLevelOneItems[i]];
-        var menuItem = menuItemChildTemplate;
+        var menuItem = templateMenuItem;
         if(sitemapItem.children.length > 0){
-            var menuItem = menuItemTemplate;
+            var menuItem = templateMenuItemWithChildren;
         }
         menuItem = menuItem.replace(/{{title}}/g,sitemapItem.title);
         menuItem = menuItem.replace(/{{href}}/g,'index.html?x='+sitemapItem.metaKey);
         var menuItemChildren = '';
         for (var j = 0; j < sitemapItem.children.length; j++) {
-            var menuChildItem = menuItemChildTemplate;
+            var menuChildItem = templateMenuItemChild;
             var sitemapChildItem = sitemap[sitemapItem.children[j]];
             menuChildItem = menuChildItem.replace(/{{title}}/g,sitemapChildItem.title);
             menuChildItem = menuChildItem.replace(/{{href}}/g,'index.html?x='+sitemapChildItem.metaKey);
@@ -311,22 +314,24 @@ export function init() {
         return;
     }
     
+    sitemap[page.path].defaultIndex = `
+        <h1>`+sitemap[page.path].title+`</h1>
+        <div id="area-map"></div>
+        `;
+
     if (typeof sitemap[page.path].mdContentPath === 'undefined' &&
         typeof sitemap[page.path].htmlContentPath === 'undefined' &&
         typeof sitemap[page.path].jsContentPath === 'undefined'){
 
         if(sitemap[page.path].isIndex){
-            document.getElementById('htmlContent').innerHTML = `
-            <h1>`+sitemap[page.path].title+`</h1>
-            <h2>Explore what's here:</h2>
-            <div id="area-map"></div>
-            `;
+            sitemap[page.path].defaultIndex = sitemap[page.path].defaultIndex + '<p>This page was auto generated due to no content files found for '+page.path+' </p>'
+            document.getElementById('htmlContent').innerHTML = sitemap[page.path].defaultIndex;
             buildMenu();
             buildBreadcrumbs();
             return;
         }
-        window.location.href = 'index.html?x=404&reason=no-content&x2='+page.path;
-        return;
+        //window.location.href = 'index.html?x=404&reason=no-content&x2='+page.path;
+        //return;
     }
     
     // fetch content files
@@ -439,7 +444,8 @@ export function init() {
                     document.getElementById('htmlContent').innerHTML = '404 page is missing';
                     return;
                 }
-                window.location.href = 'index.html?x=404&reason=no-promise&x2='+page.path;
+                sitemap[page.path].defaultIndex = sitemap[page.path].defaultIndex + '<p>This page was auto generated due to failing to fetch content files for '+page.path+' </p>'
+                document.getElementById('htmlContent').innerHTML = sitemap[page.path].defaultIndex;
                 return;
             }
         })

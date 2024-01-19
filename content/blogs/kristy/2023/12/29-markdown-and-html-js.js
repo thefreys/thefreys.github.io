@@ -1,1 +1,0 @@
-console.log('all 3... This content has: html, markdown, and javascript')
