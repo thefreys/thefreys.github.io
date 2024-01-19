@@ -41,6 +41,21 @@ hasMarkdown: true,
 'asking-ai/technical/most-common-term-for-writing-computer-code/index':{
 title: "What is the most common term for writing computer code?",
 },
+'asking-ai/technical/sitemap-file-format-preferred-by-search-engines/bard':{
+title: "Bard said:",
+hasMarkdown: true,
+},
+'asking-ai/technical/sitemap-file-format-preferred-by-search-engines/bing':{
+title: "bing said:",
+hasMarkdown: true,
+},
+'asking-ai/technical/sitemap-file-format-preferred-by-search-engines/chatgpt':{
+title: "ChatGPT said:",
+hasMarkdown: true,
+},
+'asking-ai/technical/sitemap-file-format-preferred-by-search-engines/index':{
+title: "I need to know the file format for the sitemap file that each search engine prefers.",
+},
 'blogs/kristy/2024/01/01-planting-seeds-using-my-morning-tea-bags':{
 hasMarkdown: true,
 },
