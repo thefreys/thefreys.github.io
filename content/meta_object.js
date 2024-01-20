@@ -138,6 +138,24 @@ hasMarkdown: true,
 title: "Yeast Rolls",
 hasMarkdown: true,
 },
+'recipes/want-to-try/beef-stew-20240120-bard':{
+hasMarkdown: true,
+},
+'recipes/want-to-try/beef-stew-20240120-bing':{
+hasMarkdown: true,
+},
+'recipes/want-to-try/beef-stew-20240120-chatgpt':{
+hasMarkdown: true,
+},
+'recipes/want-to-try/crab-cakes-20240120-bard':{
+hasMarkdown: true,
+},
+'recipes/want-to-try/crab-cakes-20240120-bing':{
+hasMarkdown: true,
+},
+'recipes/want-to-try/crab-cakes-20240120-chatgpt':{
+hasMarkdown: true,
+},
 'sitemap':{
 title: "Sitemap",
 hasHtml: true,

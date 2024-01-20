@@ -295,7 +295,7 @@ export function init() {
             sitemap[key].children = newChildren;
         }
         if (typeof sitemap[key].title === 'undefined'){
-            sitemap[key].title = sitemap[key].lastPath;
+            sitemap[key].title = sitemap[key].lastPath.replace(/-/g,' ');
         }
     }
     //document.getElementById('debugContent').innerHTML = JSON.stringify(sitemap,null,4);
