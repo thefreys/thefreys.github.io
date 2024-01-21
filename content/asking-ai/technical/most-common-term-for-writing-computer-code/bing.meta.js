@@ -1,3 +1,3 @@
 export const meta = { 
-  title: "bing said:",
+  title: "what Bing said",
 };

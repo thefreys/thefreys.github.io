@@ -59,7 +59,8 @@ function buildSiteMapItems(items, parent) {
     }     
 }
 
-function buildSiteMap(parent) {   
+function buildSiteMap(parent) {     
+    console.log('buildSiteMap');
     //console.log(sitemap[' '].children);return;
     if (parent === null || parent === undefined) {
         return;
@@ -70,6 +71,7 @@ function buildSiteMap(parent) {
 }
 
 function buildAreaMap(parent) {   
+    console.log('buildAreaMap');
     if (parent === null || parent === undefined) {
         return;
     } 
@@ -79,6 +81,7 @@ function buildAreaMap(parent) {
 }
 
 function buildBreadcrumbs() { 
+    console.log('buildBreadcrumbs');
     var breadcrumbs = '';
     console.log(page.breadcrumbs);
     var breadcrumbItem = breadcrumbItemTemplate;
@@ -101,6 +104,7 @@ function buildBreadcrumbs() {
 }
 
 function buildMenu() { 
+    console.log('buildMenu');
     var menu = '';
     for (var i = 0; i < moduleConfig.hamburgerLevelOneItems.length; i++) {
         var sitemapItem = sitemap[moduleConfig.hamburgerLevelOneItems[i]];
@@ -124,9 +128,20 @@ function buildMenu() {
     document.getElementById('navbarSupportedContentUl').innerHTML = menu;
 }
 
-function buildAfterContentLoaded() { 
+function buildAfterContentLoaded() {     
+    console.log('buildAfterContentLoaded');
+    buildMenu();
+    buildBreadcrumbs();
     buildSiteMap(document.getElementById("site-map"));
-    buildAreaMap(document.getElementById("area-map"));
+    if(document.getElementById("area-map")){
+      buildAreaMap(document.getElementById("area-map"));
+    }
+    else if (sitemap[page.path].isIndex) {
+        buildAreaMap(document.getElementById("areaMap"));
+    }
+    else if (page.filename == 'index') {
+        buildAreaMap(document.getElementById("areaMap"));
+    }
     var spans = document.querySelectorAll('span.site-name');
     spans.forEach(function(span) {
         span.textContent = moduleConfig.siteName;
@@ -316,6 +331,7 @@ export function init() {
     
     sitemap[page.path].defaultIndex = `
         <h1>`+sitemap[page.path].title+`</h1>
+        <hr />
         <div id="area-map"></div>
         `;
 
@@ -324,10 +340,9 @@ export function init() {
         typeof sitemap[page.path].jsContentPath === 'undefined'){
 
         if(sitemap[page.path].isIndex){
-            sitemap[page.path].defaultIndex = sitemap[page.path].defaultIndex + '<p>This page was auto generated due to no content files found for '+page.path+' </p>'
+            //sitemap[page.path].defaultIndex = sitemap[page.path].defaultIndex + '<p>This page was auto generated due to no content files found for '+page.path+' </p>'
             document.getElementById('htmlContent').innerHTML = sitemap[page.path].defaultIndex;
-            buildMenu();
-            buildBreadcrumbs();
+            //buildBreadcrumbs();
             return;
         }
         //window.location.href = 'index.html?x=404&reason=no-content&x2='+page.path;
@@ -431,11 +446,6 @@ export function init() {
         });  
     }
 
-    // Do stuff while fetching:
-
-    buildMenu();
-    buildBreadcrumbs();
-
     Promise.all(promises)
         .then((results) => {
             console.log('All promises resolved:', results);
@@ -444,6 +454,7 @@ export function init() {
                     document.getElementById('htmlContent').innerHTML = '404 page is missing';
                     return;
                 }
+                //
                 sitemap[page.path].defaultIndex = sitemap[page.path].defaultIndex + '<p>This page was auto generated due to failing to fetch content files for '+page.path+' </p>'
                 document.getElementById('htmlContent').innerHTML = sitemap[page.path].defaultIndex;
                 return;

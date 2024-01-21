@@ -1,4 +1,4 @@
 export const meta = { 
-    title: "ChatGPT said:",
+    title: "what ChatGPT said",
   };
   

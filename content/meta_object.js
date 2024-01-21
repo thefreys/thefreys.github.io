@@ -5,67 +5,76 @@ exclude_from_sitemap: true,
 hasMarkdown: true,
 },
 'asking-ai/crafty/how-do-you-make-t-shirt-yarn/bard':{
-title: "Bard said:",
+title: "what Bard said",
 hasMarkdown: true,
 },
 'asking-ai/crafty/how-do-you-make-t-shirt-yarn/bing':{
-title: "bing said:",
+title: "what Bing said",
 hasMarkdown: true,
 },
 'asking-ai/crafty/how-do-you-make-t-shirt-yarn/chatgpt':{
-title: "ChatGPT said:",
+title: "what ChatGPT said",
 hasMarkdown: true,
 },
 'asking-ai/crafty/how-do-you-make-t-shirt-yarn/index':{
 title: "How do you make t-shirt yarn?",
 },
 'asking-ai/technical/list-files-from-a-terminal/bing':{
-title: "bing said:",
+title: "what Bing said",
 hasMarkdown: true,
 },
 'asking-ai/technical/list-files-from-a-terminal/index':{
 title: "How do you list files from a terminal",
 },
 'asking-ai/technical/most-common-term-for-writing-computer-code/bard':{
-title: "Bard said:",
+title: "what Bard said",
 hasMarkdown: true,
 },
 'asking-ai/technical/most-common-term-for-writing-computer-code/bing':{
-title: "bing said:",
+title: "what Bing said",
 hasMarkdown: true,
 },
 'asking-ai/technical/most-common-term-for-writing-computer-code/chatgpt':{
-title: "ChatGPT said:",
+title: "what ChatGPT said",
 hasMarkdown: true,
 },
 'asking-ai/technical/most-common-term-for-writing-computer-code/index':{
 title: "What is the most common term for writing computer code?",
 },
+'asking-ai/technical/no-cost-website-hosts/bard':{
+hasMarkdown: true,
+},
+'asking-ai/technical/no-cost-website-hosts/bing':{
+hasMarkdown: true,
+},
+'asking-ai/technical/no-cost-website-hosts/chatgpt':{
+hasMarkdown: true,
+},
+'asking-ai/technical/no-cost-website-hosts/index':{
+title: "Please list 10 places to host a website for free.",
+},
 'asking-ai/technical/sitemap-file-format-preferred-by-search-engines/bard':{
-title: "Bard said:",
+title: "what Bard said",
 hasMarkdown: true,
 },
 'asking-ai/technical/sitemap-file-format-preferred-by-search-engines/bing':{
-title: "bing said:",
+title: "what Bing said",
 hasMarkdown: true,
 },
 'asking-ai/technical/sitemap-file-format-preferred-by-search-engines/chatgpt':{
-title: "ChatGPT said:",
+title: "what ChatGPT said",
 hasMarkdown: true,
 },
 'asking-ai/technical/sitemap-file-format-preferred-by-search-engines/index':{
 title: "I need to know the file format for the sitemap file that each search engine prefers.",
 },
-'blogs/kristy/2024/01/01-planting-seeds-using-my-morning-tea-bags':{
+'blogs/kristy/2024/01/20/finding-new-recipes-to-try':{
 hasMarkdown: true,
 },
-'blogs/kristy/2024/01/14-feeding-leftover-bacon-fat-to-birds':{
+'blogs/kristy/2024/01/x/18-asking-ai':{
 hasMarkdown: true,
 },
-'blogs/kristy/2024/01/18-asking-ai':{
-hasMarkdown: true,
-},
-'blogs/kristy/2024/01/19-asking-ai':{
+'blogs/kristy/2024/01/x/19-asking-ai':{
 hasMarkdown: true,
 },
 'coding/frameworks/bootstrap/cheatsheet-v5.3':{
@@ -138,22 +147,25 @@ hasMarkdown: true,
 title: "Yeast Rolls",
 hasMarkdown: true,
 },
-'recipes/want-to-try/beef-stew-20240120-bard':{
+'recipes/want-to-try/beef-stew/beef-stew-20240120-bard':{
 hasMarkdown: true,
 },
-'recipes/want-to-try/beef-stew-20240120-bing':{
+'recipes/want-to-try/beef-stew/beef-stew-20240120-bing':{
 hasMarkdown: true,
 },
-'recipes/want-to-try/beef-stew-20240120-chatgpt':{
+'recipes/want-to-try/beef-stew/beef-stew-20240120-chatgpt':{
 hasMarkdown: true,
 },
-'recipes/want-to-try/crab-cakes-20240120-bard':{
+'recipes/want-to-try/crab-cakes/crab-cakes-20240120-bard':{
 hasMarkdown: true,
 },
-'recipes/want-to-try/crab-cakes-20240120-bing':{
+'recipes/want-to-try/crab-cakes/crab-cakes-20240120-bing':{
 hasMarkdown: true,
 },
-'recipes/want-to-try/crab-cakes-20240120-chatgpt':{
+'recipes/want-to-try/crab-cakes/crab-cakes-20240120-chatgpt':{
+hasMarkdown: true,
+},
+'recipes/want-to-try/index':{
 hasMarkdown: true,
 },
 'sitemap':{
