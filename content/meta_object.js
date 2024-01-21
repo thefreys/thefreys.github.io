@@ -53,6 +53,18 @@ hasMarkdown: true,
 'asking-ai/technical/no-cost-website-hosts/index':{
 title: "Please list 10 places to host a website for free.",
 },
+'asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date/bard':{
+hasMarkdown: true,
+},
+'asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date/bing':{
+hasMarkdown: true,
+},
+'asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date/chatgpt':{
+hasMarkdown: true,
+},
+'asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date/index':{
+title: "Please write a bash script to list all the files in a local clone of a git repository with their last commit date.",
+},
 'asking-ai/technical/sitemap-file-format-preferred-by-search-engines/bard':{
 title: "what Bard said",
 hasMarkdown: true,
