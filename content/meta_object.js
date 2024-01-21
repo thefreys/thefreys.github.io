@@ -4,6 +4,21 @@ title: "Not Found",
 exclude_from_sitemap: true,
 hasMarkdown: true,
 },
+'activities/camping/campground-notes':{
+hasMarkdown: true,
+},
+'activities/camping/food-ideas':{
+hasMarkdown: true,
+},
+'activities/camping/fun-ideas':{
+hasMarkdown: true,
+},
+'activities/camping/gear-checklist':{
+hasMarkdown: true,
+},
+'activities/camping/sample_trip_a':{
+hasMarkdown: true,
+},
 'asking-ai/crafty/how-do-you-make-t-shirt-yarn/bard':{
 title: "what Bard said",
 hasMarkdown: true,
