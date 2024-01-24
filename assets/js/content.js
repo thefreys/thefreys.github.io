@@ -1,12 +1,12 @@
-import { metaObject } from '../../content/meta_object.js'; // relative to this file
+import { fileDates } from '../../fileDates.js';
+import { metaObject } from '../../metaObject.js';
 var moduleConfig = {};
-moduleConfig.siteName = 'theFreys.github.io'; // relative to root index.html
-moduleConfig.contentPathPrefix = 'content/'; // relative to root index.html
-moduleConfig.hamburgerLevelOneItems = ['blogs','recipes','upcycling','sitemap'];
+moduleConfig.siteName = 'The Freys';
+moduleConfig.contentPathPrefix = 'content/';
+moduleConfig.hamburgerLevelOneItems = ['recipes','upcycling','blogs','sitemap'];
 
 var page = {};
 var sitemap = {};
-
 
 var templateMenuItem = `
   <li class="nav-item"><a class="nav-link" href="{{href}}">{{title}}</a></li>`;
@@ -61,7 +61,6 @@ function buildSiteMapItems(items, parent) {
 
 function buildSiteMap(parent) {     
     console.log('buildSiteMap');
-    //console.log(sitemap[' '].children);return;
     if (parent === null || parent === undefined) {
         return;
     } 
@@ -342,7 +341,6 @@ export function init() {
         if(sitemap[page.path].isIndex){
             //sitemap[page.path].defaultIndex = sitemap[page.path].defaultIndex + '<p>This page was auto generated due to no content files found for '+page.path+' </p>'
             document.getElementById('htmlContent').innerHTML = sitemap[page.path].defaultIndex;
-            //buildBreadcrumbs();
             return;
         }
         //window.location.href = 'index.html?x=404&reason=no-content&x2='+page.path;
