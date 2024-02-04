@@ -1,9 +1,12 @@
-import { content } from '../../metaObject.js';
+import { fileDates } from '../../fileDates.js';
+import { metaObject } from '../../metaObject.js';
 var moduleConfig = {};
 moduleConfig.siteName = 'The Freys';
+moduleConfig.contentPathPrefix = 'content/';
 moduleConfig.hamburgerLevelOneItems = ['recipes','upcycling','blogs','sitemap'];
 
 var page = {};
+var sitemap = {};
 
 var templateMenuItem = `
   <li class="nav-item"><a class="nav-link" href="{{href}}">{{title}}</a></li>`;
@@ -37,7 +40,7 @@ function buildSiteMapItems(items, parent) {
     var i = 0;
     for (const key in items) {
         i++;
-        var item = content[items[key]];
+        var item = sitemap[items[key]];
         if (item.exclude_from_sitemap == true){
             continue;
         }
@@ -62,7 +65,7 @@ function buildSiteMap(parent) {
         return;
     } 
     var ul = document.createElement("ul");
-    buildSiteMapItems(content[' '].children,ul); 
+    buildSiteMapItems(sitemap['index'].children,ul); 
     parent.appendChild(ul);
 }
 
@@ -72,7 +75,7 @@ function buildAreaMap(parent) {
         return;
     } 
     var ul = document.createElement("ul");
-    buildSiteMapItems(content[page.path].children,ul);    
+    buildSiteMapItems(sitemap[page.path].children,ul);    
     parent.appendChild(ul);    
 }
 
@@ -86,13 +89,13 @@ function buildBreadcrumbs() {
     breadcrumbs = breadcrumbs + breadcrumbItem;
     for (var i = 0; i < page.breadcrumbs.length; i++) {
         var breadcrumbItem = breadcrumbItemTemplate;
-        var sitemapItem = content[page.breadcrumbs[i]];
+        var sitemapItem = sitemap[page.breadcrumbs[i]];
         breadcrumbItem = breadcrumbItem.replace(/{{title}}/g,sitemapItem.title);
         breadcrumbItem = breadcrumbItem.replace(/{{href}}/g,'index.html?x='+sitemapItem.metaKey);
         breadcrumbs = breadcrumbs + breadcrumbItem;
     }
     var breadcrumbItem = breadcrumbItemCurrentTemplate;
-    var sitemapItem = content[page.path];
+    var sitemapItem = sitemap[page.path];
     breadcrumbItem = breadcrumbItem.replace(/{{title}}/g,sitemapItem.title);
     breadcrumbItem = breadcrumbItem.replace(/{{href}}/g,'index.html?x='+sitemapItem.metaKey);
     breadcrumbs = breadcrumbs + breadcrumbItem;
@@ -103,7 +106,7 @@ function buildMenu() {
     console.log('buildMenu');
     var menu = '';
     for (var i = 0; i < moduleConfig.hamburgerLevelOneItems.length; i++) {
-        var sitemapItem = content[moduleConfig.hamburgerLevelOneItems[i]];
+        var sitemapItem = sitemap[moduleConfig.hamburgerLevelOneItems[i]];
         var menuItem = templateMenuItem;
         if(sitemapItem.children.length > 0){
             var menuItem = templateMenuItemWithChildren;
@@ -113,7 +116,7 @@ function buildMenu() {
         var menuItemChildren = '';
         for (var j = 0; j < sitemapItem.children.length; j++) {
             var menuChildItem = templateMenuItemChild;
-            var sitemapChildItem = content[sitemapItem.children[j]];
+            var sitemapChildItem = sitemap[sitemapItem.children[j]];
             menuChildItem = menuChildItem.replace(/{{title}}/g,sitemapChildItem.title);
             menuChildItem = menuChildItem.replace(/{{href}}/g,'index.html?x='+sitemapChildItem.metaKey);
             menuItemChildren = menuItemChildren + menuChildItem;
@@ -131,6 +134,12 @@ function buildAfterContentLoaded() {
     buildSiteMap(document.getElementById("site-map"));
     if(document.getElementById("area-map")){
       buildAreaMap(document.getElementById("area-map"));
+    }
+    else if (sitemap[page.path].isIndex) {
+        buildAreaMap(document.getElementById("areaMap"));
+    }
+    else if (page.filename == 'index') {
+        buildAreaMap(document.getElementById("areaMap"));
     }
     var spans = document.querySelectorAll('span.site-name');
     spans.forEach(function(span) {
@@ -193,26 +202,149 @@ export function init() {
         page.parentPath = '';
     }
     page.breadcrumbs =  page.breadcrumbs.reverse();
-    
-    //if(page.filename=='index'){
-    //    page.breadcrumbs.pop();
-    //}
-
+    if(page.filename=='index'){
+        page.breadcrumbs.pop();
+    }
+    //console.log(page.breadcrumbs);
     page.href = 'index.html?x=' + page.path; 
         
-    if (typeof content[page.path] === 'undefined') {
-        window.location.href = 'index.html?x=404&reason=no-path&x2='+page.path;
-        //window.location.href = page.parentPath;
+    sitemap[' '] = {
+        'levelNumber': 0,
+        'exclude_from_sitemap': false, 
+        'title': 'Root', 
+        'children': [], 
+    }
+    for (const key in metaObject) {
+        var keyParts = key.split('/');   
+        var tmpParts = [];
+        // loop through each folder in the key
+        for (var pathIndex = 0; pathIndex < keyParts.length; pathIndex++) {
+            var tmpParentPath = tmpParts.join('/');
+            tmpParts.push(keyParts[pathIndex]);
+            var tmpPath = tmpParts.join('/');
+            if (typeof sitemap[tmpPath] === 'undefined') {
+                sitemap[tmpPath] = {};
+                sitemap[tmpPath].levelNumber = pathIndex + 1;
+                sitemap[tmpPath].lastPath = keyParts[pathIndex];
+                sitemap[tmpPath].parentKey = tmpParentPath;
+                if (pathIndex == 0){
+                    sitemap[tmpPath].parentKey = ' ';
+                }
+                sitemap[tmpPath].exclude_from_sitemap = false;
+                sitemap[tmpPath].children = [];
+            }
+        };
+    }
+
+    for (const key in sitemap) {
+        if (key != ' ') {
+            sitemap[sitemap[key].parentKey].children.push(key);
+        }
+    }
+
+    for (const key in sitemap) {
+        if (sitemap[key].children.length == 1 && sitemap[sitemap[key].children[0]].lastPath == 'index') {
+            sitemap[key].metaKey = key + '/index';
+            sitemap[key].isIndex = false;
+            sitemap[key].children = [];
+        }
+        else if(sitemap[key].children.length == 1 && sitemap[key].lastPath == 'index'){
+            sitemap[key].metaKey = key;
+            sitemap[key].isIndex = true;
+        }
+        else if (sitemap[key].children.length > 0 && key == ' ') {
+            sitemap[key].metaKey = key;
+            sitemap[key].isIndex = true;
+        }
+        else if (sitemap[key].children.length > 0) {
+            sitemap[key].metaKey = key + '/index';
+            sitemap[key].isIndex = true;
+        }
+        else {
+            sitemap[key].metaKey = key;
+            sitemap[key].isIndex = false;
+        }
+    }
+    for (const key in sitemap) {
+        if(typeof sitemap[sitemap[key].metaKey] === 'undefined') {
+            sitemap[key].metaKey = key;
+        }
+    }
+    for (const key in sitemap) {
+        if(sitemap[key].lastPath == 'index'){
+            sitemap[key].children = sitemap[sitemap[key].parentKey].children;
+            sitemap[key].title = sitemap[sitemap[key].parentKey].title;
+        }
+    }
+
+    for (const key in sitemap) {
+        if(!(typeof metaObject[sitemap[key].metaKey] === 'undefined')) {
+            var metaItem = metaObject[sitemap[key].metaKey];
+            if (!(typeof metaItem.title === 'undefined')) {
+                sitemap[key].title = metaItem.title;
+            }
+            if (!(typeof metaItem.exclude_from_sitemap === 'undefined')) {
+                sitemap[key].exclude_from_sitemap = metaItem.exclude_from_sitemap;
+            }
+            if (typeof sitemap.mdContentPath === 'undefined' && !(typeof metaItem.hasMarkdown === 'undefined') && metaItem.hasMarkdown == true) {
+                sitemap[key].mdContentPath = moduleConfig.contentPathPrefix + sitemap[key].metaKey + '.md';
+            }
+            if (typeof sitemap.htmlContentPath === 'undefined' && !(typeof metaItem.hasHtml === 'undefined') && metaItem.hasHtml == true) {
+                sitemap[key].htmlContentPath = moduleConfig.contentPathPrefix + sitemap[key].metaKey + '.html';
+            }
+            if (typeof sitemap.jsContentPath === 'undefined' && !(typeof metaItem.hasJavaScript === 'undefined') && metaItem.hasJavaScript == true) {
+                sitemap[key].jsContentPath = moduleConfig.contentPathPrefix + sitemap[key].metaKey + '.js';
+            }
+        }
+    }
+
+    for (const key in sitemap) {
+        if (sitemap[key].metaKey != key || sitemap[key].lastPath == 'index') {
+            var newChildren = sitemap[key].children;
+            for (const c in sitemap[key].children) {
+                if (sitemap[sitemap[key].children[c]].lastPath == 'index'){
+                    newChildren.splice(c,1);
+                }
+            }
+            sitemap[key].children = newChildren;
+        }
+        if (typeof sitemap[key].title === 'undefined'){
+            sitemap[key].title = sitemap[key].lastPath.replace(/-/g,' ');
+        }
+    }
+    //document.getElementById('debugContent').innerHTML = JSON.stringify(sitemap,null,4);
+
+    if (page.path =='404' && typeof sitemap[page.path] === 'undefined'){
+        document.getElementById('htmlContent').innerHTML = '404 page is missing';
+        return;
+    }
+
+    if (typeof sitemap[page.path] === 'undefined') {
+        if (page.filename != 'index'){
+            window.location.href = 'index.html?x=404&reason=no-sitemap&x2='+page.path;
+            return;
+        }
+        window.location.href = page.parentPath;
         return;
     }
     
-    
-    if (content[page.path].hasMarkdown === false && 
-        content[page.path].hasHtml === false && 
-        content[page.path].hasJavascript === false && 
-        content[page.path].hasIndex === false) {
-        window.location.href = 'index.html?x=404&reason=no-content&x2='+page.path;
-        return;
+    sitemap[page.path].defaultIndex = `
+        <h1>`+sitemap[page.path].title+`</h1>
+        <hr />
+        <div id="area-map"></div>
+        `;
+
+    if (typeof sitemap[page.path].mdContentPath === 'undefined' &&
+        typeof sitemap[page.path].htmlContentPath === 'undefined' &&
+        typeof sitemap[page.path].jsContentPath === 'undefined'){
+
+        if(sitemap[page.path].isIndex){
+            //sitemap[page.path].defaultIndex = sitemap[page.path].defaultIndex + '<p>This page was auto generated due to no content files found for '+page.path+' </p>'
+            document.getElementById('htmlContent').innerHTML = sitemap[page.path].defaultIndex;
+            return;
+        }
+        //window.location.href = 'index.html?x=404&reason=no-content&x2='+page.path;
+        //return;
     }
     
     // fetch content files
@@ -223,13 +355,13 @@ export function init() {
     
     var promises = [];
 
-    if (typeof content[page.path].mdContentPath === 'undefined') {
+    if (typeof sitemap[page.path].mdContentPath === 'undefined') {
         mdContent404 = true;
     }
     else {
         var mdPromise;
         promises.push(mdPromise);
-        mdPromise = fetch(content[page.path].mdContentPath)
+        mdPromise = fetch(sitemap[page.path].mdContentPath)
         .then(response => {
             if (!response.ok) {
                 if (response.status === 404) {
@@ -253,13 +385,13 @@ export function init() {
         });
     }
 
-    if (typeof content[page.path].htmlContentPath === 'undefined') {
+    if (typeof sitemap[page.path].htmlContentPath === 'undefined') {
         htmlContent404 = true;
     }
     else {
         var htmlPromise;
         promises.push(htmlPromise);
-        htmlPromise = fetch(content[page.path].htmlContentPath)
+        htmlPromise = fetch(sitemap[page.path].htmlContentPath)
         .then(response => {
             if (!response.ok) {
                 if (response.status === 404) {
@@ -282,13 +414,13 @@ export function init() {
         });  
     }
 
-    if (typeof content[page.path].jsContentPath === 'undefined') {
+    if (typeof sitemap[page.path].jsContentPath === 'undefined') {
         jsContent404 = true;
     }
     else {
         var jsPromise;
         promises.push(jsPromise);
-        jsPromise = fetch(content[page.path].jsContentPath)
+        jsPromise = fetch(sitemap[page.path].jsContentPath)
         .then(response => {
             if (!response.ok) {
                 if (response.status === 404) {
@@ -304,7 +436,7 @@ export function init() {
         .then(js => {
             if (js > '') {
                 var linkDate = new Date().toISOString().replace(/:/g, '').replace(/ /g, '').replace(/-/g, '');
-                document.getElementById('jsContent').src = content[page.path].jsContentPath + '?date=' + linkDate;
+                document.getElementById('jsContent').src = sitemap[page.path].jsContentPath + '?date=' + linkDate;
             }
         })
         .catch(error => {
@@ -320,7 +452,9 @@ export function init() {
                     document.getElementById('htmlContent').innerHTML = '404 page is missing';
                     return;
                 }
-                window.location.href = 'index.html?x=404&reason=no-content&x2='+page.path;
+                //
+                sitemap[page.path].defaultIndex = sitemap[page.path].defaultIndex + '<p>This page was auto generated due to failing to fetch content files for '+page.path+' </p>'
+                document.getElementById('htmlContent').innerHTML = sitemap[page.path].defaultIndex;
                 return;
             }
         })
