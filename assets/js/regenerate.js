@@ -31,6 +31,7 @@ content['404'].content = `
 <div id="site-map"></div>`;
 
 var otherFiles = {}
+var hiddenPaths = [];
 for (const p in fileDates) {
 
     if (!p.startsWith(siteConfig.contentPathPrefix)) {
@@ -60,6 +61,7 @@ for (const p in fileDates) {
     if (filename === 'html.html') { content[key].hasHtml = true; content[key].dateHtml = fileDates[p]; }
     if (filename === 'markdown.md') { content[key].hasMarkdown = true; content[key].dateMarkdown = fileDates[p]; }
     if (filename === 'javascript.js') { content[key].hasJavascript = true; content[key].dateJavascript = fileDates[p]; }  
+    if (filename === '.hide') { hiddenPaths.push(key) }  
 
     var key = keyParts.join('/');
     if(key == ''){key = ''}
@@ -70,42 +72,39 @@ for (const p in fileDates) {
     }
 }
 
-for (const p in content) {
-    
-    var keyParts = p.split('/');   
-    //var endPathPart = keyParts.pop();
-    //if (content[p].title == null || content[p].title == ''){
-    //    content[p].title = endPathPart;
-    //}
+for (const i in hiddenPaths) {
+    var key = hiddenPaths[i];
+    for (const p in content) {
+        if(p.startsWith(key)){
+            console.log('deleting: '+p);
+            delete content[p];
+        }
+    }
+}
 
+
+for (const p in content) {
     if(content[p].hasHtml || content[p].hasMarkdown || content[p].hasJavascript){   
+        var keyParts = p.split('/');  
         // loop through each folder in the key
         while (keyParts.length > 0) {
             var childKey = keyParts.join('/');
-            var parentKey = content[childKey].parentKey;
-            if (typeof content[parentKey] === 'undefined'){
-                console.log(parentKey);
-            }
-            else {
-                if (!content[parentKey].children.includes(childKey)) {
-                    content[parentKey].children.push(childKey);
-                }
-            }
             var lastPart = keyParts.pop();
+            if (typeof content[childKey] === 'undefined'){
+                console.log('childKey undefined: '+childKey+' p:'+p);
+                continue;
+            }
+            var parentKey = content[childKey].parentKey;
             if (content[childKey].title == null || content[childKey].title == ''){content[childKey].title = lastPart}
+            if (typeof content[parentKey] === 'undefined'){
+                console.log('parentKey undefined: '+parentKey+' p:'+p);
+                continue;
+            }
+            if (!content[parentKey].children.includes(childKey)) {
+                content[parentKey].children.push(childKey);
+            }            
         }
     }
-
-
-
-    
-    // if(content[key].hasHtml || content[key].hasMarkdown || content[key].hasJavascript){
-    //     console.log(key); 
-    //     console.log(content[key].parentKey); 
-    //     if (content[key].parentKey != null && !content[content[key].parentKey].children.includes(key)) {
-    //         content[content[key].parentKey].children.push(key);
-    //     }
-    // }
 }
 
 //console.log(content);

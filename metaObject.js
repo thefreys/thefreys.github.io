@@ -30,7 +30,7 @@ export const content = {
       "hasJavascript": false,
       "title": "Welcome  ",
       "content": null,
-      "dateTitle": "2024-02-04 10:54:21 -0500"
+      "dateTitle": "2024-02-04 14:34:43 -0500"
     },
     "activities": {
       "levelNumber": 1,
@@ -217,8 +217,7 @@ export const content = {
         "asking-ai/technical/most-common-term-for-writing-computer-code",
         "asking-ai/technical/no-cost-website-hosts",
         "asking-ai/technical/shell-scripting",
-        "asking-ai/technical/sitemap-file-format-preferred-by-search-engines",
-        "asking-ai/technical/trim-file-leading-trailing-whitespace"
+        "asking-ai/technical/sitemap-file-format-preferred-by-search-engines"
       ],
       "hasTitle": false,
       "hasMarkdown": false,
@@ -459,7 +458,7 @@ export const content = {
       "hasJavascript": false,
       "title": "I need to know the file format for the sitemap file that each search engine prefers",
       "content": null,
-      "dateTitle": "2024-02-04 10:54:21 -0500"
+      "dateTitle": "2024-02-04 14:34:43 -0500"
     },
     "asking-ai/technical/sitemap-file-format-preferred-by-search-engines/bard": {
       "levelNumber": 4,
@@ -499,61 +498,6 @@ export const content = {
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
-    },
-    "asking-ai/technical/trim-file-leading-trailing-whitespace": {
-      "levelNumber": 3,
-      "parentKey": "asking-ai/technical",
-      "children": [
-        "asking-ai/technical/trim-file-leading-trailing-whitespace/bard",
-        "asking-ai/technical/trim-file-leading-trailing-whitespace/bing",
-        "asking-ai/technical/trim-file-leading-trailing-whitespace/chatgpt"
-      ],
-      "hasTitle": true,
-      "hasMarkdown": false,
-      "hasHtml": false,
-      "hasJavascript": false,
-      "title": "In bash, how do I trim the contents of a file of leading and trailing whitespace and then write it back?",
-      "content": null,
-      "dateTitle": "2024-02-04 10:54:21 -0500"
-    },
-    "asking-ai/technical/trim-file-leading-trailing-whitespace/bard": {
-      "levelNumber": 4,
-      "parentKey": "asking-ai/technical/trim-file-leading-trailing-whitespace",
-      "children": [],
-      "hasTitle": true,
-      "hasMarkdown": true,
-      "hasHtml": false,
-      "hasJavascript": false,
-      "title": "what Bard said",
-      "content": null,
-      "dateTitle": "2024-02-04 10:54:21 -0500",
-      "dateMarkdown": "2024-02-04 10:54:21 -0500"
-    },
-    "asking-ai/technical/trim-file-leading-trailing-whitespace/bing": {
-      "levelNumber": 4,
-      "parentKey": "asking-ai/technical/trim-file-leading-trailing-whitespace",
-      "children": [],
-      "hasTitle": true,
-      "hasMarkdown": true,
-      "hasHtml": false,
-      "hasJavascript": false,
-      "title": "what Bing said",
-      "content": null,
-      "dateTitle": "2024-02-04 10:54:21 -0500",
-      "dateMarkdown": "2024-02-04 10:54:21 -0500"
-    },
-    "asking-ai/technical/trim-file-leading-trailing-whitespace/chatgpt": {
-      "levelNumber": 4,
-      "parentKey": "asking-ai/technical/trim-file-leading-trailing-whitespace",
-      "children": [],
-      "hasTitle": true,
-      "hasMarkdown": true,
-      "hasHtml": false,
-      "hasJavascript": false,
-      "title": "what ChatGPT said",
-      "content": null,
-      "dateTitle": "2024-02-04 10:54:21 -0500",
-      "dateMarkdown": "2024-02-04 10:54:21 -0500"
     },
     "blogs": {
       "levelNumber": 1,
@@ -780,7 +724,7 @@ export const content = {
       "hasJavascript": false,
       "title": "Web Design",
       "content": null,
-      "dateTitle": "2024-02-04 10:54:21 -0500"
+      "dateTitle": "2024-02-04 14:34:43 -0500"
     },
     "coding/web-design/hamburger": {
       "levelNumber": 3,
@@ -842,7 +786,7 @@ export const content = {
       "hasJavascript": false,
       "title": "Desserts",
       "content": null,
-      "dateTitle": "2024-02-04 10:54:21 -0500"
+      "dateTitle": "2024-02-04 14:34:43 -0500"
     },
     "recipes/desserts/almond-cake": {
       "levelNumber": 3,
@@ -921,7 +865,7 @@ export const content = {
       "hasJavascript": false,
       "title": "Meats",
       "content": null,
-      "dateTitle": "2024-02-04 10:54:21 -0500"
+      "dateTitle": "2024-02-04 14:34:43 -0500"
     },
     "recipes/meats/chicken-meatballs": {
       "levelNumber": 3,
@@ -950,7 +894,7 @@ export const content = {
       "hasJavascript": false,
       "title": "Sides",
       "content": null,
-      "dateTitle": "2024-02-04 10:54:21 -0500"
+      "dateTitle": "2024-02-04 14:34:43 -0500"
     },
     "recipes/sides/macaroni-and-cheese-1-pot-version": {
       "levelNumber": 3,
@@ -1168,7 +1112,7 @@ export const content = {
       "hasJavascript": false,
       "title": "Creative Reuse of Food Scraps",
       "content": null,
-      "dateTitle": "2024-02-04 10:54:21 -0500"
+      "dateTitle": "2024-02-04 14:34:43 -0500"
     },
     "upcycling/food-scraps/coffee-grounds": {
       "levelNumber": 3,
@@ -1208,7 +1152,7 @@ export const content = {
       "hasJavascript": false,
       "title": "Creative Reuse of Textiles",
       "content": null,
-      "dateTitle": "2024-02-04 10:54:21 -0500"
+      "dateTitle": "2024-02-04 14:34:43 -0500"
     },
     "upcycling/textiles/t-shirts": {
       "levelNumber": 3,

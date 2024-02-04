@@ -12,7 +12,6 @@ find "$(dirname ${BASH_SOURCE[0]})" -type f -name "_title.txt" | while read file
 done
 echo '}' >> "${pathTitles}"
 
-
 pathTags="${rootdir}/pathTags.js"
 echo 'export const pathTags = {' > "${pathTags}"
 find "$(dirname ${BASH_SOURCE[0]})" -type f -name "_tags.txt" | while read filename; do
