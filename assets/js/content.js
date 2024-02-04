@@ -127,7 +127,7 @@ function buildAfterContentLoaded() {
     buildMenu();
     buildBreadcrumbs();
     buildSiteMap(document.getElementById("site-map"));
-    if(document.getElementById("area-map")){
+    if(document.getElementById("area-map") ){
       buildAreaMap(document.getElementById("area-map"));
     }
     var spans = document.querySelectorAll('span.site-name');
@@ -209,7 +209,7 @@ export function init() {
         content[page.path].hasJavascript === false) {
         if(content[page.path].content === null){
             if(content[page.path].children.length > 0){
-                document.getElementById('htmlContent').innerHTML = `<div id="area-map"></div>`;
+                document.getElementById('htmlContent').innerHTML = '<h1>'+content[page.path].title+'</h1>';
                 return;
 
             }
