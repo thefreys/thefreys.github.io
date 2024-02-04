@@ -1,6 +1,7 @@
 import { content } from '../../metaObject.js';
 var moduleConfig = {};
 moduleConfig.siteName = 'The Freys';
+moduleConfig.contentPathPrefix = 'content/';
 moduleConfig.hamburgerLevelOneItems = ['recipes','upcycling','blogs','sitemap'];
 
 var page = {};
@@ -170,12 +171,12 @@ function watchElementForChanges(elemId, callback) {
 export function init() {
     page.queryParams = getQueryParams();       
     if (typeof page.queryParams['x'] === 'undefined') {
-        window.location.href = 'index.html?x=index';
+        window.location.href = 'index.html?x=home';
         return;
     }
     page.path = page.queryParams['x'];
     if (page.path.endsWith('/')){
-        window.location.href = 'index.html?x=' + page.path + 'index';
+        window.location.href = 'index.html?x=' + page.path.split('/').join('/');
         return;
     }
     page.breadcrumbs = [];
@@ -211,29 +212,43 @@ export function init() {
         content[page.path].hasHtml === false && 
         content[page.path].hasJavascript === false && 
         content[page.path].hasIndex === false) {
-        window.location.href = 'index.html?x=404&reason=no-content&x2='+page.path;
+        if(content[page.path].content === null){
+            window.location.href = 'index.html?x=404&reason=no-content&x2='+page.path;
+            return;
+        }
+        document.getElementById('htmlContent').innerHTML = content[page.path].content;
         return;
     }
     
     // fetch content files
+    page.mdContent404 = false;
+    page.htmlContent404 = false;
+    page.jsContent404 = false;
+    page.indexContent404 = false;
+    
+    page.mdContentPath = null;
+    page.htmlContentPath = null;
+    page.jsContentPath = null;
+    page.indexContentPath = null;
 
-    var mdContent404 = false;
-    var htmlContent404 = false;
-    var jsContent404 = false;
+    if(content[page.path].hasMarkdown){page.mdContentPath = moduleConfig.contentPathPrefix + page.path + '/markdown.md'}
+    if(content[page.path].hasHtml){page.htmlContentPath = moduleConfig.contentPathPrefix + page.path + '/html.html'}
+    if(content[page.path].hasJavascript){page.jsContentPath = moduleConfig.contentPathPrefix + page.path + '/javascript.js'}
+    if(content[page.path].hasIndex){page.indexContentPath = moduleConfig.contentPathPrefix + page.path + '/_index.html'}
     
     var promises = [];
 
-    if (typeof content[page.path].mdContentPath === 'undefined') {
-        mdContent404 = true;
+    if (page.mdContentPath == null) {
+        page.mdContent404 = true;
     }
     else {
         var mdPromise;
         promises.push(mdPromise);
-        mdPromise = fetch(content[page.path].mdContentPath)
+        mdPromise = fetch(page.mdContentPath)
         .then(response => {
             if (!response.ok) {
                 if (response.status === 404) {
-                    mdContent404 = true;
+                    page.mdContent404 = true;
                     return;
                 }
                 if (!response.ok) {
@@ -253,17 +268,17 @@ export function init() {
         });
     }
 
-    if (typeof content[page.path].htmlContentPath === 'undefined') {
-        htmlContent404 = true;
+    if (page.htmlContentPath == null) {
+        page.htmlContent404 = true;
     }
     else {
         var htmlPromise;
         promises.push(htmlPromise);
-        htmlPromise = fetch(content[page.path].htmlContentPath)
+        htmlPromise = fetch(page.htmlContentPath)
         .then(response => {
             if (!response.ok) {
                 if (response.status === 404) {
-                    htmlContent404 = true;
+                    page.htmlContent404 = true;
                     return;
                 }
                 if (!response.ok) {
@@ -282,17 +297,17 @@ export function init() {
         });  
     }
 
-    if (typeof content[page.path].jsContentPath === 'undefined') {
-        jsContent404 = true;
+    if (page.jsContentPath == null) {
+        page.jsContent404 = true;
     }
     else {
         var jsPromise;
         promises.push(jsPromise);
-        jsPromise = fetch(content[page.path].jsContentPath)
+        jsPromise = fetch(page.jsContentPath)
         .then(response => {
             if (!response.ok) {
                 if (response.status === 404) {
-                    jsContent404 = true;
+                    page.jsContent404 = true;
                     return;
                 }
                 if (!response.ok) {
@@ -304,7 +319,7 @@ export function init() {
         .then(js => {
             if (js > '') {
                 var linkDate = new Date().toISOString().replace(/:/g, '').replace(/ /g, '').replace(/-/g, '');
-                document.getElementById('jsContent').src = content[page.path].jsContentPath + '?date=' + linkDate;
+                document.getElementById('jsContent').src = page.jsContentPath + '?date=' + linkDate;
             }
         })
         .catch(error => {
@@ -312,10 +327,40 @@ export function init() {
         });  
     }
 
+    if (page.indexContentPath == null) {
+        page.indexContent404 = true;
+    }
+    else {
+        var indexPromise;
+        promises.push(indexPromise);
+        indexPromise = fetch(page.indexContentPath)
+        .then(response => {
+            if (!response.ok) {
+                if (response.status === 404) {
+                    page.indexContent404 = true;
+                    return;
+                }
+                if (!response.ok) {
+                    throw new Error('Network response was not ok: ' + response.statusText);
+                }
+            }
+            return response.text(); 
+        })
+        .then(html => {
+            if (html > '') {
+                document.getElementById('htmlContent').innerHTML = html;
+            }
+        })
+        .catch(error => {
+            console.error('fetch/catch error:', error);
+        });  
+    }
+
+
     Promise.all(promises)
         .then((results) => {
             console.log('All promises resolved:', results);
-            if(mdContent404 && htmlContent404 && jsContent404){
+            if(page.mdContent404 && page.htmlContent404 && page.jsContent404){
                 if(page.path =='404'){
                     document.getElementById('htmlContent').innerHTML = '404 page is missing';
                     return;

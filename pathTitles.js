@@ -44,6 +44,7 @@ export const pathTitles = {
 'recipes/want-to-try/crab-cakes/crab-cakes-20240120-chatgpt':``,
 'recipes':`Recipes`,
 'sitemap':`Sitemap`,
+'this-should-not-appear':``,
 'upcycling/food-scraps/coffee-grounds':`Reusing Coffee Grounds`,
 'upcycling/food-scraps/tea-bags':`Reusing Tea Bags`,
 'upcycling/textiles/t-shirts':`Upcycling T-shirts`,

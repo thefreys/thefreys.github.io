@@ -1,0 +1,1 @@
+In bash, how do I trim the contents of a file of leading and trailing whitespace and then write it back?
