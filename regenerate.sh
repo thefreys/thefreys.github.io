@@ -1,25 +1,26 @@
 #!/bin/bash
 rootdir="$(dirname ${BASH_SOURCE[0]})"
-
-
-find "$(dirname ${BASH_SOURCE[0]})" -type f -name "_title.txt" | while read filename; do
-    pathname=$(dirname ${filename})
-    pathname=${pathname:10}
-    echo "'${pathname}':\`$(cat "${filename}")\`," >> "${pathTitles}"
-    #cat "'$filename':'$(git log -1 --format="%ai" -- "$filename")'," >> "${pathTitles}"
-done
-
-pathTitles="${rootdir}/pathTitles.js"
+#jsdir="${rootdir}/assets/js"
 cd "${rootdir}"
 
+pathTitles="${rootdir}/pathTitles.js"
 echo 'export const pathTitles = {' > "${pathTitles}"
 find "$(dirname ${BASH_SOURCE[0]})" -type f -name "_title.txt" | while read filename; do
     pathname=$(dirname ${filename})
     pathname=${pathname:10}
     echo "'${pathname}':\`$(cat "${filename}")\`," >> "${pathTitles}"
-    #cat "'$filename':'$(git log -1 --format="%ai" -- "$filename")'," >> "${pathTitles}"
 done
 echo '}' >> "${pathTitles}"
+
+
+pathTags="${rootdir}/pathTags.js"
+echo 'export const pathTags = {' > "${pathTags}"
+find "$(dirname ${BASH_SOURCE[0]})" -type f -name "_tags.txt" | while read filename; do
+    pathname=$(dirname ${filename})
+    pathname=${pathname:10}
+    echo "'${pathname}':\`$(cat "${filename}")\`," >> "${pathTags}"
+done
+echo '}' >> "${pathTags}"
 
 filedates="${rootdir}/fileDates.js"
 cd "${rootdir}"

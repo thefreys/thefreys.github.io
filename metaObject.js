@@ -3,9 +3,8 @@
 export const content = {
     "404": {
       "levelNumber": 1,
-      "parentKey": " ",
+      "parentKey": null,
       "children": [],
-      "hasIndex": false,
       "hasTitle": false,
       "hasMarkdown": false,
       "hasHtml": false,
@@ -13,7 +12,7 @@ export const content = {
       "title": "Explore",
       "content": "\n<h1>404 Not Found</h1><hr />\n<p>Page not found.</p>\n<div id=\"site-map\"></div>"
     },
-    " ": {
+    "": {
       "levelNumber": 0,
       "parentKey": null,
       "children": [
@@ -25,28 +24,26 @@ export const content = {
         "sitemap",
         "upcycling"
       ],
-      "hasIndex": false,
+      "hasTitle": true,
+      "hasMarkdown": false,
+      "hasHtml": false,
+      "hasJavascript": false,
+      "title": "Welcome  ",
+      "content": null,
+      "dateTitle": "2024-02-04 10:54:21 -0500"
+    },
+    "activities": {
+      "levelNumber": 1,
+      "parentKey": "",
+      "children": [
+        "activities/camping"
+      ],
       "hasTitle": false,
       "hasMarkdown": false,
       "hasHtml": false,
       "hasJavascript": false,
-      "title": null,
+      "title": "activities",
       "content": null
-    },
-    "activities": {
-      "levelNumber": 1,
-      "parentKey": " ",
-      "children": [
-        "activities/camping"
-      ],
-      "hasIndex": false,
-      "hasTitle": true,
-      "hasMarkdown": true,
-      "hasHtml": false,
-      "hasJavascript": false,
-      "content": null,
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
     },
     "activities/camping": {
       "levelNumber": 2,
@@ -56,98 +53,93 @@ export const content = {
         "activities/camping/food-ideas",
         "activities/camping/fun-ideas",
         "activities/camping/gear-checklist",
-        "activities/camping/sample_trip_a"
+        "activities/camping/sample-trip"
       ],
-      "hasIndex": false,
-      "hasTitle": true,
-      "hasMarkdown": true,
+      "hasTitle": false,
+      "hasMarkdown": false,
       "hasHtml": false,
       "hasJavascript": false,
-      "content": null,
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "title": "camping",
+      "content": null
     },
     "activities/camping/campground-notes": {
       "levelNumber": 3,
       "parentKey": "activities/camping",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "Campground Notes",
       "content": null,
-      "dateTitle": "2024-01-24 08:44:05 -0500",
+      "dateTitle": "2024-02-04 10:54:21 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
     },
     "activities/camping/food-ideas": {
       "levelNumber": 3,
       "parentKey": "activities/camping",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "Food Ideas",
       "content": null,
-      "dateTitle": "2024-01-24 08:44:05 -0500",
+      "dateTitle": "2024-02-04 10:54:21 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
     },
     "activities/camping/fun-ideas": {
       "levelNumber": 3,
       "parentKey": "activities/camping",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "Fun ideas",
       "content": null,
-      "dateTitle": "2024-01-24 08:44:05 -0500",
+      "dateTitle": "2024-02-04 10:54:21 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
     },
     "activities/camping/gear-checklist": {
       "levelNumber": 3,
       "parentKey": "activities/camping",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "Gear Checklist",
       "content": null,
-      "dateTitle": "2024-01-24 08:44:05 -0500",
+      "dateTitle": "2024-02-04 10:54:21 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
     },
-    "activities/camping/sample_trip_a": {
+    "activities/camping/sample-trip": {
       "levelNumber": 3,
       "parentKey": "activities/camping",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "Sample Trip",
       "content": null,
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "dateTitle": "2024-02-04 10:54:21 -0500",
+      "dateMarkdown": "2024-02-04 10:54:21 -0500"
     },
     "asking-ai": {
       "levelNumber": 1,
-      "parentKey": " ",
+      "parentKey": "",
       "children": [
         "asking-ai/crafty",
         "asking-ai/technical"
       ],
-      "hasIndex": true,
-      "hasTitle": true,
-      "hasMarkdown": true,
+      "hasTitle": false,
+      "hasMarkdown": false,
       "hasHtml": false,
       "hasJavascript": false,
-      "content": null,
-      "dateIndex": "2024-01-24 08:44:05 -0500",
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "title": "asking-ai",
+      "content": null
     },
     "asking-ai/crafty": {
       "levelNumber": 2,
@@ -155,15 +147,12 @@ export const content = {
       "children": [
         "asking-ai/crafty/how-do-you-make-t-shirt-yarn"
       ],
-      "hasIndex": true,
-      "hasTitle": true,
-      "hasMarkdown": true,
+      "hasTitle": false,
+      "hasMarkdown": false,
       "hasHtml": false,
       "hasJavascript": false,
-      "content": null,
-      "dateIndex": "2024-01-24 08:44:05 -0500",
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "title": "crafty",
+      "content": null
     },
     "asking-ai/crafty/how-do-you-make-t-shirt-yarn": {
       "levelNumber": 3,
@@ -173,25 +162,23 @@ export const content = {
         "asking-ai/crafty/how-do-you-make-t-shirt-yarn/bing",
         "asking-ai/crafty/how-do-you-make-t-shirt-yarn/chatgpt"
       ],
-      "hasIndex": true,
       "hasTitle": true,
-      "hasMarkdown": true,
+      "hasMarkdown": false,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "How do you make t-shirt yarn?",
       "content": null,
-      "dateIndex": "2024-01-24 08:44:05 -0500",
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "dateTitle": "2024-02-04 10:54:21 -0500"
     },
     "asking-ai/crafty/how-do-you-make-t-shirt-yarn/bard": {
       "levelNumber": 4,
       "parentKey": "asking-ai/crafty/how-do-you-make-t-shirt-yarn",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "what Bard said",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -200,11 +187,11 @@ export const content = {
       "levelNumber": 4,
       "parentKey": "asking-ai/crafty/how-do-you-make-t-shirt-yarn",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "what Bing said",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -213,11 +200,11 @@ export const content = {
       "levelNumber": 4,
       "parentKey": "asking-ai/crafty/how-do-you-make-t-shirt-yarn",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "what ChatGPT said",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -230,17 +217,15 @@ export const content = {
         "asking-ai/technical/most-common-term-for-writing-computer-code",
         "asking-ai/technical/no-cost-website-hosts",
         "asking-ai/technical/shell-scripting",
-        "asking-ai/technical/sitemap-file-format-preferred-by-search-engines"
+        "asking-ai/technical/sitemap-file-format-preferred-by-search-engines",
+        "asking-ai/technical/trim-file-leading-trailing-whitespace"
       ],
-      "hasIndex": true,
-      "hasTitle": true,
-      "hasMarkdown": true,
+      "hasTitle": false,
+      "hasMarkdown": false,
       "hasHtml": false,
       "hasJavascript": false,
-      "content": null,
-      "dateIndex": "2024-01-24 08:44:05 -0500",
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "title": "technical",
+      "content": null
     },
     "asking-ai/technical/list-files-from-a-terminal": {
       "levelNumber": 3,
@@ -248,25 +233,23 @@ export const content = {
       "children": [
         "asking-ai/technical/list-files-from-a-terminal/bing"
       ],
-      "hasIndex": true,
       "hasTitle": true,
-      "hasMarkdown": true,
+      "hasMarkdown": false,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "How do you list files from a terminal?",
       "content": null,
-      "dateIndex": "2024-01-24 08:44:05 -0500",
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "dateTitle": "2024-02-04 10:54:21 -0500"
     },
     "asking-ai/technical/list-files-from-a-terminal/bing": {
       "levelNumber": 4,
       "parentKey": "asking-ai/technical/list-files-from-a-terminal",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "what Bing said",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -279,25 +262,23 @@ export const content = {
         "asking-ai/technical/most-common-term-for-writing-computer-code/bing",
         "asking-ai/technical/most-common-term-for-writing-computer-code/chatgpt"
       ],
-      "hasIndex": true,
       "hasTitle": true,
-      "hasMarkdown": true,
+      "hasMarkdown": false,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "What is the most common term for writing computer code?",
       "content": null,
-      "dateIndex": "2024-01-24 08:44:05 -0500",
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "dateTitle": "2024-02-04 10:54:21 -0500"
     },
     "asking-ai/technical/most-common-term-for-writing-computer-code/bard": {
       "levelNumber": 4,
       "parentKey": "asking-ai/technical/most-common-term-for-writing-computer-code",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "what Bard said",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -306,11 +287,11 @@ export const content = {
       "levelNumber": 4,
       "parentKey": "asking-ai/technical/most-common-term-for-writing-computer-code",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "what Bing said",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -319,11 +300,11 @@ export const content = {
       "levelNumber": 4,
       "parentKey": "asking-ai/technical/most-common-term-for-writing-computer-code",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "what ChatGPT said",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -336,25 +317,23 @@ export const content = {
         "asking-ai/technical/no-cost-website-hosts/bing",
         "asking-ai/technical/no-cost-website-hosts/chatgpt"
       ],
-      "hasIndex": true,
       "hasTitle": true,
-      "hasMarkdown": true,
+      "hasMarkdown": false,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "Please list 10 places to host a website for free",
       "content": null,
-      "dateIndex": "2024-01-24 08:44:05 -0500",
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "dateTitle": "2024-02-04 10:54:21 -0500"
     },
     "asking-ai/technical/no-cost-website-hosts/bard": {
       "levelNumber": 4,
       "parentKey": "asking-ai/technical/no-cost-website-hosts",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "bard",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -363,11 +342,11 @@ export const content = {
       "levelNumber": 4,
       "parentKey": "asking-ai/technical/no-cost-website-hosts",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "bing",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -376,11 +355,11 @@ export const content = {
       "levelNumber": 4,
       "parentKey": "asking-ai/technical/no-cost-website-hosts",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "chatgpt",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -391,15 +370,12 @@ export const content = {
       "children": [
         "asking-ai/technical/shell-scripting/bash"
       ],
-      "hasIndex": true,
-      "hasTitle": true,
-      "hasMarkdown": true,
+      "hasTitle": false,
+      "hasMarkdown": false,
       "hasHtml": false,
       "hasJavascript": false,
-      "content": null,
-      "dateIndex": "2024-01-24 08:44:05 -0500",
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "title": "shell-scripting",
+      "content": null
     },
     "asking-ai/technical/shell-scripting/bash": {
       "levelNumber": 4,
@@ -407,15 +383,12 @@ export const content = {
       "children": [
         "asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date"
       ],
-      "hasIndex": true,
-      "hasTitle": true,
-      "hasMarkdown": true,
+      "hasTitle": false,
+      "hasMarkdown": false,
       "hasHtml": false,
       "hasJavascript": false,
-      "content": null,
-      "dateIndex": "2024-01-24 08:44:05 -0500",
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "title": "bash",
+      "content": null
     },
     "asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date": {
       "levelNumber": 5,
@@ -425,25 +398,23 @@ export const content = {
         "asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date/bing",
         "asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date/chatgpt"
       ],
-      "hasIndex": true,
       "hasTitle": true,
-      "hasMarkdown": true,
+      "hasMarkdown": false,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "Please write a bash script to list all the files in a local clone of a git repository with their last commit date",
       "content": null,
-      "dateIndex": "2024-01-24 08:44:05 -0500",
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "dateTitle": "2024-02-04 10:54:21 -0500"
     },
     "asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date/bard": {
       "levelNumber": 6,
       "parentKey": "asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "bard",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -452,11 +423,11 @@ export const content = {
       "levelNumber": 6,
       "parentKey": "asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "bing",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -465,11 +436,11 @@ export const content = {
       "levelNumber": 6,
       "parentKey": "asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "chatgpt",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -482,25 +453,23 @@ export const content = {
         "asking-ai/technical/sitemap-file-format-preferred-by-search-engines/bing",
         "asking-ai/technical/sitemap-file-format-preferred-by-search-engines/chatgpt"
       ],
-      "hasIndex": true,
       "hasTitle": true,
-      "hasMarkdown": true,
+      "hasMarkdown": false,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "I need to know the file format for the sitemap file that each search engine prefers",
       "content": null,
-      "dateIndex": "2024-01-24 08:44:05 -0500",
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "dateTitle": "2024-02-04 10:54:21 -0500"
     },
     "asking-ai/technical/sitemap-file-format-preferred-by-search-engines/bard": {
       "levelNumber": 4,
       "parentKey": "asking-ai/technical/sitemap-file-format-preferred-by-search-engines",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "what Bard said",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -509,11 +478,11 @@ export const content = {
       "levelNumber": 4,
       "parentKey": "asking-ai/technical/sitemap-file-format-preferred-by-search-engines",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "what Bing said",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -522,29 +491,82 @@ export const content = {
       "levelNumber": 4,
       "parentKey": "asking-ai/technical/sitemap-file-format-preferred-by-search-engines",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "what ChatGPT said",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
     },
-    "blogs": {
-      "levelNumber": 1,
-      "parentKey": " ",
+    "asking-ai/technical/trim-file-leading-trailing-whitespace": {
+      "levelNumber": 3,
+      "parentKey": "asking-ai/technical",
       "children": [
-        "blogs/kristy"
+        "asking-ai/technical/trim-file-leading-trailing-whitespace/bard",
+        "asking-ai/technical/trim-file-leading-trailing-whitespace/bing",
+        "asking-ai/technical/trim-file-leading-trailing-whitespace/chatgpt"
       ],
-      "hasIndex": false,
+      "hasTitle": true,
+      "hasMarkdown": false,
+      "hasHtml": false,
+      "hasJavascript": false,
+      "title": "In bash, how do I trim the contents of a file of leading and trailing whitespace and then write it back?",
+      "content": null,
+      "dateTitle": "2024-02-04 10:54:21 -0500"
+    },
+    "asking-ai/technical/trim-file-leading-trailing-whitespace/bard": {
+      "levelNumber": 4,
+      "parentKey": "asking-ai/technical/trim-file-leading-trailing-whitespace",
+      "children": [],
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "what Bard said",
       "content": null,
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "dateTitle": "2024-02-04 10:54:21 -0500",
+      "dateMarkdown": "2024-02-04 10:54:21 -0500"
+    },
+    "asking-ai/technical/trim-file-leading-trailing-whitespace/bing": {
+      "levelNumber": 4,
+      "parentKey": "asking-ai/technical/trim-file-leading-trailing-whitespace",
+      "children": [],
+      "hasTitle": true,
+      "hasMarkdown": true,
+      "hasHtml": false,
+      "hasJavascript": false,
+      "title": "what Bing said",
+      "content": null,
+      "dateTitle": "2024-02-04 10:54:21 -0500",
+      "dateMarkdown": "2024-02-04 10:54:21 -0500"
+    },
+    "asking-ai/technical/trim-file-leading-trailing-whitespace/chatgpt": {
+      "levelNumber": 4,
+      "parentKey": "asking-ai/technical/trim-file-leading-trailing-whitespace",
+      "children": [],
+      "hasTitle": true,
+      "hasMarkdown": true,
+      "hasHtml": false,
+      "hasJavascript": false,
+      "title": "what ChatGPT said",
+      "content": null,
+      "dateTitle": "2024-02-04 10:54:21 -0500",
+      "dateMarkdown": "2024-02-04 10:54:21 -0500"
+    },
+    "blogs": {
+      "levelNumber": 1,
+      "parentKey": "",
+      "children": [
+        "blogs/kristy"
+      ],
+      "hasTitle": false,
+      "hasMarkdown": false,
+      "hasHtml": false,
+      "hasJavascript": false,
+      "title": "blogs",
+      "content": null
     },
     "blogs/kristy": {
       "levelNumber": 2,
@@ -552,14 +574,12 @@ export const content = {
       "children": [
         "blogs/kristy/2024"
       ],
-      "hasIndex": false,
-      "hasTitle": true,
-      "hasMarkdown": true,
+      "hasTitle": false,
+      "hasMarkdown": false,
       "hasHtml": false,
       "hasJavascript": false,
-      "content": null,
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "title": "kristy",
+      "content": null
     },
     "blogs/kristy/2024": {
       "levelNumber": 3,
@@ -567,14 +587,12 @@ export const content = {
       "children": [
         "blogs/kristy/2024/01"
       ],
-      "hasIndex": false,
-      "hasTitle": true,
-      "hasMarkdown": true,
+      "hasTitle": false,
+      "hasMarkdown": false,
       "hasHtml": false,
       "hasJavascript": false,
-      "content": null,
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "title": "2024",
+      "content": null
     },
     "blogs/kristy/2024/01": {
       "levelNumber": 4,
@@ -583,14 +601,12 @@ export const content = {
         "blogs/kristy/2024/01/20",
         "blogs/kristy/2024/01/x"
       ],
-      "hasIndex": false,
-      "hasTitle": true,
-      "hasMarkdown": true,
+      "hasTitle": false,
+      "hasMarkdown": false,
       "hasHtml": false,
       "hasJavascript": false,
-      "content": null,
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "title": "01",
+      "content": null
     },
     "blogs/kristy/2024/01/20": {
       "levelNumber": 5,
@@ -598,24 +614,22 @@ export const content = {
       "children": [
         "blogs/kristy/2024/01/20/finding-new-recipes-to-try"
       ],
-      "hasIndex": false,
-      "hasTitle": true,
-      "hasMarkdown": true,
+      "hasTitle": false,
+      "hasMarkdown": false,
       "hasHtml": false,
       "hasJavascript": false,
-      "content": null,
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "title": "20",
+      "content": null
     },
     "blogs/kristy/2024/01/20/finding-new-recipes-to-try": {
       "levelNumber": 6,
       "parentKey": "blogs/kristy/2024/01/20",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "finding-new-recipes-to-try",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -627,24 +641,22 @@ export const content = {
         "blogs/kristy/2024/01/x/18-asking-ai",
         "blogs/kristy/2024/01/x/19-asking-ai"
       ],
-      "hasIndex": false,
-      "hasTitle": true,
-      "hasMarkdown": true,
+      "hasTitle": false,
+      "hasMarkdown": false,
       "hasHtml": false,
       "hasJavascript": false,
-      "content": null,
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "title": "x",
+      "content": null
     },
     "blogs/kristy/2024/01/x/18-asking-ai": {
       "levelNumber": 6,
       "parentKey": "blogs/kristy/2024/01/x",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "18-asking-ai",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -653,33 +665,29 @@ export const content = {
       "levelNumber": 6,
       "parentKey": "blogs/kristy/2024/01/x",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "19-asking-ai",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
     },
     "coding": {
       "levelNumber": 1,
-      "parentKey": " ",
+      "parentKey": "",
       "children": [
         "coding/frameworks",
         "coding/languages",
         "coding/web-design"
       ],
-      "hasIndex": true,
-      "hasTitle": true,
-      "hasMarkdown": true,
-      "hasHtml": true,
+      "hasTitle": false,
+      "hasMarkdown": false,
+      "hasHtml": false,
       "hasJavascript": false,
-      "content": null,
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateHtml": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500",
-      "dateIndex": "2024-01-24 08:44:05 -0500"
+      "title": "coding",
+      "content": null
     },
     "coding/frameworks": {
       "levelNumber": 2,
@@ -687,14 +695,12 @@ export const content = {
       "children": [
         "coding/frameworks/bootstrap"
       ],
-      "hasIndex": false,
-      "hasTitle": true,
+      "hasTitle": false,
       "hasMarkdown": false,
-      "hasHtml": true,
+      "hasHtml": false,
       "hasJavascript": false,
-      "content": null,
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateHtml": "2024-01-24 08:44:05 -0500"
+      "title": "frameworks",
+      "content": null
     },
     "coding/frameworks/bootstrap": {
       "levelNumber": 3,
@@ -702,24 +708,22 @@ export const content = {
       "children": [
         "coding/frameworks/bootstrap/cheatsheet-v5.3"
       ],
-      "hasIndex": false,
-      "hasTitle": true,
+      "hasTitle": false,
       "hasMarkdown": false,
-      "hasHtml": true,
+      "hasHtml": false,
       "hasJavascript": false,
-      "content": null,
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateHtml": "2024-01-24 08:44:05 -0500"
+      "title": "bootstrap",
+      "content": null
     },
     "coding/frameworks/bootstrap/cheatsheet-v5.3": {
       "levelNumber": 4,
       "parentKey": "coding/frameworks/bootstrap",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": false,
       "hasHtml": true,
       "hasJavascript": false,
+      "title": "cheatsheet-v5.3",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateHtml": "2024-01-24 08:44:05 -0500"
@@ -730,14 +734,12 @@ export const content = {
       "children": [
         "coding/languages/markdown"
       ],
-      "hasIndex": false,
-      "hasTitle": true,
-      "hasMarkdown": true,
+      "hasTitle": false,
+      "hasMarkdown": false,
       "hasHtml": false,
       "hasJavascript": false,
-      "content": null,
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "title": "languages",
+      "content": null
     },
     "coding/languages/markdown": {
       "levelNumber": 3,
@@ -745,24 +747,22 @@ export const content = {
       "children": [
         "coding/languages/markdown/markdown-cheat-sheet"
       ],
-      "hasIndex": false,
-      "hasTitle": true,
-      "hasMarkdown": true,
+      "hasTitle": false,
+      "hasMarkdown": false,
       "hasHtml": false,
       "hasJavascript": false,
-      "content": null,
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "title": "markdown",
+      "content": null
     },
     "coding/languages/markdown/markdown-cheat-sheet": {
       "levelNumber": 4,
       "parentKey": "coding/languages/markdown",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "markdown-cheat-sheet",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -774,25 +774,23 @@ export const content = {
         "coding/web-design/hamburger",
         "coding/web-design/sitemaps"
       ],
-      "hasIndex": true,
       "hasTitle": true,
-      "hasMarkdown": true,
+      "hasMarkdown": false,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "Web Design",
       "content": null,
-      "dateIndex": "2024-01-24 08:44:05 -0500",
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "dateTitle": "2024-02-04 10:54:21 -0500"
     },
     "coding/web-design/hamburger": {
       "levelNumber": 3,
       "parentKey": "coding/web-design",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "Hamburger Menus",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -801,33 +799,32 @@ export const content = {
       "levelNumber": 3,
       "parentKey": "coding/web-design",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "Sitemaps",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
     },
     "recipes": {
       "levelNumber": 1,
-      "parentKey": " ",
+      "parentKey": "",
       "children": [
         "recipes/desserts",
         "recipes/meats",
         "recipes/sides",
         "recipes/want-to-try"
       ],
-      "hasIndex": true,
       "hasTitle": true,
-      "hasMarkdown": true,
-      "hasHtml": false,
+      "hasMarkdown": false,
+      "hasHtml": true,
       "hasJavascript": false,
+      "title": "Recipes",
       "content": null,
-      "dateIndex": "2024-01-24 08:44:05 -0500",
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "dateTitle": "2024-02-04 09:37:53 -0500",
+      "dateHtml": "2024-02-04 10:54:21 -0500"
     },
     "recipes/desserts": {
       "levelNumber": 2,
@@ -839,25 +836,23 @@ export const content = {
         "recipes/desserts/rainbow-cookies",
         "recipes/desserts/tiramisu"
       ],
-      "hasIndex": true,
       "hasTitle": true,
-      "hasMarkdown": true,
+      "hasMarkdown": false,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "Desserts",
       "content": null,
-      "dateIndex": "2024-01-24 08:44:05 -0500",
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "dateTitle": "2024-02-04 10:54:21 -0500"
     },
     "recipes/desserts/almond-cake": {
       "levelNumber": 3,
       "parentKey": "recipes/desserts",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "Almond cake",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -866,11 +861,11 @@ export const content = {
       "levelNumber": 3,
       "parentKey": "recipes/desserts",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "Date Balls",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -879,11 +874,11 @@ export const content = {
       "levelNumber": 3,
       "parentKey": "recipes/desserts",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "Ginger snaps",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -892,11 +887,11 @@ export const content = {
       "levelNumber": 3,
       "parentKey": "recipes/desserts",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "Rainbow Cookies",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -905,11 +900,11 @@ export const content = {
       "levelNumber": 3,
       "parentKey": "recipes/desserts",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "Tiramisu",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -920,25 +915,23 @@ export const content = {
       "children": [
         "recipes/meats/chicken-meatballs"
       ],
-      "hasIndex": true,
       "hasTitle": true,
-      "hasMarkdown": true,
+      "hasMarkdown": false,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "Meats",
       "content": null,
-      "dateIndex": "2024-01-24 08:44:05 -0500",
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "dateTitle": "2024-02-04 10:54:21 -0500"
     },
     "recipes/meats/chicken-meatballs": {
       "levelNumber": 3,
       "parentKey": "recipes/meats",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "Chicken meatballs",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -951,25 +944,23 @@ export const content = {
         "recipes/sides/mashed-potatoes",
         "recipes/sides/yeast-rolls"
       ],
-      "hasIndex": true,
       "hasTitle": true,
-      "hasMarkdown": true,
+      "hasMarkdown": false,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "Sides",
       "content": null,
-      "dateIndex": "2024-01-24 08:44:05 -0500",
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "dateTitle": "2024-02-04 10:54:21 -0500"
     },
     "recipes/sides/macaroni-and-cheese-1-pot-version": {
       "levelNumber": 3,
       "parentKey": "recipes/sides",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "One-Pot Macaroni and Cheese Recipe",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -978,11 +969,11 @@ export const content = {
       "levelNumber": 3,
       "parentKey": "recipes/sides",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "Mashed potatoes",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -991,11 +982,11 @@ export const content = {
       "levelNumber": 3,
       "parentKey": "recipes/sides",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "Yeast Rolls",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -1007,15 +998,13 @@ export const content = {
         "recipes/want-to-try/beef-stew",
         "recipes/want-to-try/crab-cakes"
       ],
-      "hasIndex": true,
       "hasTitle": true,
-      "hasMarkdown": true,
+      "hasMarkdown": false,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "Recipes we want to try",
       "content": null,
-      "dateIndex": "2024-01-24 08:44:05 -0500",
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "dateTitle": "2024-02-04 10:54:21 -0500"
     },
     "recipes/want-to-try/beef-stew": {
       "levelNumber": 3,
@@ -1025,24 +1014,22 @@ export const content = {
         "recipes/want-to-try/beef-stew/beef-stew-20240120-bing",
         "recipes/want-to-try/beef-stew/beef-stew-20240120-chatgpt"
       ],
-      "hasIndex": false,
-      "hasTitle": true,
-      "hasMarkdown": true,
+      "hasTitle": false,
+      "hasMarkdown": false,
       "hasHtml": false,
       "hasJavascript": false,
-      "content": null,
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "title": "beef-stew",
+      "content": null
     },
     "recipes/want-to-try/beef-stew/beef-stew-20240120-bard": {
       "levelNumber": 4,
       "parentKey": "recipes/want-to-try/beef-stew",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "beef-stew-20240120-bard",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -1051,11 +1038,11 @@ export const content = {
       "levelNumber": 4,
       "parentKey": "recipes/want-to-try/beef-stew",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "beef-stew-20240120-bing",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -1064,11 +1051,11 @@ export const content = {
       "levelNumber": 4,
       "parentKey": "recipes/want-to-try/beef-stew",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "beef-stew-20240120-chatgpt",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -1081,24 +1068,22 @@ export const content = {
         "recipes/want-to-try/crab-cakes/crab-cakes-20240120-bing",
         "recipes/want-to-try/crab-cakes/crab-cakes-20240120-chatgpt"
       ],
-      "hasIndex": false,
-      "hasTitle": true,
-      "hasMarkdown": true,
+      "hasTitle": false,
+      "hasMarkdown": false,
       "hasHtml": false,
       "hasJavascript": false,
-      "content": null,
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "title": "crab-cakes",
+      "content": null
     },
     "recipes/want-to-try/crab-cakes/crab-cakes-20240120-bard": {
       "levelNumber": 4,
       "parentKey": "recipes/want-to-try/crab-cakes",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "crab-cakes-20240120-bard",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -1107,11 +1092,11 @@ export const content = {
       "levelNumber": 4,
       "parentKey": "recipes/want-to-try/crab-cakes",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "crab-cakes-20240120-bing",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -1120,44 +1105,55 @@ export const content = {
       "levelNumber": 4,
       "parentKey": "recipes/want-to-try/crab-cakes",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "crab-cakes-20240120-chatgpt",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
     },
     "sitemap": {
       "levelNumber": 1,
-      "parentKey": " ",
+      "parentKey": "",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": false,
       "hasHtml": true,
       "hasJavascript": false,
+      "title": "Sitemap",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateHtml": "2024-01-24 08:44:05 -0500"
     },
+    "this-should-not-appear": {
+      "levelNumber": 1,
+      "parentKey": "",
+      "children": [],
+      "hasTitle": true,
+      "hasMarkdown": false,
+      "hasHtml": false,
+      "hasJavascript": false,
+      "title": "",
+      "content": null,
+      "dateTitle": "2024-02-04 09:37:53 -0500"
+    },
     "upcycling": {
       "levelNumber": 1,
-      "parentKey": " ",
+      "parentKey": "",
       "children": [
         "upcycling/food-scraps",
         "upcycling/textiles"
       ],
-      "hasIndex": true,
       "hasTitle": true,
-      "hasMarkdown": true,
-      "hasHtml": false,
+      "hasMarkdown": false,
+      "hasHtml": true,
       "hasJavascript": false,
+      "title": "Creative Reuse",
       "content": null,
-      "dateIndex": "2024-01-24 08:44:05 -0500",
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "dateTitle": "2024-02-04 10:54:21 -0500",
+      "dateHtml": "2024-02-04 10:54:21 -0500"
     },
     "upcycling/food-scraps": {
       "levelNumber": 2,
@@ -1166,25 +1162,23 @@ export const content = {
         "upcycling/food-scraps/coffee-grounds",
         "upcycling/food-scraps/tea-bags"
       ],
-      "hasIndex": true,
       "hasTitle": true,
-      "hasMarkdown": true,
+      "hasMarkdown": false,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "Creative Reuse of Food Scraps",
       "content": null,
-      "dateIndex": "2024-01-24 08:44:05 -0500",
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "dateTitle": "2024-02-04 10:54:21 -0500"
     },
     "upcycling/food-scraps/coffee-grounds": {
       "levelNumber": 3,
       "parentKey": "upcycling/food-scraps",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "Reusing Coffee Grounds",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -1193,11 +1187,11 @@ export const content = {
       "levelNumber": 3,
       "parentKey": "upcycling/food-scraps",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "Reusing Tea Bags",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
@@ -1208,25 +1202,23 @@ export const content = {
       "children": [
         "upcycling/textiles/t-shirts"
       ],
-      "hasIndex": true,
       "hasTitle": true,
-      "hasMarkdown": true,
+      "hasMarkdown": false,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "Creative Reuse of Textiles",
       "content": null,
-      "dateIndex": "2024-01-24 08:44:05 -0500",
-      "dateTitle": "2024-01-24 08:44:05 -0500",
-      "dateMarkdown": "2024-01-24 08:44:05 -0500"
+      "dateTitle": "2024-02-04 10:54:21 -0500"
     },
     "upcycling/textiles/t-shirts": {
       "levelNumber": 3,
       "parentKey": "upcycling/textiles",
       "children": [],
-      "hasIndex": false,
       "hasTitle": true,
       "hasMarkdown": true,
       "hasHtml": false,
       "hasJavascript": false,
+      "title": "Upcycling T-shirts",
       "content": null,
       "dateTitle": "2024-01-24 08:44:05 -0500",
       "dateMarkdown": "2024-01-24 08:44:05 -0500"
