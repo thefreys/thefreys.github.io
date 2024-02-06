@@ -1,8 +1,8 @@
 #!/bin/bash
 rootdir="$(dirname ${BASH_SOURCE[0]})"
-#jsdir="${rootdir}/assets/js"
 cd "${rootdir}"
 
+# Generate the javascript file to hold the pathTitles object
 pathTitles="${rootdir}/pathTitles.js"
 echo 'export const pathTitles = {' > "${pathTitles}"
 find "$(dirname ${BASH_SOURCE[0]})" -type f -name "_title.txt" | while read filename; do
@@ -12,6 +12,7 @@ find "$(dirname ${BASH_SOURCE[0]})" -type f -name "_title.txt" | while read file
 done
 echo '}' >> "${pathTitles}"
 
+# Generate the javascript file to hold the pathTags object
 pathTags="${rootdir}/pathTags.js"
 echo 'export const pathTags = {' > "${pathTags}"
 find "$(dirname ${BASH_SOURCE[0]})" -type f -name "_tags.txt" | while read filename; do
@@ -21,6 +22,7 @@ find "$(dirname ${BASH_SOURCE[0]})" -type f -name "_tags.txt" | while read filen
 done
 echo '}' >> "${pathTags}"
 
+# Generate the javascript file to hold the fileDates object
 filedates="${rootdir}/fileDates.js"
 cd "${rootdir}"
 echo 'export const fileDates = {' > "${filedates}"
