@@ -1,4 +1,4 @@
-export const nodeTitles = {
+export const objNodeTitles = {
 "/coding/frameworks/bootstrap/cheatsheet-v5.3":``,
 "/coding/languages/markdown/markdown-cheat-sheet":``,
 "/coding/web-design/hamburger":`Hamburger Menus`,
@@ -66,5 +66,5 @@ export const nodeTitles = {
 "/upcycling/textiles/t-shirts":`Upcycling T-shirts`,
 "/upcycling/textiles":`Creative Reuse of Textiles`,
 "/upcycling":`Creative Reuse`,
-"":`Welcome  `,
+"/":`Welcome  `,
 }

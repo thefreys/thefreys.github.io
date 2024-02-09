@@ -1,40 +1,53 @@
 #!/bin/bash
-
-#!/bin/bash
-jsvar=nodeFiles
-rootdir="$(dirname ${BASH_SOURCE[0]})/../"
+source "$(dirname ${BASH_SOURCE[0]})/config.sh"
+rm -rf "${tmpoutdir}"
+mkdir -p "${tmpoutdir}"
+jsvar=objNodes
+tmpoutfile="${tmpoutdir}/${jsvar}.js"
 cd "${rootdir}"
-outfile="$(pwd)/assets/js/generated/${jsvar}.js"
-echo "export const ${jsvar} = {" > "${outfile}"
+echo "export const ${jsvar} = {" > "${tmpoutfile}"
 find content -type d -print | xargs -I {} ls -d {}  | while read nodepath; do
     node="/${nodepath}"
     node=${node:8}
     if [[ "${node}" = "" ]]; then
         node="/"
     fi
-    echo "\"${node}\":{" >> "${outfile}"
+    echo "\"${node}\":{" >> "${tmpoutfile}"
 
     if [[ "${node}" = "/" ]]; then
-        echo "  \"parent\":null," >> "${outfile}"
+        echo "  \"parent\":null," >> "${tmpoutfile}"
+        title="Home"
     else
-        echo "  \"parent\":\"$(dirname ${node})\"," >> "${outfile}"
+        echo "  \"parent\":\"$(dirname ${node})\"," >> "${tmpoutfile}"
+        title="$(basename ${node})"
     fi
     
     if [ -f "${nodepath}/_title.txt" ]; then
-        echo "  \"title\":\`$(cat "${nodepath}/_title.txt")\`," >> "${outfile}"
-    else
-        echo "  \"title\":\`\`," >> "${outfile}"
+        tmptitle="$(cat "${nodepath}/_title.txt")"     
+        if [[ "${tmptitle}" != "" ]]; then
+            title="${tmptitle}";
+        fi
     fi
+    echo "  \"title\":\`${title}\`," >> "${tmpoutfile}"
 
-    echo "  \"files\":{" >> "${outfile}"
+    markdownCount="$(find ${nodepath}/ -type f -name "markdown.md" | wc -l)"
+    htmlCount="$(find ${nodepath}/ -type f -name "html.html" | wc -l)"
+    javascriptCount="$(find ${nodepath}/ -type f -name "javascript.js" | wc -l)"
+    hiddenCount="$(find ${nodepath}/ -type f -name ".hide" | wc -l)"
+
+    echo "  \"markdownCount\":${markdownCount}," >> "${tmpoutfile}"
+    echo "  \"htmlCount\":${htmlCount}," >> "${tmpoutfile}"
+    echo "  \"javascriptCount\":${javascriptCount}," >> "${tmpoutfile}"
+    echo "  \"hiddenCount\":${hiddenCount}," >> "${tmpoutfile}"
+
+    echo "  \"files\":{" >> "${tmpoutfile}"
     find ${nodepath} -maxdepth 1 -type f | while read filename; do
         file="$(basename ${filename})"
-        echo "    \"${file}\":\"$(git log -1 --format="%ai" -- "$filename")\"," >> "${outfile}"
+        echo "    \"${file}\":\"$(git log -1 --format="%ai" -- "$filename")\"," >> "${tmpoutfile}"
     done
-    echo "  }," >> "${outfile}"
+    echo "  }," >> "${tmpoutfile}"
     
-
-    echo "  \"children\":[" >> "${outfile}"
+    echo "  \"children\":[" >> "${tmpoutfile}"
     find ${nodepath} -maxdepth 1 -type d | while read childnodepath; do
         childnode="/${childnodepath}"
         childnode=${childnode:8}
@@ -42,23 +55,27 @@ find content -type d -print | xargs -I {} ls -d {}  | while read nodepath; do
             childnode="/"
         fi
         if [[ "${childnode}" != "${node}" ]]; then
-            echo "    \"${childnode}\"," >> "${outfile}"
+            echo "    \"${childnode}\"," >> "${tmpoutfile}"
         fi
         
     done
-    echo "  ]," >> "${outfile}"
+    echo "  ]," >> "${tmpoutfile}"
 
-    echo "}," >> "${outfile}"
+    echo "}," >> "${tmpoutfile}"
 done
-echo "}" >> "${outfile}"
+echo "}" >> "${tmpoutfile}"
 
 
-"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "markdownNodes" "markdown.md"
-"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "htmlNodes" "html.html"
-"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "javascriptNodes" "javascript.js"
-"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "hiddenNodes" ".hide"
-"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "titleNodes" "_title.txt"
-"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "tagNodes" "_tags.txt"
+"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrMarkdownNodes" "markdown.md"
+"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrHtmlNodes" "html.html"
+"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrJavascriptNodes" "javascript.js"
+"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrHiddenNodes" ".hide"
+"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrTitleNodes" "_title.txt"
+"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrTagNodes" "_tags.txt"
 
-"$(dirname ${BASH_SOURCE[0]})/nodeObject.sh" "nodeTitles" "_title.txt"
-"$(dirname ${BASH_SOURCE[0]})/nodeObject.sh" "nodeTags" "_tags.txt"
+"$(dirname ${BASH_SOURCE[0]})/nodeObject.sh" "objNodeTitles" "_title.txt"
+"$(dirname ${BASH_SOURCE[0]})/nodeObject.sh" "objNodeTags" "_tags.txt"
+
+
+rm -rf "${outdir}"
+mv "${tmpoutdir}" "${outdir}"

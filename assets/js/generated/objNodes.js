@@ -1,7 +1,11 @@
-export const nodeFiles = {
+export const objNodes = {
 "/":{
   "parent":null,
   "title":`Welcome  `,
+  "markdownCount":48,
+  "htmlCount":4,
+  "javascriptCount":0,
+  "hiddenCount":2,
   "files":{
     "_title.txt":"2024-02-04 14:34:43 -0500",
   },
@@ -16,7 +20,11 @@ export const nodeFiles = {
 },
 "/coding":{
   "parent":"/",
-  "title":``,
+  "title":`coding`,
+  "markdownCount":3,
+  "htmlCount":1,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
   },
   "children":[
@@ -27,7 +35,11 @@ export const nodeFiles = {
 },
 "/coding/frameworks":{
   "parent":"/coding",
-  "title":``,
+  "title":`frameworks`,
+  "markdownCount":0,
+  "htmlCount":1,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
   },
   "children":[
@@ -36,7 +48,11 @@ export const nodeFiles = {
 },
 "/coding/frameworks/bootstrap":{
   "parent":"/coding/frameworks",
-  "title":``,
+  "title":`bootstrap`,
+  "markdownCount":0,
+  "htmlCount":1,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
   },
   "children":[
@@ -45,7 +61,11 @@ export const nodeFiles = {
 },
 "/coding/frameworks/bootstrap/cheatsheet-v5.3":{
   "parent":"/coding/frameworks/bootstrap",
-  "title":``,
+  "title":`cheatsheet-v5.3`,
+  "markdownCount":0,
+  "htmlCount":1,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "html.html":"2024-01-24 08:44:05 -0500",
     "_title.txt":"2024-01-24 08:44:05 -0500",
@@ -55,7 +75,11 @@ export const nodeFiles = {
 },
 "/coding/languages":{
   "parent":"/coding",
-  "title":``,
+  "title":`languages`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
   },
   "children":[
@@ -64,7 +88,11 @@ export const nodeFiles = {
 },
 "/coding/languages/markdown":{
   "parent":"/coding/languages",
-  "title":``,
+  "title":`markdown`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
   },
   "children":[
@@ -73,7 +101,11 @@ export const nodeFiles = {
 },
 "/coding/languages/markdown/markdown-cheat-sheet":{
   "parent":"/coding/languages/markdown",
-  "title":``,
+  "title":`markdown-cheat-sheet`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-01-24 08:44:05 -0500",
     "_title.txt":"2024-01-24 08:44:05 -0500",
@@ -84,6 +116,10 @@ export const nodeFiles = {
 "/coding/web-design":{
   "parent":"/coding",
   "title":`Web Design`,
+  "markdownCount":2,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "_title.txt":"2024-02-04 14:34:43 -0500",
   },
@@ -95,6 +131,10 @@ export const nodeFiles = {
 "/coding/web-design/hamburger":{
   "parent":"/coding/web-design",
   "title":`Hamburger Menus`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-01-24 08:44:05 -0500",
     "_title.txt":"2024-01-24 08:44:05 -0500",
@@ -105,6 +145,10 @@ export const nodeFiles = {
 "/coding/web-design/sitemaps":{
   "parent":"/coding/web-design",
   "title":`Sitemaps`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-01-24 08:44:05 -0500",
     "_title.txt":"2024-01-24 08:44:05 -0500",
@@ -114,7 +158,11 @@ export const nodeFiles = {
 },
 "/hidden":{
   "parent":"/",
-  "title":``,
+  "title":`hidden`,
+  "markdownCount":27,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":2,
   "files":{
     ".hide":"2024-02-04 15:49:01 -0500",
   },
@@ -126,7 +174,11 @@ export const nodeFiles = {
 },
 "/hidden/activities":{
   "parent":"/hidden",
-  "title":``,
+  "title":`activities`,
+  "markdownCount":5,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
   },
   "children":[
@@ -135,7 +187,11 @@ export const nodeFiles = {
 },
 "/hidden/activities/camping":{
   "parent":"/hidden/activities",
-  "title":``,
+  "title":`camping`,
+  "markdownCount":5,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
   },
   "children":[
@@ -149,6 +205,10 @@ export const nodeFiles = {
 "/hidden/activities/camping/campground-notes":{
   "parent":"/hidden/activities/camping",
   "title":`Campground Notes`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-02-04 15:49:01 -0500",
     "_title.txt":"2024-02-04 15:49:01 -0500",
@@ -159,6 +219,10 @@ export const nodeFiles = {
 "/hidden/activities/camping/food-ideas":{
   "parent":"/hidden/activities/camping",
   "title":`Food Ideas`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-02-04 15:49:01 -0500",
     "_title.txt":"2024-02-04 15:49:01 -0500",
@@ -169,6 +233,10 @@ export const nodeFiles = {
 "/hidden/activities/camping/fun-ideas":{
   "parent":"/hidden/activities/camping",
   "title":`Fun ideas`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-02-04 15:49:01 -0500",
     "_title.txt":"2024-02-04 15:49:01 -0500",
@@ -179,6 +247,10 @@ export const nodeFiles = {
 "/hidden/activities/camping/gear-checklist":{
   "parent":"/hidden/activities/camping",
   "title":`Gear Checklist`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-02-04 15:49:01 -0500",
     "_title.txt":"2024-02-04 15:49:01 -0500",
@@ -189,6 +261,10 @@ export const nodeFiles = {
 "/hidden/activities/camping/sample-trip":{
   "parent":"/hidden/activities/camping",
   "title":`Sample Trip`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-02-04 15:49:01 -0500",
     "_title.txt":"2024-02-04 15:49:01 -0500",
@@ -198,7 +274,11 @@ export const nodeFiles = {
 },
 "/hidden/asking-ai":{
   "parent":"/hidden",
-  "title":``,
+  "title":`asking-ai`,
+  "markdownCount":19,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":1,
   "files":{
   },
   "children":[
@@ -208,7 +288,11 @@ export const nodeFiles = {
 },
 "/hidden/asking-ai/crafty":{
   "parent":"/hidden/asking-ai",
-  "title":``,
+  "title":`crafty`,
+  "markdownCount":3,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
   },
   "children":[
@@ -218,6 +302,10 @@ export const nodeFiles = {
 "/hidden/asking-ai/crafty/how-do-you-make-t-shirt-yarn":{
   "parent":"/hidden/asking-ai/crafty",
   "title":`How do you make t-shirt yarn?`,
+  "markdownCount":3,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "_title.txt":"2024-02-04 15:49:01 -0500",
   },
@@ -230,6 +318,10 @@ export const nodeFiles = {
 "/hidden/asking-ai/crafty/how-do-you-make-t-shirt-yarn/bard":{
   "parent":"/hidden/asking-ai/crafty/how-do-you-make-t-shirt-yarn",
   "title":`what Bard said`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-02-04 15:49:01 -0500",
     "_title.txt":"2024-02-04 15:49:01 -0500",
@@ -240,6 +332,10 @@ export const nodeFiles = {
 "/hidden/asking-ai/crafty/how-do-you-make-t-shirt-yarn/bing":{
   "parent":"/hidden/asking-ai/crafty/how-do-you-make-t-shirt-yarn",
   "title":`what Bing said`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-02-04 15:49:01 -0500",
     "_title.txt":"2024-02-04 15:49:01 -0500",
@@ -250,6 +346,10 @@ export const nodeFiles = {
 "/hidden/asking-ai/crafty/how-do-you-make-t-shirt-yarn/chatgpt":{
   "parent":"/hidden/asking-ai/crafty/how-do-you-make-t-shirt-yarn",
   "title":`what ChatGPT said`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-02-04 15:49:01 -0500",
     "_title.txt":"2024-02-04 15:49:01 -0500",
@@ -259,7 +359,11 @@ export const nodeFiles = {
 },
 "/hidden/asking-ai/technical":{
   "parent":"/hidden/asking-ai",
-  "title":``,
+  "title":`technical`,
+  "markdownCount":16,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":1,
   "files":{
   },
   "children":[
@@ -274,6 +378,10 @@ export const nodeFiles = {
 "/hidden/asking-ai/technical/list-files-from-a-terminal":{
   "parent":"/hidden/asking-ai/technical",
   "title":`How do you list files from a terminal?`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "_title.txt":"2024-02-04 15:49:01 -0500",
   },
@@ -284,6 +392,10 @@ export const nodeFiles = {
 "/hidden/asking-ai/technical/list-files-from-a-terminal/bing":{
   "parent":"/hidden/asking-ai/technical/list-files-from-a-terminal",
   "title":`what Bing said`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-02-04 15:49:01 -0500",
     "_title.txt":"2024-02-04 15:49:01 -0500",
@@ -294,6 +406,10 @@ export const nodeFiles = {
 "/hidden/asking-ai/technical/most-common-term-for-writing-computer-code":{
   "parent":"/hidden/asking-ai/technical",
   "title":`What is the most common term for writing computer code?`,
+  "markdownCount":3,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "_title.txt":"2024-02-04 15:49:01 -0500",
   },
@@ -306,6 +422,10 @@ export const nodeFiles = {
 "/hidden/asking-ai/technical/most-common-term-for-writing-computer-code/bard":{
   "parent":"/hidden/asking-ai/technical/most-common-term-for-writing-computer-code",
   "title":`what Bard said`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-02-04 15:49:01 -0500",
     "_title.txt":"2024-02-04 15:49:01 -0500",
@@ -316,6 +436,10 @@ export const nodeFiles = {
 "/hidden/asking-ai/technical/most-common-term-for-writing-computer-code/bing":{
   "parent":"/hidden/asking-ai/technical/most-common-term-for-writing-computer-code",
   "title":`what Bing said`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-02-04 15:49:01 -0500",
     "_title.txt":"2024-02-04 15:49:01 -0500",
@@ -326,6 +450,10 @@ export const nodeFiles = {
 "/hidden/asking-ai/technical/most-common-term-for-writing-computer-code/chatgpt":{
   "parent":"/hidden/asking-ai/technical/most-common-term-for-writing-computer-code",
   "title":`what ChatGPT said`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-02-04 15:49:01 -0500",
     "_title.txt":"2024-02-04 15:49:01 -0500",
@@ -336,6 +464,10 @@ export const nodeFiles = {
 "/hidden/asking-ai/technical/no-cost-website-hosts":{
   "parent":"/hidden/asking-ai/technical",
   "title":`Please list 10 places to host a website for free`,
+  "markdownCount":3,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "_title.txt":"2024-02-04 15:49:01 -0500",
   },
@@ -347,7 +479,11 @@ export const nodeFiles = {
 },
 "/hidden/asking-ai/technical/no-cost-website-hosts/bard":{
   "parent":"/hidden/asking-ai/technical/no-cost-website-hosts",
-  "title":``,
+  "title":`bard`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-02-04 15:49:01 -0500",
     "_title.txt":"2024-02-04 15:49:01 -0500",
@@ -357,7 +493,11 @@ export const nodeFiles = {
 },
 "/hidden/asking-ai/technical/no-cost-website-hosts/bing":{
   "parent":"/hidden/asking-ai/technical/no-cost-website-hosts",
-  "title":``,
+  "title":`bing`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-02-04 15:49:01 -0500",
     "_title.txt":"2024-02-04 15:49:01 -0500",
@@ -367,7 +507,11 @@ export const nodeFiles = {
 },
 "/hidden/asking-ai/technical/no-cost-website-hosts/chatgpt":{
   "parent":"/hidden/asking-ai/technical/no-cost-website-hosts",
-  "title":``,
+  "title":`chatgpt`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-02-04 15:49:01 -0500",
     "_title.txt":"2024-02-04 15:49:01 -0500",
@@ -377,7 +521,11 @@ export const nodeFiles = {
 },
 "/hidden/asking-ai/technical/shell-scripting":{
   "parent":"/hidden/asking-ai/technical",
-  "title":``,
+  "title":`shell-scripting`,
+  "markdownCount":3,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
   },
   "children":[
@@ -386,7 +534,11 @@ export const nodeFiles = {
 },
 "/hidden/asking-ai/technical/shell-scripting/bash":{
   "parent":"/hidden/asking-ai/technical/shell-scripting",
-  "title":``,
+  "title":`bash`,
+  "markdownCount":3,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
   },
   "children":[
@@ -396,6 +548,10 @@ export const nodeFiles = {
 "/hidden/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date":{
   "parent":"/hidden/asking-ai/technical/shell-scripting/bash",
   "title":`Please write a bash script to list all the files in a local clone of a git repository with their last commit date`,
+  "markdownCount":3,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "_title.txt":"2024-02-04 15:49:01 -0500",
   },
@@ -407,7 +563,11 @@ export const nodeFiles = {
 },
 "/hidden/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date/bard":{
   "parent":"/hidden/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date",
-  "title":``,
+  "title":`bard`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-02-04 15:49:01 -0500",
     "_title.txt":"2024-02-04 15:49:01 -0500",
@@ -417,7 +577,11 @@ export const nodeFiles = {
 },
 "/hidden/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date/bing":{
   "parent":"/hidden/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date",
-  "title":``,
+  "title":`bing`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-02-04 15:49:01 -0500",
     "_title.txt":"2024-02-04 15:49:01 -0500",
@@ -427,7 +591,11 @@ export const nodeFiles = {
 },
 "/hidden/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date/chatgpt":{
   "parent":"/hidden/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date",
-  "title":``,
+  "title":`chatgpt`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-02-04 15:49:01 -0500",
     "_title.txt":"2024-02-04 15:49:01 -0500",
@@ -438,6 +606,10 @@ export const nodeFiles = {
 "/hidden/asking-ai/technical/sitemap-file-format-preferred-by-search-engines":{
   "parent":"/hidden/asking-ai/technical",
   "title":`I need to know the file format for the sitemap file that each search engine prefers`,
+  "markdownCount":3,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "_title.txt":"2024-02-04 15:49:01 -0500",
   },
@@ -450,6 +622,10 @@ export const nodeFiles = {
 "/hidden/asking-ai/technical/sitemap-file-format-preferred-by-search-engines/bard":{
   "parent":"/hidden/asking-ai/technical/sitemap-file-format-preferred-by-search-engines",
   "title":`what Bard said`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-02-04 15:49:01 -0500",
     "_title.txt":"2024-02-04 15:49:01 -0500",
@@ -460,6 +636,10 @@ export const nodeFiles = {
 "/hidden/asking-ai/technical/sitemap-file-format-preferred-by-search-engines/bing":{
   "parent":"/hidden/asking-ai/technical/sitemap-file-format-preferred-by-search-engines",
   "title":`what Bing said`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-02-04 15:49:01 -0500",
     "_title.txt":"2024-02-04 15:49:01 -0500",
@@ -470,6 +650,10 @@ export const nodeFiles = {
 "/hidden/asking-ai/technical/sitemap-file-format-preferred-by-search-engines/chatgpt":{
   "parent":"/hidden/asking-ai/technical/sitemap-file-format-preferred-by-search-engines",
   "title":`what ChatGPT said`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-02-04 15:49:01 -0500",
     "_title.txt":"2024-02-04 15:49:01 -0500",
@@ -480,6 +664,10 @@ export const nodeFiles = {
 "/hidden/asking-ai/technical/trim-file-leading-trailing-whitespace":{
   "parent":"/hidden/asking-ai/technical",
   "title":`In bash, how do I trim the contents of a file of leading and trailing whitespace and then write it back?`,
+  "markdownCount":3,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":1,
   "files":{
     ".hide":"2024-02-04 15:49:01 -0500",
     "_title.txt":"2024-02-04 15:49:01 -0500",
@@ -493,6 +681,10 @@ export const nodeFiles = {
 "/hidden/asking-ai/technical/trim-file-leading-trailing-whitespace/bard":{
   "parent":"/hidden/asking-ai/technical/trim-file-leading-trailing-whitespace",
   "title":`what Bard said`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-02-04 15:49:01 -0500",
     "_title.txt":"2024-02-04 15:49:01 -0500",
@@ -503,6 +695,10 @@ export const nodeFiles = {
 "/hidden/asking-ai/technical/trim-file-leading-trailing-whitespace/bing":{
   "parent":"/hidden/asking-ai/technical/trim-file-leading-trailing-whitespace",
   "title":`what Bing said`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-02-04 15:49:01 -0500",
     "_title.txt":"2024-02-04 15:49:01 -0500",
@@ -513,6 +709,10 @@ export const nodeFiles = {
 "/hidden/asking-ai/technical/trim-file-leading-trailing-whitespace/chatgpt":{
   "parent":"/hidden/asking-ai/technical/trim-file-leading-trailing-whitespace",
   "title":`what ChatGPT said`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-02-04 15:49:01 -0500",
     "_title.txt":"2024-02-04 15:49:01 -0500",
@@ -522,7 +722,11 @@ export const nodeFiles = {
 },
 "/hidden/blogs":{
   "parent":"/hidden",
-  "title":``,
+  "title":`blogs`,
+  "markdownCount":3,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
   },
   "children":[
@@ -531,7 +735,11 @@ export const nodeFiles = {
 },
 "/hidden/blogs/kristy":{
   "parent":"/hidden/blogs",
-  "title":``,
+  "title":`kristy`,
+  "markdownCount":3,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
   },
   "children":[
@@ -540,7 +748,11 @@ export const nodeFiles = {
 },
 "/hidden/blogs/kristy/2024":{
   "parent":"/hidden/blogs/kristy",
-  "title":``,
+  "title":`2024`,
+  "markdownCount":3,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
   },
   "children":[
@@ -549,7 +761,11 @@ export const nodeFiles = {
 },
 "/hidden/blogs/kristy/2024/01":{
   "parent":"/hidden/blogs/kristy/2024",
-  "title":``,
+  "title":`01`,
+  "markdownCount":3,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
   },
   "children":[
@@ -559,7 +775,11 @@ export const nodeFiles = {
 },
 "/hidden/blogs/kristy/2024/01/20":{
   "parent":"/hidden/blogs/kristy/2024/01",
-  "title":``,
+  "title":`20`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
   },
   "children":[
@@ -568,7 +788,11 @@ export const nodeFiles = {
 },
 "/hidden/blogs/kristy/2024/01/20/finding-new-recipes-to-try":{
   "parent":"/hidden/blogs/kristy/2024/01/20",
-  "title":``,
+  "title":`finding-new-recipes-to-try`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-02-04 15:49:01 -0500",
     "_title.txt":"2024-02-04 15:49:01 -0500",
@@ -578,7 +802,11 @@ export const nodeFiles = {
 },
 "/hidden/blogs/kristy/2024/01/x":{
   "parent":"/hidden/blogs/kristy/2024/01",
-  "title":``,
+  "title":`x`,
+  "markdownCount":2,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
   },
   "children":[
@@ -588,7 +816,11 @@ export const nodeFiles = {
 },
 "/hidden/blogs/kristy/2024/01/x/18-asking-ai":{
   "parent":"/hidden/blogs/kristy/2024/01/x",
-  "title":``,
+  "title":`18-asking-ai`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-02-04 15:49:01 -0500",
     "_title.txt":"2024-02-04 15:49:01 -0500",
@@ -598,7 +830,11 @@ export const nodeFiles = {
 },
 "/hidden/blogs/kristy/2024/01/x/19-asking-ai":{
   "parent":"/hidden/blogs/kristy/2024/01/x",
-  "title":``,
+  "title":`19-asking-ai`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-02-04 15:49:01 -0500",
     "_title.txt":"2024-02-04 15:49:01 -0500",
@@ -609,6 +845,10 @@ export const nodeFiles = {
 "/recipes":{
   "parent":"/",
   "title":`Recipes`,
+  "markdownCount":15,
+  "htmlCount":1,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "html.html":"2024-02-04 10:54:21 -0500",
     "_title.txt":"2024-02-04 09:37:53 -0500",
@@ -623,6 +863,10 @@ export const nodeFiles = {
 "/recipes/desserts":{
   "parent":"/recipes",
   "title":`Desserts`,
+  "markdownCount":5,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "_title.txt":"2024-02-04 14:34:43 -0500",
   },
@@ -637,6 +881,10 @@ export const nodeFiles = {
 "/recipes/desserts/almond-cake":{
   "parent":"/recipes/desserts",
   "title":`Almond cake`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-01-24 08:44:05 -0500",
     "_title.txt":"2024-01-24 08:44:05 -0500",
@@ -647,6 +895,10 @@ export const nodeFiles = {
 "/recipes/desserts/date-balls":{
   "parent":"/recipes/desserts",
   "title":`Date Balls`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-01-24 08:44:05 -0500",
     "_title.txt":"2024-01-24 08:44:05 -0500",
@@ -657,6 +909,10 @@ export const nodeFiles = {
 "/recipes/desserts/ginger-snaps":{
   "parent":"/recipes/desserts",
   "title":`Ginger snaps`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-01-24 08:44:05 -0500",
     "_title.txt":"2024-01-24 08:44:05 -0500",
@@ -667,6 +923,10 @@ export const nodeFiles = {
 "/recipes/desserts/rainbow-cookies":{
   "parent":"/recipes/desserts",
   "title":`Rainbow Cookies`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-01-24 08:44:05 -0500",
     "_title.txt":"2024-01-24 08:44:05 -0500",
@@ -677,6 +937,10 @@ export const nodeFiles = {
 "/recipes/desserts/tiramisu":{
   "parent":"/recipes/desserts",
   "title":`Tiramisu`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-01-24 08:44:05 -0500",
     "_title.txt":"2024-01-24 08:44:05 -0500",
@@ -687,6 +951,10 @@ export const nodeFiles = {
 "/recipes/meats":{
   "parent":"/recipes",
   "title":`Meats`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "_title.txt":"2024-02-04 14:34:43 -0500",
   },
@@ -697,6 +965,10 @@ export const nodeFiles = {
 "/recipes/meats/chicken-meatballs":{
   "parent":"/recipes/meats",
   "title":`Chicken meatballs`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-01-24 08:44:05 -0500",
     "_title.txt":"2024-01-24 08:44:05 -0500",
@@ -707,6 +979,10 @@ export const nodeFiles = {
 "/recipes/sides":{
   "parent":"/recipes",
   "title":`Sides`,
+  "markdownCount":3,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "_title.txt":"2024-02-04 14:34:43 -0500",
   },
@@ -719,6 +995,10 @@ export const nodeFiles = {
 "/recipes/sides/macaroni-and-cheese-1-pot-version":{
   "parent":"/recipes/sides",
   "title":`One-Pot Macaroni and Cheese Recipe`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-01-24 08:44:05 -0500",
     "_title.txt":"2024-01-24 08:44:05 -0500",
@@ -729,6 +1009,10 @@ export const nodeFiles = {
 "/recipes/sides/mashed-potatoes":{
   "parent":"/recipes/sides",
   "title":`Mashed potatoes`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-01-24 08:44:05 -0500",
     "_title.txt":"2024-01-24 08:44:05 -0500",
@@ -739,6 +1023,10 @@ export const nodeFiles = {
 "/recipes/sides/yeast-rolls":{
   "parent":"/recipes/sides",
   "title":`Yeast Rolls`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-01-24 08:44:05 -0500",
     "_title.txt":"2024-01-24 08:44:05 -0500",
@@ -749,6 +1037,10 @@ export const nodeFiles = {
 "/recipes/want-to-try":{
   "parent":"/recipes",
   "title":`Recipes we want to try`,
+  "markdownCount":6,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "index.md":"2024-01-21 06:59:31 -0500",
     "_title.txt":"2024-02-04 10:54:21 -0500",
@@ -760,7 +1052,11 @@ export const nodeFiles = {
 },
 "/recipes/want-to-try/beef-stew":{
   "parent":"/recipes/want-to-try",
-  "title":``,
+  "title":`beef-stew`,
+  "markdownCount":3,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
   },
   "children":[
@@ -771,7 +1067,11 @@ export const nodeFiles = {
 },
 "/recipes/want-to-try/beef-stew/beef-stew-20240120-bard":{
   "parent":"/recipes/want-to-try/beef-stew",
-  "title":``,
+  "title":`beef-stew-20240120-bard`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-01-24 08:44:05 -0500",
     "_title.txt":"2024-01-24 08:44:05 -0500",
@@ -781,7 +1081,11 @@ export const nodeFiles = {
 },
 "/recipes/want-to-try/beef-stew/beef-stew-20240120-bing":{
   "parent":"/recipes/want-to-try/beef-stew",
-  "title":``,
+  "title":`beef-stew-20240120-bing`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-01-24 08:44:05 -0500",
     "_title.txt":"2024-01-24 08:44:05 -0500",
@@ -791,7 +1095,11 @@ export const nodeFiles = {
 },
 "/recipes/want-to-try/beef-stew/beef-stew-20240120-chatgpt":{
   "parent":"/recipes/want-to-try/beef-stew",
-  "title":``,
+  "title":`beef-stew-20240120-chatgpt`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-01-24 08:44:05 -0500",
     "_title.txt":"2024-01-24 08:44:05 -0500",
@@ -801,7 +1109,11 @@ export const nodeFiles = {
 },
 "/recipes/want-to-try/crab-cakes":{
   "parent":"/recipes/want-to-try",
-  "title":``,
+  "title":`crab-cakes`,
+  "markdownCount":3,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
   },
   "children":[
@@ -812,7 +1124,11 @@ export const nodeFiles = {
 },
 "/recipes/want-to-try/crab-cakes/crab-cakes-20240120-bard":{
   "parent":"/recipes/want-to-try/crab-cakes",
-  "title":``,
+  "title":`crab-cakes-20240120-bard`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-01-24 08:44:05 -0500",
     "_title.txt":"2024-01-24 08:44:05 -0500",
@@ -822,7 +1138,11 @@ export const nodeFiles = {
 },
 "/recipes/want-to-try/crab-cakes/crab-cakes-20240120-bing":{
   "parent":"/recipes/want-to-try/crab-cakes",
-  "title":``,
+  "title":`crab-cakes-20240120-bing`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-01-24 08:44:05 -0500",
     "_title.txt":"2024-01-24 08:44:05 -0500",
@@ -832,7 +1152,11 @@ export const nodeFiles = {
 },
 "/recipes/want-to-try/crab-cakes/crab-cakes-20240120-chatgpt":{
   "parent":"/recipes/want-to-try/crab-cakes",
-  "title":``,
+  "title":`crab-cakes-20240120-chatgpt`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-01-24 08:44:05 -0500",
     "_title.txt":"2024-01-24 08:44:05 -0500",
@@ -843,6 +1167,10 @@ export const nodeFiles = {
 "/sitemap":{
   "parent":"/",
   "title":`Sitemap`,
+  "markdownCount":0,
+  "htmlCount":1,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "html.html":"2024-01-24 08:44:05 -0500",
     "_title.txt":"2024-01-24 08:44:05 -0500",
@@ -852,7 +1180,11 @@ export const nodeFiles = {
 },
 "/this-should-not-appear":{
   "parent":"/",
-  "title":``,
+  "title":`this-should-not-appear`,
+  "markdownCount":0,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "_title.txt":"2024-02-04 09:37:53 -0500",
   },
@@ -862,6 +1194,10 @@ export const nodeFiles = {
 "/upcycling":{
   "parent":"/",
   "title":`Creative Reuse`,
+  "markdownCount":3,
+  "htmlCount":1,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "html.html":"2024-02-04 10:54:21 -0500",
     "_title.txt":"2024-02-04 10:54:21 -0500",
@@ -874,6 +1210,10 @@ export const nodeFiles = {
 "/upcycling/food-scraps":{
   "parent":"/upcycling",
   "title":`Creative Reuse of Food Scraps`,
+  "markdownCount":2,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "_title.txt":"2024-02-04 14:34:43 -0500",
   },
@@ -885,6 +1225,10 @@ export const nodeFiles = {
 "/upcycling/food-scraps/coffee-grounds":{
   "parent":"/upcycling/food-scraps",
   "title":`Reusing Coffee Grounds`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-01-24 08:44:05 -0500",
     "_title.txt":"2024-01-24 08:44:05 -0500",
@@ -895,6 +1239,10 @@ export const nodeFiles = {
 "/upcycling/food-scraps/tea-bags":{
   "parent":"/upcycling/food-scraps",
   "title":`Reusing Tea Bags`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-01-24 08:44:05 -0500",
     "_title.txt":"2024-01-24 08:44:05 -0500",
@@ -905,6 +1253,10 @@ export const nodeFiles = {
 "/upcycling/textiles":{
   "parent":"/upcycling",
   "title":`Creative Reuse of Textiles`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "_title.txt":"2024-02-04 14:34:43 -0500",
   },
@@ -915,6 +1267,10 @@ export const nodeFiles = {
 "/upcycling/textiles/t-shirts":{
   "parent":"/upcycling/textiles",
   "title":`Upcycling T-shirts`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
   "files":{
     "markdown.md":"2024-01-24 08:44:05 -0500",
     "_title.txt":"2024-01-24 08:44:05 -0500",
