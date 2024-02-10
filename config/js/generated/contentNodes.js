@@ -1,4 +1,4 @@
-export const objNodes = {
+export const contentNodes = {
 "/":{
   "parent":null,
   "title":`Welcome  `,

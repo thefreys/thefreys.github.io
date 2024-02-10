@@ -8,12 +8,12 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
 
-<link href="assets/css/main.css" id="dynamicMainCss" rel="stylesheet">
-<script type="module" id="dynamicContentJs"></script>
+<link href="assets/css/index.css" id="dynamicCss" rel="stylesheet">
+<script type="module" id="dynamicJs"></script>
 <script>
   var linkDate = new Date().toISOString().replace(/:/g, '').replace(/ /g, '').replace(/-/g, '');
-  document.getElementById('dynamicMainCss').href = 'assets/css/main.css?date=' + linkDate;
-  document.getElementById('dynamicContentJs').src = 'assets/js/content.js?date=' + linkDate;
+  document.getElementById('dynamicCss').href = 'assets/css/index.css?date=' + linkDate;
+  document.getElementById('dynamicJs').src = 'assets/js/index.js?date=' + linkDate;
 </script>
 </head>
 <title></title>

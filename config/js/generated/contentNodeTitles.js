@@ -1,4 +1,4 @@
-export const objNodeTitles = {
+export const contentNodeTitles = {
 "/coding/frameworks/bootstrap/cheatsheet-v5.3":``,
 "/coding/languages/markdown/markdown-cheat-sheet":``,
 "/coding/web-design/hamburger":`Hamburger Menus`,

@@ -1,12 +1,13 @@
 #!/bin/bash
 source "$(dirname ${BASH_SOURCE[0]})/config.sh"
+find content -type d -print | xargs -I {} ls -d {} > "$(dirname ${BASH_SOURCE[0]})/contentNodeList.txt"
 rm -rf "${tmpoutdir}"
 mkdir -p "${tmpoutdir}"
-jsvar=objNodes
+jsvar=contentNodes
 tmpoutfile="${tmpoutdir}/${jsvar}.js"
 cd "${rootdir}"
 echo "export const ${jsvar} = {" > "${tmpoutfile}"
-find content -type d -print | xargs -I {} ls -d {}  | while read nodepath; do
+cat  "$(dirname ${BASH_SOURCE[0]})/contentNodeList.txt" | while read nodepath; do
     node="/${nodepath}"
     node=${node:8}
     if [[ "${node}" = "" ]]; then
@@ -73,8 +74,8 @@ echo "}" >> "${tmpoutfile}"
 "$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrTitleNodes" "_title.txt"
 "$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrTagNodes" "_tags.txt"
 
-"$(dirname ${BASH_SOURCE[0]})/nodeObject.sh" "objNodeTitles" "_title.txt"
-"$(dirname ${BASH_SOURCE[0]})/nodeObject.sh" "objNodeTags" "_tags.txt"
+"$(dirname ${BASH_SOURCE[0]})/nodeObject.sh" "contentNodeTitles" "_title.txt"
+"$(dirname ${BASH_SOURCE[0]})/nodeObject.sh" "contentNodeTags" "_tags.txt"
 
 
 rm -rf "${outdir}"
