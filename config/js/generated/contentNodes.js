@@ -2,7 +2,7 @@ export const contentNodes = {
 "/":{
   "parent":null,
   "title":`Welcome  `,
-  "markdownCount":48,
+  "markdownCount":55,
   "htmlCount":4,
   "javascriptCount":0,
   "hiddenCount":2,
@@ -10,18 +10,200 @@ export const contentNodes = {
     "_title.txt":"2024-02-04 14:34:43 -0500",
   },
   "children":[
+    "/blogs",
     "/coding",
     "/hidden",
+    "/img",
     "/recipes",
     "/sitemap",
     "/this-should-not-appear",
     "/upcycling",
   ],
 },
+"/blogs":{
+  "parent":"/",
+  "title":`blogs`,
+  "markdownCount":6,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+  },
+  "children":[
+    "/blogs/kristy",
+  ],
+},
+"/blogs/kristy":{
+  "parent":"/blogs",
+  "title":`kristy`,
+  "markdownCount":6,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+  },
+  "children":[
+    "/blogs/kristy/2024",
+  ],
+},
+"/blogs/kristy/2024":{
+  "parent":"/blogs/kristy",
+  "title":`2024`,
+  "markdownCount":6,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+  },
+  "children":[
+    "/blogs/kristy/2024/01",
+    "/blogs/kristy/2024/02",
+  ],
+},
+"/blogs/kristy/2024/01":{
+  "parent":"/blogs/kristy/2024",
+  "title":`01`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+  },
+  "children":[
+    "/blogs/kristy/2024/01/20",
+  ],
+},
+"/blogs/kristy/2024/01/20":{
+  "parent":"/blogs/kristy/2024/01",
+  "title":`20`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+  },
+  "children":[
+    "/blogs/kristy/2024/01/20/finding-new-recipes-to-try",
+  ],
+},
+"/blogs/kristy/2024/01/20/finding-new-recipes-to-try":{
+  "parent":"/blogs/kristy/2024/01/20",
+  "title":`finding-new-recipes-to-try`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-04 15:49:01 -0500",
+    "_title.txt":"2024-02-04 15:49:01 -0500",
+  },
+  "children":[
+  ],
+},
+"/blogs/kristy/2024/02":{
+  "parent":"/blogs/kristy/2024",
+  "title":`02`,
+  "markdownCount":5,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+  },
+  "children":[
+    "/blogs/kristy/2024/02/10",
+  ],
+},
+"/blogs/kristy/2024/02/10":{
+  "parent":"/blogs/kristy/2024/02",
+  "title":`10`,
+  "markdownCount":5,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+  },
+  "children":[
+    "/blogs/kristy/2024/02/10/scammers-gonna-scam",
+  ],
+},
+"/blogs/kristy/2024/02/10/scammers-gonna-scam":{
+  "parent":"/blogs/kristy/2024/02/10",
+  "title":`Scammers gonna scam`,
+  "markdownCount":5,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"",
+    "_title.txt":"",
+  },
+  "children":[
+    "/blogs/kristy/2024/02/10/scammers-gonna-scam/20240208-featured-snippets",
+  ],
+},
+"/blogs/kristy/2024/02/10/scammers-gonna-scam/20240208-featured-snippets":{
+  "parent":"/blogs/kristy/2024/02/10/scammers-gonna-scam",
+  "title":`Featured Snippets according to AI on February 10, 2024`,
+  "markdownCount":4,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"",
+    "_title.txt":"",
+  },
+  "children":[
+    "/blogs/kristy/2024/02/10/scammers-gonna-scam/20240208-featured-snippets/bing",
+    "/blogs/kristy/2024/02/10/scammers-gonna-scam/20240208-featured-snippets/chatgpt",
+    "/blogs/kristy/2024/02/10/scammers-gonna-scam/20240208-featured-snippets/gemini",
+  ],
+},
+"/blogs/kristy/2024/02/10/scammers-gonna-scam/20240208-featured-snippets/bing":{
+  "parent":"/blogs/kristy/2024/02/10/scammers-gonna-scam/20240208-featured-snippets",
+  "title":`Response from Bing Copilot`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"",
+    "_title.txt":"",
+  },
+  "children":[
+  ],
+},
+"/blogs/kristy/2024/02/10/scammers-gonna-scam/20240208-featured-snippets/chatgpt":{
+  "parent":"/blogs/kristy/2024/02/10/scammers-gonna-scam/20240208-featured-snippets",
+  "title":`Response from ChatGPT 3.5`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"",
+    "_title.txt":"",
+  },
+  "children":[
+  ],
+},
+"/blogs/kristy/2024/02/10/scammers-gonna-scam/20240208-featured-snippets/gemini":{
+  "parent":"/blogs/kristy/2024/02/10/scammers-gonna-scam/20240208-featured-snippets",
+  "title":`Response from Gemini`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"",
+    "_title.txt":"",
+  },
+  "children":[
+  ],
+},
 "/coding":{
   "parent":"/",
   "title":`coding`,
-  "markdownCount":3,
+  "markdownCount":2,
   "htmlCount":1,
   "javascriptCount":0,
   "hiddenCount":0,
@@ -116,7 +298,7 @@ export const contentNodes = {
 "/coding/web-design":{
   "parent":"/coding",
   "title":`Web Design`,
-  "markdownCount":2,
+  "markdownCount":1,
   "htmlCount":0,
   "javascriptCount":0,
   "hiddenCount":0,
@@ -124,22 +306,7 @@ export const contentNodes = {
     "_title.txt":"2024-02-04 14:34:43 -0500",
   },
   "children":[
-    "/coding/web-design/hamburger",
     "/coding/web-design/sitemaps",
-  ],
-},
-"/coding/web-design/hamburger":{
-  "parent":"/coding/web-design",
-  "title":`Hamburger Menus`,
-  "markdownCount":1,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "markdown.md":"2024-01-24 08:44:05 -0500",
-    "_title.txt":"2024-01-24 08:44:05 -0500",
-  },
-  "children":[
   ],
 },
 "/coding/web-design/sitemaps":{
@@ -159,7 +326,7 @@ export const contentNodes = {
 "/hidden":{
   "parent":"/",
   "title":`hidden`,
-  "markdownCount":27,
+  "markdownCount":24,
   "htmlCount":0,
   "javascriptCount":0,
   "hiddenCount":2,
@@ -169,7 +336,6 @@ export const contentNodes = {
   "children":[
     "/hidden/activities",
     "/hidden/asking-ai",
-    "/hidden/blogs",
   ],
 },
 "/hidden/activities":{
@@ -720,124 +886,15 @@ export const contentNodes = {
   "children":[
   ],
 },
-"/hidden/blogs":{
-  "parent":"/hidden",
-  "title":`blogs`,
-  "markdownCount":3,
+"/img":{
+  "parent":"/",
+  "title":`img`,
+  "markdownCount":0,
   "htmlCount":0,
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-  },
-  "children":[
-    "/hidden/blogs/kristy",
-  ],
-},
-"/hidden/blogs/kristy":{
-  "parent":"/hidden/blogs",
-  "title":`kristy`,
-  "markdownCount":3,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-  },
-  "children":[
-    "/hidden/blogs/kristy/2024",
-  ],
-},
-"/hidden/blogs/kristy/2024":{
-  "parent":"/hidden/blogs/kristy",
-  "title":`2024`,
-  "markdownCount":3,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-  },
-  "children":[
-    "/hidden/blogs/kristy/2024/01",
-  ],
-},
-"/hidden/blogs/kristy/2024/01":{
-  "parent":"/hidden/blogs/kristy/2024",
-  "title":`01`,
-  "markdownCount":3,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-  },
-  "children":[
-    "/hidden/blogs/kristy/2024/01/20",
-    "/hidden/blogs/kristy/2024/01/x",
-  ],
-},
-"/hidden/blogs/kristy/2024/01/20":{
-  "parent":"/hidden/blogs/kristy/2024/01",
-  "title":`20`,
-  "markdownCount":1,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-  },
-  "children":[
-    "/hidden/blogs/kristy/2024/01/20/finding-new-recipes-to-try",
-  ],
-},
-"/hidden/blogs/kristy/2024/01/20/finding-new-recipes-to-try":{
-  "parent":"/hidden/blogs/kristy/2024/01/20",
-  "title":`finding-new-recipes-to-try`,
-  "markdownCount":1,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "markdown.md":"2024-02-04 15:49:01 -0500",
-    "_title.txt":"2024-02-04 15:49:01 -0500",
-  },
-  "children":[
-  ],
-},
-"/hidden/blogs/kristy/2024/01/x":{
-  "parent":"/hidden/blogs/kristy/2024/01",
-  "title":`x`,
-  "markdownCount":2,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-  },
-  "children":[
-    "/hidden/blogs/kristy/2024/01/x/18-asking-ai",
-    "/hidden/blogs/kristy/2024/01/x/19-asking-ai",
-  ],
-},
-"/hidden/blogs/kristy/2024/01/x/18-asking-ai":{
-  "parent":"/hidden/blogs/kristy/2024/01/x",
-  "title":`18-asking-ai`,
-  "markdownCount":1,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "markdown.md":"2024-02-04 15:49:01 -0500",
-    "_title.txt":"2024-02-04 15:49:01 -0500",
-  },
-  "children":[
-  ],
-},
-"/hidden/blogs/kristy/2024/01/x/19-asking-ai":{
-  "parent":"/hidden/blogs/kristy/2024/01/x",
-  "title":`19-asking-ai`,
-  "markdownCount":1,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "markdown.md":"2024-02-04 15:49:01 -0500",
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "2024-02-10-scamming-google.png":"",
   },
   "children":[
   ],
@@ -845,7 +902,7 @@ export const contentNodes = {
 "/recipes":{
   "parent":"/",
   "title":`Recipes`,
-  "markdownCount":15,
+  "markdownCount":20,
   "htmlCount":1,
   "javascriptCount":0,
   "hiddenCount":0,
@@ -857,7 +914,7 @@ export const contentNodes = {
     "/recipes/desserts",
     "/recipes/meats",
     "/recipes/sides",
-    "/recipes/want-to-try",
+    "/recipes/what-did-ai-say",
   ],
 },
 "/recipes/desserts":{
@@ -1034,24 +1091,25 @@ export const contentNodes = {
   "children":[
   ],
 },
-"/recipes/want-to-try":{
+"/recipes/what-did-ai-say":{
   "parent":"/recipes",
-  "title":`Recipes we want to try`,
-  "markdownCount":6,
+  "title":`What did AI say?`,
+  "markdownCount":11,
   "htmlCount":0,
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "index.md":"2024-01-21 06:59:31 -0500",
-    "_title.txt":"2024-02-04 10:54:21 -0500",
+    "markdown.md":"",
+    "_title.txt":"",
   },
   "children":[
-    "/recipes/want-to-try/beef-stew",
-    "/recipes/want-to-try/crab-cakes",
+    "/recipes/what-did-ai-say/beef-stew",
+    "/recipes/what-did-ai-say/crab-cakes",
+    "/recipes/what-did-ai-say/pie-crust",
   ],
 },
-"/recipes/want-to-try/beef-stew":{
-  "parent":"/recipes/want-to-try",
+"/recipes/what-did-ai-say/beef-stew":{
+  "parent":"/recipes/what-did-ai-say",
   "title":`beef-stew`,
   "markdownCount":3,
   "htmlCount":0,
@@ -1060,55 +1118,55 @@ export const contentNodes = {
   "files":{
   },
   "children":[
-    "/recipes/want-to-try/beef-stew/beef-stew-20240120-bard",
-    "/recipes/want-to-try/beef-stew/beef-stew-20240120-bing",
-    "/recipes/want-to-try/beef-stew/beef-stew-20240120-chatgpt",
+    "/recipes/what-did-ai-say/beef-stew/beef-stew-20240120-bard",
+    "/recipes/what-did-ai-say/beef-stew/beef-stew-20240120-bing",
+    "/recipes/what-did-ai-say/beef-stew/beef-stew-20240120-chatgpt",
   ],
 },
-"/recipes/want-to-try/beef-stew/beef-stew-20240120-bard":{
-  "parent":"/recipes/want-to-try/beef-stew",
+"/recipes/what-did-ai-say/beef-stew/beef-stew-20240120-bard":{
+  "parent":"/recipes/what-did-ai-say/beef-stew",
   "title":`beef-stew-20240120-bard`,
   "markdownCount":1,
   "htmlCount":0,
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-01-24 08:44:05 -0500",
-    "_title.txt":"2024-01-24 08:44:05 -0500",
+    "markdown.md":"",
+    "_title.txt":"",
   },
   "children":[
   ],
 },
-"/recipes/want-to-try/beef-stew/beef-stew-20240120-bing":{
-  "parent":"/recipes/want-to-try/beef-stew",
+"/recipes/what-did-ai-say/beef-stew/beef-stew-20240120-bing":{
+  "parent":"/recipes/what-did-ai-say/beef-stew",
   "title":`beef-stew-20240120-bing`,
   "markdownCount":1,
   "htmlCount":0,
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-01-24 08:44:05 -0500",
-    "_title.txt":"2024-01-24 08:44:05 -0500",
+    "markdown.md":"",
+    "_title.txt":"",
   },
   "children":[
   ],
 },
-"/recipes/want-to-try/beef-stew/beef-stew-20240120-chatgpt":{
-  "parent":"/recipes/want-to-try/beef-stew",
+"/recipes/what-did-ai-say/beef-stew/beef-stew-20240120-chatgpt":{
+  "parent":"/recipes/what-did-ai-say/beef-stew",
   "title":`beef-stew-20240120-chatgpt`,
   "markdownCount":1,
   "htmlCount":0,
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-01-24 08:44:05 -0500",
-    "_title.txt":"2024-01-24 08:44:05 -0500",
+    "markdown.md":"",
+    "_title.txt":"",
   },
   "children":[
   ],
 },
-"/recipes/want-to-try/crab-cakes":{
-  "parent":"/recipes/want-to-try",
+"/recipes/what-did-ai-say/crab-cakes":{
+  "parent":"/recipes/what-did-ai-say",
   "title":`crab-cakes`,
   "markdownCount":3,
   "htmlCount":0,
@@ -1117,49 +1175,120 @@ export const contentNodes = {
   "files":{
   },
   "children":[
-    "/recipes/want-to-try/crab-cakes/crab-cakes-20240120-bard",
-    "/recipes/want-to-try/crab-cakes/crab-cakes-20240120-bing",
-    "/recipes/want-to-try/crab-cakes/crab-cakes-20240120-chatgpt",
+    "/recipes/what-did-ai-say/crab-cakes/crab-cakes-20240120-bard",
+    "/recipes/what-did-ai-say/crab-cakes/crab-cakes-20240120-bing",
+    "/recipes/what-did-ai-say/crab-cakes/crab-cakes-20240120-chatgpt",
   ],
 },
-"/recipes/want-to-try/crab-cakes/crab-cakes-20240120-bard":{
-  "parent":"/recipes/want-to-try/crab-cakes",
+"/recipes/what-did-ai-say/crab-cakes/crab-cakes-20240120-bard":{
+  "parent":"/recipes/what-did-ai-say/crab-cakes",
   "title":`crab-cakes-20240120-bard`,
   "markdownCount":1,
   "htmlCount":0,
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-01-24 08:44:05 -0500",
-    "_title.txt":"2024-01-24 08:44:05 -0500",
+    "markdown.md":"",
+    "_title.txt":"",
   },
   "children":[
   ],
 },
-"/recipes/want-to-try/crab-cakes/crab-cakes-20240120-bing":{
-  "parent":"/recipes/want-to-try/crab-cakes",
+"/recipes/what-did-ai-say/crab-cakes/crab-cakes-20240120-bing":{
+  "parent":"/recipes/what-did-ai-say/crab-cakes",
   "title":`crab-cakes-20240120-bing`,
   "markdownCount":1,
   "htmlCount":0,
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-01-24 08:44:05 -0500",
-    "_title.txt":"2024-01-24 08:44:05 -0500",
+    "markdown.md":"",
+    "_title.txt":"",
   },
   "children":[
   ],
 },
-"/recipes/want-to-try/crab-cakes/crab-cakes-20240120-chatgpt":{
-  "parent":"/recipes/want-to-try/crab-cakes",
+"/recipes/what-did-ai-say/crab-cakes/crab-cakes-20240120-chatgpt":{
+  "parent":"/recipes/what-did-ai-say/crab-cakes",
   "title":`crab-cakes-20240120-chatgpt`,
   "markdownCount":1,
   "htmlCount":0,
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-01-24 08:44:05 -0500",
-    "_title.txt":"2024-01-24 08:44:05 -0500",
+    "markdown.md":"",
+    "_title.txt":"",
+  },
+  "children":[
+  ],
+},
+"/recipes/what-did-ai-say/pie-crust":{
+  "parent":"/recipes/what-did-ai-say",
+  "title":`pie-crust`,
+  "markdownCount":4,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+  },
+  "children":[
+    "/recipes/what-did-ai-say/pie-crust/20240208",
+  ],
+},
+"/recipes/what-did-ai-say/pie-crust/20240208":{
+  "parent":"/recipes/what-did-ai-say/pie-crust",
+  "title":`20240208`,
+  "markdownCount":4,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"",
+  },
+  "children":[
+    "/recipes/what-did-ai-say/pie-crust/20240208/bing",
+    "/recipes/what-did-ai-say/pie-crust/20240208/chatgpt",
+    "/recipes/what-did-ai-say/pie-crust/20240208/gemini",
+  ],
+},
+"/recipes/what-did-ai-say/pie-crust/20240208/bing":{
+  "parent":"/recipes/what-did-ai-say/pie-crust/20240208",
+  "title":`Response from Bing Copilot`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"",
+    "_title.txt":"",
+  },
+  "children":[
+  ],
+},
+"/recipes/what-did-ai-say/pie-crust/20240208/chatgpt":{
+  "parent":"/recipes/what-did-ai-say/pie-crust/20240208",
+  "title":`Response from ChatGPT 3.5`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"",
+    "_title.txt":"",
+  },
+  "children":[
+  ],
+},
+"/recipes/what-did-ai-say/pie-crust/20240208/gemini":{
+  "parent":"/recipes/what-did-ai-say/pie-crust/20240208",
+  "title":`Response from Gemini`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"",
+    "_title.txt":"",
   },
   "children":[
   ],
