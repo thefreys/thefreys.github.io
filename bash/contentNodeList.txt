@@ -12,6 +12,13 @@ content/blogs/kristy/2024/02/10/scammers-gonna-scam/20240208-featured-snippets
 content/blogs/kristy/2024/02/10/scammers-gonna-scam/20240208-featured-snippets/bing
 content/blogs/kristy/2024/02/10/scammers-gonna-scam/20240208-featured-snippets/chatgpt
 content/blogs/kristy/2024/02/10/scammers-gonna-scam/20240208-featured-snippets/gemini
+content/blogs/kristy/2024/02/11
+content/blogs/kristy/2024/02/11/google-analytics-query-string
+content/blogs/kristy/2024/02/11/google-analytics-query-string/AI-answers
+content/blogs/kristy/2024/02/11/google-analytics-query-string/AI-answers/bing
+content/blogs/kristy/2024/02/11/google-analytics-query-string/AI-answers/chatgpt
+content/blogs/kristy/2024/02/11/google-analytics-query-string/AI-answers/claude
+content/blogs/kristy/2024/02/11/google-analytics-query-string/AI-answers/gemini
 content/coding
 content/coding/frameworks
 content/coding/frameworks/bootstrap

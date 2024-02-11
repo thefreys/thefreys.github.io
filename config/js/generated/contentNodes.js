@@ -2,7 +2,7 @@ export const contentNodes = {
 "/":{
   "parent":null,
   "title":`Welcome  `,
-  "markdownCount":55,
+  "markdownCount":61,
   "htmlCount":4,
   "javascriptCount":0,
   "hiddenCount":2,
@@ -23,7 +23,7 @@ export const contentNodes = {
 "/blogs":{
   "parent":"/",
   "title":`blogs`,
-  "markdownCount":6,
+  "markdownCount":12,
   "htmlCount":0,
   "javascriptCount":0,
   "hiddenCount":0,
@@ -36,7 +36,7 @@ export const contentNodes = {
 "/blogs/kristy":{
   "parent":"/blogs",
   "title":`kristy`,
-  "markdownCount":6,
+  "markdownCount":12,
   "htmlCount":0,
   "javascriptCount":0,
   "hiddenCount":0,
@@ -49,7 +49,7 @@ export const contentNodes = {
 "/blogs/kristy/2024":{
   "parent":"/blogs/kristy",
   "title":`2024`,
-  "markdownCount":6,
+  "markdownCount":12,
   "htmlCount":0,
   "javascriptCount":0,
   "hiddenCount":0,
@@ -94,8 +94,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-04 15:49:01 -0500",
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "markdown.md":"2024-02-10 09:21:20 -0500",
+    "_title.txt":"2024-02-10 09:21:20 -0500",
   },
   "children":[
   ],
@@ -103,7 +103,7 @@ export const contentNodes = {
 "/blogs/kristy/2024/02":{
   "parent":"/blogs/kristy/2024",
   "title":`02`,
-  "markdownCount":5,
+  "markdownCount":11,
   "htmlCount":0,
   "javascriptCount":0,
   "hiddenCount":0,
@@ -111,6 +111,7 @@ export const contentNodes = {
   },
   "children":[
     "/blogs/kristy/2024/02/10",
+    "/blogs/kristy/2024/02/11",
   ],
 },
 "/blogs/kristy/2024/02/10":{
@@ -134,8 +135,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"",
-    "_title.txt":"",
+    "markdown.md":"2024-02-10 09:21:20 -0500",
+    "_title.txt":"2024-02-10 09:21:20 -0500",
   },
   "children":[
     "/blogs/kristy/2024/02/10/scammers-gonna-scam/20240208-featured-snippets",
@@ -149,8 +150,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"",
-    "_title.txt":"",
+    "markdown.md":"2024-02-10 09:21:20 -0500",
+    "_title.txt":"2024-02-10 09:21:20 -0500",
   },
   "children":[
     "/blogs/kristy/2024/02/10/scammers-gonna-scam/20240208-featured-snippets/bing",
@@ -166,8 +167,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"",
-    "_title.txt":"",
+    "markdown.md":"2024-02-10 09:21:20 -0500",
+    "_title.txt":"2024-02-10 09:21:20 -0500",
   },
   "children":[
   ],
@@ -180,14 +181,116 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"",
-    "_title.txt":"",
+    "markdown.md":"2024-02-10 09:21:20 -0500",
+    "_title.txt":"2024-02-10 09:21:20 -0500",
   },
   "children":[
   ],
 },
 "/blogs/kristy/2024/02/10/scammers-gonna-scam/20240208-featured-snippets/gemini":{
   "parent":"/blogs/kristy/2024/02/10/scammers-gonna-scam/20240208-featured-snippets",
+  "title":`Response from Gemini`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-10 09:21:20 -0500",
+    "_title.txt":"2024-02-10 09:21:20 -0500",
+  },
+  "children":[
+  ],
+},
+"/blogs/kristy/2024/02/11":{
+  "parent":"/blogs/kristy/2024/02",
+  "title":`11`,
+  "markdownCount":6,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+  },
+  "children":[
+    "/blogs/kristy/2024/02/11/google-analytics-query-string",
+  ],
+},
+"/blogs/kristy/2024/02/11/google-analytics-query-string":{
+  "parent":"/blogs/kristy/2024/02/11",
+  "title":`Query String Values as Pages in Google Analytics`,
+  "markdownCount":6,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"",
+    "_title.txt":"",
+  },
+  "children":[
+    "/blogs/kristy/2024/02/11/google-analytics-query-string/AI-answers",
+  ],
+},
+"/blogs/kristy/2024/02/11/google-analytics-query-string/AI-answers":{
+  "parent":"/blogs/kristy/2024/02/11/google-analytics-query-string",
+  "title":`Query Parameters in Google Analytics according to AI on February 11, 2024`,
+  "markdownCount":5,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"",
+    "_title.txt":"",
+  },
+  "children":[
+    "/blogs/kristy/2024/02/11/google-analytics-query-string/AI-answers/bing",
+    "/blogs/kristy/2024/02/11/google-analytics-query-string/AI-answers/chatgpt",
+    "/blogs/kristy/2024/02/11/google-analytics-query-string/AI-answers/claude",
+    "/blogs/kristy/2024/02/11/google-analytics-query-string/AI-answers/gemini",
+  ],
+},
+"/blogs/kristy/2024/02/11/google-analytics-query-string/AI-answers/bing":{
+  "parent":"/blogs/kristy/2024/02/11/google-analytics-query-string/AI-answers",
+  "title":`Response from Bing Copilot`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"",
+    "_title.txt":"",
+  },
+  "children":[
+  ],
+},
+"/blogs/kristy/2024/02/11/google-analytics-query-string/AI-answers/chatgpt":{
+  "parent":"/blogs/kristy/2024/02/11/google-analytics-query-string/AI-answers",
+  "title":`Response from ChatGPT 3.5`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"",
+    "_title.txt":"",
+  },
+  "children":[
+  ],
+},
+"/blogs/kristy/2024/02/11/google-analytics-query-string/AI-answers/claude":{
+  "parent":"/blogs/kristy/2024/02/11/google-analytics-query-string/AI-answers",
+  "title":`Response from Claude`,
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"",
+    "_title.txt":"",
+  },
+  "children":[
+  ],
+},
+"/blogs/kristy/2024/02/11/google-analytics-query-string/AI-answers/gemini":{
+  "parent":"/blogs/kristy/2024/02/11/google-analytics-query-string/AI-answers",
   "title":`Response from Gemini`,
   "markdownCount":1,
   "htmlCount":0,
@@ -894,7 +997,7 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "2024-02-10-scamming-google.png":"",
+    "2024-02-10-scamming-google.png":"2024-02-10 09:21:20 -0500",
   },
   "children":[
   ],
@@ -1099,8 +1202,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"",
-    "_title.txt":"",
+    "markdown.md":"2024-02-10 09:21:20 -0500",
+    "_title.txt":"2024-02-10 09:21:20 -0500",
   },
   "children":[
     "/recipes/what-did-ai-say/beef-stew",
@@ -1131,8 +1234,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"",
-    "_title.txt":"",
+    "markdown.md":"2024-02-10 09:21:20 -0500",
+    "_title.txt":"2024-02-10 09:21:20 -0500",
   },
   "children":[
   ],
@@ -1145,8 +1248,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"",
-    "_title.txt":"",
+    "markdown.md":"2024-02-10 09:21:20 -0500",
+    "_title.txt":"2024-02-10 09:21:20 -0500",
   },
   "children":[
   ],
@@ -1159,8 +1262,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"",
-    "_title.txt":"",
+    "markdown.md":"2024-02-10 09:21:20 -0500",
+    "_title.txt":"2024-02-10 09:21:20 -0500",
   },
   "children":[
   ],
@@ -1188,8 +1291,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"",
-    "_title.txt":"",
+    "markdown.md":"2024-02-10 09:21:20 -0500",
+    "_title.txt":"2024-02-10 09:21:20 -0500",
   },
   "children":[
   ],
@@ -1202,8 +1305,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"",
-    "_title.txt":"",
+    "markdown.md":"2024-02-10 09:21:20 -0500",
+    "_title.txt":"2024-02-10 09:21:20 -0500",
   },
   "children":[
   ],
@@ -1216,8 +1319,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"",
-    "_title.txt":"",
+    "markdown.md":"2024-02-10 09:21:20 -0500",
+    "_title.txt":"2024-02-10 09:21:20 -0500",
   },
   "children":[
   ],
@@ -1243,7 +1346,7 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"",
+    "markdown.md":"2024-02-10 09:21:20 -0500",
   },
   "children":[
     "/recipes/what-did-ai-say/pie-crust/20240208/bing",
@@ -1259,8 +1362,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"",
-    "_title.txt":"",
+    "markdown.md":"2024-02-10 09:21:20 -0500",
+    "_title.txt":"2024-02-10 09:21:20 -0500",
   },
   "children":[
   ],
@@ -1273,8 +1376,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"",
-    "_title.txt":"",
+    "markdown.md":"2024-02-10 09:21:20 -0500",
+    "_title.txt":"2024-02-10 09:21:20 -0500",
   },
   "children":[
   ],
@@ -1287,8 +1390,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"",
-    "_title.txt":"",
+    "markdown.md":"2024-02-10 09:21:20 -0500",
+    "_title.txt":"2024-02-10 09:21:20 -0500",
   },
   "children":[
   ],

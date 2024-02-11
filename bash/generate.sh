@@ -66,8 +66,6 @@ cat  "$(dirname ${BASH_SOURCE[0]})/contentNodeList.txt" | while read nodepath; d
 done
 echo "}" >> "${tmpoutfile}"
 
-
-
 "$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrMarkdownNodes" "markdown.md"
 "$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrHtmlNodes" "html.html"
 "$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrJavascriptNodes" "javascript.js"
@@ -81,3 +79,5 @@ echo "}" >> "${tmpoutfile}"
 
 rm -rf "${outdir}"
 mv "${tmpoutdir}" "${outdir}"
+
+"$(dirname ${BASH_SOURCE[0]})/xmlsitemap.sh"
