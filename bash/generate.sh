@@ -17,19 +17,20 @@ cat  "$(dirname ${BASH_SOURCE[0]})/contentNodeList.txt" | while read nodepath; d
 
     if [[ "${node}" = "/" ]]; then
         echo "  \"parent\":null," >> "${tmpoutfile}"
-        title="Home"
+        navLabel="Home"
     else
         echo "  \"parent\":\"$(dirname ${node})\"," >> "${tmpoutfile}"
-        title="$(basename ${node})"
+        navLabel="$(basename ${node})"
     fi
     
     if [ -f "${nodepath}/_title.txt" ]; then
-        tmptitle="$(cat "${nodepath}/_title.txt")"     
-        if [[ "${tmptitle}" != "" ]]; then
-            title="${tmptitle}";
+        title="$(cat "${nodepath}/_title.txt")"     
+        if [[ "${title}" != "" ]]; then
+            navLabel="${title}"
+            echo "  \"title\":\`${title}\`," >> "${tmpoutfile}"
         fi
     fi
-    echo "  \"title\":\`${title}\`," >> "${tmpoutfile}"
+    echo "  \"navLabel\":\"${navLabel}\"," >> "${tmpoutfile}"
 
     markdownCount="$(find ${nodepath}/ -type f -name "markdown.md" | wc -l)"
     htmlCount="$(find ${nodepath}/ -type f -name "html.html" | wc -l)"

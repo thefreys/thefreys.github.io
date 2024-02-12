@@ -4,18 +4,18 @@ import { contentNodes } from '../../config/js/generated/contentNodes.js';
 var request = {};
 
 var templateMenuItem = `
-  <li class="nav-item"><a class="nav-link" href="{{href}}">{{title}}</a></li>`;
+  <li class="nav-item"><a class="nav-link" href="{{href}}">{{navLabel}}</a></li>`;
 var templateMenuItemWithChildren = `<li class="nav-item dropdown">
 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-{{title}}</a><ul class="dropdown-menu">{{children}}
+{{navLabel}}</a><ul class="dropdown-menu">{{children}}
 <li><hr class="dropdown-divider"></li>
-<li><a class="dropdown-item" href="{{href}}">All {{title}}</a></li>
+<li><a class="dropdown-item" href="{{href}}">All {{navLabel}}</a></li>
 </ul>
 </li>`;
 var templateMenuItemChild = `
-  <li><a class="dropdown-item" href="{{href}}">{{title}}</a></li>`;
-var breadcrumbItemTemplate = `<li class="breadcrumb-item"><a href="{{href}}">{{title}}</a></li>`;
-var breadcrumbItemCurrentTemplate = `<li class="breadcrumb-item active" aria-current="page">{{title}}</li>`;
+  <li><a class="dropdown-item" href="{{href}}">{{navLabel}}</a></li>`;
+var breadcrumbItemTemplate = `<li class="breadcrumb-item"><a href="{{href}}">{{navLabel}}</a></li>`;
+var breadcrumbItemCurrentTemplate = `<li class="breadcrumb-item active" aria-current="page">{{navLabel}}</li>`;
 
 export function getQueryParams() {
     var queryParams = {};
@@ -45,7 +45,7 @@ function buildSiteMapItems(items, parent) {
 
         var li = document.createElement("li");
         var a = document.createElement("a");
-        a.textContent = item.title;
+        a.textContent = item.navLabel;
         a.setAttribute("href", 'index.html?node=' + items[key]);
         li.appendChild(a);
         if (item.children.length > 0) {
@@ -85,20 +85,20 @@ function buildBreadcrumbs() {
     }
     var breadcrumbs = '';
     var breadcrumbItem = breadcrumbItemTemplate;
-    breadcrumbItem = breadcrumbItem.replace(/{{title}}/g, 'Home');
+    breadcrumbItem = breadcrumbItem.replace(/{{navLabel}}/g, 'Home');
     breadcrumbItem = breadcrumbItem.replace(/{{href}}/g, 'index.html?node=/');
     breadcrumbs = breadcrumbs + breadcrumbItem;
     for (var i = 0; i < request.breadcrumbs.length; i++) {
         var breadcrumbItem = breadcrumbItemTemplate;
         var breadcrumbPath = request.breadcrumbs[i];
         var sitemapItem = contentNodes[breadcrumbPath];
-        breadcrumbItem = breadcrumbItem.replace(/{{title}}/g, sitemapItem.title);
+        breadcrumbItem = breadcrumbItem.replace(/{{navLabel}}/g, sitemapItem.navLabel);
         breadcrumbItem = breadcrumbItem.replace(/{{href}}/g, 'index.html?node=' + breadcrumbPath);
         breadcrumbs = breadcrumbs + breadcrumbItem;
     }
     var breadcrumbItem = breadcrumbItemCurrentTemplate;
     var sitemapItem = contentNodes[request.node];
-    breadcrumbItem = breadcrumbItem.replace(/{{title}}/g, sitemapItem.title);
+    breadcrumbItem = breadcrumbItem.replace(/{{navLabel}}/g, sitemapItem.navLabel);
     breadcrumbItem = breadcrumbItem.replace(/{{href}}/g, 'index.html?node=' + request.node);
     breadcrumbs = breadcrumbs + breadcrumbItem;
     document.getElementById('breadcrumbs').innerHTML = breadcrumbs;
@@ -110,7 +110,7 @@ function buildMenu() {
         var level1 = siteConfig.hamburgerLevelOneItems[i];
         var menuItem = templateMenuItem;
         if ('Sitemap' == level1){
-            menuItem = menuItem.replace(/{{title}}/g, level1);
+            menuItem = menuItem.replace(/{{navLabel}}/g, level1);
             menuItem = menuItem.replace(/{{href}}/g, 'index.html?node=' + level1);
             menu = menu + menuItem;
             continue;
@@ -119,13 +119,13 @@ function buildMenu() {
         if (sitemapItem.children.length > 0) {
             var menuItem = templateMenuItemWithChildren;
         }
-        menuItem = menuItem.replace(/{{title}}/g, sitemapItem.title);
+        menuItem = menuItem.replace(/{{navLabel}}/g, sitemapItem.navLabel);
         menuItem = menuItem.replace(/{{href}}/g, 'index.html?node=' + siteConfig.hamburgerLevelOneItems[i]);
         var menuItemChildren = '';
         for (var j = 0; j < sitemapItem.children.length; j++) {
             var menuChildItem = templateMenuItemChild;
             var sitemapChildItem = contentNodes[sitemapItem.children[j]];
-            menuChildItem = menuChildItem.replace(/{{title}}/g, sitemapChildItem.title);
+            menuChildItem = menuChildItem.replace(/{{navLabel}}/g, sitemapChildItem.navLabel);
             menuChildItem = menuChildItem.replace(/{{href}}/g, 'index.html?node=' + sitemapItem.children[j]);
             menuItemChildren = menuItemChildren + menuChildItem;
         }
@@ -204,10 +204,12 @@ export function init() {
     request.breadcrumbs = request.breadcrumbs.reverse();
 
     if (request.node == '/404' && typeof contentNodes[request.node] === 'undefined') {
+        document.title = 'Page not found (/404)';
         document.getElementById('htmlContent').innerHTML = '<h1>404 Not Found</h1><p>Page not found</p>';
         return;
     }
     else if (typeof contentNodes[request.node] === 'undefined') {
+        document.title = 'Page not found ('+request.node+')';
         window.location.href = 'index.html?node=/404&reason=no-path&x2=' + request.node;
         return;
     }
@@ -216,13 +218,26 @@ export function init() {
         typeof contentNodes[request.node].files['html.html'] === 'undefined' &&
         typeof contentNodes[request.node].files['javascript.js'] === 'undefined') {
         if (request.node == '/404') {
+            document.title = 'Page not found, but node exists (/404)';
             document.getElementById('htmlContent').innerHTML = '<h1>404 Not Found</h1><p>Page not found</p>';
             return;
+        }
+        if (typeof contentNodes[request.node]['title'] === 'undefined'){
+            document.title = 'Explore ' + contentNodes[request.node].navLabel + ' (' + request.node + ')';
+        }
+        else{
+            document.title = 'Explore ' + contentNodes[request.node].title + ' (' + request.node + ')';
         }
         document.getElementById('htmlContent').innerHTML = '<h1>Explore</h1><div id="area-map"></div>';
         return;
     }
 
+    if (typeof contentNodes[request.node]['title'] === 'undefined'){
+        document.title = contentNodes[request.node].navLabel + ' (' + request.node + ')';
+    }
+    else{
+        document.title = contentNodes[request.node].title + ' (' + request.node + ')';
+    }
     // fetch content files
     request.mdContent404 = false;
     request.htmlContent404 = false;
