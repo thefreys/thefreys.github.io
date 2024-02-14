@@ -3,12 +3,13 @@ export const contentNodes = {
   "parent":null,
   "title":`Welcome  `,
   "navLabel":"Welcome  ",
-  "markdownCount":62,
+  "markdownCount":70,
   "htmlCount":4,
   "javascriptCount":0,
   "hiddenCount":2,
   "files":{
-    "_title.txt":"2024-02-04 14:34:43 -0500",
+    "markdown.md":"",
+    "_title.txt":"2024-02-04",
   },
   "children":[
     "/blogs",
@@ -24,7 +25,7 @@ export const contentNodes = {
 "/blogs":{
   "parent":"/",
   "navLabel":"blogs",
-  "markdownCount":12,
+  "markdownCount":19,
   "htmlCount":0,
   "javascriptCount":0,
   "hiddenCount":0,
@@ -37,7 +38,7 @@ export const contentNodes = {
 "/blogs/kristy":{
   "parent":"/blogs",
   "navLabel":"kristy",
-  "markdownCount":12,
+  "markdownCount":19,
   "htmlCount":0,
   "javascriptCount":0,
   "hiddenCount":0,
@@ -50,7 +51,7 @@ export const contentNodes = {
 "/blogs/kristy/2024":{
   "parent":"/blogs/kristy",
   "navLabel":"2024",
-  "markdownCount":12,
+  "markdownCount":19,
   "htmlCount":0,
   "javascriptCount":0,
   "hiddenCount":0,
@@ -95,8 +96,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-10 09:21:20 -0500",
-    "_title.txt":"2024-02-10 09:21:20 -0500",
+    "markdown.md":"2024-02-10",
+    "_title.txt":"2024-02-10",
   },
   "children":[
   ],
@@ -104,7 +105,7 @@ export const contentNodes = {
 "/blogs/kristy/2024/02":{
   "parent":"/blogs/kristy/2024",
   "navLabel":"02",
-  "markdownCount":11,
+  "markdownCount":18,
   "htmlCount":0,
   "javascriptCount":0,
   "hiddenCount":0,
@@ -113,6 +114,7 @@ export const contentNodes = {
   "children":[
     "/blogs/kristy/2024/02/10",
     "/blogs/kristy/2024/02/11",
+    "/blogs/kristy/2024/02/14",
   ],
 },
 "/blogs/kristy/2024/02/10":{
@@ -137,8 +139,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-10 09:21:20 -0500",
-    "_title.txt":"2024-02-10 09:21:20 -0500",
+    "markdown.md":"2024-02-10",
+    "_title.txt":"2024-02-10",
   },
   "children":[
     "/blogs/kristy/2024/02/10/scammers-gonna-scam/20240208-featured-snippets",
@@ -153,8 +155,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-10 09:21:20 -0500",
-    "_title.txt":"2024-02-10 09:21:20 -0500",
+    "markdown.md":"2024-02-10",
+    "_title.txt":"2024-02-10",
   },
   "children":[
     "/blogs/kristy/2024/02/10/scammers-gonna-scam/20240208-featured-snippets/bing",
@@ -171,8 +173,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-10 09:21:20 -0500",
-    "_title.txt":"2024-02-10 09:21:20 -0500",
+    "markdown.md":"2024-02-10",
+    "_title.txt":"2024-02-10",
   },
   "children":[
   ],
@@ -186,8 +188,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-10 09:21:20 -0500",
-    "_title.txt":"2024-02-10 09:21:20 -0500",
+    "markdown.md":"2024-02-10",
+    "_title.txt":"2024-02-10",
   },
   "children":[
   ],
@@ -201,8 +203,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-10 09:21:20 -0500",
-    "_title.txt":"2024-02-10 09:21:20 -0500",
+    "markdown.md":"2024-02-10",
+    "_title.txt":"2024-02-10",
   },
   "children":[
   ],
@@ -229,8 +231,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-11 11:20:16 -0500",
-    "_title.txt":"2024-02-11 11:20:16 -0500",
+    "markdown.md":"2024-02-11",
+    "_title.txt":"2024-02-11",
   },
   "children":[
     "/blogs/kristy/2024/02/11/google-analytics-query-string/AI-answers",
@@ -245,8 +247,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-11 11:20:16 -0500",
-    "_title.txt":"2024-02-11 11:20:16 -0500",
+    "markdown.md":"2024-02-11",
+    "_title.txt":"2024-02-11",
   },
   "children":[
     "/blogs/kristy/2024/02/11/google-analytics-query-string/AI-answers/bing",
@@ -264,8 +266,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-11 11:20:16 -0500",
-    "_title.txt":"2024-02-11 11:20:16 -0500",
+    "markdown.md":"2024-02-11",
+    "_title.txt":"2024-02-11",
   },
   "children":[
   ],
@@ -279,8 +281,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-11 11:20:16 -0500",
-    "_title.txt":"2024-02-11 11:20:16 -0500",
+    "markdown.md":"2024-02-11",
+    "_title.txt":"2024-02-11",
   },
   "children":[
   ],
@@ -294,8 +296,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-11 11:20:16 -0500",
-    "_title.txt":"2024-02-11 11:20:16 -0500",
+    "markdown.md":"2024-02-11",
+    "_title.txt":"2024-02-11",
   },
   "children":[
   ],
@@ -309,8 +311,119 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-11 11:20:16 -0500",
-    "_title.txt":"2024-02-11 11:20:16 -0500",
+    "markdown.md":"2024-02-11",
+    "_title.txt":"2024-02-11",
+  },
+  "children":[
+  ],
+},
+"/blogs/kristy/2024/02/14":{
+  "parent":"/blogs/kristy/2024/02",
+  "title":`Date format strings and how they differ across programming languages`,
+  "navLabel":"Date format strings and how they differ across programming languages",
+  "markdownCount":7,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"",
+    "_title.txt":"",
+  },
+  "children":[
+    "/blogs/kristy/2024/02/14/date-string-formats",
+  ],
+},
+"/blogs/kristy/2024/02/14/date-string-formats":{
+  "parent":"/blogs/kristy/2024/02/14",
+  "title":`How multiple AIs answered`,
+  "navLabel":"How multiple AIs answered",
+  "markdownCount":6,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"",
+    "_title.txt":"",
+  },
+  "children":[
+    "/blogs/kristy/2024/02/14/date-string-formats/AI-answers",
+  ],
+},
+"/blogs/kristy/2024/02/14/date-string-formats/AI-answers":{
+  "parent":"/blogs/kristy/2024/02/14/date-string-formats",
+  "title":`Query Parameters in Google Analytics according to AI on February 11, 2024`,
+  "navLabel":"Query Parameters in Google Analytics according to AI on February 11, 2024",
+  "markdownCount":5,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"",
+    "_title.txt":"",
+  },
+  "children":[
+    "/blogs/kristy/2024/02/14/date-string-formats/AI-answers/bing",
+    "/blogs/kristy/2024/02/14/date-string-formats/AI-answers/chatgpt",
+    "/blogs/kristy/2024/02/14/date-string-formats/AI-answers/claude",
+    "/blogs/kristy/2024/02/14/date-string-formats/AI-answers/gemini",
+  ],
+},
+"/blogs/kristy/2024/02/14/date-string-formats/AI-answers/bing":{
+  "parent":"/blogs/kristy/2024/02/14/date-string-formats/AI-answers",
+  "title":`Response from Bing Copilot`,
+  "navLabel":"Response from Bing Copilot",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"",
+    "_title.txt":"",
+  },
+  "children":[
+  ],
+},
+"/blogs/kristy/2024/02/14/date-string-formats/AI-answers/chatgpt":{
+  "parent":"/blogs/kristy/2024/02/14/date-string-formats/AI-answers",
+  "title":`Response from ChatGPT 3.5`,
+  "navLabel":"Response from ChatGPT 3.5",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"",
+    "_title.txt":"",
+  },
+  "children":[
+  ],
+},
+"/blogs/kristy/2024/02/14/date-string-formats/AI-answers/claude":{
+  "parent":"/blogs/kristy/2024/02/14/date-string-formats/AI-answers",
+  "title":`Response from Claude`,
+  "navLabel":"Response from Claude",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"",
+    "_title.txt":"",
+  },
+  "children":[
+  ],
+},
+"/blogs/kristy/2024/02/14/date-string-formats/AI-answers/gemini":{
+  "parent":"/blogs/kristy/2024/02/14/date-string-formats/AI-answers",
+  "title":`Response from Gemini`,
+  "navLabel":"Response from Gemini",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"",
+    "_title.txt":"",
   },
   "children":[
   ],
@@ -364,8 +477,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "html.html":"2024-01-24 08:44:05 -0500",
-    "_title.txt":"2024-01-24 08:44:05 -0500",
+    "html.html":"2024-01-24",
+    "_title.txt":"2024-01-24",
   },
   "children":[
   ],
@@ -404,8 +517,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-01-24 08:44:05 -0500",
-    "_title.txt":"2024-01-24 08:44:05 -0500",
+    "markdown.md":"2024-01-24",
+    "_title.txt":"2024-01-24",
   },
   "children":[
   ],
@@ -419,7 +532,7 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "_title.txt":"2024-02-04 14:34:43 -0500",
+    "_title.txt":"2024-02-04",
   },
   "children":[
     "/coding/web-design/sitemaps",
@@ -434,8 +547,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-01-24 08:44:05 -0500",
-    "_title.txt":"2024-01-24 08:44:05 -0500",
+    "markdown.md":"2024-01-24",
+    "_title.txt":"2024-01-24",
   },
   "children":[
   ],
@@ -448,7 +561,7 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":2,
   "files":{
-    ".hide":"2024-02-04 15:49:01 -0500",
+    ".hide":"2024-02-04",
   },
   "children":[
     "/hidden/activities",
@@ -494,8 +607,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-04 15:49:01 -0500",
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "markdown.md":"2024-02-04",
+    "_title.txt":"2024-02-04",
   },
   "children":[
   ],
@@ -509,8 +622,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-04 15:49:01 -0500",
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "markdown.md":"2024-02-04",
+    "_title.txt":"2024-02-04",
   },
   "children":[
   ],
@@ -524,8 +637,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-04 15:49:01 -0500",
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "markdown.md":"2024-02-04",
+    "_title.txt":"2024-02-04",
   },
   "children":[
   ],
@@ -539,8 +652,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-04 15:49:01 -0500",
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "markdown.md":"2024-02-04",
+    "_title.txt":"2024-02-04",
   },
   "children":[
   ],
@@ -554,8 +667,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-04 15:49:01 -0500",
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "markdown.md":"2024-02-04",
+    "_title.txt":"2024-02-04",
   },
   "children":[
   ],
@@ -596,7 +709,7 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "_title.txt":"2024-02-04",
   },
   "children":[
     "/hidden/asking-ai/crafty/how-do-you-make-t-shirt-yarn/bard",
@@ -613,8 +726,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-04 15:49:01 -0500",
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "markdown.md":"2024-02-04",
+    "_title.txt":"2024-02-04",
   },
   "children":[
   ],
@@ -628,8 +741,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-04 15:49:01 -0500",
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "markdown.md":"2024-02-04",
+    "_title.txt":"2024-02-04",
   },
   "children":[
   ],
@@ -643,8 +756,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-04 15:49:01 -0500",
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "markdown.md":"2024-02-04",
+    "_title.txt":"2024-02-04",
   },
   "children":[
   ],
@@ -676,7 +789,7 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "_title.txt":"2024-02-04",
   },
   "children":[
     "/hidden/asking-ai/technical/list-files-from-a-terminal/bing",
@@ -691,8 +804,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-04 15:49:01 -0500",
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "markdown.md":"2024-02-04",
+    "_title.txt":"2024-02-04",
   },
   "children":[
   ],
@@ -706,7 +819,7 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "_title.txt":"2024-02-04",
   },
   "children":[
     "/hidden/asking-ai/technical/most-common-term-for-writing-computer-code/bard",
@@ -723,8 +836,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-04 15:49:01 -0500",
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "markdown.md":"2024-02-04",
+    "_title.txt":"2024-02-04",
   },
   "children":[
   ],
@@ -738,8 +851,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-04 15:49:01 -0500",
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "markdown.md":"2024-02-04",
+    "_title.txt":"2024-02-04",
   },
   "children":[
   ],
@@ -753,8 +866,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-04 15:49:01 -0500",
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "markdown.md":"2024-02-04",
+    "_title.txt":"2024-02-04",
   },
   "children":[
   ],
@@ -768,7 +881,7 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "_title.txt":"2024-02-04",
   },
   "children":[
     "/hidden/asking-ai/technical/no-cost-website-hosts/bard",
@@ -784,8 +897,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-04 15:49:01 -0500",
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "markdown.md":"2024-02-04",
+    "_title.txt":"2024-02-04",
   },
   "children":[
   ],
@@ -798,8 +911,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-04 15:49:01 -0500",
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "markdown.md":"2024-02-04",
+    "_title.txt":"2024-02-04",
   },
   "children":[
   ],
@@ -812,8 +925,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-04 15:49:01 -0500",
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "markdown.md":"2024-02-04",
+    "_title.txt":"2024-02-04",
   },
   "children":[
   ],
@@ -853,7 +966,7 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "_title.txt":"2024-02-04",
   },
   "children":[
     "/hidden/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date/bard",
@@ -869,8 +982,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-04 15:49:01 -0500",
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "markdown.md":"2024-02-04",
+    "_title.txt":"2024-02-04",
   },
   "children":[
   ],
@@ -883,8 +996,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-04 15:49:01 -0500",
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "markdown.md":"2024-02-04",
+    "_title.txt":"2024-02-04",
   },
   "children":[
   ],
@@ -897,8 +1010,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-04 15:49:01 -0500",
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "markdown.md":"2024-02-04",
+    "_title.txt":"2024-02-04",
   },
   "children":[
   ],
@@ -912,7 +1025,7 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "_title.txt":"2024-02-04",
   },
   "children":[
     "/hidden/asking-ai/technical/sitemap-file-format-preferred-by-search-engines/bard",
@@ -929,8 +1042,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-04 15:49:01 -0500",
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "markdown.md":"2024-02-04",
+    "_title.txt":"2024-02-04",
   },
   "children":[
   ],
@@ -944,8 +1057,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-04 15:49:01 -0500",
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "markdown.md":"2024-02-04",
+    "_title.txt":"2024-02-04",
   },
   "children":[
   ],
@@ -959,8 +1072,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-04 15:49:01 -0500",
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "markdown.md":"2024-02-04",
+    "_title.txt":"2024-02-04",
   },
   "children":[
   ],
@@ -974,8 +1087,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":1,
   "files":{
-    ".hide":"2024-02-04 15:49:01 -0500",
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    ".hide":"2024-02-04",
+    "_title.txt":"2024-02-04",
   },
   "children":[
     "/hidden/asking-ai/technical/trim-file-leading-trailing-whitespace/bard",
@@ -992,8 +1105,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-04 15:49:01 -0500",
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "markdown.md":"2024-02-04",
+    "_title.txt":"2024-02-04",
   },
   "children":[
   ],
@@ -1007,8 +1120,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-04 15:49:01 -0500",
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "markdown.md":"2024-02-04",
+    "_title.txt":"2024-02-04",
   },
   "children":[
   ],
@@ -1022,8 +1135,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-04 15:49:01 -0500",
-    "_title.txt":"2024-02-04 15:49:01 -0500",
+    "markdown.md":"2024-02-04",
+    "_title.txt":"2024-02-04",
   },
   "children":[
   ],
@@ -1036,7 +1149,7 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "2024-02-10-scamming-google.png":"2024-02-10 09:21:20 -0500",
+    "2024-02-10-scamming-google.png":"2024-02-10",
   },
   "children":[
   ],
@@ -1050,8 +1163,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "html.html":"2024-02-04 10:54:21 -0500",
-    "_title.txt":"2024-02-04 09:37:53 -0500",
+    "html.html":"2024-02-04",
+    "_title.txt":"2024-02-04",
   },
   "children":[
     "/recipes/desserts",
@@ -1069,7 +1182,7 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "_title.txt":"2024-02-04 14:34:43 -0500",
+    "_title.txt":"2024-02-04",
   },
   "children":[
     "/recipes/desserts/almond-cake",
@@ -1089,8 +1202,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-01-24 08:44:05 -0500",
-    "_title.txt":"2024-01-24 08:44:05 -0500",
+    "markdown.md":"2024-01-24",
+    "_title.txt":"2024-01-24",
   },
   "children":[
   ],
@@ -1104,8 +1217,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"",
-    "_title.txt":"",
+    "markdown.md":"2024-02-14",
+    "_title.txt":"2024-02-14",
   },
   "children":[
   ],
@@ -1119,8 +1232,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-01-24 08:44:05 -0500",
-    "_title.txt":"2024-01-24 08:44:05 -0500",
+    "markdown.md":"2024-01-24",
+    "_title.txt":"2024-01-24",
   },
   "children":[
   ],
@@ -1134,8 +1247,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-01-24 08:44:05 -0500",
-    "_title.txt":"2024-01-24 08:44:05 -0500",
+    "markdown.md":"2024-01-24",
+    "_title.txt":"2024-01-24",
   },
   "children":[
   ],
@@ -1149,8 +1262,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-01-24 08:44:05 -0500",
-    "_title.txt":"2024-01-24 08:44:05 -0500",
+    "markdown.md":"2024-01-24",
+    "_title.txt":"2024-01-24",
   },
   "children":[
   ],
@@ -1164,8 +1277,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-01-24 08:44:05 -0500",
-    "_title.txt":"2024-01-24 08:44:05 -0500",
+    "markdown.md":"2024-01-24",
+    "_title.txt":"2024-01-24",
   },
   "children":[
   ],
@@ -1179,7 +1292,7 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "_title.txt":"2024-02-04 14:34:43 -0500",
+    "_title.txt":"2024-02-04",
   },
   "children":[
     "/recipes/meats/chicken-meatballs",
@@ -1194,8 +1307,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-01-24 08:44:05 -0500",
-    "_title.txt":"2024-01-24 08:44:05 -0500",
+    "markdown.md":"2024-01-24",
+    "_title.txt":"2024-01-24",
   },
   "children":[
   ],
@@ -1209,7 +1322,7 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "_title.txt":"2024-02-04 14:34:43 -0500",
+    "_title.txt":"2024-02-04",
   },
   "children":[
     "/recipes/sides/macaroni-and-cheese-1-pot-version",
@@ -1226,8 +1339,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-01-24 08:44:05 -0500",
-    "_title.txt":"2024-01-24 08:44:05 -0500",
+    "markdown.md":"2024-01-24",
+    "_title.txt":"2024-01-24",
   },
   "children":[
   ],
@@ -1241,8 +1354,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-01-24 08:44:05 -0500",
-    "_title.txt":"2024-01-24 08:44:05 -0500",
+    "markdown.md":"2024-01-24",
+    "_title.txt":"2024-01-24",
   },
   "children":[
   ],
@@ -1256,8 +1369,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-01-24 08:44:05 -0500",
-    "_title.txt":"2024-01-24 08:44:05 -0500",
+    "markdown.md":"2024-01-24",
+    "_title.txt":"2024-01-24",
   },
   "children":[
   ],
@@ -1271,8 +1384,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-10 09:21:20 -0500",
-    "_title.txt":"2024-02-10 09:21:20 -0500",
+    "markdown.md":"2024-02-10",
+    "_title.txt":"2024-02-10",
   },
   "children":[
     "/recipes/what-did-ai-say/beef-stew",
@@ -1303,8 +1416,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-10 09:21:20 -0500",
-    "_title.txt":"2024-02-10 09:21:20 -0500",
+    "markdown.md":"2024-02-10",
+    "_title.txt":"2024-02-10",
   },
   "children":[
   ],
@@ -1317,8 +1430,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-10 09:21:20 -0500",
-    "_title.txt":"2024-02-10 09:21:20 -0500",
+    "markdown.md":"2024-02-10",
+    "_title.txt":"2024-02-10",
   },
   "children":[
   ],
@@ -1331,8 +1444,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-10 09:21:20 -0500",
-    "_title.txt":"2024-02-10 09:21:20 -0500",
+    "markdown.md":"2024-02-10",
+    "_title.txt":"2024-02-10",
   },
   "children":[
   ],
@@ -1360,8 +1473,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-10 09:21:20 -0500",
-    "_title.txt":"2024-02-10 09:21:20 -0500",
+    "markdown.md":"2024-02-10",
+    "_title.txt":"2024-02-10",
   },
   "children":[
   ],
@@ -1374,8 +1487,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-10 09:21:20 -0500",
-    "_title.txt":"2024-02-10 09:21:20 -0500",
+    "markdown.md":"2024-02-10",
+    "_title.txt":"2024-02-10",
   },
   "children":[
   ],
@@ -1388,8 +1501,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-10 09:21:20 -0500",
-    "_title.txt":"2024-02-10 09:21:20 -0500",
+    "markdown.md":"2024-02-10",
+    "_title.txt":"2024-02-10",
   },
   "children":[
   ],
@@ -1415,7 +1528,7 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-10 09:21:20 -0500",
+    "markdown.md":"2024-02-10",
   },
   "children":[
     "/recipes/what-did-ai-say/pie-crust/20240208/bing",
@@ -1432,8 +1545,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-10 09:21:20 -0500",
-    "_title.txt":"2024-02-10 09:21:20 -0500",
+    "markdown.md":"2024-02-10",
+    "_title.txt":"2024-02-10",
   },
   "children":[
   ],
@@ -1447,8 +1560,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-10 09:21:20 -0500",
-    "_title.txt":"2024-02-10 09:21:20 -0500",
+    "markdown.md":"2024-02-10",
+    "_title.txt":"2024-02-10",
   },
   "children":[
   ],
@@ -1462,8 +1575,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-10 09:21:20 -0500",
-    "_title.txt":"2024-02-10 09:21:20 -0500",
+    "markdown.md":"2024-02-10",
+    "_title.txt":"2024-02-10",
   },
   "children":[
   ],
@@ -1477,8 +1590,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "html.html":"2024-01-24 08:44:05 -0500",
-    "_title.txt":"2024-01-24 08:44:05 -0500",
+    "html.html":"2024-01-24",
+    "_title.txt":"2024-01-24",
   },
   "children":[
   ],
@@ -1491,7 +1604,7 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "_title.txt":"2024-02-04 09:37:53 -0500",
+    "_title.txt":"2024-02-04",
   },
   "children":[
   ],
@@ -1505,8 +1618,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "html.html":"2024-02-04 10:54:21 -0500",
-    "_title.txt":"2024-02-04 10:54:21 -0500",
+    "html.html":"2024-02-04",
+    "_title.txt":"2024-02-04",
   },
   "children":[
     "/upcycling/food-scraps",
@@ -1522,7 +1635,7 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "_title.txt":"2024-02-04 14:34:43 -0500",
+    "_title.txt":"2024-02-04",
   },
   "children":[
     "/upcycling/food-scraps/coffee-grounds",
@@ -1538,8 +1651,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-01-24 08:44:05 -0500",
-    "_title.txt":"2024-01-24 08:44:05 -0500",
+    "markdown.md":"2024-01-24",
+    "_title.txt":"2024-01-24",
   },
   "children":[
   ],
@@ -1553,8 +1666,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-01-24 08:44:05 -0500",
-    "_title.txt":"2024-01-24 08:44:05 -0500",
+    "markdown.md":"2024-01-24",
+    "_title.txt":"2024-01-24",
   },
   "children":[
   ],
@@ -1568,7 +1681,7 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "_title.txt":"2024-02-04 14:34:43 -0500",
+    "_title.txt":"2024-02-04",
   },
   "children":[
     "/upcycling/textiles/t-shirts",
@@ -1583,8 +1696,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-01-24 08:44:05 -0500",
-    "_title.txt":"2024-01-24 08:44:05 -0500",
+    "markdown.md":"2024-01-24",
+    "_title.txt":"2024-01-24",
   },
   "children":[
   ],

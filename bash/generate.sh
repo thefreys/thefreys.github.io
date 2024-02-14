@@ -3,8 +3,7 @@ source "$(dirname ${BASH_SOURCE[0]})/config.sh"
 rm -rf "${tmpoutdir}"
 mkdir -p "${tmpoutdir}"
 
-echo `date`
-
+echo "$(date): Generating array files"
 "$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrMarkdownNodes" "markdown.md"
 "$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrHtmlNodes" "html.html"
 "$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrJavascriptNodes" "javascript.js"
@@ -12,15 +11,17 @@ echo `date`
 "$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrTitleNodes" "_title.txt"
 "$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrTagNodes" "_tags.txt"
 
+echo "$(date): Generating metadata files"
 "$(dirname ${BASH_SOURCE[0]})/nodeObject.sh" "contentNodeTitles" "_title.txt"
 "$(dirname ${BASH_SOURCE[0]})/nodeObject.sh" "contentNodeTags" "_tags.txt"
-echo `date`
 
+echo "$(date): Generating contentNodeList.txt"
 find content -type d -print | xargs -I {} ls -d {} > "$(dirname ${BASH_SOURCE[0]})/contentNodeList.txt"
 jsvar=contentNodes
 tmpoutfile="${tmpoutdir}/${jsvar}.js"
 cd "${rootdir}"
 echo "export const ${jsvar} = {" > "${tmpoutfile}"
+echo "$(date): Generating the contentNode javascript object (${jsvar}.js)"
 cat  "$(dirname ${BASH_SOURCE[0]})/contentNodeList.txt" | while read nodepath; do
     node="/${nodepath}"
     node=${node:8}
@@ -59,7 +60,13 @@ cat  "$(dirname ${BASH_SOURCE[0]})/contentNodeList.txt" | while read nodepath; d
     echo "  \"files\":{" >> "${tmpoutfile}"
     find ${nodepath} -maxdepth 1 -type f | while read filename; do
         file="$(basename ${filename})"
-        echo "    \"${file}\":\"$(git log -1 --format="%ai" -- "$filename")\"," >> "${tmpoutfile}"
+        gitdate="$(git log -1 --format="%ai" -- "$filename")"
+        if [[ "" == "${gitdate}" ]]; then
+            lastmod=${today}
+        else
+            lastmod=${gitdate:0:10}
+        fi
+        echo "    \"${file}\":\"${lastmod}\"," >> "${tmpoutfile}"
     done
     echo "  }," >> "${tmpoutfile}"
     
@@ -81,10 +88,11 @@ cat  "$(dirname ${BASH_SOURCE[0]})/contentNodeList.txt" | while read nodepath; d
 done
 echo "}" >> "${tmpoutfile}"
 
-echo `date`
+echo "$(date): Remove previously generated files and replace them with the new ones"
 rm -rf "${outdir}"
 mv "${tmpoutdir}" "${outdir}"
 
+echo "$(date): Generating the sitemap file for search engines (sitemap.xml)"
 "$(dirname ${BASH_SOURCE[0]})/xmlsitemap.sh"
 
-echo `date`
+echo "$(date): Generating complete"
