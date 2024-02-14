@@ -276,8 +276,9 @@ export function init() {
             })
             .then(markdown => {
                 if (markdown > '') {
-                    var converter = new showdown.Converter();
-                    document.getElementById('mdContent').innerHTML = converter.makeHtml(markdown);
+                    var converter = new showdown.Converter({tables: true, strikethrough: true});
+                    var mdHtml = converter.makeHtml(markdown).replace(/<table>/g, '<table class="table table-hover  table-bordered">')
+                    document.getElementById('mdContent').innerHTML = mdHtml;
                 }
             })
             .catch(error => {

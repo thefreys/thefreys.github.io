@@ -17,7 +17,6 @@ export const arrTitleNodes = [
 "/blogs/kristy/2024/02/14/date-string-formats/AI-answers/gemini",
 "/blogs/kristy/2024/02/14/date-string-formats/AI-answers",
 "/blogs/kristy/2024/02/14/date-string-formats",
-"/blogs/kristy/2024/02/14",
 "/coding/frameworks/bootstrap/cheatsheet-v5.3",
 "/coding/languages/markdown/markdown-cheat-sheet",
 "/coding/web-design/sitemaps",

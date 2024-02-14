@@ -240,8 +240,8 @@ export const contentNodes = {
 },
 "/blogs/kristy/2024/02/11/google-analytics-query-string/AI-answers":{
   "parent":"/blogs/kristy/2024/02/11/google-analytics-query-string",
-  "title":`Query Parameters in Google Analytics according to AI on February 11, 2024`,
-  "navLabel":"Query Parameters in Google Analytics according to AI on February 11, 2024",
+  "title":`How multiple AIs answered`,
+  "navLabel":"How multiple AIs answered",
   "markdownCount":5,
   "htmlCount":0,
   "javascriptCount":0,
@@ -319,15 +319,12 @@ export const contentNodes = {
 },
 "/blogs/kristy/2024/02/14":{
   "parent":"/blogs/kristy/2024/02",
-  "title":`Date format strings and how they differ across programming languages`,
-  "navLabel":"Date format strings and how they differ across programming languages",
+  "navLabel":"14",
   "markdownCount":6,
   "htmlCount":0,
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-14 08:34:15",
-    "_title.txt":"2024-02-14 08:34:15",
   },
   "children":[
     "/blogs/kristy/2024/02/14/date-string-formats",
@@ -335,13 +332,14 @@ export const contentNodes = {
 },
 "/blogs/kristy/2024/02/14/date-string-formats":{
   "parent":"/blogs/kristy/2024/02/14",
-  "title":`How multiple AIs answered`,
-  "navLabel":"How multiple AIs answered",
-  "markdownCount":5,
+  "title":`Date format strings`,
+  "navLabel":"Date format strings",
+  "markdownCount":6,
   "htmlCount":0,
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
+    "markdown.md":"2024-02-14 08:57:06",
     "_title.txt":"2024-02-14 08:34:15",
   },
   "children":[
@@ -350,8 +348,8 @@ export const contentNodes = {
 },
 "/blogs/kristy/2024/02/14/date-string-formats/AI-answers":{
   "parent":"/blogs/kristy/2024/02/14/date-string-formats",
-  "title":`Query Parameters in Google Analytics according to AI on February 11, 2024`,
-  "navLabel":"Query Parameters in Google Analytics according to AI on February 11, 2024",
+  "title":`How multiple AIs answered`,
+  "navLabel":"How multiple AIs answered",
   "markdownCount":5,
   "htmlCount":0,
   "javascriptCount":0,
