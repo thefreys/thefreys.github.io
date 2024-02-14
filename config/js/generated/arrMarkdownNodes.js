@@ -38,6 +38,7 @@ export const arrMarkdownNodes = [
 "/hidden/asking-ai/technical/trim-file-leading-trailing-whitespace/bing",
 "/hidden/asking-ai/technical/trim-file-leading-trailing-whitespace/chatgpt",
 "/recipes/desserts/almond-cake",
+"/recipes/desserts/cocoa-mint-sandwich-cookies",
 "/recipes/desserts/date-balls",
 "/recipes/desserts/ginger-snaps",
 "/recipes/desserts/rainbow-cookies",

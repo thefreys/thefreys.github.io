@@ -1,8 +1,22 @@
 #!/bin/bash
 source "$(dirname ${BASH_SOURCE[0]})/config.sh"
-find content -type d -print | xargs -I {} ls -d {} > "$(dirname ${BASH_SOURCE[0]})/contentNodeList.txt"
 rm -rf "${tmpoutdir}"
 mkdir -p "${tmpoutdir}"
+
+echo `date`
+
+"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrMarkdownNodes" "markdown.md"
+"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrHtmlNodes" "html.html"
+"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrJavascriptNodes" "javascript.js"
+"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrHiddenNodes" ".hide"
+"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrTitleNodes" "_title.txt"
+"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrTagNodes" "_tags.txt"
+
+"$(dirname ${BASH_SOURCE[0]})/nodeObject.sh" "contentNodeTitles" "_title.txt"
+"$(dirname ${BASH_SOURCE[0]})/nodeObject.sh" "contentNodeTags" "_tags.txt"
+echo `date`
+
+find content -type d -print | xargs -I {} ls -d {} > "$(dirname ${BASH_SOURCE[0]})/contentNodeList.txt"
 jsvar=contentNodes
 tmpoutfile="${tmpoutdir}/${jsvar}.js"
 cd "${rootdir}"
@@ -67,18 +81,10 @@ cat  "$(dirname ${BASH_SOURCE[0]})/contentNodeList.txt" | while read nodepath; d
 done
 echo "}" >> "${tmpoutfile}"
 
-"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrMarkdownNodes" "markdown.md"
-"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrHtmlNodes" "html.html"
-"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrJavascriptNodes" "javascript.js"
-"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrHiddenNodes" ".hide"
-"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrTitleNodes" "_title.txt"
-"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrTagNodes" "_tags.txt"
-
-"$(dirname ${BASH_SOURCE[0]})/nodeObject.sh" "contentNodeTitles" "_title.txt"
-"$(dirname ${BASH_SOURCE[0]})/nodeObject.sh" "contentNodeTags" "_tags.txt"
-
-
+echo `date`
 rm -rf "${outdir}"
 mv "${tmpoutdir}" "${outdir}"
 
 "$(dirname ${BASH_SOURCE[0]})/xmlsitemap.sh"
+
+echo `date`

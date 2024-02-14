@@ -47,6 +47,7 @@ export const contentNodeTitles = {
 "/hidden/asking-ai/technical/trim-file-leading-trailing-whitespace/chatgpt":`what ChatGPT said`,
 "/hidden/asking-ai/technical/trim-file-leading-trailing-whitespace":`In bash, how do I trim the contents of a file of leading and trailing whitespace and then write it back?`,
 "/recipes/desserts/almond-cake":`Almond cake`,
+"/recipes/desserts/cocoa-mint-sandwich-cookies":`Cocoa Mint Sandwich Cookies`,
 "/recipes/desserts/date-balls":`Date Balls`,
 "/recipes/desserts/ginger-snaps":`Ginger snaps`,
 "/recipes/desserts/rainbow-cookies":`Rainbow Cookies`,

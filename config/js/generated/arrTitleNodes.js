@@ -47,6 +47,7 @@ export const arrTitleNodes = [
 "/hidden/asking-ai/technical/trim-file-leading-trailing-whitespace/chatgpt",
 "/hidden/asking-ai/technical/trim-file-leading-trailing-whitespace",
 "/recipes/desserts/almond-cake",
+"/recipes/desserts/cocoa-mint-sandwich-cookies",
 "/recipes/desserts/date-balls",
 "/recipes/desserts/ginger-snaps",
 "/recipes/desserts/rainbow-cookies",

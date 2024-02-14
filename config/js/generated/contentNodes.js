@@ -3,7 +3,7 @@ export const contentNodes = {
   "parent":null,
   "title":`Welcome  `,
   "navLabel":"Welcome  ",
-  "markdownCount":61,
+  "markdownCount":62,
   "htmlCount":4,
   "javascriptCount":0,
   "hiddenCount":2,
@@ -1045,7 +1045,7 @@ export const contentNodes = {
   "parent":"/",
   "title":`Recipes`,
   "navLabel":"Recipes",
-  "markdownCount":20,
+  "markdownCount":21,
   "htmlCount":1,
   "javascriptCount":0,
   "hiddenCount":0,
@@ -1064,7 +1064,7 @@ export const contentNodes = {
   "parent":"/recipes",
   "title":`Desserts`,
   "navLabel":"Desserts",
-  "markdownCount":5,
+  "markdownCount":6,
   "htmlCount":0,
   "javascriptCount":0,
   "hiddenCount":0,
@@ -1073,6 +1073,7 @@ export const contentNodes = {
   },
   "children":[
     "/recipes/desserts/almond-cake",
+    "/recipes/desserts/cocoa-mint-sandwich-cookies",
     "/recipes/desserts/date-balls",
     "/recipes/desserts/ginger-snaps",
     "/recipes/desserts/rainbow-cookies",
@@ -1090,6 +1091,21 @@ export const contentNodes = {
   "files":{
     "markdown.md":"2024-01-24 08:44:05 -0500",
     "_title.txt":"2024-01-24 08:44:05 -0500",
+  },
+  "children":[
+  ],
+},
+"/recipes/desserts/cocoa-mint-sandwich-cookies":{
+  "parent":"/recipes/desserts",
+  "title":`Cocoa Mint Sandwich Cookies`,
+  "navLabel":"Cocoa Mint Sandwich Cookies",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"",
+    "_title.txt":"",
   },
   "children":[
   ],

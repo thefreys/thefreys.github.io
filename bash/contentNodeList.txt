@@ -71,6 +71,7 @@ content/img
 content/recipes
 content/recipes/desserts
 content/recipes/desserts/almond-cake
+content/recipes/desserts/cocoa-mint-sandwich-cookies
 content/recipes/desserts/date-balls
 content/recipes/desserts/ginger-snaps
 content/recipes/desserts/rainbow-cookies
