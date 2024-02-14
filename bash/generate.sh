@@ -2,6 +2,7 @@
 source "$(dirname ${BASH_SOURCE[0]})/config.sh"
 rm -rf "${tmpoutdir}"
 mkdir -p "${tmpoutdir}"
+today=$(date '+%F\ %T')
 
 echo "$(date): Generating array files"
 "$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrMarkdownNodes" "markdown.md"
@@ -64,7 +65,7 @@ cat  "$(dirname ${BASH_SOURCE[0]})/contentNodeList.txt" | while read nodepath; d
         if [[ "" == "${gitdate}" ]]; then
             lastmod=${today}
         else
-            lastmod=${gitdate:0:10}
+            lastmod=${gitdate:0:19}
         fi
         echo "    \"${file}\":\"${lastmod}\"," >> "${tmpoutfile}"
     done
