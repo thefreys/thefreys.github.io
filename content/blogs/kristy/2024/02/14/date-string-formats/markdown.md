@@ -1,6 +1,6 @@
 # Date String formats
 
-I will never commit these to memory and every time I do a search, I wade through trash results. This morning I decided to ask the AIs and documents it here so I can be done with searching and come back here whenever I need one.
+I will never commit these to memory and every time I do a search, I wade through trash results. This morning I decided to ask the AIs and document it here so I can be done with searching and come back here whenever I need one.
 
 This is what I asked: 
 
