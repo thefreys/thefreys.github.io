@@ -44,13 +44,15 @@ function buildSiteMapItems(items, parent) {
 
 
         var li = document.createElement("li");
+        //li.classList.add('list-group-item');
+        //li.classList.add('list-group-item','list-group-item-action','flex-column','align-items-start');
         var a = document.createElement("a");
         a.textContent = item.navLabel;
         a.setAttribute("href", 'index.html?node=' + items[key]);
         li.appendChild(a);
         if (item.children.length > 0) {
             var ul = document.createElement("ul");
-            ul.setAttribute("id", parent.getAttribute("id") + "-" + i);
+            //ul.setAttribute("id", parent.getAttribute("id") + "-" + i);
             buildSiteMapItems(item.children, ul);
             li.appendChild(ul);
         }
@@ -63,6 +65,7 @@ function buildSiteMap(parent) {
         return;
     }
     var ul = document.createElement("ul");
+    //ul.classList.add('list-group'); 
     buildSiteMapItems(contentNodes['/'].children, ul);
     parent.appendChild(ul);
 }
@@ -75,6 +78,7 @@ function buildAreaMap(parent) {
         return;
     }
     var ul = document.createElement("ul");
+    //ul.classList.add('list-group','list-group-flush'); 
     buildSiteMapItems(contentNodes[request.node].children, ul);
     parent.appendChild(ul);
 }
@@ -228,7 +232,8 @@ export function init() {
         else{
             document.title = 'Explore ' + contentNodes[request.node].title + ' (' + request.node + ')';
         }
-        document.getElementById('htmlContent').innerHTML = '<h1>Explore</h1><div id="area-map"></div>';
+        //document.getElementById('htmlContent').innerHTML = '<h1>Explore</h1><div id="area-map"></div>';
+        document.getElementById('htmlContent').innerHTML = '<h1>Explore</h1></div>';
         return;
     }
 

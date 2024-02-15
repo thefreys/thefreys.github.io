@@ -1,0 +1,21 @@
+#site-map,
+#area-map {
+    margin-left: 18px;
+}
+
+#site-map ul,
+#area-map ul {
+    padding-left: 9px;
+}
+
+#site-map li,
+#area-map li {
+    list-style-type: hearts;
+}
+
+@counter-style hearts {
+    system: fixed;
+    /* symbols: ✱ ✲ ✻ ✼ ✽ ❃ ❉; */
+    symbols: ❤️ 💛 💚 💙 💜 ❤️ 💛 💚 💙 💜;
+    suffix: "";
+}
