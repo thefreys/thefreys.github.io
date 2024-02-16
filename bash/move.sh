@@ -16,10 +16,15 @@ cat  "$(dirname ${BASH_SOURCE[0]})/contentNodeList.txt" | while read nodepath; d
     echo ".${node}"
     mkdir -p ".${node}"
     rm ".${node}/README.md"
+    rm ".${node}/_title.txt"
     if [ -f "./content${node}/markdown.md" ]; then
-      cat "./content${node}/markdown.md" > ".${node}/README.md"
+        if [[ -s "./content${node}/markdown.md" ]]; then
+            cat "./content${node}/markdown.md" > ".${node}/README.md"
+        fi
     fi
     if [ -f "./content${node}/_title.txt" ]; then
-      cat "./content${node}/_title.txt" > ".${node}/_title.txt"
+        if [[ -s "./content${node}/_title.txt" ]]; then
+            cat "./content${node}/_title.txt" > ".${node}/_title.txt"
+        fi
     fi
 done
