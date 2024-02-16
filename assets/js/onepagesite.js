@@ -1,4 +1,4 @@
-import { siteConfig } from '../../config/js/index.js';
+import { siteConfig } from '../../config/js/onepagesite.js';
 import { contentNodes } from '../../config/js/generated/contentNodes.js';
 
 var request = {};
@@ -48,7 +48,7 @@ function buildSiteMapItems(items, parent, level) {
         li.classList.add('sitemap-level-'+level);
         var a = document.createElement("a");
         a.textContent = item.navLabel;
-        a.setAttribute("href", 'index.html?node=' + items[key]);
+        a.setAttribute("href", 'onepagesite.html?node=' + items[key]);
         li.appendChild(a);
         if (item.children.length > 0) {
             var ul = document.createElement("ul");
@@ -89,20 +89,20 @@ function buildBreadcrumbs() {
     var breadcrumbs = '';
     var breadcrumbItem = breadcrumbItemTemplate;
     breadcrumbItem = breadcrumbItem.replace(/{{navLabel}}/g, 'Home');
-    breadcrumbItem = breadcrumbItem.replace(/{{href}}/g, 'index.html?node=/');
+    breadcrumbItem = breadcrumbItem.replace(/{{href}}/g, 'onepagesite.html?node=/');
     breadcrumbs = breadcrumbs + breadcrumbItem;
     for (var i = 0; i < request.breadcrumbs.length; i++) {
         var breadcrumbItem = breadcrumbItemTemplate;
         var breadcrumbPath = request.breadcrumbs[i];
         var sitemapItem = contentNodes[breadcrumbPath];
         breadcrumbItem = breadcrumbItem.replace(/{{navLabel}}/g, sitemapItem.navLabel);
-        breadcrumbItem = breadcrumbItem.replace(/{{href}}/g, 'index.html?node=' + breadcrumbPath);
+        breadcrumbItem = breadcrumbItem.replace(/{{href}}/g, 'onepagesite.html?node=' + breadcrumbPath);
         breadcrumbs = breadcrumbs + breadcrumbItem;
     }
     var breadcrumbItem = breadcrumbItemCurrentTemplate;
     var sitemapItem = contentNodes[request.node];
     breadcrumbItem = breadcrumbItem.replace(/{{navLabel}}/g, sitemapItem.navLabel);
-    breadcrumbItem = breadcrumbItem.replace(/{{href}}/g, 'index.html?node=' + request.node);
+    breadcrumbItem = breadcrumbItem.replace(/{{href}}/g, 'onepagesite.html?node=' + request.node);
     breadcrumbs = breadcrumbs + breadcrumbItem;
     document.getElementById('breadcrumbs').innerHTML = breadcrumbs;
 }
@@ -114,7 +114,7 @@ function buildMenu() {
         var menuItem = templateMenuItem;
         if ('Sitemap' == level1){
             menuItem = menuItem.replace(/{{navLabel}}/g, level1);
-            menuItem = menuItem.replace(/{{href}}/g, 'index.html?node=' + level1);
+            menuItem = menuItem.replace(/{{href}}/g, 'onepagesite.html?node=' + level1);
             menu = menu + menuItem;
             continue;
         }
@@ -123,13 +123,13 @@ function buildMenu() {
             var menuItem = templateMenuItemWithChildren;
         }
         menuItem = menuItem.replace(/{{navLabel}}/g, sitemapItem.navLabel);
-        menuItem = menuItem.replace(/{{href}}/g, 'index.html?node=' + siteConfig.hamburgerLevelOneItems[i]);
+        menuItem = menuItem.replace(/{{href}}/g, 'onepagesite.html?node=' + siteConfig.hamburgerLevelOneItems[i]);
         var menuItemChildren = '';
         for (var j = 0; j < sitemapItem.children.length; j++) {
             var menuChildItem = templateMenuItemChild;
             var sitemapChildItem = contentNodes[sitemapItem.children[j]];
             menuChildItem = menuChildItem.replace(/{{navLabel}}/g, sitemapChildItem.navLabel);
-            menuChildItem = menuChildItem.replace(/{{href}}/g, 'index.html?node=' + sitemapItem.children[j]);
+            menuChildItem = menuChildItem.replace(/{{href}}/g, 'onepagesite.html?node=' + sitemapItem.children[j]);
             menuItemChildren = menuItemChildren + menuChildItem;
         }
         menuItem = menuItem.replace(/{{children}}/g, menuItemChildren);
@@ -180,7 +180,7 @@ export function init() {
     // determine the content requested
     request.queryParams = getQueryParams();
     if (typeof request.queryParams['node'] === 'undefined') {
-        window.location.href = 'index.html?node=/';
+        window.location.href = 'onepagesite.html?node=/';
         return;
     }
     request.node = request.queryParams['node'];
@@ -213,7 +213,7 @@ export function init() {
     }
     else if (typeof contentNodes[request.node] === 'undefined') {
         document.title = 'Page not found ('+request.node+')';
-        window.location.href = 'index.html?node=/404&reason=no-path&x2=' + request.node;
+        window.location.href = 'onepagesite.html?node=/404&reason=no-path&x2=' + request.node;
         return;
     }
 
@@ -358,7 +358,7 @@ export function init() {
                     document.getElementById('htmlContent').innerHTML = '404 page is missing';
                     return;
                 }
-                window.location.href = 'index.html?node=404&reason=no-content-via-fetch&x2=' + request.node;
+                window.location.href = 'onepagesite.html?node=404&reason=no-content-via-fetch&x2=' + request.node;
                 return;
             }
         })
