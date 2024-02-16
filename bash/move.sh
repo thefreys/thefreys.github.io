@@ -6,8 +6,6 @@ mkdir -p "${tmpoutdir}"
 today=$(date '+%F\ %T')
 
 find content -type d -print | xargs -I {} ls -d {} > "$(dirname ${BASH_SOURCE[0]})/contentNodeList.txt"
-jsvar=contentNodes
-tmpoutfile="${tmpoutdir}/${jsvar}.js"
 cd "${rootdir}"
 cat  "$(dirname ${BASH_SOURCE[0]})/contentNodeList.txt" | while read nodepath; do
     node="/${nodepath}"
@@ -15,5 +13,13 @@ cat  "$(dirname ${BASH_SOURCE[0]})/contentNodeList.txt" | while read nodepath; d
     if [[ "${node}" = "" ]]; then
         node="/"
     fi
-    echo ${node}
+    echo ".${node}"
+    mkdir -p ".${node}"
+    touch ".${node}/README.md"
+    if [ -f "./content${node}/markdown.md" ]; then
+      cat "./content${node}/markdown.md" > ".${node}/README.md"
+    fi
+    if [ -f "./content${node}/_title.txt" ]; then
+      cat "./content${node}/_title.txt" > ".${node}/_title.txt"
+    fi
 done
