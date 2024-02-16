@@ -1,4 +1,4 @@
-To display a family tree on your web page, you can use HTML and CSS to create a visual representation. You can leverage nested lists (ul and ol) to represent the hierarchy and use CSS to style and position the elements. Here's a simple example:
+You can achieve this by using the `:nth-child` selector in CSS to apply different symbols to different levels of nested `ul` elements. Here's an example using five different symbols (❤️ 💛 💚 💙 💜):
 
 ```html
 <!DOCTYPE html>
@@ -6,8 +6,29 @@ To display a family tree on your web page, you can use HTML and CSS to create a 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Family Tree</title>
+  <title>Family Tree with Symbols</title>
   <style>
+    /* Define different symbols */
+    .tree li::before {
+      content: '❤️'; /* Default symbol for root level */
+    }
+
+    .tree li ul li::before {
+      content: '💛'; /* Symbol for the second level */
+    }
+
+    .tree li ul li ul li::before {
+      content: '💚'; /* Symbol for the third level */
+    }
+
+    .tree li ul li ul li ul li::before {
+      content: '💙'; /* Symbol for the fourth level */
+    }
+
+    .tree li ul li ul li ul li ul li::before {
+      content: '💜'; /* Symbol for the fifth level */
+    }
+
     /* Style the tree */
     .tree {
       position: relative;
@@ -77,4 +98,4 @@ To display a family tree on your web page, you can use HTML and CSS to create a 
 </html>
 ```
 
-This example uses CSS to style the tree, nodes, and connecting lines. You can customize the styling further to match your preferences. Additionally, you may want to add more details to each node, such as names and additional information, and adjust the styling accordingly.
+In this example, each level of nesting has a different symbol. You can customize the symbols and styling as needed.
