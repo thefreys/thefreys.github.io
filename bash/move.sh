@@ -15,7 +15,7 @@ cat  "$(dirname ${BASH_SOURCE[0]})/contentNodeList.txt" | while read nodepath; d
     fi
     echo ".${node}"
     mkdir -p ".${node}"
-    touch ".${node}/README.md"
+    rm ".${node}/README.md"
     if [ -f "./content${node}/markdown.md" ]; then
       cat "./content${node}/markdown.md" > ".${node}/README.md"
     fi
