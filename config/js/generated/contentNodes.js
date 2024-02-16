@@ -3,7 +3,7 @@ export const contentNodes = {
   "parent":null,
   "title":`Welcome  `,
   "navLabel":"Welcome  ",
-  "markdownCount":69,
+  "markdownCount":75,
   "htmlCount":4,
   "javascriptCount":0,
   "hiddenCount":2,
@@ -25,7 +25,7 @@ export const contentNodes = {
 "/blogs":{
   "parent":"/",
   "navLabel":"blogs",
-  "markdownCount":18,
+  "markdownCount":24,
   "htmlCount":0,
   "javascriptCount":0,
   "hiddenCount":0,
@@ -38,7 +38,7 @@ export const contentNodes = {
 "/blogs/kristy":{
   "parent":"/blogs",
   "navLabel":"kristy",
-  "markdownCount":18,
+  "markdownCount":24,
   "htmlCount":0,
   "javascriptCount":0,
   "hiddenCount":0,
@@ -51,7 +51,7 @@ export const contentNodes = {
 "/blogs/kristy/2024":{
   "parent":"/blogs/kristy",
   "navLabel":"2024",
-  "markdownCount":18,
+  "markdownCount":24,
   "htmlCount":0,
   "javascriptCount":0,
   "hiddenCount":0,
@@ -105,7 +105,7 @@ export const contentNodes = {
 "/blogs/kristy/2024/02":{
   "parent":"/blogs/kristy/2024",
   "navLabel":"02",
-  "markdownCount":17,
+  "markdownCount":23,
   "htmlCount":0,
   "javascriptCount":0,
   "hiddenCount":0,
@@ -115,6 +115,7 @@ export const contentNodes = {
     "/blogs/kristy/2024/02/10",
     "/blogs/kristy/2024/02/11",
     "/blogs/kristy/2024/02/14",
+    "/blogs/kristy/2024/02/15",
   ],
 },
 "/blogs/kristy/2024/02/10":{
@@ -339,7 +340,7 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-14 09:42:16",
+    "markdown.md":"2024-02-14 10:05:42",
     "_title.txt":"2024-02-14 09:42:16",
   },
   "children":[
@@ -421,6 +422,114 @@ export const contentNodes = {
   "files":{
     "markdown.md":"2024-02-14 08:34:15",
     "_title.txt":"2024-02-14 08:34:15",
+  },
+  "children":[
+  ],
+},
+"/blogs/kristy/2024/02/15":{
+  "parent":"/blogs/kristy/2024/02",
+  "navLabel":"15",
+  "markdownCount":6,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+  },
+  "children":[
+    "/blogs/kristy/2024/02/15/family-tree-as-web-page",
+  ],
+},
+"/blogs/kristy/2024/02/15/family-tree-as-web-page":{
+  "parent":"/blogs/kristy/2024/02/15",
+  "title":`Representing a family tree in a web page`,
+  "navLabel":"Representing a family tree in a web page",
+  "markdownCount":6,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-16\ 07:53:49",
+    "_title.txt":"2024-02-16\ 07:53:49",
+  },
+  "children":[
+    "/blogs/kristy/2024/02/15/family-tree-as-web-page/AI-answers",
+  ],
+},
+"/blogs/kristy/2024/02/15/family-tree-as-web-page/AI-answers":{
+  "parent":"/blogs/kristy/2024/02/15/family-tree-as-web-page",
+  "title":`How multiple AIs answered`,
+  "navLabel":"How multiple AIs answered",
+  "markdownCount":5,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-16\ 07:53:49",
+    "_title.txt":"2024-02-16\ 07:53:49",
+  },
+  "children":[
+    "/blogs/kristy/2024/02/15/family-tree-as-web-page/AI-answers/bing",
+    "/blogs/kristy/2024/02/15/family-tree-as-web-page/AI-answers/chatgpt",
+    "/blogs/kristy/2024/02/15/family-tree-as-web-page/AI-answers/claude",
+    "/blogs/kristy/2024/02/15/family-tree-as-web-page/AI-answers/gemini",
+  ],
+},
+"/blogs/kristy/2024/02/15/family-tree-as-web-page/AI-answers/bing":{
+  "parent":"/blogs/kristy/2024/02/15/family-tree-as-web-page/AI-answers",
+  "title":`Response from Bing Copilot`,
+  "navLabel":"Response from Bing Copilot",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-16\ 07:53:49",
+    "_title.txt":"2024-02-16\ 07:53:49",
+  },
+  "children":[
+  ],
+},
+"/blogs/kristy/2024/02/15/family-tree-as-web-page/AI-answers/chatgpt":{
+  "parent":"/blogs/kristy/2024/02/15/family-tree-as-web-page/AI-answers",
+  "title":`Response from ChatGPT 3.5`,
+  "navLabel":"Response from ChatGPT 3.5",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-16\ 07:53:49",
+    "_title.txt":"2024-02-16\ 07:53:49",
+  },
+  "children":[
+  ],
+},
+"/blogs/kristy/2024/02/15/family-tree-as-web-page/AI-answers/claude":{
+  "parent":"/blogs/kristy/2024/02/15/family-tree-as-web-page/AI-answers",
+  "title":`Response from Claude`,
+  "navLabel":"Response from Claude",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-16\ 07:53:49",
+    "_title.txt":"2024-02-16\ 07:53:49",
+  },
+  "children":[
+  ],
+},
+"/blogs/kristy/2024/02/15/family-tree-as-web-page/AI-answers/gemini":{
+  "parent":"/blogs/kristy/2024/02/15/family-tree-as-web-page/AI-answers",
+  "title":`Response from Gemini`,
+  "navLabel":"Response from Gemini",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-16\ 07:53:49",
+    "_title.txt":"2024-02-16\ 07:53:49",
   },
   "children":[
   ],

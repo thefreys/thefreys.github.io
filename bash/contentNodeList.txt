@@ -26,6 +26,13 @@ content/blogs/kristy/2024/02/14/date-string-formats/AI-answers/bing
 content/blogs/kristy/2024/02/14/date-string-formats/AI-answers/chatgpt
 content/blogs/kristy/2024/02/14/date-string-formats/AI-answers/claude
 content/blogs/kristy/2024/02/14/date-string-formats/AI-answers/gemini
+content/blogs/kristy/2024/02/15
+content/blogs/kristy/2024/02/15/family-tree-as-web-page
+content/blogs/kristy/2024/02/15/family-tree-as-web-page/AI-answers
+content/blogs/kristy/2024/02/15/family-tree-as-web-page/AI-answers/bing
+content/blogs/kristy/2024/02/15/family-tree-as-web-page/AI-answers/chatgpt
+content/blogs/kristy/2024/02/15/family-tree-as-web-page/AI-answers/claude
+content/blogs/kristy/2024/02/15/family-tree-as-web-page/AI-answers/gemini
 content/coding
 content/coding/frameworks
 content/coding/frameworks/bootstrap

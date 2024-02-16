@@ -30,8 +30,9 @@ export function getQueryParams() {
     return queryParams;
 }
 
-function buildSiteMapItems(items, parent) {
+function buildSiteMapItems(items, parent, level) {
     var i = 0;
+    parent.classList.add('sitemap-level-'+level);
     for (const key in items) {
         i++;
         var item = contentNodes[items[key]];
@@ -44,16 +45,14 @@ function buildSiteMapItems(items, parent) {
 
 
         var li = document.createElement("li");
-        //li.classList.add('list-group-item');
-        //li.classList.add('list-group-item','list-group-item-action','flex-column','align-items-start');
+        li.classList.add('sitemap-level-'+level);
         var a = document.createElement("a");
         a.textContent = item.navLabel;
         a.setAttribute("href", 'index.html?node=' + items[key]);
         li.appendChild(a);
         if (item.children.length > 0) {
             var ul = document.createElement("ul");
-            //ul.setAttribute("id", parent.getAttribute("id") + "-" + i);
-            buildSiteMapItems(item.children, ul);
+            buildSiteMapItems(item.children, ul, level + 1);
             li.appendChild(ul);
         }
         parent.appendChild(li);
@@ -66,7 +65,7 @@ function buildSiteMap(parent) {
     }
     var ul = document.createElement("ul");
     //ul.classList.add('list-group'); 
-    buildSiteMapItems(contentNodes['/'].children, ul);
+    buildSiteMapItems(contentNodes['/'].children, ul,0);
     parent.appendChild(ul);
 }
 
@@ -79,7 +78,7 @@ function buildAreaMap(parent) {
     }
     var ul = document.createElement("ul");
     //ul.classList.add('list-group','list-group-flush'); 
-    buildSiteMapItems(contentNodes[request.node].children, ul);
+    buildSiteMapItems(contentNodes[request.node].children, ul,0);
     parent.appendChild(ul);
 }
 
