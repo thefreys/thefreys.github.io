@@ -15,8 +15,8 @@ cat  "$(dirname ${BASH_SOURCE[0]})/contentNodeList.txt" | while read nodepath; d
     fi
     echo ".${node}"
     mkdir -p ".${node}"
-    rm ".${node}/README.md"
-    rm ".${node}/_title.txt"
+    #rm ".${node}/README.md"
+    #rm ".${node}/_title.txt"
     if [ -f "./content${node}/markdown.md" ]; then
         if [[ -s "./content${node}/markdown.md" ]]; then
             cat "./content${node}/markdown.md" > ".${node}/README.md"
@@ -25,6 +25,16 @@ cat  "$(dirname ${BASH_SOURCE[0]})/contentNodeList.txt" | while read nodepath; d
     if [ -f "./content${node}/_title.txt" ]; then
         if [[ -s "./content${node}/_title.txt" ]]; then
             cat "./content${node}/_title.txt" > ".${node}/_title.txt"
+        fi
+    fi
+    if [ -f "./content${node}/html.html" ]; then
+        if [[ -s "./content${node}/html.html" ]]; then
+            cat "./content${node}/html.html" > ".${node}/.html"
+        fi
+    fi
+    if [ -f "./content${node}/javascript.js" ]; then
+        if [[ -s "./content${node}/javascript.js" ]]; then
+            cat "./content${node}/javascript.js" > ".${node}/.js"
         fi
     fi
 done
