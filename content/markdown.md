@@ -1,7 +1,3 @@
-This simple website uses JavaScript, the Bootstrap framework, and Markdown formatted content to build an interactive single page site with navigation menus and a sitemap without the need for a backend server language. 
+This simple website displays content maintained separate from code. Each content item (node) is represented by a directory and a few key files within it. Content is primarily written in markdown to facilitate quick creation without needing to know HTML. For more information on what files go into a node, see the README.md in the content directory of the github repository.
 
-- JavaScript is used to dynamically generate the page content and show/hide sections and menus when clicked' 
-- Bootstrap provides responsive grid layouts and styled UI components out of the box
-- Markdown text formatting allows writing the content using simple typographic conventions which are converted to HTML. 
- 
-Together these technologies allow rapidly creating a functional site with navigation menus and structured page areas, while avoiding complex HTML/CSS markup and keeping the focus on the content.
+JavaScript, the Bootstrap framework, and the showdown library are the technologies used to create the interactive single page site with navigation menus and a sitemap you see here without the need for a backend server language. In the absence of a server, the content is still easily consumable due the native readability of a markdown file and the organization of files into a meaningful directory structure.

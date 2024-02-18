@@ -52,6 +52,7 @@ cat  "$(dirname ${BASH_SOURCE[0]})/contentNodeList.txt" | while read nodepath; d
     htmlCount="$(find ${nodepath}/ -type f -name "html.html" | wc -l)"
     javascriptCount="$(find ${nodepath}/ -type f -name "javascript.js" | wc -l)"
     hiddenCount="$(find ${nodepath}/ -type f -name ".hide" | wc -l)"
+    
 
     echo "  \"markdownCount\":${markdownCount}," >> "${tmpoutfile}"
     echo "  \"htmlCount\":${htmlCount}," >> "${tmpoutfile}"

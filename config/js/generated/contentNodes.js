@@ -9,17 +9,593 @@ export const contentNodes = {
   "hiddenCount":2,
   "files":{
     "markdown.md":"2024-02-14 08:34:15",
+    "README.md":"2024-01-24 08:44:05",
     "_title.txt":"2024-02-04 14:34:43",
   },
   "children":[
+    "/activities",
     "/blogs",
     "/coding",
-    "/hidden",
     "/img",
     "/recipes",
     "/sitemap",
     "/this-should-not-appear",
     "/upcycling",
+  ],
+},
+"/activities":{
+  "parent":"/",
+  "navLabel":"activities",
+  "markdownCount":24,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":2,
+  "files":{
+    ".hide":"2024-02-18\ 08:58:54",
+  },
+  "children":[
+    "/activities/asking-ai",
+    "/activities/camping",
+  ],
+},
+"/activities/asking-ai":{
+  "parent":"/activities",
+  "navLabel":"asking-ai",
+  "markdownCount":19,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":1,
+  "files":{
+  },
+  "children":[
+    "/activities/asking-ai/crafty",
+    "/activities/asking-ai/technical",
+  ],
+},
+"/activities/asking-ai/crafty":{
+  "parent":"/activities/asking-ai",
+  "navLabel":"crafty",
+  "markdownCount":3,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+  },
+  "children":[
+    "/activities/asking-ai/crafty/how-do-you-make-t-shirt-yarn",
+  ],
+},
+"/activities/asking-ai/crafty/how-do-you-make-t-shirt-yarn":{
+  "parent":"/activities/asking-ai/crafty",
+  "title":`How do you make t-shirt yarn?`,
+  "navLabel":"How do you make t-shirt yarn?",
+  "markdownCount":3,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "_title.txt":"2024-02-18\ 08:58:54",
+  },
+  "children":[
+    "/activities/asking-ai/crafty/how-do-you-make-t-shirt-yarn/bard",
+    "/activities/asking-ai/crafty/how-do-you-make-t-shirt-yarn/bing",
+    "/activities/asking-ai/crafty/how-do-you-make-t-shirt-yarn/chatgpt",
+  ],
+},
+"/activities/asking-ai/crafty/how-do-you-make-t-shirt-yarn/bard":{
+  "parent":"/activities/asking-ai/crafty/how-do-you-make-t-shirt-yarn",
+  "title":`what Bard said`,
+  "navLabel":"what Bard said",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-18\ 08:58:54",
+    "_title.txt":"2024-02-18\ 08:58:54",
+  },
+  "children":[
+  ],
+},
+"/activities/asking-ai/crafty/how-do-you-make-t-shirt-yarn/bing":{
+  "parent":"/activities/asking-ai/crafty/how-do-you-make-t-shirt-yarn",
+  "title":`what Bing said`,
+  "navLabel":"what Bing said",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-18\ 08:58:54",
+    "_title.txt":"2024-02-18\ 08:58:54",
+  },
+  "children":[
+  ],
+},
+"/activities/asking-ai/crafty/how-do-you-make-t-shirt-yarn/chatgpt":{
+  "parent":"/activities/asking-ai/crafty/how-do-you-make-t-shirt-yarn",
+  "title":`what ChatGPT said`,
+  "navLabel":"what ChatGPT said",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-18\ 08:58:54",
+    "_title.txt":"2024-02-18\ 08:58:54",
+  },
+  "children":[
+  ],
+},
+"/activities/asking-ai/technical":{
+  "parent":"/activities/asking-ai",
+  "navLabel":"technical",
+  "markdownCount":16,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":1,
+  "files":{
+  },
+  "children":[
+    "/activities/asking-ai/technical/list-files-from-a-terminal",
+    "/activities/asking-ai/technical/most-common-term-for-writing-computer-code",
+    "/activities/asking-ai/technical/no-cost-website-hosts",
+    "/activities/asking-ai/technical/shell-scripting",
+    "/activities/asking-ai/technical/sitemap-file-format-preferred-by-search-engines",
+    "/activities/asking-ai/technical/trim-file-leading-trailing-whitespace",
+  ],
+},
+"/activities/asking-ai/technical/list-files-from-a-terminal":{
+  "parent":"/activities/asking-ai/technical",
+  "title":`How do you list files from a terminal?`,
+  "navLabel":"How do you list files from a terminal?",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "_title.txt":"2024-02-18\ 08:58:54",
+  },
+  "children":[
+    "/activities/asking-ai/technical/list-files-from-a-terminal/bing",
+  ],
+},
+"/activities/asking-ai/technical/list-files-from-a-terminal/bing":{
+  "parent":"/activities/asking-ai/technical/list-files-from-a-terminal",
+  "title":`what Bing said`,
+  "navLabel":"what Bing said",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-18\ 08:58:54",
+    "_title.txt":"2024-02-18\ 08:58:54",
+  },
+  "children":[
+  ],
+},
+"/activities/asking-ai/technical/most-common-term-for-writing-computer-code":{
+  "parent":"/activities/asking-ai/technical",
+  "title":`What is the most common term for writing computer code?`,
+  "navLabel":"What is the most common term for writing computer code?",
+  "markdownCount":3,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "_title.txt":"2024-02-18\ 08:58:54",
+  },
+  "children":[
+    "/activities/asking-ai/technical/most-common-term-for-writing-computer-code/bard",
+    "/activities/asking-ai/technical/most-common-term-for-writing-computer-code/bing",
+    "/activities/asking-ai/technical/most-common-term-for-writing-computer-code/chatgpt",
+  ],
+},
+"/activities/asking-ai/technical/most-common-term-for-writing-computer-code/bard":{
+  "parent":"/activities/asking-ai/technical/most-common-term-for-writing-computer-code",
+  "title":`what Bard said`,
+  "navLabel":"what Bard said",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-18\ 08:58:54",
+    "_title.txt":"2024-02-18\ 08:58:54",
+  },
+  "children":[
+  ],
+},
+"/activities/asking-ai/technical/most-common-term-for-writing-computer-code/bing":{
+  "parent":"/activities/asking-ai/technical/most-common-term-for-writing-computer-code",
+  "title":`what Bing said`,
+  "navLabel":"what Bing said",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-18\ 08:58:54",
+    "_title.txt":"2024-02-18\ 08:58:54",
+  },
+  "children":[
+  ],
+},
+"/activities/asking-ai/technical/most-common-term-for-writing-computer-code/chatgpt":{
+  "parent":"/activities/asking-ai/technical/most-common-term-for-writing-computer-code",
+  "title":`what ChatGPT said`,
+  "navLabel":"what ChatGPT said",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-18\ 08:58:54",
+    "_title.txt":"2024-02-18\ 08:58:54",
+  },
+  "children":[
+  ],
+},
+"/activities/asking-ai/technical/no-cost-website-hosts":{
+  "parent":"/activities/asking-ai/technical",
+  "title":`Please list 10 places to host a website for free`,
+  "navLabel":"Please list 10 places to host a website for free",
+  "markdownCount":3,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "_title.txt":"2024-02-18\ 08:58:54",
+  },
+  "children":[
+    "/activities/asking-ai/technical/no-cost-website-hosts/bard",
+    "/activities/asking-ai/technical/no-cost-website-hosts/bing",
+    "/activities/asking-ai/technical/no-cost-website-hosts/chatgpt",
+  ],
+},
+"/activities/asking-ai/technical/no-cost-website-hosts/bard":{
+  "parent":"/activities/asking-ai/technical/no-cost-website-hosts",
+  "navLabel":"bard",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-18\ 08:58:54",
+    "_title.txt":"2024-02-18\ 08:58:54",
+  },
+  "children":[
+  ],
+},
+"/activities/asking-ai/technical/no-cost-website-hosts/bing":{
+  "parent":"/activities/asking-ai/technical/no-cost-website-hosts",
+  "navLabel":"bing",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-18\ 08:58:54",
+    "_title.txt":"2024-02-18\ 08:58:54",
+  },
+  "children":[
+  ],
+},
+"/activities/asking-ai/technical/no-cost-website-hosts/chatgpt":{
+  "parent":"/activities/asking-ai/technical/no-cost-website-hosts",
+  "navLabel":"chatgpt",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-18\ 08:58:54",
+    "_title.txt":"2024-02-18\ 08:58:54",
+  },
+  "children":[
+  ],
+},
+"/activities/asking-ai/technical/shell-scripting":{
+  "parent":"/activities/asking-ai/technical",
+  "navLabel":"shell-scripting",
+  "markdownCount":3,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+  },
+  "children":[
+    "/activities/asking-ai/technical/shell-scripting/bash",
+  ],
+},
+"/activities/asking-ai/technical/shell-scripting/bash":{
+  "parent":"/activities/asking-ai/technical/shell-scripting",
+  "navLabel":"bash",
+  "markdownCount":3,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+  },
+  "children":[
+    "/activities/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date",
+  ],
+},
+"/activities/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date":{
+  "parent":"/activities/asking-ai/technical/shell-scripting/bash",
+  "title":`Please write a bash script to list all the files in a local clone of a git repository with their last commit date`,
+  "navLabel":"Please write a bash script to list all the files in a local clone of a git repository with their last commit date",
+  "markdownCount":3,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "_title.txt":"2024-02-18\ 08:58:54",
+  },
+  "children":[
+    "/activities/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date/bard",
+    "/activities/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date/bing",
+    "/activities/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date/chatgpt",
+  ],
+},
+"/activities/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date/bard":{
+  "parent":"/activities/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date",
+  "navLabel":"bard",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-18\ 08:58:54",
+    "_title.txt":"2024-02-18\ 08:58:54",
+  },
+  "children":[
+  ],
+},
+"/activities/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date/bing":{
+  "parent":"/activities/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date",
+  "navLabel":"bing",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-18\ 08:58:54",
+    "_title.txt":"2024-02-18\ 08:58:54",
+  },
+  "children":[
+  ],
+},
+"/activities/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date/chatgpt":{
+  "parent":"/activities/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date",
+  "navLabel":"chatgpt",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-18\ 08:58:54",
+    "_title.txt":"2024-02-18\ 08:58:54",
+  },
+  "children":[
+  ],
+},
+"/activities/asking-ai/technical/sitemap-file-format-preferred-by-search-engines":{
+  "parent":"/activities/asking-ai/technical",
+  "title":`I need to know the file format for the sitemap file that each search engine prefers`,
+  "navLabel":"I need to know the file format for the sitemap file that each search engine prefers",
+  "markdownCount":3,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "_title.txt":"2024-02-18\ 08:58:54",
+  },
+  "children":[
+    "/activities/asking-ai/technical/sitemap-file-format-preferred-by-search-engines/bard",
+    "/activities/asking-ai/technical/sitemap-file-format-preferred-by-search-engines/bing",
+    "/activities/asking-ai/technical/sitemap-file-format-preferred-by-search-engines/chatgpt",
+  ],
+},
+"/activities/asking-ai/technical/sitemap-file-format-preferred-by-search-engines/bard":{
+  "parent":"/activities/asking-ai/technical/sitemap-file-format-preferred-by-search-engines",
+  "title":`what Bard said`,
+  "navLabel":"what Bard said",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-18\ 08:58:54",
+    "_title.txt":"2024-02-18\ 08:58:54",
+  },
+  "children":[
+  ],
+},
+"/activities/asking-ai/technical/sitemap-file-format-preferred-by-search-engines/bing":{
+  "parent":"/activities/asking-ai/technical/sitemap-file-format-preferred-by-search-engines",
+  "title":`what Bing said`,
+  "navLabel":"what Bing said",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-18\ 08:58:54",
+    "_title.txt":"2024-02-18\ 08:58:54",
+  },
+  "children":[
+  ],
+},
+"/activities/asking-ai/technical/sitemap-file-format-preferred-by-search-engines/chatgpt":{
+  "parent":"/activities/asking-ai/technical/sitemap-file-format-preferred-by-search-engines",
+  "title":`what ChatGPT said`,
+  "navLabel":"what ChatGPT said",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-18\ 08:58:54",
+    "_title.txt":"2024-02-18\ 08:58:54",
+  },
+  "children":[
+  ],
+},
+"/activities/asking-ai/technical/trim-file-leading-trailing-whitespace":{
+  "parent":"/activities/asking-ai/technical",
+  "title":`In bash, how do I trim the contents of a file of leading and trailing whitespace and then write it back?`,
+  "navLabel":"In bash, how do I trim the contents of a file of leading and trailing whitespace and then write it back?",
+  "markdownCount":3,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":1,
+  "files":{
+    ".hide":"2024-02-18\ 08:58:54",
+    "_title.txt":"2024-02-18\ 08:58:54",
+  },
+  "children":[
+    "/activities/asking-ai/technical/trim-file-leading-trailing-whitespace/bard",
+    "/activities/asking-ai/technical/trim-file-leading-trailing-whitespace/bing",
+    "/activities/asking-ai/technical/trim-file-leading-trailing-whitespace/chatgpt",
+  ],
+},
+"/activities/asking-ai/technical/trim-file-leading-trailing-whitespace/bard":{
+  "parent":"/activities/asking-ai/technical/trim-file-leading-trailing-whitespace",
+  "title":`what Bard said`,
+  "navLabel":"what Bard said",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-18\ 08:58:54",
+    "_title.txt":"2024-02-18\ 08:58:54",
+  },
+  "children":[
+  ],
+},
+"/activities/asking-ai/technical/trim-file-leading-trailing-whitespace/bing":{
+  "parent":"/activities/asking-ai/technical/trim-file-leading-trailing-whitespace",
+  "title":`what Bing said`,
+  "navLabel":"what Bing said",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-18\ 08:58:54",
+    "_title.txt":"2024-02-18\ 08:58:54",
+  },
+  "children":[
+  ],
+},
+"/activities/asking-ai/technical/trim-file-leading-trailing-whitespace/chatgpt":{
+  "parent":"/activities/asking-ai/technical/trim-file-leading-trailing-whitespace",
+  "title":`what ChatGPT said`,
+  "navLabel":"what ChatGPT said",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-18\ 08:58:54",
+    "_title.txt":"2024-02-18\ 08:58:54",
+  },
+  "children":[
+  ],
+},
+"/activities/camping":{
+  "parent":"/activities",
+  "navLabel":"camping",
+  "markdownCount":5,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+  },
+  "children":[
+    "/activities/camping/campground-notes",
+    "/activities/camping/food-ideas",
+    "/activities/camping/fun-ideas",
+    "/activities/camping/gear-checklist",
+    "/activities/camping/sample-trip",
+  ],
+},
+"/activities/camping/campground-notes":{
+  "parent":"/activities/camping",
+  "title":`Campground Notes`,
+  "navLabel":"Campground Notes",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-04 15:49:01",
+    "_title.txt":"2024-02-04 15:49:01",
+  },
+  "children":[
+  ],
+},
+"/activities/camping/food-ideas":{
+  "parent":"/activities/camping",
+  "title":`Food Ideas`,
+  "navLabel":"Food Ideas",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-04 15:49:01",
+    "_title.txt":"2024-02-04 15:49:01",
+  },
+  "children":[
+  ],
+},
+"/activities/camping/fun-ideas":{
+  "parent":"/activities/camping",
+  "title":`Fun ideas`,
+  "navLabel":"Fun ideas",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-04 15:49:01",
+    "_title.txt":"2024-02-04 15:49:01",
+  },
+  "children":[
+  ],
+},
+"/activities/camping/gear-checklist":{
+  "parent":"/activities/camping",
+  "title":`Gear Checklist`,
+  "navLabel":"Gear Checklist",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-04 15:49:01",
+    "_title.txt":"2024-02-04 15:49:01",
+  },
+  "children":[
+  ],
+},
+"/activities/camping/sample-trip":{
+  "parent":"/activities/camping",
+  "title":`Sample Trip`,
+  "navLabel":"Sample Trip",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-04 15:49:01",
+    "_title.txt":"2024-02-04 15:49:01",
+  },
+  "children":[
   ],
 },
 "/blogs":{
@@ -448,8 +1024,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-16\ 07:53:49",
-    "_title.txt":"2024-02-16\ 07:53:49",
+    "markdown.md":"2024-02-16 08:26:12",
+    "_title.txt":"2024-02-16 08:26:12",
   },
   "children":[
     "/blogs/kristy/2024/02/15/family-tree-as-web-page/AI-answers",
@@ -464,8 +1040,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-16\ 07:53:49",
-    "_title.txt":"2024-02-16\ 07:53:49",
+    "markdown.md":"2024-02-16 08:26:12",
+    "_title.txt":"2024-02-16 08:26:12",
   },
   "children":[
     "/blogs/kristy/2024/02/15/family-tree-as-web-page/AI-answers/bing",
@@ -483,8 +1059,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-16\ 07:53:49",
-    "_title.txt":"2024-02-16\ 07:53:49",
+    "markdown.md":"2024-02-16 08:26:12",
+    "_title.txt":"2024-02-16 08:26:12",
   },
   "children":[
   ],
@@ -498,8 +1074,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-16\ 07:53:49",
-    "_title.txt":"2024-02-16\ 07:53:49",
+    "markdown.md":"2024-02-16 08:26:12",
+    "_title.txt":"2024-02-16 08:26:12",
   },
   "children":[
   ],
@@ -513,8 +1089,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-16\ 07:53:49",
-    "_title.txt":"2024-02-16\ 07:53:49",
+    "markdown.md":"2024-02-16 08:26:12",
+    "_title.txt":"2024-02-16 08:26:12",
   },
   "children":[
   ],
@@ -528,8 +1104,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-16\ 07:53:49",
-    "_title.txt":"2024-02-16\ 07:53:49",
+    "markdown.md":"2024-02-16 08:26:12",
+    "_title.txt":"2024-02-16 08:26:12",
   },
   "children":[
   ],
@@ -655,594 +1231,6 @@ export const contentNodes = {
   "files":{
     "markdown.md":"2024-01-24 08:44:05",
     "_title.txt":"2024-01-24 08:44:05",
-  },
-  "children":[
-  ],
-},
-"/hidden":{
-  "parent":"/",
-  "navLabel":"hidden",
-  "markdownCount":24,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":2,
-  "files":{
-    ".hide":"2024-02-04 15:49:01",
-  },
-  "children":[
-    "/hidden/activities",
-    "/hidden/asking-ai",
-  ],
-},
-"/hidden/activities":{
-  "parent":"/hidden",
-  "navLabel":"activities",
-  "markdownCount":5,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-  },
-  "children":[
-    "/hidden/activities/camping",
-  ],
-},
-"/hidden/activities/camping":{
-  "parent":"/hidden/activities",
-  "navLabel":"camping",
-  "markdownCount":5,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-  },
-  "children":[
-    "/hidden/activities/camping/campground-notes",
-    "/hidden/activities/camping/food-ideas",
-    "/hidden/activities/camping/fun-ideas",
-    "/hidden/activities/camping/gear-checklist",
-    "/hidden/activities/camping/sample-trip",
-  ],
-},
-"/hidden/activities/camping/campground-notes":{
-  "parent":"/hidden/activities/camping",
-  "title":`Campground Notes`,
-  "navLabel":"Campground Notes",
-  "markdownCount":1,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "markdown.md":"2024-02-04 15:49:01",
-    "_title.txt":"2024-02-04 15:49:01",
-  },
-  "children":[
-  ],
-},
-"/hidden/activities/camping/food-ideas":{
-  "parent":"/hidden/activities/camping",
-  "title":`Food Ideas`,
-  "navLabel":"Food Ideas",
-  "markdownCount":1,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "markdown.md":"2024-02-04 15:49:01",
-    "_title.txt":"2024-02-04 15:49:01",
-  },
-  "children":[
-  ],
-},
-"/hidden/activities/camping/fun-ideas":{
-  "parent":"/hidden/activities/camping",
-  "title":`Fun ideas`,
-  "navLabel":"Fun ideas",
-  "markdownCount":1,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "markdown.md":"2024-02-04 15:49:01",
-    "_title.txt":"2024-02-04 15:49:01",
-  },
-  "children":[
-  ],
-},
-"/hidden/activities/camping/gear-checklist":{
-  "parent":"/hidden/activities/camping",
-  "title":`Gear Checklist`,
-  "navLabel":"Gear Checklist",
-  "markdownCount":1,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "markdown.md":"2024-02-04 15:49:01",
-    "_title.txt":"2024-02-04 15:49:01",
-  },
-  "children":[
-  ],
-},
-"/hidden/activities/camping/sample-trip":{
-  "parent":"/hidden/activities/camping",
-  "title":`Sample Trip`,
-  "navLabel":"Sample Trip",
-  "markdownCount":1,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "markdown.md":"2024-02-04 15:49:01",
-    "_title.txt":"2024-02-04 15:49:01",
-  },
-  "children":[
-  ],
-},
-"/hidden/asking-ai":{
-  "parent":"/hidden",
-  "navLabel":"asking-ai",
-  "markdownCount":19,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":1,
-  "files":{
-  },
-  "children":[
-    "/hidden/asking-ai/crafty",
-    "/hidden/asking-ai/technical",
-  ],
-},
-"/hidden/asking-ai/crafty":{
-  "parent":"/hidden/asking-ai",
-  "navLabel":"crafty",
-  "markdownCount":3,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-  },
-  "children":[
-    "/hidden/asking-ai/crafty/how-do-you-make-t-shirt-yarn",
-  ],
-},
-"/hidden/asking-ai/crafty/how-do-you-make-t-shirt-yarn":{
-  "parent":"/hidden/asking-ai/crafty",
-  "title":`How do you make t-shirt yarn?`,
-  "navLabel":"How do you make t-shirt yarn?",
-  "markdownCount":3,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "_title.txt":"2024-02-04 15:49:01",
-  },
-  "children":[
-    "/hidden/asking-ai/crafty/how-do-you-make-t-shirt-yarn/bard",
-    "/hidden/asking-ai/crafty/how-do-you-make-t-shirt-yarn/bing",
-    "/hidden/asking-ai/crafty/how-do-you-make-t-shirt-yarn/chatgpt",
-  ],
-},
-"/hidden/asking-ai/crafty/how-do-you-make-t-shirt-yarn/bard":{
-  "parent":"/hidden/asking-ai/crafty/how-do-you-make-t-shirt-yarn",
-  "title":`what Bard said`,
-  "navLabel":"what Bard said",
-  "markdownCount":1,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "markdown.md":"2024-02-04 15:49:01",
-    "_title.txt":"2024-02-04 15:49:01",
-  },
-  "children":[
-  ],
-},
-"/hidden/asking-ai/crafty/how-do-you-make-t-shirt-yarn/bing":{
-  "parent":"/hidden/asking-ai/crafty/how-do-you-make-t-shirt-yarn",
-  "title":`what Bing said`,
-  "navLabel":"what Bing said",
-  "markdownCount":1,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "markdown.md":"2024-02-04 15:49:01",
-    "_title.txt":"2024-02-04 15:49:01",
-  },
-  "children":[
-  ],
-},
-"/hidden/asking-ai/crafty/how-do-you-make-t-shirt-yarn/chatgpt":{
-  "parent":"/hidden/asking-ai/crafty/how-do-you-make-t-shirt-yarn",
-  "title":`what ChatGPT said`,
-  "navLabel":"what ChatGPT said",
-  "markdownCount":1,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "markdown.md":"2024-02-04 15:49:01",
-    "_title.txt":"2024-02-04 15:49:01",
-  },
-  "children":[
-  ],
-},
-"/hidden/asking-ai/technical":{
-  "parent":"/hidden/asking-ai",
-  "navLabel":"technical",
-  "markdownCount":16,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":1,
-  "files":{
-  },
-  "children":[
-    "/hidden/asking-ai/technical/list-files-from-a-terminal",
-    "/hidden/asking-ai/technical/most-common-term-for-writing-computer-code",
-    "/hidden/asking-ai/technical/no-cost-website-hosts",
-    "/hidden/asking-ai/technical/shell-scripting",
-    "/hidden/asking-ai/technical/sitemap-file-format-preferred-by-search-engines",
-    "/hidden/asking-ai/technical/trim-file-leading-trailing-whitespace",
-  ],
-},
-"/hidden/asking-ai/technical/list-files-from-a-terminal":{
-  "parent":"/hidden/asking-ai/technical",
-  "title":`How do you list files from a terminal?`,
-  "navLabel":"How do you list files from a terminal?",
-  "markdownCount":1,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "_title.txt":"2024-02-04 15:49:01",
-  },
-  "children":[
-    "/hidden/asking-ai/technical/list-files-from-a-terminal/bing",
-  ],
-},
-"/hidden/asking-ai/technical/list-files-from-a-terminal/bing":{
-  "parent":"/hidden/asking-ai/technical/list-files-from-a-terminal",
-  "title":`what Bing said`,
-  "navLabel":"what Bing said",
-  "markdownCount":1,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "markdown.md":"2024-02-04 15:49:01",
-    "_title.txt":"2024-02-04 15:49:01",
-  },
-  "children":[
-  ],
-},
-"/hidden/asking-ai/technical/most-common-term-for-writing-computer-code":{
-  "parent":"/hidden/asking-ai/technical",
-  "title":`What is the most common term for writing computer code?`,
-  "navLabel":"What is the most common term for writing computer code?",
-  "markdownCount":3,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "_title.txt":"2024-02-04 15:49:01",
-  },
-  "children":[
-    "/hidden/asking-ai/technical/most-common-term-for-writing-computer-code/bard",
-    "/hidden/asking-ai/technical/most-common-term-for-writing-computer-code/bing",
-    "/hidden/asking-ai/technical/most-common-term-for-writing-computer-code/chatgpt",
-  ],
-},
-"/hidden/asking-ai/technical/most-common-term-for-writing-computer-code/bard":{
-  "parent":"/hidden/asking-ai/technical/most-common-term-for-writing-computer-code",
-  "title":`what Bard said`,
-  "navLabel":"what Bard said",
-  "markdownCount":1,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "markdown.md":"2024-02-04 15:49:01",
-    "_title.txt":"2024-02-04 15:49:01",
-  },
-  "children":[
-  ],
-},
-"/hidden/asking-ai/technical/most-common-term-for-writing-computer-code/bing":{
-  "parent":"/hidden/asking-ai/technical/most-common-term-for-writing-computer-code",
-  "title":`what Bing said`,
-  "navLabel":"what Bing said",
-  "markdownCount":1,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "markdown.md":"2024-02-04 15:49:01",
-    "_title.txt":"2024-02-04 15:49:01",
-  },
-  "children":[
-  ],
-},
-"/hidden/asking-ai/technical/most-common-term-for-writing-computer-code/chatgpt":{
-  "parent":"/hidden/asking-ai/technical/most-common-term-for-writing-computer-code",
-  "title":`what ChatGPT said`,
-  "navLabel":"what ChatGPT said",
-  "markdownCount":1,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "markdown.md":"2024-02-04 15:49:01",
-    "_title.txt":"2024-02-04 15:49:01",
-  },
-  "children":[
-  ],
-},
-"/hidden/asking-ai/technical/no-cost-website-hosts":{
-  "parent":"/hidden/asking-ai/technical",
-  "title":`Please list 10 places to host a website for free`,
-  "navLabel":"Please list 10 places to host a website for free",
-  "markdownCount":3,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "_title.txt":"2024-02-04 15:49:01",
-  },
-  "children":[
-    "/hidden/asking-ai/technical/no-cost-website-hosts/bard",
-    "/hidden/asking-ai/technical/no-cost-website-hosts/bing",
-    "/hidden/asking-ai/technical/no-cost-website-hosts/chatgpt",
-  ],
-},
-"/hidden/asking-ai/technical/no-cost-website-hosts/bard":{
-  "parent":"/hidden/asking-ai/technical/no-cost-website-hosts",
-  "navLabel":"bard",
-  "markdownCount":1,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "markdown.md":"2024-02-04 15:49:01",
-    "_title.txt":"2024-02-04 15:49:01",
-  },
-  "children":[
-  ],
-},
-"/hidden/asking-ai/technical/no-cost-website-hosts/bing":{
-  "parent":"/hidden/asking-ai/technical/no-cost-website-hosts",
-  "navLabel":"bing",
-  "markdownCount":1,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "markdown.md":"2024-02-04 15:49:01",
-    "_title.txt":"2024-02-04 15:49:01",
-  },
-  "children":[
-  ],
-},
-"/hidden/asking-ai/technical/no-cost-website-hosts/chatgpt":{
-  "parent":"/hidden/asking-ai/technical/no-cost-website-hosts",
-  "navLabel":"chatgpt",
-  "markdownCount":1,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "markdown.md":"2024-02-04 15:49:01",
-    "_title.txt":"2024-02-04 15:49:01",
-  },
-  "children":[
-  ],
-},
-"/hidden/asking-ai/technical/shell-scripting":{
-  "parent":"/hidden/asking-ai/technical",
-  "navLabel":"shell-scripting",
-  "markdownCount":3,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-  },
-  "children":[
-    "/hidden/asking-ai/technical/shell-scripting/bash",
-  ],
-},
-"/hidden/asking-ai/technical/shell-scripting/bash":{
-  "parent":"/hidden/asking-ai/technical/shell-scripting",
-  "navLabel":"bash",
-  "markdownCount":3,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-  },
-  "children":[
-    "/hidden/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date",
-  ],
-},
-"/hidden/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date":{
-  "parent":"/hidden/asking-ai/technical/shell-scripting/bash",
-  "title":`Please write a bash script to list all the files in a local clone of a git repository with their last commit date`,
-  "navLabel":"Please write a bash script to list all the files in a local clone of a git repository with their last commit date",
-  "markdownCount":3,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "_title.txt":"2024-02-04 15:49:01",
-  },
-  "children":[
-    "/hidden/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date/bard",
-    "/hidden/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date/bing",
-    "/hidden/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date/chatgpt",
-  ],
-},
-"/hidden/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date/bard":{
-  "parent":"/hidden/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date",
-  "navLabel":"bard",
-  "markdownCount":1,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "markdown.md":"2024-02-04 15:49:01",
-    "_title.txt":"2024-02-04 15:49:01",
-  },
-  "children":[
-  ],
-},
-"/hidden/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date/bing":{
-  "parent":"/hidden/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date",
-  "navLabel":"bing",
-  "markdownCount":1,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "markdown.md":"2024-02-04 15:49:01",
-    "_title.txt":"2024-02-04 15:49:01",
-  },
-  "children":[
-  ],
-},
-"/hidden/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date/chatgpt":{
-  "parent":"/hidden/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date",
-  "navLabel":"chatgpt",
-  "markdownCount":1,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "markdown.md":"2024-02-04 15:49:01",
-    "_title.txt":"2024-02-04 15:49:01",
-  },
-  "children":[
-  ],
-},
-"/hidden/asking-ai/technical/sitemap-file-format-preferred-by-search-engines":{
-  "parent":"/hidden/asking-ai/technical",
-  "title":`I need to know the file format for the sitemap file that each search engine prefers`,
-  "navLabel":"I need to know the file format for the sitemap file that each search engine prefers",
-  "markdownCount":3,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "_title.txt":"2024-02-04 15:49:01",
-  },
-  "children":[
-    "/hidden/asking-ai/technical/sitemap-file-format-preferred-by-search-engines/bard",
-    "/hidden/asking-ai/technical/sitemap-file-format-preferred-by-search-engines/bing",
-    "/hidden/asking-ai/technical/sitemap-file-format-preferred-by-search-engines/chatgpt",
-  ],
-},
-"/hidden/asking-ai/technical/sitemap-file-format-preferred-by-search-engines/bard":{
-  "parent":"/hidden/asking-ai/technical/sitemap-file-format-preferred-by-search-engines",
-  "title":`what Bard said`,
-  "navLabel":"what Bard said",
-  "markdownCount":1,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "markdown.md":"2024-02-04 15:49:01",
-    "_title.txt":"2024-02-04 15:49:01",
-  },
-  "children":[
-  ],
-},
-"/hidden/asking-ai/technical/sitemap-file-format-preferred-by-search-engines/bing":{
-  "parent":"/hidden/asking-ai/technical/sitemap-file-format-preferred-by-search-engines",
-  "title":`what Bing said`,
-  "navLabel":"what Bing said",
-  "markdownCount":1,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "markdown.md":"2024-02-04 15:49:01",
-    "_title.txt":"2024-02-04 15:49:01",
-  },
-  "children":[
-  ],
-},
-"/hidden/asking-ai/technical/sitemap-file-format-preferred-by-search-engines/chatgpt":{
-  "parent":"/hidden/asking-ai/technical/sitemap-file-format-preferred-by-search-engines",
-  "title":`what ChatGPT said`,
-  "navLabel":"what ChatGPT said",
-  "markdownCount":1,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "markdown.md":"2024-02-04 15:49:01",
-    "_title.txt":"2024-02-04 15:49:01",
-  },
-  "children":[
-  ],
-},
-"/hidden/asking-ai/technical/trim-file-leading-trailing-whitespace":{
-  "parent":"/hidden/asking-ai/technical",
-  "title":`In bash, how do I trim the contents of a file of leading and trailing whitespace and then write it back?`,
-  "navLabel":"In bash, how do I trim the contents of a file of leading and trailing whitespace and then write it back?",
-  "markdownCount":3,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":1,
-  "files":{
-    ".hide":"2024-02-04 15:49:01",
-    "_title.txt":"2024-02-04 15:49:01",
-  },
-  "children":[
-    "/hidden/asking-ai/technical/trim-file-leading-trailing-whitespace/bard",
-    "/hidden/asking-ai/technical/trim-file-leading-trailing-whitespace/bing",
-    "/hidden/asking-ai/technical/trim-file-leading-trailing-whitespace/chatgpt",
-  ],
-},
-"/hidden/asking-ai/technical/trim-file-leading-trailing-whitespace/bard":{
-  "parent":"/hidden/asking-ai/technical/trim-file-leading-trailing-whitespace",
-  "title":`what Bard said`,
-  "navLabel":"what Bard said",
-  "markdownCount":1,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "markdown.md":"2024-02-04 15:49:01",
-    "_title.txt":"2024-02-04 15:49:01",
-  },
-  "children":[
-  ],
-},
-"/hidden/asking-ai/technical/trim-file-leading-trailing-whitespace/bing":{
-  "parent":"/hidden/asking-ai/technical/trim-file-leading-trailing-whitespace",
-  "title":`what Bing said`,
-  "navLabel":"what Bing said",
-  "markdownCount":1,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "markdown.md":"2024-02-04 15:49:01",
-    "_title.txt":"2024-02-04 15:49:01",
-  },
-  "children":[
-  ],
-},
-"/hidden/asking-ai/technical/trim-file-leading-trailing-whitespace/chatgpt":{
-  "parent":"/hidden/asking-ai/technical/trim-file-leading-trailing-whitespace",
-  "title":`what ChatGPT said`,
-  "navLabel":"what ChatGPT said",
-  "markdownCount":1,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
-  "files":{
-    "markdown.md":"2024-02-04 15:49:01",
-    "_title.txt":"2024-02-04 15:49:01",
   },
   "children":[
   ],
@@ -1710,6 +1698,7 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
+    "README.md":"2024-02-18\ 08:58:54",
     "_title.txt":"2024-02-04 09:37:53",
   },
   "children":[

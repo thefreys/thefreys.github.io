@@ -231,7 +231,6 @@ export function init() {
         else{
             document.title = 'Explore ' + contentNodes[request.node].title + ' (' + request.node + ')';
         }
-        //document.getElementById('htmlContent').innerHTML = '<h1>Explore</h1><div id="area-map"></div>';
         document.getElementById('htmlContent').innerHTML = '<h1>Explore</h1></div>';
         return;
     }

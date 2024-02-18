@@ -1,4 +1,4 @@
 export const arrHiddenNodes = [
-"/hidden",
-"/hidden/asking-ai/technical/trim-file-leading-trailing-whitespace",
+"/activities",
+"/activities/asking-ai/technical/trim-file-leading-trailing-whitespace",
 ]
