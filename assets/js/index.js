@@ -167,10 +167,38 @@ function watchElementForChanges(elemId, callback) {
 
 watchElementForChanges('htmlContent', () => {
     buildAfterContentLoaded();
+    var links = document.querySelectorAll('#htmlContent a');
+            
+    // Check each link and update the target for external links
+    links.forEach(function(link) {
+        console.log(link);
+        var href = link.getAttribute('href');
+
+        // Check if the link is external (starts with http://, https://, or is an absolute URL)
+        if (href && (href.startsWith('http://') || href.startsWith('https://') || new URL(href, window.location.origin).host !== window.location.host)) {
+            link.setAttribute('target', '_blank');
+            // Optionally, you can also add rel="noopener noreferrer" for security reasons
+            link.setAttribute('rel', 'noopener noreferrer');
+        }
+    });
 });
 
 watchElementForChanges('mdContent', () => {
     buildAfterContentLoaded();
+    var links = document.querySelectorAll('#mdContent a');
+            
+    // Check each link and update the target for external links
+    links.forEach(function(link) {
+        console.log(link);
+        var href = link.getAttribute('href');
+
+        // Check if the link is external (starts with http://, https://, or is an absolute URL)
+        if (href && (href.startsWith('http://') || href.startsWith('https://') || new URL(href, window.location.origin).host !== window.location.host)) {
+            link.setAttribute('target', '_blank');
+            // Optionally, you can also add rel="noopener noreferrer" for security reasons
+            link.setAttribute('rel', 'noopener noreferrer');
+        }
+    });
 });
 
 watchElementForChanges('jsContent', () => {
