@@ -1,5 +1,10 @@
 import { siteConfig } from '../../config/js/index.js';
 import { contentNodes } from '../../config/js/generated/contentNodes.js';
+import hljs from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/highlight.min.js';
+//  individually load additional languages
+// import go from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/languages/go.min.js';
+// hljs.registerLanguage('go', go);
+
 
 var request = {};
 
@@ -30,20 +35,20 @@ export function getQueryParams() {
     return queryParams;
 }
 
-function buildSiteMapItems(items, parent, level) {
+function buildSiteMapItems(items, parent, level=0) {
     var i = 0;
     parent.classList.add('sitemap-level-'+level);
     for (const key in items) {
         i++;
         var item = contentNodes[items[key]];
+        // do not show this node or go deeper when .hide is found
         if (!(typeof item.files['.hide'] === 'undefined')) {
             continue;
         }
+        // do not show this node or go deeper when there will never be content files to show
         if (0 == item.markdownCount + item.htmlCount + item.javascriptCount) {
             continue;
         }
-
-
         var li = document.createElement("li");
         li.classList.add('sitemap-level-'+level);
         var a = document.createElement("a");
@@ -65,7 +70,7 @@ function buildSiteMap(parent) {
     }
     var ul = document.createElement("ul");
     //ul.classList.add('list-group'); 
-    buildSiteMapItems(contentNodes['/'].children, ul,0);
+    buildSiteMapItems(contentNodes['/'].children, ul);
     parent.appendChild(ul);
 }
 
@@ -77,8 +82,7 @@ function buildAreaMap(parent) {
         return;
     }
     var ul = document.createElement("ul");
-    //ul.classList.add('list-group','list-group-flush'); 
-    buildSiteMapItems(contentNodes[request.node].children, ul,0);
+    buildSiteMapItems(contentNodes[request.node].children, ul);
     parent.appendChild(ul);
 }
 
@@ -171,16 +175,14 @@ watchElementForChanges('htmlContent', () => {
             
     // Check each link and update the target for external links
     links.forEach(function(link) {
-        console.log(link);
         var href = link.getAttribute('href');
-
-        // Check if the link is external (starts with http://, https://, or is an absolute URL)
         if (href && (href.startsWith('http://') || href.startsWith('https://') || new URL(href, window.location.origin).host !== window.location.host)) {
             link.setAttribute('target', '_blank');
-            // Optionally, you can also add rel="noopener noreferrer" for security reasons
+            // Add rel="noopener noreferrer" for security reasons
             link.setAttribute('rel', 'noopener noreferrer');
         }
     });
+    hljs.highlightAll();
 });
 
 watchElementForChanges('mdContent', () => {
@@ -388,6 +390,7 @@ export function init() {
                 window.location.href = 'index.html?node=404&reason=no-content-via-fetch&x2=' + request.node;
                 return;
             }
+            //hljs.highlightAll();
         })
         .catch((error) => {
             console.error('A promise failed:', error);

@@ -3,13 +3,13 @@ export const contentNodes = {
   "parent":null,
   "title":`Welcome  `,
   "navLabel":"Welcome  ",
-  "markdownCount":75,
-  "htmlCount":4,
-  "javascriptCount":0,
-  "hiddenCount":2,
+  "markdownCount":82,
+  "htmlCount":5,
+  "javascriptCount":1,
+  "hiddenCount":4,
   "files":{
-    "markdown.md":"2024-02-14 08:34:15",
-    "README.md":"2024-01-24 08:44:05",
+    "markdown.md":"2024-02-18 11:01:48",
+    "README.md":"2024-02-18 09:22:05",
     "_title.txt":"2024-02-04 14:34:43",
   },
   "children":[
@@ -31,7 +31,7 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":2,
   "files":{
-    ".hide":"2024-02-18\ 08:58:54",
+    ".hide":"2024-02-18 09:22:05",
   },
   "children":[
     "/activities/asking-ai",
@@ -74,7 +74,7 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "_title.txt":"2024-02-18\ 08:58:54",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
     "/activities/asking-ai/crafty/how-do-you-make-t-shirt-yarn/bard",
@@ -91,8 +91,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-18\ 08:58:54",
-    "_title.txt":"2024-02-18\ 08:58:54",
+    "markdown.md":"2024-02-18 09:22:05",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
   ],
@@ -106,8 +106,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-18\ 08:58:54",
-    "_title.txt":"2024-02-18\ 08:58:54",
+    "markdown.md":"2024-02-18 09:22:05",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
   ],
@@ -121,8 +121,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-18\ 08:58:54",
-    "_title.txt":"2024-02-18\ 08:58:54",
+    "markdown.md":"2024-02-18 09:22:05",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
   ],
@@ -154,7 +154,7 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "_title.txt":"2024-02-18\ 08:58:54",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
     "/activities/asking-ai/technical/list-files-from-a-terminal/bing",
@@ -169,8 +169,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-18\ 08:58:54",
-    "_title.txt":"2024-02-18\ 08:58:54",
+    "markdown.md":"2024-02-18 09:22:05",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
   ],
@@ -184,7 +184,7 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "_title.txt":"2024-02-18\ 08:58:54",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
     "/activities/asking-ai/technical/most-common-term-for-writing-computer-code/bard",
@@ -201,8 +201,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-18\ 08:58:54",
-    "_title.txt":"2024-02-18\ 08:58:54",
+    "markdown.md":"2024-02-18 09:22:05",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
   ],
@@ -216,8 +216,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-18\ 08:58:54",
-    "_title.txt":"2024-02-18\ 08:58:54",
+    "markdown.md":"2024-02-18 09:22:05",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
   ],
@@ -231,8 +231,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-18\ 08:58:54",
-    "_title.txt":"2024-02-18\ 08:58:54",
+    "markdown.md":"2024-02-18 09:22:05",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
   ],
@@ -246,7 +246,7 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "_title.txt":"2024-02-18\ 08:58:54",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
     "/activities/asking-ai/technical/no-cost-website-hosts/bard",
@@ -262,8 +262,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-18\ 08:58:54",
-    "_title.txt":"2024-02-18\ 08:58:54",
+    "markdown.md":"2024-02-18 09:22:05",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
   ],
@@ -276,8 +276,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-18\ 08:58:54",
-    "_title.txt":"2024-02-18\ 08:58:54",
+    "markdown.md":"2024-02-18 09:22:05",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
   ],
@@ -290,8 +290,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-18\ 08:58:54",
-    "_title.txt":"2024-02-18\ 08:58:54",
+    "markdown.md":"2024-02-18 09:22:05",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
   ],
@@ -331,7 +331,7 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "_title.txt":"2024-02-18\ 08:58:54",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
     "/activities/asking-ai/technical/shell-scripting/bash/list-git-repo-files-with-commit-date/bard",
@@ -347,8 +347,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-18\ 08:58:54",
-    "_title.txt":"2024-02-18\ 08:58:54",
+    "markdown.md":"2024-02-18 09:22:05",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
   ],
@@ -361,8 +361,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-18\ 08:58:54",
-    "_title.txt":"2024-02-18\ 08:58:54",
+    "markdown.md":"2024-02-18 09:22:05",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
   ],
@@ -375,8 +375,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-18\ 08:58:54",
-    "_title.txt":"2024-02-18\ 08:58:54",
+    "markdown.md":"2024-02-18 09:22:05",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
   ],
@@ -390,7 +390,7 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "_title.txt":"2024-02-18\ 08:58:54",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
     "/activities/asking-ai/technical/sitemap-file-format-preferred-by-search-engines/bard",
@@ -407,8 +407,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-18\ 08:58:54",
-    "_title.txt":"2024-02-18\ 08:58:54",
+    "markdown.md":"2024-02-18 09:22:05",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
   ],
@@ -422,8 +422,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-18\ 08:58:54",
-    "_title.txt":"2024-02-18\ 08:58:54",
+    "markdown.md":"2024-02-18 09:22:05",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
   ],
@@ -437,8 +437,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-18\ 08:58:54",
-    "_title.txt":"2024-02-18\ 08:58:54",
+    "markdown.md":"2024-02-18 09:22:05",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
   ],
@@ -452,8 +452,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":1,
   "files":{
-    ".hide":"2024-02-18\ 08:58:54",
-    "_title.txt":"2024-02-18\ 08:58:54",
+    ".hide":"2024-02-18 09:22:05",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
     "/activities/asking-ai/technical/trim-file-leading-trailing-whitespace/bard",
@@ -470,8 +470,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-18\ 08:58:54",
-    "_title.txt":"2024-02-18\ 08:58:54",
+    "markdown.md":"2024-02-18 09:22:05",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
   ],
@@ -485,8 +485,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-18\ 08:58:54",
-    "_title.txt":"2024-02-18\ 08:58:54",
+    "markdown.md":"2024-02-18 09:22:05",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
   ],
@@ -500,8 +500,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-18\ 08:58:54",
-    "_title.txt":"2024-02-18\ 08:58:54",
+    "markdown.md":"2024-02-18 09:22:05",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
   ],
@@ -532,8 +532,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-04 15:49:01",
-    "_title.txt":"2024-02-04 15:49:01",
+    "markdown.md":"2024-02-18 09:22:05",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
   ],
@@ -547,8 +547,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-04 15:49:01",
-    "_title.txt":"2024-02-04 15:49:01",
+    "markdown.md":"2024-02-18 09:22:05",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
   ],
@@ -562,8 +562,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-04 15:49:01",
-    "_title.txt":"2024-02-04 15:49:01",
+    "markdown.md":"2024-02-18 09:22:05",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
   ],
@@ -577,8 +577,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-04 15:49:01",
-    "_title.txt":"2024-02-04 15:49:01",
+    "markdown.md":"2024-02-18 09:22:05",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
   ],
@@ -592,8 +592,8 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-02-04 15:49:01",
-    "_title.txt":"2024-02-04 15:49:01",
+    "markdown.md":"2024-02-18 09:22:05",
+    "_title.txt":"2024-02-18 09:22:05",
   },
   "children":[
   ],
@@ -601,11 +601,12 @@ export const contentNodes = {
 "/blogs":{
   "parent":"/",
   "navLabel":"blogs",
-  "markdownCount":24,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
+  "markdownCount":31,
+  "htmlCount":1,
+  "javascriptCount":1,
+  "hiddenCount":1,
   "files":{
+    "markdown.md":"2024-02-20\ 09:50:15",
   },
   "children":[
     "/blogs/kristy",
@@ -614,10 +615,10 @@ export const contentNodes = {
 "/blogs/kristy":{
   "parent":"/blogs",
   "navLabel":"kristy",
-  "markdownCount":24,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
+  "markdownCount":30,
+  "htmlCount":1,
+  "javascriptCount":1,
+  "hiddenCount":1,
   "files":{
   },
   "children":[
@@ -627,10 +628,10 @@ export const contentNodes = {
 "/blogs/kristy/2024":{
   "parent":"/blogs/kristy",
   "navLabel":"2024",
-  "markdownCount":24,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
+  "markdownCount":30,
+  "htmlCount":1,
+  "javascriptCount":1,
+  "hiddenCount":1,
   "files":{
   },
   "children":[
@@ -681,10 +682,10 @@ export const contentNodes = {
 "/blogs/kristy/2024/02":{
   "parent":"/blogs/kristy/2024",
   "navLabel":"02",
-  "markdownCount":23,
-  "htmlCount":0,
-  "javascriptCount":0,
-  "hiddenCount":0,
+  "markdownCount":29,
+  "htmlCount":1,
+  "javascriptCount":1,
+  "hiddenCount":1,
   "files":{
   },
   "children":[
@@ -692,6 +693,7 @@ export const contentNodes = {
     "/blogs/kristy/2024/02/11",
     "/blogs/kristy/2024/02/14",
     "/blogs/kristy/2024/02/15",
+    "/blogs/kristy/2024/02/19",
   ],
 },
 "/blogs/kristy/2024/02/10":{
@@ -1110,14 +1112,126 @@ export const contentNodes = {
   "children":[
   ],
 },
+"/blogs/kristy/2024/02/19":{
+  "parent":"/blogs/kristy/2024/02",
+  "navLabel":"19",
+  "markdownCount":6,
+  "htmlCount":1,
+  "javascriptCount":1,
+  "hiddenCount":1,
+  "files":{
+  },
+  "children":[
+    "/blogs/kristy/2024/02/19/treeview",
+  ],
+},
+"/blogs/kristy/2024/02/19/treeview":{
+  "parent":"/blogs/kristy/2024/02/19",
+  "title":`Nested unordered list as a treeview`,
+  "navLabel":"Nested unordered list as a treeview",
+  "markdownCount":6,
+  "htmlCount":1,
+  "javascriptCount":1,
+  "hiddenCount":1,
+  "files":{
+    "html.html":"2024-02-20\ 09:50:15",
+    "javascript.js":"2024-02-20\ 09:50:15",
+    "markdown.md":"2024-02-20\ 09:50:15",
+    "_title.txt":"2024-02-20\ 09:50:15",
+  },
+  "children":[
+    "/blogs/kristy/2024/02/19/treeview/AI-answers",
+  ],
+},
+"/blogs/kristy/2024/02/19/treeview/AI-answers":{
+  "parent":"/blogs/kristy/2024/02/19/treeview",
+  "title":`How multiple AIs answered`,
+  "navLabel":"How multiple AIs answered",
+  "markdownCount":5,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":1,
+  "files":{
+    ".hide":"2024-02-20\ 09:50:15",
+    "markdown.md":"2024-02-20\ 09:50:15",
+    "_title.txt":"2024-02-20\ 09:50:15",
+  },
+  "children":[
+    "/blogs/kristy/2024/02/19/treeview/AI-answers/bing",
+    "/blogs/kristy/2024/02/19/treeview/AI-answers/chatgpt",
+    "/blogs/kristy/2024/02/19/treeview/AI-answers/claude",
+    "/blogs/kristy/2024/02/19/treeview/AI-answers/gemini",
+  ],
+},
+"/blogs/kristy/2024/02/19/treeview/AI-answers/bing":{
+  "parent":"/blogs/kristy/2024/02/19/treeview/AI-answers",
+  "title":`Response from Bing Copilot`,
+  "navLabel":"Response from Bing Copilot",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-20\ 09:50:15",
+    "_title.txt":"2024-02-20\ 09:50:15",
+  },
+  "children":[
+  ],
+},
+"/blogs/kristy/2024/02/19/treeview/AI-answers/chatgpt":{
+  "parent":"/blogs/kristy/2024/02/19/treeview/AI-answers",
+  "title":`Response from ChatGPT 3.5`,
+  "navLabel":"Response from ChatGPT 3.5",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-20\ 09:50:15",
+    "_title.txt":"2024-02-20\ 09:50:15",
+  },
+  "children":[
+  ],
+},
+"/blogs/kristy/2024/02/19/treeview/AI-answers/claude":{
+  "parent":"/blogs/kristy/2024/02/19/treeview/AI-answers",
+  "title":`Response from Claude`,
+  "navLabel":"Response from Claude",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-20\ 09:50:15",
+    "_title.txt":"2024-02-20\ 09:50:15",
+  },
+  "children":[
+  ],
+},
+"/blogs/kristy/2024/02/19/treeview/AI-answers/gemini":{
+  "parent":"/blogs/kristy/2024/02/19/treeview/AI-answers",
+  "title":`Response from Gemini`,
+  "navLabel":"Response from Gemini",
+  "markdownCount":1,
+  "htmlCount":0,
+  "javascriptCount":0,
+  "hiddenCount":0,
+  "files":{
+    "markdown.md":"2024-02-20\ 09:50:15",
+    "_title.txt":"2024-02-20\ 09:50:15",
+  },
+  "children":[
+  ],
+},
 "/coding":{
   "parent":"/",
   "navLabel":"coding",
   "markdownCount":2,
   "htmlCount":1,
   "javascriptCount":0,
-  "hiddenCount":0,
+  "hiddenCount":1,
   "files":{
+    ".hide":"2024-02-20\ 09:50:15",
   },
   "children":[
     "/coding/frameworks",
@@ -1296,7 +1410,7 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "markdown.md":"2024-01-24 08:44:05",
+    "markdown.md":"2024-02-18 09:05:31",
     "_title.txt":"2024-01-24 08:44:05",
   },
   "children":[
@@ -1698,7 +1812,7 @@ export const contentNodes = {
   "javascriptCount":0,
   "hiddenCount":0,
   "files":{
-    "README.md":"2024-02-18\ 08:58:54",
+    "README.md":"2024-02-18 09:22:05",
     "_title.txt":"2024-02-04 09:37:53",
   },
   "children":[
