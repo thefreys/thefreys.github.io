@@ -19,12 +19,12 @@ integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQV
 
 <script src="https://unpkg.com/lunr/lunr.js"></script>
 
-<link href="assets/css/index.css" id="dynamicCss" rel="stylesheet">
-<script type="module" id="dynamicJs"></script>
+<link href="assets/css/index.css" id="indexCss" rel="stylesheet">
+<script type="module" id="indexJs"></script>
 <script>
   var linkDate = new Date().toISOString().replace(/:/g, '').replace(/ /g, '').replace(/-/g, '');
-  document.getElementById('dynamicCss').href = 'assets/css/index.css?date=' + linkDate;
-  document.getElementById('dynamicJs').src = 'assets/js/index.js?date=' + linkDate;
+  document.getElementById('indexCss').href = 'assets/css/index.css?date=' + linkDate;
+  document.getElementById('indexJs').src = 'assets/js/index.js?date=' + linkDate;
 </script>
 
 <!-- Google tag (gtag.js) -->
@@ -44,6 +44,7 @@ integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQV
   })(window,document,'script','dataLayer','GTM-MBGZJ3DL');</script>
   <!-- End Google Tag Manager -->
 
+<style id="nodeCss"></style>
 </head>
 <title></title>
 <body>
@@ -78,13 +79,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
   <ol class="breadcrumb" id="breadcrumbs"></ol>
 </nav>
-  <div id="mdContent"></div>
-  <div id="htmlContent"></div>
-  <div id="tree"></div>
+  <div id="nodeMarkdown"></div>
+  <div id="nodeHtml"></div>
   <div id="area-map"></div>
   <pre id="debugContent" style="display:none;"></pre>
 </div>
-<script type="module" id="jsContent"></script>
+<script type="module" id="nodeJavascript"></script>
 
 </body>
 </html>

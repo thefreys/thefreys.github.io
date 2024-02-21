@@ -1,4 +1,4 @@
-export const arrTitleNodes = [
+export const titledNodes = [
 "/activities/asking-ai/crafty/how-do-you-make-t-shirt-yarn/bard",
 "/activities/asking-ai/crafty/how-do-you-make-t-shirt-yarn/bing",
 "/activities/asking-ai/crafty/how-do-you-make-t-shirt-yarn/chatgpt",
@@ -31,10 +31,10 @@ export const arrTitleNodes = [
 "/activities/camping/gear-checklist",
 "/activities/camping/sample-trip",
 "/blogs/kristy/2024/01/20/finding-new-recipes-to-try",
-"/blogs/kristy/2024/02/10/scammers-gonna-scam/20240208-featured-snippets/bing",
-"/blogs/kristy/2024/02/10/scammers-gonna-scam/20240208-featured-snippets/chatgpt",
-"/blogs/kristy/2024/02/10/scammers-gonna-scam/20240208-featured-snippets/gemini",
-"/blogs/kristy/2024/02/10/scammers-gonna-scam/20240208-featured-snippets",
+"/blogs/kristy/2024/02/10/scammers-gonna-scam/AI-answers/bing",
+"/blogs/kristy/2024/02/10/scammers-gonna-scam/AI-answers/chatgpt",
+"/blogs/kristy/2024/02/10/scammers-gonna-scam/AI-answers/gemini",
+"/blogs/kristy/2024/02/10/scammers-gonna-scam/AI-answers",
 "/blogs/kristy/2024/02/10/scammers-gonna-scam",
 "/blogs/kristy/2024/02/11/google-analytics-query-string/AI-answers/bing",
 "/blogs/kristy/2024/02/11/google-analytics-query-string/AI-answers/chatgpt",

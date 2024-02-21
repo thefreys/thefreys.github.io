@@ -1,7 +1,15 @@
 import { siteConfig } from '../../config/js/index.js';
+import { nodes } from '../../config/js/generated/nodes.js';
+import { markdownNodes } from '../../config/js/generated/markdownNodes.js';
+import { htmlNodes } from '../../config/js/generated/htmlNodes.js';
+import { javascriptNodes } from '../../config/js/generated/javascriptNodes.js';
+import { cssNodes } from '../../config/js/generated/cssNodes.js';
+import { hiddenNodes } from '../../config/js/generated/hiddenNodes.js';
+import { titledNodes } from '../../config/js/generated/titledNodes.js';
+import { taggedNodes } from '../../config/js/generated/taggedNodes.js';
 import { contentNodes } from '../../config/js/generated/contentNodes.js';
 import hljs from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/highlight.min.js';
-//  individually load additional languages
+// individually load additional languages
 // import go from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/languages/go.min.js';
 // hljs.registerLanguage('go', go);
 
@@ -42,11 +50,14 @@ function buildSiteMapItems(items, parent, level=0) {
         i++;
         var item = contentNodes[items[key]];
         // do not show this node or go deeper when .hide is found
-        if (!(typeof item.files['.hide'] === 'undefined')) {
+        if (hiddenNodes.includes(items[key])) {
             continue;
         }
         // do not show this node or go deeper when there will never be content files to show
-        if (0 == item.markdownCount + item.htmlCount + item.javascriptCount) {
+        var markdownCount = markdownNodes.filter(str => str.startsWith(items[key])).length;
+        var htmlCount = htmlNodes.filter(str => str.startsWith(items[key])).length;
+        var javascriptCount = javascriptNodes.filter(str => str.startsWith(items[key])).length;
+        if (0 == markdownCount + htmlCount + javascriptCount) {
             continue;
         }
         var li = document.createElement("li");
@@ -169,9 +180,9 @@ function watchElementForChanges(elemId, callback) {
     // observer.disconnect();
 }
 
-watchElementForChanges('htmlContent', () => {
+watchElementForChanges('nodeHtml', () => {
     buildAfterContentLoaded();
-    var links = document.querySelectorAll('#htmlContent a');
+    var links = document.querySelectorAll('#nodeHtml a');
             
     // Check each link and update the target for external links
     links.forEach(function(link) {
@@ -185,9 +196,9 @@ watchElementForChanges('htmlContent', () => {
     hljs.highlightAll();
 });
 
-watchElementForChanges('mdContent', () => {
+watchElementForChanges('nodeMarkdown', () => {
     buildAfterContentLoaded();
-    var links = document.querySelectorAll('#mdContent a');
+    var links = document.querySelectorAll('#nodeMarkdown a');
             
     // Check each link and update the target for external links
     links.forEach(function(link) {
@@ -203,7 +214,7 @@ watchElementForChanges('mdContent', () => {
     });
 });
 
-watchElementForChanges('jsContent', () => {
+watchElementForChanges('nodeJavascript', () => {
 });
 
 export function init() {
@@ -238,7 +249,7 @@ export function init() {
 
     if (request.node == '/404' && typeof contentNodes[request.node] === 'undefined') {
         document.title = 'Page not found (/404)';
-        document.getElementById('htmlContent').innerHTML = '<h1>404 Not Found</h1><p>Page not found</p>';
+        document.getElementById('nodeHtml').innerHTML = '<h1>404 Not Found</h1><p>Page not found</p>';
         return;
     }
     else if (typeof contentNodes[request.node] === 'undefined') {
@@ -247,12 +258,12 @@ export function init() {
         return;
     }
 
-    if (typeof contentNodes[request.node].files['markdown.md'] === 'undefined' &&
-        typeof contentNodes[request.node].files['html.html'] === 'undefined' &&
-        typeof contentNodes[request.node].files['javascript.js'] === 'undefined') {
+    if (!(markdownNodes.includes(request.node)) &&
+        !(htmlNodes.includes(request.node)) &&
+        !(javascriptNodes.includes(request.node))) {
         if (request.node == '/404') {
             document.title = 'Page not found, but node exists (/404)';
-            document.getElementById('htmlContent').innerHTML = '<h1>404 Not Found</h1><p>Page not found</p>';
+            document.getElementById('nodeHtml').innerHTML = '<h1>404 Not Found</h1><p>Page not found</p>';
             return;
         }
         if (typeof contentNodes[request.node]['title'] === 'undefined'){
@@ -261,7 +272,7 @@ export function init() {
         else{
             document.title = 'Explore ' + contentNodes[request.node].title + ' (' + request.node + ')';
         }
-        document.getElementById('htmlContent').innerHTML = '<h1>Explore</h1></div>';
+        document.getElementById('nodeHtml').innerHTML = '<h1>Explore</h1></div>';
         return;
     }
 
@@ -272,33 +283,36 @@ export function init() {
         document.title = contentNodes[request.node].title + ' (' + request.node + ')';
     }
     // fetch content files
-    request.mdContent404 = false;
-    request.htmlContent404 = false;
-    request.jsContent404 = false;
+    request.nodeMarkdown404 = false;
+    request.nodeHtml404 = false;
+    request.nodeJavascript404 = false;
+    request.nodeCss404 = false;
 
-    request.mdContentPath = null;
-    request.htmlContentPath = null;
-    request.jsContentPath = null;
+    request.nodeMarkdownPath = null;
+    request.nodeHtmlPath = null;
+    request.nodeJavascriptPath = null;
+    request.nodeCssPath = null;
 
-    if (typeof contentNodes[request.node].files['markdown.md'] != 'undefined') { request.mdContentPath = siteConfig.contentPathPrefix + request.node + '/markdown.md' }
-    if (typeof contentNodes[request.node].files['html.html'] != 'undefined') { request.htmlContentPath = siteConfig.contentPathPrefix + request.node + '/html.html' }
-    if (typeof contentNodes[request.node].files['javascript.js'] != 'undefined') { request.jsContentPath = siteConfig.contentPathPrefix + request.node + '/javascript.js' }
+    if (markdownNodes.includes(request.node)) { request.nodeMarkdownPath = siteConfig.contentPathPrefix + request.node + '/markdown.md' }
+    if (htmlNodes.includes(request.node)) { request.nodeHtmlPath = siteConfig.contentPathPrefix + request.node + '/html.html' }
+    if (javascriptNodes.includes(request.node)) { request.nodeJavascriptPath = siteConfig.contentPathPrefix + request.node + '/javascript.js' }
+    if (cssNodes.includes(request.node)) { request.nodeCssPath = siteConfig.contentPathPrefix + request.node + '/css.css' }
 
     // use promises to make sure the fetching completes
     var promises = [];
 
     // fetch the markdown if it we have a path for it
-    if (request.mdContentPath == null) {
-        request.mdContent404 = true;
+    if (request.nodeMarkdownPath == null) {
+        request.nodeMarkdown404 = true;
     }
     else {
-        var mdPromise;
-        promises.push(mdPromise);
-        mdPromise = fetch(request.mdContentPath)
+        var nodeMarkdownPromise;
+        promises.push(nodeMarkdownPromise);
+        nodeMarkdownPromise = fetch(request.nodeMarkdownPath)
             .then(response => {
                 if (!response.ok) {
                     if (response.status === 404) {
-                        request.mdContent404 = true;
+                        request.nodeMarkdown404 = true;
                         return;
                     }
                     if (!response.ok) {
@@ -311,7 +325,7 @@ export function init() {
                 if (markdown > '') {
                     var converter = new showdown.Converter({tables: true, strikethrough: true});
                     var mdHtml = converter.makeHtml(markdown).replace(/<table>/g, '<table class="table table-hover  table-bordered">')
-                    document.getElementById('mdContent').innerHTML = mdHtml;
+                    document.getElementById('nodeMarkdown').innerHTML = mdHtml;
                 }
             })
             .catch(error => {
@@ -320,17 +334,17 @@ export function init() {
     }
 
     // fetch the html if it we have a path for it
-    if (request.htmlContentPath == null) {
-        request.htmlContent404 = true;
+    if (request.nodeHtmlPath == null) {
+        request.nodeHtml404 = true;
     }
     else {
-        var htmlPromise;
-        promises.push(htmlPromise);
-        htmlPromise = fetch(request.htmlContentPath)
+        var nodeHtmlPromise;
+        promises.push(nodeHtmlPromise);
+        nodeHtmlPromise = fetch(request.nodeHtmlPath)
             .then(response => {
                 if (!response.ok) {
                     if (response.status === 404) {
-                        request.htmlContent404 = true;
+                        request.nodeHtml404 = true;
                         return;
                     }
                     if (!response.ok) {
@@ -341,7 +355,7 @@ export function init() {
             })
             .then(html => {
                 if (html > '') {
-                    document.getElementById('htmlContent').innerHTML = html;
+                    document.getElementById('nodeHtml').innerHTML = html;
                 }
             })
             .catch(error => {
@@ -350,17 +364,17 @@ export function init() {
     }
 
     // fetch the javascript if it we have a path for it
-    if (request.jsContentPath == null) {
-        request.jsContent404 = true;
+    if (request.nodeJavascriptPath == null) {
+        request.nodeJavascript404 = true;
     }
     else {
-        var jsPromise;
-        promises.push(jsPromise);
-        jsPromise = fetch(request.jsContentPath)
+        var nodeJavascriptPromise;
+        promises.push(nodeJavascriptPromise);
+        nodeJavascriptPromise = fetch(request.nodeJavascriptPath)
             .then(response => {
                 if (!response.ok) {
                     if (response.status === 404) {
-                        request.jsContent404 = true;
+                        request.nodeJavascript404 = true;
                         return;
                     }
                     if (!response.ok) {
@@ -372,7 +386,37 @@ export function init() {
             .then(js => {
                 if (js > '') {
                     var linkDate = new Date().toISOString().replace(/:/g, '').replace(/ /g, '').replace(/-/g, '');
-                    document.getElementById('jsContent').src = request.jsContentPath + '?date=' + linkDate;
+                    document.getElementById('nodeJavascript').src = request.nodeJavascriptPath + '?date=' + linkDate;
+                }
+            })
+            .catch(error => {
+                console.error('fetch/catch error:', error);
+            });
+    }
+    
+    // fetch the css if it we have a path for it
+    if (request.nodeCssPath == null) {
+        request.nodeCss404 = true;
+    }
+    else {
+        var nodeCssPromise;
+        promises.push(nodeCssPromise);
+        nodeCssPromise = fetch(request.nodeCssPath)
+            .then(response => {
+                if (!response.ok) {
+                    if (response.status === 404) {
+                        request.nodeCss404 = true;
+                        return;
+                    }
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok: ' + response.statusText);
+                    }
+                }
+                return response.text();
+            })
+            .then(css => {
+                if (css > '') {
+                    document.getElementById('nodeCss').innerHTML = css;
                 }
             })
             .catch(error => {
@@ -382,15 +426,14 @@ export function init() {
 
     Promise.all(promises)
         .then((results) => {
-            if (request.mdContent404 && request.htmlContent404 && request.jsContent404) {
+            if (request.nodeMarkdown404 && request.nodeHtml404 && request.nodeJavascript404) {
                 if (request.node == '404') {
-                    document.getElementById('htmlContent').innerHTML = '404 page is missing';
+                    document.getElementById('nodeHtml').innerHTML = '404 page is missing';
                     return;
                 }
                 window.location.href = 'index.html?node=404&reason=no-content-via-fetch&x2=' + request.node;
                 return;
             }
-            //hljs.highlightAll();
         })
         .catch((error) => {
             console.error('A promise failed:', error);

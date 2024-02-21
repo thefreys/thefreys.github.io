@@ -4,26 +4,29 @@ rm -rf "${tmpoutdir}"
 mkdir -p "${tmpoutdir}"
 today=$(date '+%F\ %T')
 
+#echo "$(date): Generating node relation object"
+#"$(dirname ${BASH_SOURCE[0]})/nodeRelation.sh"
 echo "$(date): Generating array files"
-"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrMarkdownNodes" "markdown.md"
-"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrHtmlNodes" "html.html"
-"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrJavascriptNodes" "javascript.js"
-"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrHiddenNodes" ".hide"
-"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrTitleNodes" "_title.txt"
-"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "arrTagNodes" "_tags.txt"
+"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "nodes"
+"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "nodesFiles" "*"
+"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "markdownNodes" "markdown.md"
+"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "htmlNodes" "html.html"
+"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "javascriptNodes" "javascript.js"
+"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "cssNodes" "css.css"
+"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "hiddenNodes" ".hide"
+"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "titledNodes" "_title.txt"
+"$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "taggedNodes" "_tags.txt"
 
-echo "$(date): Generating metadata files"
-"$(dirname ${BASH_SOURCE[0]})/nodeObject.sh" "contentNodeTitles" "_title.txt"
-"$(dirname ${BASH_SOURCE[0]})/nodeObject.sh" "contentNodeTags" "_tags.txt"
+#echo "$(date): Generating metadata files"
+#"$(dirname ${BASH_SOURCE[0]})/nodeObject.sh" "contentNodeTitles" "_title.txt"
+#"$(dirname ${BASH_SOURCE[0]})/nodeObject.sh" "contentNodeTags" "_tags.txt"
 
-echo "$(date): Generating contentNodeList.txt"
-find content -type d -print | xargs -I {} ls -d {} > "$(dirname ${BASH_SOURCE[0]})/contentNodeList.txt"
 jsvar=contentNodes
 tmpoutfile="${tmpoutdir}/${jsvar}.js"
 cd "${rootdir}"
 echo "export const ${jsvar} = {" > "${tmpoutfile}"
 echo "$(date): Generating the contentNode javascript object (${jsvar}.js)"
-cat  "$(dirname ${BASH_SOURCE[0]})/contentNodeList.txt" | while read nodepath; do
+find content -type d -print | xargs -I {} ls -d {} | while read nodepath; do
     node="/${nodepath}"
     node=${node:8}
     if [[ "${node}" = "" ]]; then
@@ -32,10 +35,10 @@ cat  "$(dirname ${BASH_SOURCE[0]})/contentNodeList.txt" | while read nodepath; d
     echo "\"${node}\":{" >> "${tmpoutfile}"
 
     if [[ "${node}" = "/" ]]; then
-        echo "  \"parent\":null," >> "${tmpoutfile}"
+        echo " \"parent\":null," >> "${tmpoutfile}"
         navLabel="Home"
     else
-        echo "  \"parent\":\"$(dirname ${node})\"," >> "${tmpoutfile}"
+        echo " \"parent\":\"$(dirname ${node})\"," >> "${tmpoutfile}"
         navLabel="$(basename ${node})"
     fi
     
@@ -46,33 +49,9 @@ cat  "$(dirname ${BASH_SOURCE[0]})/contentNodeList.txt" | while read nodepath; d
             echo "  \"title\":\`${title}\`," >> "${tmpoutfile}"
         fi
     fi
-    echo "  \"navLabel\":\"${navLabel}\"," >> "${tmpoutfile}"
-
-    markdownCount="$(find ${nodepath}/ -type f -name "markdown.md" | wc -l)"
-    htmlCount="$(find ${nodepath}/ -type f -name "html.html" | wc -l)"
-    javascriptCount="$(find ${nodepath}/ -type f -name "javascript.js" | wc -l)"
-    hiddenCount="$(find ${nodepath}/ -type f -name ".hide" | wc -l)"
+    echo " \"navLabel\":\"${navLabel}\"," >> "${tmpoutfile}"
     
-
-    echo "  \"markdownCount\":${markdownCount}," >> "${tmpoutfile}"
-    echo "  \"htmlCount\":${htmlCount}," >> "${tmpoutfile}"
-    echo "  \"javascriptCount\":${javascriptCount}," >> "${tmpoutfile}"
-    echo "  \"hiddenCount\":${hiddenCount}," >> "${tmpoutfile}"
-
-    echo "  \"files\":{" >> "${tmpoutfile}"
-    find ${nodepath} -maxdepth 1 -type f | while read filename; do
-        file="$(basename ${filename})"
-        gitdate="$(git log -1 --format="%ai" -- "$filename")"
-        if [[ "" == "${gitdate}" ]]; then
-            lastmod=${today}
-        else
-            lastmod=${gitdate:0:19}
-        fi
-        echo "    \"${file}\":\"${lastmod}\"," >> "${tmpoutfile}"
-    done
-    echo "  }," >> "${tmpoutfile}"
-    
-    echo "  \"children\":[" >> "${tmpoutfile}"
+    echo " \"children\":[" >> "${tmpoutfile}"
     find ${nodepath} -maxdepth 1 -type d | while read childnodepath; do
         childnode="/${childnodepath}"
         childnode=${childnode:8}
@@ -84,7 +63,7 @@ cat  "$(dirname ${BASH_SOURCE[0]})/contentNodeList.txt" | while read nodepath; d
         fi
         
     done
-    echo "  ]," >> "${tmpoutfile}"
+    echo " ]," >> "${tmpoutfile}"
 
     echo "}," >> "${tmpoutfile}"
 done
