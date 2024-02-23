@@ -60,6 +60,7 @@ export const titledNodes = [
 "/blogs/kristy/2024/02/19/treeview/AI-answers/gemini",
 "/blogs/kristy/2024/02/19/treeview/AI-answers",
 "/blogs/kristy/2024/02/19/treeview",
+"/blogs/kristy/2024",
 "/coding/frameworks/bootstrap/cheatsheet-v5.3",
 "/coding/languages/markdown/markdown-cheat-sheet",
 "/coding/web-design/sitemaps",

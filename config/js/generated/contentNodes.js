@@ -320,7 +320,8 @@ export const contentNodes = {
 },
 "/blogs/kristy/2024":{
  "parent":"/blogs/kristy",
- "navLabel":"2024",
+  "title":`2024 - the year of the dragon`,
+ "navLabel":"2024 - the year of the dragon",
  "children":[
     "/blogs/kristy/2024/01",
     "/blogs/kristy/2024/02",
