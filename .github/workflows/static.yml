@@ -31,6 +31,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Custom build
+        run: ./bash/index/generate.sh
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
