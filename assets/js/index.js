@@ -1,18 +1,20 @@
-import { siteConfig } from '../../config/js/index.js';
-import { nodes } from '../../config/js/generated/nodes.js';
-import { markdownNodes } from '../../config/js/generated/markdownNodes.js';
-import { htmlNodes } from '../../config/js/generated/htmlNodes.js';
-import { javascriptNodes } from '../../config/js/generated/javascriptNodes.js';
-import { cssNodes } from '../../config/js/generated/cssNodes.js';
-import { hiddenNodes } from '../../config/js/generated/hiddenNodes.js';
-import { titledNodes } from '../../config/js/generated/titledNodes.js';
-import { taggedNodes } from '../../config/js/generated/taggedNodes.js';
-import { contentNodes } from '../../config/js/generated/contentNodes.js';
+// JavaScript file for index one page site
+import { siteConfig } from '../../config/index/js/index.js';
+import { nodes } from '../../config/index/js/generated/nodes.js';
+import { markdownNodes } from '../../config/index/js/generated/markdownNodes.js';
+import { htmlNodes } from '../../config/index/js/generated/htmlNodes.js';
+import { javascriptNodes } from '../../config/index/js/generated/javascriptNodes.js';
+import { cssNodes } from '../../config/index/js/generated/cssNodes.js';
+import { hiddenNodes } from '../../config/index/js/generated/hiddenNodes.js';
+import { titledNodes } from '../../config/index/js/generated/titledNodes.js';
+import { taggedNodes } from '../../config/index/js/generated/taggedNodes.js';
+import { contentNodes } from '../../config/index/js/generated/contentNodes.js';
 import hljs from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/highlight.min.js';
 // individually load additional languages
 // import go from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/languages/go.min.js';
 // hljs.registerLanguage('go', go);
-
+import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
+  //document.getElementById('content').innerHTML = marked.parse('# Marked in the browser\n\nRendered by **marked**.');
 
 var request = {};
 
@@ -65,6 +67,7 @@ function buildSiteMapItems(items, parent, level=0) {
         var a = document.createElement("a");
         a.textContent = item.navLabel;
         a.setAttribute("href", 'index.html?node=' + items[key]);
+        a.classList.add('sitemap-level-'+level);
         li.appendChild(a);
         if (item.children.length > 0) {
             var ul = document.createElement("ul");
@@ -80,7 +83,6 @@ function buildSiteMap(parent) {
         return;
     }
     var ul = document.createElement("ul");
-    //ul.classList.add('list-group'); 
     buildSiteMapItems(contentNodes['/'].children, ul);
     parent.appendChild(ul);
 }
@@ -164,6 +166,24 @@ function buildAfterContentLoaded() {
     spans.forEach(function (span) {
         span.textContent = siteConfig.siteName;
     });
+    hljs.highlightAll();
+}
+
+function updateExternalLinkTarget(parentContainerSelector) {
+    var links = document.querySelectorAll(parentContainerSelector+' a');
+            
+    // Check each link and update the target for external links
+    links.forEach(function(link) {
+        console.log(link);
+        var href = link.getAttribute('href');
+
+        // Check if the link is external (starts with http://, https://, or is an absolute URL)
+        if (href && (href.startsWith('http://') || href.startsWith('https://') || new URL(href, window.location.origin).host !== window.location.host)) {
+            link.setAttribute('target', '_blank');
+            // Optionally, you can also add rel="noopener noreferrer" for security reasons
+            link.setAttribute('rel', 'noopener noreferrer');
+        }
+    });
 }
 
 function watchElementForChanges(elemId, callback) {
@@ -182,36 +202,12 @@ function watchElementForChanges(elemId, callback) {
 
 watchElementForChanges('nodeHtml', () => {
     buildAfterContentLoaded();
-    var links = document.querySelectorAll('#nodeHtml a');
-            
-    // Check each link and update the target for external links
-    links.forEach(function(link) {
-        var href = link.getAttribute('href');
-        if (href && (href.startsWith('http://') || href.startsWith('https://') || new URL(href, window.location.origin).host !== window.location.host)) {
-            link.setAttribute('target', '_blank');
-            // Add rel="noopener noreferrer" for security reasons
-            link.setAttribute('rel', 'noopener noreferrer');
-        }
-    });
-    hljs.highlightAll();
+    updateExternalLinkTarget('#nodeHtml');
 });
 
 watchElementForChanges('nodeMarkdown', () => {
     buildAfterContentLoaded();
-    var links = document.querySelectorAll('#nodeMarkdown a');
-            
-    // Check each link and update the target for external links
-    links.forEach(function(link) {
-        console.log(link);
-        var href = link.getAttribute('href');
-
-        // Check if the link is external (starts with http://, https://, or is an absolute URL)
-        if (href && (href.startsWith('http://') || href.startsWith('https://') || new URL(href, window.location.origin).host !== window.location.host)) {
-            link.setAttribute('target', '_blank');
-            // Optionally, you can also add rel="noopener noreferrer" for security reasons
-            link.setAttribute('rel', 'noopener noreferrer');
-        }
-    });
+    updateExternalLinkTarget('#nodeMarkdown');
 });
 
 watchElementForChanges('nodeJavascript', () => {
@@ -323,8 +319,7 @@ export function init() {
             })
             .then(markdown => {
                 if (markdown > '') {
-                    var converter = new showdown.Converter({tables: true, strikethrough: true});
-                    var mdHtml = converter.makeHtml(markdown).replace(/<table>/g, '<table class="table table-hover  table-bordered">')
+                    var mdHtml = marked.parse(markdown).replace(/<table>/g, '<table class="table table-hover  table-bordered">');
                     document.getElementById('nodeMarkdown').innerHTML = mdHtml;
                 }
             })
