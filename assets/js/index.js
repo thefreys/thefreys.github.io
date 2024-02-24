@@ -1,4 +1,4 @@
-// JavaScript file for index one page site
+// JavaScript file for "index" one page site
 import { siteConfig } from '../../config/index/js/index.js';
 import { nodes } from '../../config/index/js/generated/nodes.js';
 import { markdownNodes } from '../../config/index/js/generated/markdownNodes.js';

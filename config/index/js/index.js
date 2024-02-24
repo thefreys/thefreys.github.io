@@ -1,4 +1,4 @@
-// JavaScript config file for index one page site
+// JavaScript config file for "index" one page site
 export const siteConfig = {
     siteName: 'The Freys',
     contentPathPrefix: 'content',
