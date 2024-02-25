@@ -92,6 +92,7 @@ export const nodes = [
 "/recipes",
 "/recipes/desserts",
 "/recipes/desserts/almond-cake",
+"/recipes/desserts/chocolate-cream-pie",
 "/recipes/desserts/cocoa-mint-sandwich-cookies",
 "/recipes/desserts/date-balls",
 "/recipes/desserts/ginger-snaps",

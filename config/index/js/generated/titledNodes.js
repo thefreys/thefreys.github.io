@@ -66,6 +66,7 @@ export const titledNodes = [
 "/coding/web-design/sitemaps",
 "/coding/web-design",
 "/recipes/desserts/almond-cake",
+"/recipes/desserts/chocolate-cream-pie",
 "/recipes/desserts/cocoa-mint-sandwich-cookies",
 "/recipes/desserts/date-balls",
 "/recipes/desserts/ginger-snaps",

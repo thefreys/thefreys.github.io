@@ -707,6 +707,7 @@ export const contentNodes = {
  "navLabel":"Desserts",
  "children":[
     "/recipes/desserts/almond-cake",
+    "/recipes/desserts/chocolate-cream-pie",
     "/recipes/desserts/cocoa-mint-sandwich-cookies",
     "/recipes/desserts/date-balls",
     "/recipes/desserts/ginger-snaps",
@@ -718,6 +719,13 @@ export const contentNodes = {
  "parent":"/recipes/desserts",
   "title":`Almond cake`,
  "navLabel":"Almond cake",
+ "children":[
+ ],
+},
+"/recipes/desserts/chocolate-cream-pie":{
+ "parent":"/recipes/desserts",
+  "title":`Chocolate cream pie`,
+ "navLabel":"Chocolate cream pie",
  "children":[
  ],
 },

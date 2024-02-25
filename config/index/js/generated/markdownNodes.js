@@ -59,6 +59,7 @@ export const markdownNodes = [
 "/coding/web-design/sitemaps",
 "/",
 "/recipes/desserts/almond-cake",
+"/recipes/desserts/chocolate-cream-pie",
 "/recipes/desserts/cocoa-mint-sandwich-cookies",
 "/recipes/desserts/date-balls",
 "/recipes/desserts/ginger-snaps",
