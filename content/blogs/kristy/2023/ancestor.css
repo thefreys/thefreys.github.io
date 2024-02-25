@@ -1,0 +1,3 @@
+#breadcrumb-wrapper nav {
+  --bs-breadcrumb-divider: "<"; 
+}
