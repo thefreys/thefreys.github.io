@@ -1,4 +1,4 @@
-/* CSS file for index one page site */
+/* CSS file for "index" one page site */
 #site-map,
 #area-map {
     margin-left: 18px;
@@ -12,6 +12,10 @@
     white-space: pre-wrap;
     overflow-wrap: anywhere;
     max-width: 250px;
+  }
+
+  #breadcrumb-wrapper nav {
+    --bs-breadcrumb-divider: ">"; 
   }
 
 /*

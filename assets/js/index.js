@@ -1,10 +1,11 @@
-// JavaScript file for index one page site
+// JavaScript file for "index" one page site
 import { siteConfig } from '../../config/index/js/index.js';
 import { nodes } from '../../config/index/js/generated/nodes.js';
 import { markdownNodes } from '../../config/index/js/generated/markdownNodes.js';
 import { htmlNodes } from '../../config/index/js/generated/htmlNodes.js';
 import { javascriptNodes } from '../../config/index/js/generated/javascriptNodes.js';
 import { cssNodes } from '../../config/index/js/generated/cssNodes.js';
+import { cssAncestorNodes } from '../../config/index/js/generated/cssAncestorNodes.js';
 import { hiddenNodes } from '../../config/index/js/generated/hiddenNodes.js';
 import { titledNodes } from '../../config/index/js/generated/titledNodes.js';
 import { taggedNodes } from '../../config/index/js/generated/taggedNodes.js';
@@ -155,6 +156,69 @@ function buildMenu() {
     document.getElementById('navbarSupportedContentUl').innerHTML = menu;
 }
 
+
+function buildCSS(){
+    console.log('buildCSS');
+    var ancestralNodes = request.breadcrumbs;
+    ancestralNodes.unshift('/');
+    ancestralNodes.push(request.node);
+    var cssPaths = [];
+    for (const i in ancestralNodes) {
+        if(cssAncestorNodes.includes(ancestralNodes[i])){
+            cssPaths.push( siteConfig.contentPathPrefix + ancestralNodes[i] + '/ancestor.css' );
+        }
+    }
+    if (cssNodes.includes(request.node)) { cssPaths.push( siteConfig.contentPathPrefix + request.node + '/css.css' ); }
+    var promises = [];
+    var tmpPromises = [];
+    var tmpResults = [];
+    var styleBlockInner = '';
+    for (const i in cssPaths) {
+        console.log(cssPaths[i]);
+        tmpResults[i] = '/* Nothing Fetched */'
+        tmpPromises[i] = fetch(cssPaths[i])
+            .then(response => {
+                if (!response.ok) {
+                    if (response.status === 404) {
+                        tmpResults[i] = '/* 404 NOT FOUND */';
+                        console.log(tmpResults[i]);
+                        return;
+                    }
+                    if (!response.ok) {
+                        tmpResults[i] = '/* Network response was not ok: ' + response.statusText + ' */';
+                        console.log(tmpResults[i]);
+                        return;
+                    }
+                }
+                return response.text();
+            })
+            .then(css => {
+                tmpResults[i] = css;
+            })
+            .catch(error => {
+                tmpResults[i] = '/* fetch/catch error: ' + error + '*/';
+                console.error('fetch/catch error:', error);
+            });
+            promises.push(tmpPromises[i]);
+
+    }
+    
+    Promise.all(promises)
+        .then((results) => {
+            for (const i in cssPaths) {
+                styleBlockInner = styleBlockInner + "\n";
+                styleBlockInner = styleBlockInner + '/* ' + cssPaths[i] + ' */';
+                styleBlockInner = styleBlockInner + "\n";
+                styleBlockInner = styleBlockInner + tmpResults[i];
+                styleBlockInner = styleBlockInner + "\n";
+            }
+            document.getElementById('nodeCss').innerHTML = styleBlockInner;
+        })
+        .catch((error) => {
+            console.error('A promise failed:', error);
+        });
+}
+
 function buildAfterContentLoaded() {
     buildMenu();
     buildBreadcrumbs();
@@ -166,7 +230,10 @@ function buildAfterContentLoaded() {
     spans.forEach(function (span) {
         span.textContent = siteConfig.siteName;
     });
+    buildCSS();
+
     hljs.highlightAll();
+
 }
 
 function updateExternalLinkTarget(parentContainerSelector) {
@@ -201,12 +268,10 @@ function watchElementForChanges(elemId, callback) {
 }
 
 watchElementForChanges('nodeHtml', () => {
-    buildAfterContentLoaded();
     updateExternalLinkTarget('#nodeHtml');
 });
 
 watchElementForChanges('nodeMarkdown', () => {
-    buildAfterContentLoaded();
     updateExternalLinkTarget('#nodeMarkdown');
 });
 
@@ -230,6 +295,7 @@ export function init() {
     if (request.node != '/' && request.node.endsWith('/')) {
         request.node = request.node.slice(0, -1);
     }
+    //request.ancestors = [];
     if (request.node != '/') {
         request.nodeParts = request.node.substring(1).split('/');
         if (request.nodeParts.length > 1) {
@@ -246,6 +312,7 @@ export function init() {
     if (request.node == '/404' && typeof contentNodes[request.node] === 'undefined') {
         document.title = 'Page not found (/404)';
         document.getElementById('nodeHtml').innerHTML = '<h1>404 Not Found</h1><p>Page not found</p>';
+        buildAfterContentLoaded();
         return;
     }
     else if (typeof contentNodes[request.node] === 'undefined') {
@@ -260,6 +327,7 @@ export function init() {
         if (request.node == '/404') {
             document.title = 'Page not found, but node exists (/404)';
             document.getElementById('nodeHtml').innerHTML = '<h1>404 Not Found</h1><p>Page not found</p>';
+            buildAfterContentLoaded();
             return;
         }
         if (typeof contentNodes[request.node]['title'] === 'undefined'){
@@ -269,6 +337,7 @@ export function init() {
             document.title = 'Explore ' + contentNodes[request.node].title + ' (' + request.node + ')';
         }
         document.getElementById('nodeHtml').innerHTML = '<h1>Explore</h1></div>';
+        buildAfterContentLoaded();
         return;
     }
 
@@ -292,12 +361,11 @@ export function init() {
     if (markdownNodes.includes(request.node)) { request.nodeMarkdownPath = siteConfig.contentPathPrefix + request.node + '/markdown.md' }
     if (htmlNodes.includes(request.node)) { request.nodeHtmlPath = siteConfig.contentPathPrefix + request.node + '/html.html' }
     if (javascriptNodes.includes(request.node)) { request.nodeJavascriptPath = siteConfig.contentPathPrefix + request.node + '/javascript.js' }
-    if (cssNodes.includes(request.node)) { request.nodeCssPath = siteConfig.contentPathPrefix + request.node + '/css.css' }
-
+    
     // use promises to make sure the fetching completes
     var promises = [];
 
-    // fetch the markdown if it we have a path for it
+    // fetch the markdown if we have a path for it
     if (request.nodeMarkdownPath == null) {
         request.nodeMarkdown404 = true;
     }
@@ -328,7 +396,7 @@ export function init() {
             });
     }
 
-    // fetch the html if it we have a path for it
+    // fetch the html if we have a path for it
     if (request.nodeHtmlPath == null) {
         request.nodeHtml404 = true;
     }
@@ -358,7 +426,7 @@ export function init() {
             });
     }
 
-    // fetch the javascript if it we have a path for it
+    // fetch the javascript if we have a path for it
     if (request.nodeJavascriptPath == null) {
         request.nodeJavascript404 = true;
     }
@@ -389,38 +457,9 @@ export function init() {
             });
     }
     
-    // fetch the css if it we have a path for it
-    if (request.nodeCssPath == null) {
-        request.nodeCss404 = true;
-    }
-    else {
-        var nodeCssPromise;
-        promises.push(nodeCssPromise);
-        nodeCssPromise = fetch(request.nodeCssPath)
-            .then(response => {
-                if (!response.ok) {
-                    if (response.status === 404) {
-                        request.nodeCss404 = true;
-                        return;
-                    }
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok: ' + response.statusText);
-                    }
-                }
-                return response.text();
-            })
-            .then(css => {
-                if (css > '') {
-                    document.getElementById('nodeCss').innerHTML = css;
-                }
-            })
-            .catch(error => {
-                console.error('fetch/catch error:', error);
-            });
-    }
-
     Promise.all(promises)
         .then((results) => {
+            buildAfterContentLoaded();
             if (request.nodeMarkdown404 && request.nodeHtml404 && request.nodeJavascript404) {
                 if (request.node == '404') {
                     document.getElementById('nodeHtml').innerHTML = '404 page is missing';
@@ -431,6 +470,7 @@ export function init() {
             }
         })
         .catch((error) => {
+            buildAfterContentLoaded();
             console.error('A promise failed:', error);
         });
 

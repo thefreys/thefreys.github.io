@@ -315,7 +315,57 @@ export const contentNodes = {
  "parent":"/blogs",
  "navLabel":"kristy",
  "children":[
+    "/blogs/kristy/2023",
     "/blogs/kristy/2024",
+ ],
+},
+"/blogs/kristy/2023":{
+ "parent":"/blogs/kristy",
+ "navLabel":"2023",
+ "children":[
+    "/blogs/kristy/2023/11",
+    "/blogs/kristy/2023/12",
+ ],
+},
+"/blogs/kristy/2023/11":{
+ "parent":"/blogs/kristy/2023",
+ "navLabel":"11",
+ "children":[
+    "/blogs/kristy/2023/11/01",
+ ],
+},
+"/blogs/kristy/2023/11/01":{
+ "parent":"/blogs/kristy/2023/11",
+ "navLabel":"01",
+ "children":[
+    "/blogs/kristy/2023/11/01/markdown-cheat-sheet",
+ ],
+},
+"/blogs/kristy/2023/11/01/markdown-cheat-sheet":{
+ "parent":"/blogs/kristy/2023/11/01",
+ "navLabel":"markdown-cheat-sheet",
+ "children":[
+ ],
+},
+"/blogs/kristy/2023/12":{
+ "parent":"/blogs/kristy/2023",
+ "navLabel":"12",
+ "children":[
+    "/blogs/kristy/2023/12/01",
+ ],
+},
+"/blogs/kristy/2023/12/01":{
+ "parent":"/blogs/kristy/2023/12",
+ "navLabel":"01",
+ "children":[
+    "/blogs/kristy/2023/12/01/Bootstrap-version-5.3-Cheatsheet",
+ ],
+},
+"/blogs/kristy/2023/12/01/Bootstrap-version-5.3-Cheatsheet":{
+ "parent":"/blogs/kristy/2023/12/01",
+  "title":`Bootstrap Version 5.3 Cheatsheet`,
+ "navLabel":"Bootstrap Version 5.3 Cheatsheet",
+ "children":[
  ],
 },
 "/blogs/kristy/2024":{
@@ -624,49 +674,7 @@ export const contentNodes = {
  "parent":"/",
  "navLabel":"coding",
  "children":[
-    "/coding/frameworks",
-    "/coding/languages",
     "/coding/web-design",
- ],
-},
-"/coding/frameworks":{
- "parent":"/coding",
- "navLabel":"frameworks",
- "children":[
-    "/coding/frameworks/bootstrap",
- ],
-},
-"/coding/frameworks/bootstrap":{
- "parent":"/coding/frameworks",
- "navLabel":"bootstrap",
- "children":[
-    "/coding/frameworks/bootstrap/cheatsheet-v5.3",
- ],
-},
-"/coding/frameworks/bootstrap/cheatsheet-v5.3":{
- "parent":"/coding/frameworks/bootstrap",
- "navLabel":"cheatsheet-v5.3",
- "children":[
- ],
-},
-"/coding/languages":{
- "parent":"/coding",
- "navLabel":"languages",
- "children":[
-    "/coding/languages/markdown",
- ],
-},
-"/coding/languages/markdown":{
- "parent":"/coding/languages",
- "navLabel":"markdown",
- "children":[
-    "/coding/languages/markdown/markdown-cheat-sheet",
- ],
-},
-"/coding/languages/markdown/markdown-cheat-sheet":{
- "parent":"/coding/languages/markdown",
- "navLabel":"markdown-cheat-sheet",
- "children":[
  ],
 },
 "/coding/web-design":{
