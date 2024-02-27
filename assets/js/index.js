@@ -1,21 +1,15 @@
 // JavaScript file for "index" one page site
 import { siteConfig } from '../../config/index/js/index.js';
-import { nodes } from '../../config/index/js/generated/nodes.js';
 import { markdownNodes } from '../../config/index/js/generated/markdownNodes.js';
 import { htmlNodes } from '../../config/index/js/generated/htmlNodes.js';
 import { javascriptNodes } from '../../config/index/js/generated/javascriptNodes.js';
+import { jsAncestorNodes } from '../../config/index/js/generated/jsAncestorNodes.js';
 import { cssNodes } from '../../config/index/js/generated/cssNodes.js';
 import { cssAncestorNodes } from '../../config/index/js/generated/cssAncestorNodes.js';
 import { hiddenNodes } from '../../config/index/js/generated/hiddenNodes.js';
-import { titledNodes } from '../../config/index/js/generated/titledNodes.js';
-import { taggedNodes } from '../../config/index/js/generated/taggedNodes.js';
 import { contentNodes } from '../../config/index/js/generated/contentNodes.js';
 import hljs from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/highlight.min.js';
-// individually load additional languages
-// import go from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/languages/go.min.js';
-// hljs.registerLanguage('go', go);
 import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
-  //document.getElementById('content').innerHTML = marked.parse('# Marked in the browser\n\nRendered by **marked**.');
 
 var request = {};
 
@@ -79,24 +73,16 @@ function buildSiteMapItems(items, parent, level=0) {
     }
 }
 
-function buildSiteMap(parent) {
-    if (parent === null || parent === undefined) {
-        return;
-    }
-    var ul = document.createElement("ul");
-    buildSiteMapItems(contentNodes['/'].children, ul);
-    parent.appendChild(ul);
-}
-
-function buildAreaMap(parent) {
-    if (request.node == '/404' && typeof contentNodes[request.node] === 'undefined') {
+function buildAreaMap(parent,node) {
+    console.log('buildAreaMap for '+ node);
+    if (node == '/404' && typeof contentNodes[node] === 'undefined') {
         return;
     }
     if (parent === null || parent === undefined) {
         return;
     }
     var ul = document.createElement("ul");
-    buildSiteMapItems(contentNodes[request.node].children, ul);
+    buildSiteMapItems(contentNodes[node].children, ul);
     parent.appendChild(ul);
 }
 
@@ -156,89 +142,25 @@ function buildMenu() {
     document.getElementById('navbarSupportedContentUl').innerHTML = menu;
 }
 
-
-function buildCSS(){
-    console.log('buildCSS');
-    var ancestralNodes = request.breadcrumbs;
-    ancestralNodes.unshift('/');
-    ancestralNodes.push(request.node);
-    var cssPaths = [];
-    for (const i in ancestralNodes) {
-        if(cssAncestorNodes.includes(ancestralNodes[i])){
-            cssPaths.push( siteConfig.contentPathPrefix + ancestralNodes[i] + '/ancestor.css' );
-        }
-    }
-    if (cssNodes.includes(request.node)) { cssPaths.push( siteConfig.contentPathPrefix + request.node + '/css.css' ); }
-    var promises = [];
-    var tmpPromises = [];
-    var tmpResults = [];
-    var styleBlockInner = '';
-    for (const i in cssPaths) {
-        console.log(cssPaths[i]);
-        tmpResults[i] = '/* Nothing Fetched */'
-        tmpPromises[i] = fetch(cssPaths[i])
-            .then(response => {
-                if (!response.ok) {
-                    if (response.status === 404) {
-                        tmpResults[i] = '/* 404 NOT FOUND */';
-                        console.log(tmpResults[i]);
-                        return;
-                    }
-                    if (!response.ok) {
-                        tmpResults[i] = '/* Network response was not ok: ' + response.statusText + ' */';
-                        console.log(tmpResults[i]);
-                        return;
-                    }
-                }
-                return response.text();
-            })
-            .then(css => {
-                tmpResults[i] = css;
-            })
-            .catch(error => {
-                tmpResults[i] = '/* fetch/catch error: ' + error + '*/';
-                console.error('fetch/catch error:', error);
-            });
-            promises.push(tmpPromises[i]);
-
-    }
-    
-    Promise.all(promises)
-        .then((results) => {
-            for (const i in cssPaths) {
-                styleBlockInner = styleBlockInner + "\n";
-                styleBlockInner = styleBlockInner + '/* ' + cssPaths[i] + ' */';
-                styleBlockInner = styleBlockInner + "\n";
-                styleBlockInner = styleBlockInner + tmpResults[i];
-                styleBlockInner = styleBlockInner + "\n";
-            }
-            document.getElementById('nodeCss').innerHTML = styleBlockInner;
-        })
-        .catch((error) => {
-            console.error('A promise failed:', error);
-        });
-}
-
 function buildAfterContentLoaded() {
     buildMenu();
     buildBreadcrumbs();
-    buildSiteMap(document.getElementById("site-map"));
-    if (document.getElementById("area-map")) {
-        buildAreaMap(document.getElementById("area-map"));
-    }
     var spans = document.querySelectorAll('span.site-name');
     spans.forEach(function (span) {
         span.textContent = siteConfig.siteName;
     });
-    buildCSS();
-
     hljs.highlightAll();
-
+    if (document.getElementById("site-map")) {
+        console.log('yo');
+        buildAreaMap(document.getElementById("site-map"),"/");
+    }
+    if (document.getElementById("area-map")) {
+        buildAreaMap(document.getElementById("area-map"),request.node);
+    }
 }
 
 function updateExternalLinkTarget(parentContainerSelector) {
     var links = document.querySelectorAll(parentContainerSelector+' a');
-            
     // Check each link and update the target for external links
     links.forEach(function(link) {
         console.log(link);
@@ -268,18 +190,110 @@ function watchElementForChanges(elemId, callback) {
 }
 
 watchElementForChanges('nodeHtml', () => {
+    console.log('nodeHtml changed');
     updateExternalLinkTarget('#nodeHtml');
 });
 
 watchElementForChanges('nodeMarkdown', () => {
+    console.log('nodeMarkdown changed');
     updateExternalLinkTarget('#nodeMarkdown');
 });
 
 watchElementForChanges('nodeJavascript', () => {
+    console.log('nodeJavascript changed');
 });
 
+watchElementForChanges('nodeCss', () => {
+    console.log('nodeCSS changed');
+});
+
+function processFetchedFiles(){
+    console.log('processFetchedFiles');  
+    request.markdown = ' ';          
+    request.html = ' ';          
+    request.css = ' ';          
+    request.javascript = '';          
+    for (let i in request.files) {     
+        if(request.files[i].endsWith('/markdown.md')){
+            request.markdown = request.fetchedFiles[request.files[i]].body;
+        }
+        if(request.files[i].endsWith('/html.html')){
+            request.html = request.fetchedFiles[request.files[i]].body;
+        }
+        if(request.files[i].endsWith('.css')){
+            request.css = request.css + "/* " + request.files[i] + " */";
+            request.css = request.css + "\n";
+            request.css = request.css + request.fetchedFiles[request.files[i]].body;
+            request.css = request.css + "\n";
+        }
+        if(request.files[i].endsWith('javascript.js')){
+            request.javascript = request.files[i];
+        }
+    }
+    if (request.css >= ' ') {
+        document.getElementById('nodeCss').innerHTML = request.css;
+    }
+    if (request.markdown >= ' ' || request.html >= ' ') {
+        console.log('we have content');
+        if (request.markdown >= ' ') {
+            var mdHtml = marked.parse(request.markdown).replace(/<table>/g, '<table class="table table-hover  table-bordered">');
+            document.getElementById('nodeMarkdown').innerHTML = mdHtml;
+        }
+        if (request.html >= ' ') {
+            document.getElementById('nodeHtml').innerHTML = request.html;
+        }
+    }
+    else {
+        console.log('content free node - show Explore');
+        document.getElementById('nodeHtml').innerHTML = '<h1>Explore</h1></div>';
+    }
+    buildAfterContentLoaded();
+    if (request.javascript >= ' ') {
+        var linkDate = new Date().toISOString().replace(/:/g, '').replace(/ /g, '').replace(/-/g, '');
+        document.getElementById('nodeJavascript').src = request.javascript + '?date=' + linkDate;
+    }
+}
+
+function fetchFiles() {
+    console.log('fetchFiles');
+    var fetchPromises = [];
+    var bodyPromises = [];
+    for (let i in request.files) {
+        request.fetchedFiles[request.files[i]] = {};
+        request.fetchedFiles[request.files[i]].loaded = false;
+        request.fetchedFiles[request.files[i]].status404 = false;
+        request.fetchedFiles[request.files[i]].body = '';
+        request.fetchedFiles[request.files[i]].bodyPromiseIndex = -1;
+        fetchPromises.push(fetch(request.files[i]));
+        request.fetchedFiles[request.files[i]].fetchPromiseIndex = fetchPromises.length - 1;
+    }
+    Promise.all(fetchPromises).then(response => {
+        for (let i in request.files) {     
+            request.fetchedFiles[request.files[i]].response = response[request.fetchedFiles[request.files[i]].fetchPromiseIndex];
+            if(request.fetchedFiles[request.files[i]].response.ok){
+                bodyPromises.push(request.fetchedFiles[request.files[i]].response.text());
+                request.fetchedFiles[request.files[i]].bodyPromiseIndex = bodyPromises.length - 1;
+            }
+            else{
+                if('404' == request.fetchedFiles[request.files[i]].response.status){
+                    request.fetchedFiles[request.files[i]].status404 = true;
+                }
+                else {throw new Error('Network response was not ok: ' + request.fetchedFiles[request.files[i]].response.statusText);}
+            }
+        }
+        Promise.all(bodyPromises).then(response => {
+            for (let i in request.files) {         
+                if(request.fetchedFiles[request.files[i]].bodyPromiseIndex >= 0){
+                    request.fetchedFiles[request.files[i]].body = response[request.fetchedFiles[request.files[i]].bodyPromiseIndex];
+                }
+            }
+            processFetchedFiles();
+        }); 
+    });
+} 
+
 export function init() {
-    // determine the content requested
+    // determine the node requested
     request.queryParams = getQueryParams();
     if (typeof request.queryParams['node'] === 'undefined') {
         window.location.href = 'index.html?node=/';
@@ -289,13 +303,21 @@ export function init() {
     if (request.node == '') {
         request.node = '/';
     }
-    request.breadcrumbs = [];
-    request.filename = request.node
-    request.parentPath = '/';
     if (request.node != '/' && request.node.endsWith('/')) {
         request.node = request.node.slice(0, -1);
     }
-    //request.ancestors = [];
+    // handle when node is not defined
+    if (typeof contentNodes[request.node] === 'undefined') {
+        if (request.node == '/404') {
+            window.location.href = 'index.html?node=/&orig_node=' + request.node;
+        }
+        window.location.href = 'index.html?node=/404&orig_node=' + request.node;
+        return;
+    }
+    // continue on with defined node
+    request.breadcrumbs = [];
+    request.filename = request.node
+    request.parentPath = '/';
     if (request.node != '/') {
         request.nodeParts = request.node.substring(1).split('/');
         if (request.nodeParts.length > 1) {
@@ -306,174 +328,43 @@ export function init() {
                 request.nodeParts.pop();
             }
         }
-    }
+    }   
     request.breadcrumbs = request.breadcrumbs.reverse();
 
-    if (request.node == '/404' && typeof contentNodes[request.node] === 'undefined') {
-        document.title = 'Page not found (/404)';
-        document.getElementById('nodeHtml').innerHTML = '<h1>404 Not Found</h1><p>Page not found</p>';
-        buildAfterContentLoaded();
-        return;
+    request.files = [];
+    request.fetchedFiles = {}
+    if(markdownNodes.includes(request.node)){
+       request.files.push(siteConfig.contentPathPrefix + request.node + '/markdown.md');
     }
-    else if (typeof contentNodes[request.node] === 'undefined') {
-        document.title = 'Page not found ('+request.node+')';
-        window.location.href = 'index.html?node=/404&reason=no-path&x2=' + request.node;
-        return;
+    if(htmlNodes.includes(request.node)){
+       request.files.push(siteConfig.contentPathPrefix + request.node + '/html.html');
     }
-
-    if (!(markdownNodes.includes(request.node)) &&
-        !(htmlNodes.includes(request.node)) &&
-        !(javascriptNodes.includes(request.node))) {
-        if (request.node == '/404') {
-            document.title = 'Page not found, but node exists (/404)';
-            document.getElementById('nodeHtml').innerHTML = '<h1>404 Not Found</h1><p>Page not found</p>';
-            buildAfterContentLoaded();
-            return;
-        }
-        if (typeof contentNodes[request.node]['title'] === 'undefined'){
-            document.title = 'Explore ' + contentNodes[request.node].navLabel + ' (' + request.node + ')';
-        }
-        else{
-            document.title = 'Explore ' + contentNodes[request.node].title + ' (' + request.node + ')';
-        }
-        document.getElementById('nodeHtml').innerHTML = '<h1>Explore</h1></div>';
-        buildAfterContentLoaded();
-        return;
+    request.ancestralNodes = [];
+    for (const i in request.breadcrumbs) {
+        request.ancestralNodes.push(request.breadcrumbs[i]);
     }
-
+    request.ancestralNodes.push(request.node);
+    for (const i in request.ancestralNodes) {
+        if(cssAncestorNodes.includes(request.ancestralNodes[i])){
+            request.files.push(siteConfig.contentPathPrefix + request.ancestralNodes[i] + '/ancestor.css');
+        }
+        if(jsAncestorNodes.includes(request.ancestralNodes[i])){
+            request.files.push(siteConfig.contentPathPrefix + request.ancestralNodes[i] + '/ancestor.js');
+        }
+    }  
+    if(cssNodes.includes(request.node)){
+        request.files.push(siteConfig.contentPathPrefix + request.node + '/css.css');
+    }
+    if(javascriptNodes.includes(request.node)){
+        request.files.push(siteConfig.contentPathPrefix + request.node + '/javascript.js');
+    }
     if (typeof contentNodes[request.node]['title'] === 'undefined'){
         document.title = contentNodes[request.node].navLabel + ' (' + request.node + ')';
     }
     else{
         document.title = contentNodes[request.node].title + ' (' + request.node + ')';
     }
-    // fetch content files
-    request.nodeMarkdown404 = false;
-    request.nodeHtml404 = false;
-    request.nodeJavascript404 = false;
-    request.nodeCss404 = false;
-
-    request.nodeMarkdownPath = null;
-    request.nodeHtmlPath = null;
-    request.nodeJavascriptPath = null;
-    request.nodeCssPath = null;
-
-    if (markdownNodes.includes(request.node)) { request.nodeMarkdownPath = siteConfig.contentPathPrefix + request.node + '/markdown.md' }
-    if (htmlNodes.includes(request.node)) { request.nodeHtmlPath = siteConfig.contentPathPrefix + request.node + '/html.html' }
-    if (javascriptNodes.includes(request.node)) { request.nodeJavascriptPath = siteConfig.contentPathPrefix + request.node + '/javascript.js' }
-    
-    // use promises to make sure the fetching completes
-    var promises = [];
-
-    // fetch the markdown if we have a path for it
-    if (request.nodeMarkdownPath == null) {
-        request.nodeMarkdown404 = true;
-    }
-    else {
-        var nodeMarkdownPromise;
-        promises.push(nodeMarkdownPromise);
-        nodeMarkdownPromise = fetch(request.nodeMarkdownPath)
-            .then(response => {
-                if (!response.ok) {
-                    if (response.status === 404) {
-                        request.nodeMarkdown404 = true;
-                        return;
-                    }
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok: ' + response.statusText);
-                    }
-                }
-                return response.text();
-            })
-            .then(markdown => {
-                if (markdown > '') {
-                    var mdHtml = marked.parse(markdown).replace(/<table>/g, '<table class="table table-hover  table-bordered">');
-                    document.getElementById('nodeMarkdown').innerHTML = mdHtml;
-                }
-            })
-            .catch(error => {
-                console.error('There has been a problem with your fetch operation:', error);
-            });
-    }
-
-    // fetch the html if we have a path for it
-    if (request.nodeHtmlPath == null) {
-        request.nodeHtml404 = true;
-    }
-    else {
-        var nodeHtmlPromise;
-        promises.push(nodeHtmlPromise);
-        nodeHtmlPromise = fetch(request.nodeHtmlPath)
-            .then(response => {
-                if (!response.ok) {
-                    if (response.status === 404) {
-                        request.nodeHtml404 = true;
-                        return;
-                    }
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok: ' + response.statusText);
-                    }
-                }
-                return response.text();
-            })
-            .then(html => {
-                if (html > '') {
-                    document.getElementById('nodeHtml').innerHTML = html;
-                }
-            })
-            .catch(error => {
-                console.error('fetch/catch error:', error);
-            });
-    }
-
-    // fetch the javascript if we have a path for it
-    if (request.nodeJavascriptPath == null) {
-        request.nodeJavascript404 = true;
-    }
-    else {
-        var nodeJavascriptPromise;
-        promises.push(nodeJavascriptPromise);
-        nodeJavascriptPromise = fetch(request.nodeJavascriptPath)
-            .then(response => {
-                if (!response.ok) {
-                    if (response.status === 404) {
-                        request.nodeJavascript404 = true;
-                        return;
-                    }
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok: ' + response.statusText);
-                    }
-                }
-                return response.text();
-            })
-            .then(js => {
-                if (js > '') {
-                    var linkDate = new Date().toISOString().replace(/:/g, '').replace(/ /g, '').replace(/-/g, '');
-                    document.getElementById('nodeJavascript').src = request.nodeJavascriptPath + '?date=' + linkDate;
-                }
-            })
-            .catch(error => {
-                console.error('fetch/catch error:', error);
-            });
-    }
-    
-    Promise.all(promises)
-        .then((results) => {
-            buildAfterContentLoaded();
-            if (request.nodeMarkdown404 && request.nodeHtml404 && request.nodeJavascript404) {
-                if (request.node == '404') {
-                    document.getElementById('nodeHtml').innerHTML = '404 page is missing';
-                    return;
-                }
-                window.location.href = 'index.html?node=404&reason=no-content-via-fetch&x2=' + request.node;
-                return;
-            }
-        })
-        .catch((error) => {
-            buildAfterContentLoaded();
-            console.error('A promise failed:', error);
-        });
-
-}
+    fetchFiles();
+} 
 
 init();

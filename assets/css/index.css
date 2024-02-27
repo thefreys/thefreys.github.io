@@ -14,9 +14,6 @@
     max-width: 250px;
   }
 
-  #breadcrumb-wrapper nav {
-    --bs-breadcrumb-divider: ">"; 
-  }
 
 /*
 li.sitemap-level-0 {

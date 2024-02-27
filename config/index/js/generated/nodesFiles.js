@@ -63,6 +63,7 @@ export const nodesFiles = [
 "/blogs/kristy/2023/ancestor.css",
 "/blogs/kristy/2024/01/20/finding-new-recipes-to-try/markdown.md",
 "/blogs/kristy/2024/01/20/finding-new-recipes-to-try/_title.txt",
+"/blogs/kristy/2024/01/ancestor.css",
 "/blogs/kristy/2024/02/10/scammers-gonna-scam/AI-answers/.hide",
 "/blogs/kristy/2024/02/10/scammers-gonna-scam/AI-answers/bing/markdown.md",
 "/blogs/kristy/2024/02/10/scammers-gonna-scam/AI-answers/bing/_title.txt",

@@ -1,4 +1,4 @@
-#breadcrumb-wrapper nav {
-  --bs-breadcrumb-divider: "|";
+.breadcrumb-item + .breadcrumb-item::before {
+  font-family: 'FontAwesome';
+  content: "\f138"; 
 }
-  
