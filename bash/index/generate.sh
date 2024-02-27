@@ -28,7 +28,7 @@ tmpoutfile="${tmpoutdir}/${jsvar}.js"
 cd "${rootdir}"
 echo "export const ${jsvar} = {" > "${tmpoutfile}"
 echo "$(date): Generating the contentNode javascript object (${jsvar}.js)"
-find content -type d -print | sort | xargs -I {} ls -d {} | while read nodepath; do
+find content -type d -print | xargs -I {} ls -d {} | sort | while read nodepath; do
     node="/${nodepath}"
     node=${node:8}
     if [[ "${node}" = "" ]]; then
@@ -54,7 +54,7 @@ find content -type d -print | sort | xargs -I {} ls -d {} | while read nodepath;
     echo " \"navLabel\":\"${navLabel}\"," >> "${tmpoutfile}"
     
     echo " \"children\":[" >> "${tmpoutfile}"
-    find ${nodepath} -maxdepth 1 -type d | while read childnodepath; do
+    find ${nodepath} -maxdepth 1 -type d | sort | while read childnodepath; do
         childnode="/${childnodepath}"
         childnode=${childnode:8}
         if [[ "${childnode}" = "" ]]; then
