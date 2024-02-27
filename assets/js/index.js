@@ -130,6 +130,19 @@ function buildMenu() {
         menuItem = menuItem.replace(/{{href}}/g, 'index.html?node=' + siteConfig.hamburgerLevelOneItems[i]);
         var menuItemChildren = '';
         for (var j = 0; j < sitemapItem.children.length; j++) {
+                
+            // do not show this node or go deeper when .hide is found
+            if (hiddenNodes.includes(sitemapItem.children[j])) {
+                continue;
+            }
+            // do not show this node or go deeper when there will never be content files to show
+            var markdownCount = markdownNodes.filter(str => str.startsWith(sitemapItem.children[j])).length;
+            var htmlCount = htmlNodes.filter(str => str.startsWith(sitemapItem.children[j])).length;
+            var javascriptCount = javascriptNodes.filter(str => str.startsWith(sitemapItem.children[j])).length;
+            if (0 == markdownCount + htmlCount + javascriptCount) {
+                continue;
+            }
+
             var menuChildItem = templateMenuItemChild;
             var sitemapChildItem = contentNodes[sitemapItem.children[j]];
             menuChildItem = menuChildItem.replace(/{{navLabel}}/g, sitemapChildItem.navLabel);
@@ -151,7 +164,6 @@ function buildAfterContentLoaded() {
     });
     hljs.highlightAll();
     if (document.getElementById("site-map")) {
-        console.log('yo');
         buildAreaMap(document.getElementById("site-map"),"/");
     }
     if (document.getElementById("area-map")) {
