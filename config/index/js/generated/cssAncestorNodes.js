@@ -1,6 +1,6 @@
 export const cssAncestorNodes = [
-"/blogs/kristy/2023",
-"/blogs/kristy/2024/01",
-"/blogs/kristy/2024",
-"/blogs/kristy",
+"/coding/this-site/css/ancestor-demo",
+"/coding/this-site/css/ancestor-demo/demo-child",
+"/coding/this-site/css/ancestor-demo/demo-child/demo-grand-child",
+"/coding/this-site/css/ancestor-demo/demo-child/demo-grand-child/demo-great-grand-child",
 ]
