@@ -53,8 +53,7 @@ function buildSiteMapItems(items, parent, level=0) {
         // do not show this node or go deeper when there will never be content files to show
         var markdownCount = markdownNodes.filter(str => str.startsWith(items[key])).length;
         var htmlCount = htmlNodes.filter(str => str.startsWith(items[key])).length;
-        var javascriptCount = javascriptNodes.filter(str => str.startsWith(items[key])).length;
-        if (0 == markdownCount + htmlCount + javascriptCount) {
+        if (0 == markdownCount + htmlCount) {
             continue;
         }
         var li = document.createElement("li");
@@ -129,8 +128,7 @@ function buildMenu() {
         menuItem = menuItem.replace(/{{navLabel}}/g, sitemapItem.navLabel);
         menuItem = menuItem.replace(/{{href}}/g, 'index.html?node=' + siteConfig.hamburgerLevelOneItems[i]);
         var menuItemChildren = '';
-        for (var j = 0; j < sitemapItem.children.length; j++) {
-                
+        for (var j = 0; j < sitemapItem.children.length; j++) {   
             // do not show this node or go deeper when .hide is found
             if (hiddenNodes.includes(sitemapItem.children[j])) {
                 continue;
@@ -138,11 +136,9 @@ function buildMenu() {
             // do not show this node or go deeper when there will never be content files to show
             var markdownCount = markdownNodes.filter(str => str.startsWith(sitemapItem.children[j])).length;
             var htmlCount = htmlNodes.filter(str => str.startsWith(sitemapItem.children[j])).length;
-            var javascriptCount = javascriptNodes.filter(str => str.startsWith(sitemapItem.children[j])).length;
-            if (0 == markdownCount + htmlCount + javascriptCount) {
+            if (0 == markdownCount + htmlCount) {
                 continue;
             }
-
             var menuChildItem = templateMenuItemChild;
             var sitemapChildItem = contentNodes[sitemapItem.children[j]];
             menuChildItem = menuChildItem.replace(/{{navLabel}}/g, sitemapChildItem.navLabel);
@@ -205,16 +201,13 @@ watchElementForChanges('nodeHtml', () => {
     console.log('nodeHtml changed');
     updateExternalLinkTarget('#nodeHtml');
 });
-
 watchElementForChanges('nodeMarkdown', () => {
     console.log('nodeMarkdown changed');
     updateExternalLinkTarget('#nodeMarkdown');
 });
-
 watchElementForChanges('nodeJavascript', () => {
     console.log('nodeJavascript changed');
 });
-
 watchElementForChanges('nodeCss', () => {
     console.log('nodeCSS changed');
 });
@@ -238,8 +231,17 @@ function processFetchedFiles(){
             request.css = request.css + request.fetchedFiles[request.files[i]].body;
             request.css = request.css + "\n";
         }
-        if(request.files[i].endsWith('javascript.js')){
-            request.javascript = request.files[i];
+        if(request.files[i].endsWith('.js')){
+            if(request.files[i].endsWith('javascript.js')){
+                request.javascript = request.javascript + "\n";
+                request.javascript = request.javascript + '// ' + request.files[i];
+                request.javascript = request.javascript + request.fetchedFiles[request.files[i]].body;
+            }
+            else {
+                var importAs = 'ancestor' + (request.files[i].split('/').length - 1);
+                request.javascript = request.javascript + 'import * as '+importAs+' from \'/'+request.files[i]+'\';';
+                request.javascript = request.javascript + "\n";
+            }
         }
     }
     if (request.css >= ' ') {
@@ -261,9 +263,10 @@ function processFetchedFiles(){
     }
     buildAfterContentLoaded();
     if (request.javascript >= ' ') {
-        var linkDate = new Date().toISOString().replace(/:/g, '').replace(/ /g, '').replace(/-/g, '');
-        document.getElementById('nodeJavascript').src = request.javascript + '?date=' + linkDate;
+        document.getElementById('nodeJavascript').innerHTML = request.javascript;
     }
+    console.log('request.javascript ------------------');
+    console.log(request.javascript);
 }
 
 function fetchFiles() {
@@ -351,30 +354,30 @@ export function init() {
     if(htmlNodes.includes(request.node)){
        request.files.push(siteConfig.contentPathPrefix + request.node + '/html.html');
     }
-    request.ancestralNodes = [];
+    request.ancestralNodes = ['/'];
     for (const i in request.breadcrumbs) {
         request.ancestralNodes.push(request.breadcrumbs[i]);
     }
     request.ancestralNodes.push(request.node);
     for (const i in request.ancestralNodes) {
         if(cssAncestorNodes.includes(request.ancestralNodes[i])){
-            request.files.push(siteConfig.contentPathPrefix + request.ancestralNodes[i] + '/ancestor.css');
+            request.files.push(siteConfig.contentPathPrefix + request.ancestralNodes[i].replace(/\/$/, '') + '/ancestor.css');
         }
         if(jsAncestorNodes.includes(request.ancestralNodes[i])){
-            request.files.push(siteConfig.contentPathPrefix + request.ancestralNodes[i] + '/ancestor.js');
+            request.files.push(siteConfig.contentPathPrefix + request.ancestralNodes[i].replace(/\/$/, '') + '/ancestor.js');
         }
     }  
     if(cssNodes.includes(request.node)){
-        request.files.push(siteConfig.contentPathPrefix + request.node + '/css.css');
+        request.files.push(siteConfig.contentPathPrefix + request.node.replace(/\/$/, '') + '/css.css');
     }
     if(javascriptNodes.includes(request.node)){
-        request.files.push(siteConfig.contentPathPrefix + request.node + '/javascript.js');
+        request.files.push(siteConfig.contentPathPrefix + request.node.replace(/\/$/, '') + '/javascript.js');
     }
     if (typeof contentNodes[request.node]['title'] === 'undefined'){
-        document.title = contentNodes[request.node].navLabel + ' (' + request.node + ')';
+        document.title = contentNodes[request.node].navLabel + ' (' + request.node.replace(/\/$/, '') + ')';
     }
     else{
-        document.title = contentNodes[request.node].title + ' (' + request.node + ')';
+        document.title = contentNodes[request.node].title + ' (' + request.node.replace(/\/$/, '') + ')';
     }
     fetchFiles();
 } 

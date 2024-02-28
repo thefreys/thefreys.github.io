@@ -1,3 +1,4 @@
 .breadcrumb-item + .breadcrumb-item::before {
-    content: "}"; 
-}  
+    font-family: 'FontAwesome';
+    content: "\f138"; 
+  }
