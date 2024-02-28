@@ -286,6 +286,7 @@ function fetchFiles() {
         for (let i in request.files) {     
             request.fetchedFiles[request.files[i]].response = response[request.fetchedFiles[request.files[i]].fetchPromiseIndex];
             if(request.fetchedFiles[request.files[i]].response.ok){
+                console.log('Getting text() for '+request.files[i]);
                 bodyPromises.push(request.fetchedFiles[request.files[i]].response.text());
                 request.fetchedFiles[request.files[i]].bodyPromiseIndex = bodyPromises.length - 1;
             }
@@ -355,10 +356,12 @@ export function init() {
        request.files.push(siteConfig.contentPathPrefix + request.node + '/html.html');
     }
     request.ancestralNodes = ['/'];
-    for (const i in request.breadcrumbs) {
-        request.ancestralNodes.push(request.breadcrumbs[i]);
+    if ('/' != request.node) {
+        for (const i in request.breadcrumbs) {
+            request.ancestralNodes.push(request.breadcrumbs[i]);
+        }
+        request.ancestralNodes.push(request.node);
     }
-    request.ancestralNodes.push(request.node);
     for (const i in request.ancestralNodes) {
         if(cssAncestorNodes.includes(request.ancestralNodes[i])){
             request.files.push(siteConfig.contentPathPrefix + request.ancestralNodes[i].replace(/\/$/, '') + '/ancestor.css');
