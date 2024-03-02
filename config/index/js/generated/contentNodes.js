@@ -686,7 +686,23 @@ export const contentNodes = {
  "parent":"/blogs/kristy/2024/03",
  "navLabel":"02",
  "children":[
+    "/blogs/kristy/2024/03/02/embedding-short-form-videos",
     "/blogs/kristy/2024/03/02/working-on-this-site",
+ ],
+},
+"/blogs/kristy/2024/03/02/embedding-short-form-videos":{
+ "parent":"/blogs/kristy/2024/03/02",
+  "title":`Embedding short form videos`,
+ "navLabel":"Embedding short form videos",
+ "children":[
+    "/blogs/kristy/2024/03/02/embedding-short-form-videos/embedding-tiktok",
+ ],
+},
+"/blogs/kristy/2024/03/02/embedding-short-form-videos/embedding-tiktok":{
+ "parent":"/blogs/kristy/2024/03/02/embedding-short-form-videos",
+  "title":`Embedding TikTok`,
+ "navLabel":"Embedding TikTok",
+ "children":[
  ],
 },
 "/blogs/kristy/2024/03/02/working-on-this-site":{
