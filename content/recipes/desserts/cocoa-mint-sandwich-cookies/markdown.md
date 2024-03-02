@@ -1,6 +1,6 @@
 # Cocoa Mint Sandwich Cookies
 
-<img style="float:right;" src="https://drive.google.com/thumbnail?id=1Lg_szh7q8tiB4RFQDe068bdJnRpoJxYP" alt="Recipe Card Back">
+<img style="float:right;" src="https://drive.google.com/thumbnail?id=1Lg_szh7q8tiB4RFQDe068bdJnRpoJxYP" alt="Dino Cookies Michele made for Zack in February 2024">
 
 ## Cookie Ingredients:
 - 3/4 cup butter
@@ -38,6 +38,7 @@
 ### Assembly:
 When cookies are cool, put together sandwich style with the mint frosting or frost each one if you prefer not to make sandwiches
 
+Credit to Michele Gilbert! 
 <img src="https://drive.google.com/thumbnail?id=1-Ch2hNLrvyx_OZEugWtAOml-Lh9nHiED" alt="Recipe Card Front">
 
 <img src="https://drive.google.com/thumbnail?id=1-EP1xFKG4rXde59pqha7SBlX7NPPaxYz" alt="Recipe Card Back">
