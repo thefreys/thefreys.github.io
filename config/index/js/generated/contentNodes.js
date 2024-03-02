@@ -329,7 +329,8 @@ export const contentNodes = {
 },
 "/blogs/kristy/2023/11":{
  "parent":"/blogs/kristy/2023",
- "navLabel":"11",
+  "title":`November`,
+ "navLabel":"November",
  "children":[
     "/blogs/kristy/2023/11/01",
  ],
@@ -349,7 +350,8 @@ export const contentNodes = {
 },
 "/blogs/kristy/2023/12":{
  "parent":"/blogs/kristy/2023",
- "navLabel":"12",
+  "title":`December`,
+ "navLabel":"December",
  "children":[
     "/blogs/kristy/2023/12/01",
  ],
@@ -370,16 +372,17 @@ export const contentNodes = {
 },
 "/blogs/kristy/2024":{
  "parent":"/blogs/kristy",
-  "title":`2024 - the year of the dragon`,
- "navLabel":"2024 - the year of the dragon",
+ "navLabel":"2024",
  "children":[
     "/blogs/kristy/2024/01",
     "/blogs/kristy/2024/02",
+    "/blogs/kristy/2024/03",
  ],
 },
 "/blogs/kristy/2024/01":{
  "parent":"/blogs/kristy/2024",
- "navLabel":"01",
+  "title":`January`,
+ "navLabel":"January",
  "children":[
     "/blogs/kristy/2024/01/20",
  ],
@@ -399,14 +402,14 @@ export const contentNodes = {
 },
 "/blogs/kristy/2024/02":{
  "parent":"/blogs/kristy/2024",
- "navLabel":"02",
+  "title":`February`,
+ "navLabel":"February",
  "children":[
     "/blogs/kristy/2024/02/10",
     "/blogs/kristy/2024/02/11",
     "/blogs/kristy/2024/02/14",
     "/blogs/kristy/2024/02/15",
     "/blogs/kristy/2024/02/19",
-    "/blogs/kristy/2024/02/27",
  ],
 },
 "/blogs/kristy/2024/02/10":{
@@ -671,57 +674,25 @@ export const contentNodes = {
  "children":[
  ],
 },
-"/blogs/kristy/2024/02/27":{
- "parent":"/blogs/kristy/2024/02",
- "navLabel":"27",
+"/blogs/kristy/2024/03":{
+ "parent":"/blogs/kristy/2024",
+  "title":`March`,
+ "navLabel":"March",
  "children":[
-    "/blogs/kristy/2024/02/27/treeview",
+    "/blogs/kristy/2024/03/02",
  ],
 },
-"/blogs/kristy/2024/02/27/treeview":{
- "parent":"/blogs/kristy/2024/02/27",
-  "title":`Nested unordered list as a treeview`,
- "navLabel":"Nested unordered list as a treeview",
+"/blogs/kristy/2024/03/02":{
+ "parent":"/blogs/kristy/2024/03",
+ "navLabel":"02",
  "children":[
-    "/blogs/kristy/2024/02/27/treeview/AI-answers",
+    "/blogs/kristy/2024/03/02/working-on-this-site",
  ],
 },
-"/blogs/kristy/2024/02/27/treeview/AI-answers":{
- "parent":"/blogs/kristy/2024/02/27/treeview",
-  "title":`How multiple AIs answered`,
- "navLabel":"How multiple AIs answered",
- "children":[
-    "/blogs/kristy/2024/02/27/treeview/AI-answers/bing",
-    "/blogs/kristy/2024/02/27/treeview/AI-answers/chatgpt",
-    "/blogs/kristy/2024/02/27/treeview/AI-answers/claude",
-    "/blogs/kristy/2024/02/27/treeview/AI-answers/gemini",
- ],
-},
-"/blogs/kristy/2024/02/27/treeview/AI-answers/bing":{
- "parent":"/blogs/kristy/2024/02/27/treeview/AI-answers",
-  "title":`Response from Bing Copilot`,
- "navLabel":"Response from Bing Copilot",
- "children":[
- ],
-},
-"/blogs/kristy/2024/02/27/treeview/AI-answers/chatgpt":{
- "parent":"/blogs/kristy/2024/02/27/treeview/AI-answers",
-  "title":`Response from ChatGPT 3.5`,
- "navLabel":"Response from ChatGPT 3.5",
- "children":[
- ],
-},
-"/blogs/kristy/2024/02/27/treeview/AI-answers/claude":{
- "parent":"/blogs/kristy/2024/02/27/treeview/AI-answers",
-  "title":`Response from Claude`,
- "navLabel":"Response from Claude",
- "children":[
- ],
-},
-"/blogs/kristy/2024/02/27/treeview/AI-answers/gemini":{
- "parent":"/blogs/kristy/2024/02/27/treeview/AI-answers",
-  "title":`Response from Gemini`,
- "navLabel":"Response from Gemini",
+"/blogs/kristy/2024/03/02/working-on-this-site":{
+ "parent":"/blogs/kristy/2024/03/02",
+  "title":`Working on this site`,
+ "navLabel":"Working on this site",
  "children":[
  ],
 },

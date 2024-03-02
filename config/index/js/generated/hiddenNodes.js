@@ -6,7 +6,6 @@ export const hiddenNodes = [
 "/blogs/kristy/2024/02/14/date-string-formats/AI-answers",
 "/blogs/kristy/2024/02/15/family-tree-as-web-page/AI-answers",
 "/blogs/kristy/2024/02/19/treeview/AI-answers",
-"/blogs/kristy/2024/02/27/treeview/AI-answers",
 "/coding/web-design",
 "/recipes/what-did-ai-say",
 ]

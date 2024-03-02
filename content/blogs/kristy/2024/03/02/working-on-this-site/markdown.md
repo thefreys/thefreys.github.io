@@ -1,0 +1,5 @@
+I've been working on how to interpret javascript and css files put in the content directory tree by a content editor. I decided that each node could have css and javascript which only apply to the node. To make that possible, create files named css.css and javascript.js in the node folder.
+
+For more advanced content editors who understand how css and javascript are interpreted from an inheritance perspective, nodes can also contain an ancestor.css file and an ancestor.js file.  These files will be applied to the node page itself, as well as all descendant node pages.
+
+The [README.md](https://github.com/thefreys/thefreys.github.io/blob/main/content/README.md) in the [content directory](https://github.com/thefreys/thefreys.github.io/blob/main/content) of the github repository lists all the content node files supported so far.

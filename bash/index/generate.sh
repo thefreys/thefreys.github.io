@@ -29,6 +29,7 @@ cd "${rootdir}"
 echo "export const ${jsvar} = {" > "${tmpoutfile}"
 echo "$(date): Generating the contentNode javascript object (${jsvar}.js)"
 find content -type d -print | xargs -I {} ls -d {} | sort | while read nodepath; do
+    touch "${nodepath}/editor_notes.md"
     node="/${nodepath}"
     node=${node:8}
     if [[ "${node}" = "" ]]; then
