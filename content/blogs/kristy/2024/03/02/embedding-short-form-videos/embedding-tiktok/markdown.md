@@ -4,7 +4,7 @@ This is basically what tiktok says:
 * Click the Share button (right-facing arrow icon), and then click Embed
 * From the popup window, copy and paste the code into the destination webpage
 
-It did not work for me until I moved the script tag into the head of the html. Even then it produces a lot of security warnings in the console. I removed it from the head and left it in the body here in a not-working sate. Boooooo.
+It did not work for me until I moved the script tag into the head of the html. Even then it produces a lot of security warnings in the console. I removed it from the head and left it in the body here in a not-working state. Boooooo.
 
 Code:
 ```html
