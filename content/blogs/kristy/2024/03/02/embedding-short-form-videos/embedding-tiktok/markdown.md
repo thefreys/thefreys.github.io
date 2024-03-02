@@ -1,10 +1,8 @@
-This is basically what tiktok says:
+This is basically what TikTok says:
 
 * Go to the video in a non-mobile browser
 * Click the Share button (right-facing arrow icon), and then click Embed
 * From the popup window, copy and paste the code into the destination webpage
-
-It did not work for me until I moved the script tag into the head of the html. Even then it produces a lot of security warnings in the console. I removed it from the head and left it in the body here in a not-working sate. Boooooo.
 
 Code:
 ```html

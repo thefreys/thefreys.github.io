@@ -6,4 +6,4 @@ I post each video on the following short form video platforms:
 * [Facebook reels](https://www.facebook.com/effariwhy/reels_tab)
 * [TikTok](https://www.tiktok.com/@effariwhy)
 
-Not every platform offers an easy way to embed. Let's see which ones are possible. So far I only have one working and it's Youtube. Instagram requires my entire account to be public in order to use their embed link. TikTok gives me awful embed code with a script tag in it. See for yourself:
+Not every platform offers an easy way to embed. Let's see which ones are possible. Instagram requires my entire account to be public in order to use their embed link and I'm not doing that. See for yourself:
