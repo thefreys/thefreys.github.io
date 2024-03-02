@@ -61,6 +61,7 @@ export const markdownNodes = [
 "/blogs/kristy/2024/02/19/treeview",
 "/blogs/kristy/2024/02",
 "/blogs/kristy/2024/03/02/embedding-short-form-videos/embedding-tiktok",
+"/blogs/kristy/2024/03/02/embedding-short-form-videos/embedding-youtube-shorts",
 "/blogs/kristy/2024/03/02/embedding-short-form-videos",
 "/blogs/kristy/2024/03/02/working-on-this-site",
 "/blogs/kristy/2024/03",

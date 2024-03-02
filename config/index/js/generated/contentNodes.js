@@ -696,12 +696,20 @@ export const contentNodes = {
  "navLabel":"Embedding short form videos",
  "children":[
     "/blogs/kristy/2024/03/02/embedding-short-form-videos/embedding-tiktok",
+    "/blogs/kristy/2024/03/02/embedding-short-form-videos/embedding-youtube-shorts",
  ],
 },
 "/blogs/kristy/2024/03/02/embedding-short-form-videos/embedding-tiktok":{
  "parent":"/blogs/kristy/2024/03/02/embedding-short-form-videos",
   "title":`Embedding TikTok`,
  "navLabel":"Embedding TikTok",
+ "children":[
+ ],
+},
+"/blogs/kristy/2024/03/02/embedding-short-form-videos/embedding-youtube-shorts":{
+ "parent":"/blogs/kristy/2024/03/02/embedding-short-form-videos",
+  "title":`Embedding a Youtube short`,
+ "navLabel":"Embedding a Youtube short",
  "children":[
  ],
 },
