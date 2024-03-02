@@ -3,7 +3,7 @@ source "$(dirname ${BASH_SOURCE[0]})/config.sh"
 tmpoutfile="${tmpoutdir}/nodeRelation.js"
 cd "${rootdir}"
 echo "export const nodeChildren = {" > "${tmpoutfile}"
-find content -type d -print | xargs -I {} ls -d {} | while read nodepath; do
+find content -type d -print | xargs -I {} ls -d {} | sort | while read nodepath; do
     node="/${nodepath}"
     node=${node:8}
     if [[ "${node}" = "" ]]; then
@@ -13,7 +13,7 @@ find content -type d -print | xargs -I {} ls -d {} | while read nodepath; do
     echo " \"parent\":\"$(dirname ${node})\"," >> "${tmpoutfile}"
     
     echo " \"children\":[" >> "${tmpoutfile}"   
-    find ${nodepath} -maxdepth 1 -type d | while read childnodepath; do
+    find ${nodepath} -maxdepth 1 -type d | sort | while read childnodepath; do
         childnode="/${childnodepath}"
         childnode=${childnode:8}
         if [[ "${childnode}" = "" ]]; then

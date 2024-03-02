@@ -406,6 +406,7 @@ export const contentNodes = {
     "/blogs/kristy/2024/02/14",
     "/blogs/kristy/2024/02/15",
     "/blogs/kristy/2024/02/19",
+    "/blogs/kristy/2024/02/27",
  ],
 },
 "/blogs/kristy/2024/02/10":{
@@ -670,11 +671,170 @@ export const contentNodes = {
  "children":[
  ],
 },
+"/blogs/kristy/2024/02/27":{
+ "parent":"/blogs/kristy/2024/02",
+ "navLabel":"27",
+ "children":[
+    "/blogs/kristy/2024/02/27/treeview",
+ ],
+},
+"/blogs/kristy/2024/02/27/treeview":{
+ "parent":"/blogs/kristy/2024/02/27",
+  "title":`Nested unordered list as a treeview`,
+ "navLabel":"Nested unordered list as a treeview",
+ "children":[
+    "/blogs/kristy/2024/02/27/treeview/AI-answers",
+ ],
+},
+"/blogs/kristy/2024/02/27/treeview/AI-answers":{
+ "parent":"/blogs/kristy/2024/02/27/treeview",
+  "title":`How multiple AIs answered`,
+ "navLabel":"How multiple AIs answered",
+ "children":[
+    "/blogs/kristy/2024/02/27/treeview/AI-answers/bing",
+    "/blogs/kristy/2024/02/27/treeview/AI-answers/chatgpt",
+    "/blogs/kristy/2024/02/27/treeview/AI-answers/claude",
+    "/blogs/kristy/2024/02/27/treeview/AI-answers/gemini",
+ ],
+},
+"/blogs/kristy/2024/02/27/treeview/AI-answers/bing":{
+ "parent":"/blogs/kristy/2024/02/27/treeview/AI-answers",
+  "title":`Response from Bing Copilot`,
+ "navLabel":"Response from Bing Copilot",
+ "children":[
+ ],
+},
+"/blogs/kristy/2024/02/27/treeview/AI-answers/chatgpt":{
+ "parent":"/blogs/kristy/2024/02/27/treeview/AI-answers",
+  "title":`Response from ChatGPT 3.5`,
+ "navLabel":"Response from ChatGPT 3.5",
+ "children":[
+ ],
+},
+"/blogs/kristy/2024/02/27/treeview/AI-answers/claude":{
+ "parent":"/blogs/kristy/2024/02/27/treeview/AI-answers",
+  "title":`Response from Claude`,
+ "navLabel":"Response from Claude",
+ "children":[
+ ],
+},
+"/blogs/kristy/2024/02/27/treeview/AI-answers/gemini":{
+ "parent":"/blogs/kristy/2024/02/27/treeview/AI-answers",
+  "title":`Response from Gemini`,
+ "navLabel":"Response from Gemini",
+ "children":[
+ ],
+},
 "/coding":{
  "parent":"/",
  "navLabel":"coding",
  "children":[
+    "/coding/this-site",
     "/coding/web-design",
+ ],
+},
+"/coding/this-site":{
+ "parent":"/coding",
+ "navLabel":"this-site",
+ "children":[
+    "/coding/this-site/css",
+    "/coding/this-site/github",
+    "/coding/this-site/html",
+    "/coding/this-site/javascript",
+    "/coding/this-site/libraries",
+    "/coding/this-site/markdown",
+ ],
+},
+"/coding/this-site/css":{
+ "parent":"/coding/this-site",
+ "navLabel":"css",
+ "children":[
+    "/coding/this-site/css/ancestor-demo",
+ ],
+},
+"/coding/this-site/css/ancestor-demo":{
+ "parent":"/coding/this-site/css",
+ "navLabel":"ancestor-demo",
+ "children":[
+    "/coding/this-site/css/ancestor-demo/demo-child",
+ ],
+},
+"/coding/this-site/css/ancestor-demo/demo-child":{
+ "parent":"/coding/this-site/css/ancestor-demo",
+ "navLabel":"demo-child",
+ "children":[
+    "/coding/this-site/css/ancestor-demo/demo-child/demo-grand-child",
+ ],
+},
+"/coding/this-site/css/ancestor-demo/demo-child/demo-grand-child":{
+ "parent":"/coding/this-site/css/ancestor-demo/demo-child",
+ "navLabel":"demo-grand-child",
+ "children":[
+    "/coding/this-site/css/ancestor-demo/demo-child/demo-grand-child/demo-great-grand-child",
+ ],
+},
+"/coding/this-site/css/ancestor-demo/demo-child/demo-grand-child/demo-great-grand-child":{
+ "parent":"/coding/this-site/css/ancestor-demo/demo-child/demo-grand-child",
+ "navLabel":"demo-great-grand-child",
+ "children":[
+ ],
+},
+"/coding/this-site/github":{
+ "parent":"/coding/this-site",
+ "navLabel":"github",
+ "children":[
+ ],
+},
+"/coding/this-site/html":{
+ "parent":"/coding/this-site",
+ "navLabel":"html",
+ "children":[
+ ],
+},
+"/coding/this-site/javascript":{
+ "parent":"/coding/this-site",
+ "navLabel":"javascript",
+ "children":[
+    "/coding/this-site/javascript/ancestor-demo",
+ ],
+},
+"/coding/this-site/javascript/ancestor-demo":{
+ "parent":"/coding/this-site/javascript",
+ "navLabel":"ancestor-demo",
+ "children":[
+    "/coding/this-site/javascript/ancestor-demo/demo-child",
+ ],
+},
+"/coding/this-site/javascript/ancestor-demo/demo-child":{
+ "parent":"/coding/this-site/javascript/ancestor-demo",
+ "navLabel":"demo-child",
+ "children":[
+    "/coding/this-site/javascript/ancestor-demo/demo-child/demo-grand-child",
+ ],
+},
+"/coding/this-site/javascript/ancestor-demo/demo-child/demo-grand-child":{
+ "parent":"/coding/this-site/javascript/ancestor-demo/demo-child",
+ "navLabel":"demo-grand-child",
+ "children":[
+    "/coding/this-site/javascript/ancestor-demo/demo-child/demo-grand-child/demo-great-grand-child",
+ ],
+},
+"/coding/this-site/javascript/ancestor-demo/demo-child/demo-grand-child/demo-great-grand-child":{
+ "parent":"/coding/this-site/javascript/ancestor-demo/demo-child/demo-grand-child",
+ "navLabel":"demo-great-grand-child",
+ "children":[
+ ],
+},
+"/coding/this-site/libraries":{
+ "parent":"/coding/this-site",
+ "navLabel":"libraries",
+ "children":[
+ ],
+},
+"/coding/this-site/markdown":{
+ "parent":"/coding/this-site",
+ "navLabel":"markdown",
+ "children":[
  ],
 },
 "/coding/web-design":{

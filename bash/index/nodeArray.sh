@@ -6,7 +6,7 @@ tmpoutfile="${tmpoutdir}/${jsvar}.js"
 cd "${rootdir}"
 echo "export const ${jsvar} = [" > "${tmpoutfile}"
 if [[ "${searchfile}" = "" ]]; then
-    find content -type d -print | xargs -I {} ls -d {} | while read nodepath; do
+    find content -type d -print | xargs -I {} ls -d {} | sort | while read nodepath; do
         node="/${nodepath}"
         node=${node:8}
         if [[ "${node}" = "" ]]; then
