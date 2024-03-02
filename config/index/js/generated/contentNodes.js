@@ -704,7 +704,7 @@ export const contentNodes = {
  "navLabel":"Recipes",
  "children":[
     "/recipes/desserts",
-    "/recipes/meats",
+    "/recipes/main-courses",
     "/recipes/sides",
     "/recipes/what-did-ai-say",
  ],
@@ -772,18 +772,26 @@ export const contentNodes = {
  "children":[
  ],
 },
-"/recipes/meats":{
+"/recipes/main-courses":{
  "parent":"/recipes",
-  "title":`Meats`,
- "navLabel":"Meats",
+  "title":`Main courses`,
+ "navLabel":"Main courses",
  "children":[
-    "/recipes/meats/chicken-meatballs",
+    "/recipes/main-courses/chicken-meatballs",
+    "/recipes/main-courses/shepherds-pie",
  ],
 },
-"/recipes/meats/chicken-meatballs":{
- "parent":"/recipes/meats",
+"/recipes/main-courses/chicken-meatballs":{
+ "parent":"/recipes/main-courses",
   "title":`Chicken meatballs`,
  "navLabel":"Chicken meatballs",
+ "children":[
+ ],
+},
+"/recipes/main-courses/shepherds-pie":{
+ "parent":"/recipes/main-courses",
+  "title":`Shepherd's Pie`,
+ "navLabel":"Shepherd's Pie",
  "children":[
  ],
 },
