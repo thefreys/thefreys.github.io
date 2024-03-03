@@ -1,0 +1,24 @@
+### badge
+
+```html
+<p class="h1">Example heading <span class="badge bg-primary">New</span></p>
+<p class="h2">Example heading <span class="badge bg-secondary">New</span></p>
+<p class="h3">Example heading <span class="badge bg-success">New</span></p>
+<p class="h4">Example heading <span class="badge bg-danger">New</span></p>
+<p class="h5">Example heading <span class="badge text-bg-warning">New</span></p>
+<p class="h6">Example heading <span class="badge text-bg-info">New</span></p>
+<p class="h6">Example heading <span class="badge text-bg-light">New</span></p>
+<p class="h6">Example heading <span class="badge bg-dark">New</span></p>
+```  
+
+```html
+
+<span class="badge rounded-pill bg-primary">Primary</span>
+<span class="badge rounded-pill bg-secondary">Secondary</span>
+<span class="badge rounded-pill bg-success">Success</span>
+<span class="badge rounded-pill bg-danger">Danger</span>
+<span class="badge rounded-pill text-bg-warning">Warning</span>
+<span class="badge rounded-pill text-bg-info">Info</span>
+<span class="badge rounded-pill text-bg-light">Light</span>
+<span class="badge rounded-pill bg-dark">Dark</span>
+```
