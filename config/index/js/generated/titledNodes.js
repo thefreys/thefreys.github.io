@@ -31,7 +31,7 @@ export const titledNodes = [
 "/activities/camping/gear-checklist",
 "/activities/camping/sample-trip",
 "/blogs/kristy/2023/11",
-"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet",
+"/blogs/kristy/2023/12/01/bootstrap-reference",
 "/blogs/kristy/2023/12",
 "/blogs/kristy/2024/01/20/finding-new-recipes-to-try",
 "/blogs/kristy/2024/01",

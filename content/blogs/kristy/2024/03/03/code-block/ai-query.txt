@@ -1,0 +1,1 @@
+I need an html snippet which will display a python code snippet and make it easy for the visitor to copy the python code snippet.

@@ -25,6 +25,7 @@ export const markdownNodes = [
 "/activities/camping/sample-trip",
 "/blogs/kristy/2023/11/01/markdown-cheat-sheet",
 "/blogs/kristy/2023/11",
+"/blogs/kristy/2023/12/01/bootstrap-reference",
 "/blogs/kristy/2023/12",
 "/blogs/kristy/2023",
 "/blogs/kristy/2024/01/20/finding-new-recipes-to-try",
