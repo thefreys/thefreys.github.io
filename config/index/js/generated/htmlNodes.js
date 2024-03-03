@@ -5,6 +5,7 @@ export const htmlNodes = [
 "/blogs/kristy/2024/03/02/embedding-short-form-videos/embedding-tiktok",
 "/blogs/kristy/2024/03/02/embedding-short-form-videos/embedding-youtube-shorts",
 "/blogs/kristy/2024/03/02/embedding-short-form-videos",
+"/blogs/kristy/2024/03/03/google-tag-manager-vs-analytics",
 "/coding/this-site/javascript/ancestor-demo/demo-child/demo-grand-child/demo-great-grand-child",
 "/coding/this-site/javascript/ancestor-demo/demo-child/demo-grand-child",
 "/coding/this-site/javascript/ancestor-demo/demo-child",

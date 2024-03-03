@@ -7,6 +7,7 @@ export const contentNodes = {
     "/activities",
     "/blogs",
     "/coding",
+    "/digital-curation",
     "/img",
     "/recipes",
     "/sitemap",
@@ -360,13 +361,34 @@ export const contentNodes = {
  "parent":"/blogs/kristy/2023/12",
  "navLabel":"01",
  "children":[
-    "/blogs/kristy/2023/12/01/Bootstrap-version-5.3-Cheatsheet",
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet",
  ],
 },
-"/blogs/kristy/2023/12/01/Bootstrap-version-5.3-Cheatsheet":{
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet":{
  "parent":"/blogs/kristy/2023/12/01",
-  "title":`Bootstrap Version 5.3 Cheatsheet`,
- "navLabel":"Bootstrap Version 5.3 Cheatsheet",
+  "title":`Bootstrap cheatsheet v5.3`,
+ "navLabel":"Bootstrap cheatsheet v5.3",
+ "children":[
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components",
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/content",
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/forms",
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet",
+ "navLabel":"components",
+ "children":[
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/content":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet",
+ "navLabel":"content",
+ "children":[
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/forms":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet",
+ "navLabel":"forms",
  "children":[
  ],
 },
@@ -680,6 +702,7 @@ export const contentNodes = {
  "navLabel":"March",
  "children":[
     "/blogs/kristy/2024/03/02",
+    "/blogs/kristy/2024/03/03",
  ],
 },
 "/blogs/kristy/2024/03/02":{
@@ -725,6 +748,20 @@ export const contentNodes = {
  "parent":"/blogs/kristy/2024/03/02",
   "title":`Working on this site`,
  "navLabel":"Working on this site",
+ "children":[
+ ],
+},
+"/blogs/kristy/2024/03/03":{
+ "parent":"/blogs/kristy/2024/03",
+ "navLabel":"03",
+ "children":[
+    "/blogs/kristy/2024/03/03/google-tag-manager-vs-analytics",
+ ],
+},
+"/blogs/kristy/2024/03/03/google-tag-manager-vs-analytics":{
+ "parent":"/blogs/kristy/2024/03/03",
+  "title":`When does a website need Google Tag Manager instead of Google Analytics?`,
+ "navLabel":"When does a website need Google Tag Manager instead of Google Analytics?",
  "children":[
  ],
 },
@@ -852,6 +889,33 @@ export const contentNodes = {
  "parent":"/coding/web-design",
   "title":`Sitemaps`,
  "navLabel":"Sitemaps",
+ "children":[
+ ],
+},
+"/digital-curation":{
+ "parent":"/",
+ "navLabel":"digital-curation",
+ "children":[
+    "/digital-curation/images",
+ ],
+},
+"/digital-curation/images":{
+ "parent":"/digital-curation",
+ "navLabel":"images",
+ "children":[
+    "/digital-curation/images/openclipart.org",
+ ],
+},
+"/digital-curation/images/openclipart.org":{
+ "parent":"/digital-curation/images",
+ "navLabel":"openclipart.org",
+ "children":[
+    "/digital-curation/images/openclipart.org/monthly-calendars",
+ ],
+},
+"/digital-curation/images/openclipart.org/monthly-calendars":{
+ "parent":"/digital-curation/images/openclipart.org",
+ "navLabel":"monthly-calendars",
  "children":[
  ],
 },

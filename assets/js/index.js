@@ -74,9 +74,6 @@ function buildSiteMapItems(items, parent, level=0) {
 
 function buildAreaMap(parent,node) {
     console.log('buildAreaMap for '+ node);
-    if (node == '/404' && typeof contentNodes[node] === 'undefined') {
-        return;
-    }
     if (parent === null || parent === undefined) {
         return;
     }
@@ -86,9 +83,6 @@ function buildAreaMap(parent,node) {
 }
 
 function buildBreadcrumbs() {
-    if (request.node == '/404' && typeof contentNodes[request.node] === 'undefined') {
-        return;
-    }
     var breadcrumbs = '';
     var breadcrumbItem = breadcrumbItemTemplate;
     breadcrumbItem = breadcrumbItem.replace(/{{navLabel}}/g, 'Home');
@@ -358,10 +352,7 @@ export function init() {
     }
     // handle when node is not defined
     if (typeof contentNodes[request.node] === 'undefined') {
-        if (request.node == '/404') {
-            window.location.href = 'index.html?node=/&orig_node=' + request.node;
-        }
-        window.location.href = 'index.html?node=/404&orig_node=' + request.node;
+        window.location.href = 'index.html?node=/&error=404&orig_node=' + request.node;
         return;
     }
     // continue on with defined node
