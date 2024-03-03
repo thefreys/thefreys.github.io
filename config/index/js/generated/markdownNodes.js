@@ -66,6 +66,7 @@ export const markdownNodes = [
 "/blogs/kristy/2024/03/02/embedding-short-form-videos",
 "/blogs/kristy/2024/03/02/working-on-this-site",
 "/blogs/kristy/2024/03/03/google-tag-manager-vs-analytics",
+"/blogs/kristy/2024/03/03/tater-tot-the-orange-girl-cat",
 "/blogs/kristy/2024/03",
 "/coding/this-site/bootstrap",
 "/coding/this-site/css/ancestor-demo/demo-child/demo-grand-child/demo-great-grand-child",

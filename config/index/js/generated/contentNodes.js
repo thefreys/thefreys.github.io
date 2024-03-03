@@ -734,13 +734,34 @@ export const contentNodes = {
  "parent":"/blogs/kristy/2024/03",
  "navLabel":"03",
  "children":[
+    "/blogs/kristy/2024/03/03/code-block",
     "/blogs/kristy/2024/03/03/google-tag-manager-vs-analytics",
+    "/blogs/kristy/2024/03/03/inserting-element-after",
+    "/blogs/kristy/2024/03/03/tater-tot-the-orange-girl-cat",
+ ],
+},
+"/blogs/kristy/2024/03/03/code-block":{
+ "parent":"/blogs/kristy/2024/03/03",
+ "navLabel":"code-block",
+ "children":[
  ],
 },
 "/blogs/kristy/2024/03/03/google-tag-manager-vs-analytics":{
  "parent":"/blogs/kristy/2024/03/03",
   "title":`When does a website need Google Tag Manager instead of Google Analytics?`,
  "navLabel":"When does a website need Google Tag Manager instead of Google Analytics?",
+ "children":[
+ ],
+},
+"/blogs/kristy/2024/03/03/inserting-element-after":{
+ "parent":"/blogs/kristy/2024/03/03",
+ "navLabel":"inserting-element-after",
+ "children":[
+ ],
+},
+"/blogs/kristy/2024/03/03/tater-tot-the-orange-girl-cat":{
+ "parent":"/blogs/kristy/2024/03/03",
+ "navLabel":"tater-tot-the-orange-girl-cat",
  "children":[
  ],
 },
