@@ -72,6 +72,7 @@ export const titledNodes = [
 "/blogs/kristy/2024/03/02/working-on-this-site",
 "/blogs/kristy/2024/03/03/google-tag-manager-vs-analytics",
 "/blogs/kristy/2024/03",
+"/coding/this-site/bootstrap/cheatsheet-v5.3",
 "/coding/web-design/sitemaps",
 "/coding/web-design",
 "/recipes/desserts/almond-cake",

@@ -378,17 +378,227 @@ export const contentNodes = {
  "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet",
  "navLabel":"components",
  "children":[
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/accordian",
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/alerts",
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/badge",
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/breadcrumb",
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/button-group",
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/buttons",
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/card",
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/carousel",
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/dropdowns",
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/list-group",
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/modal",
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/navbar",
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/navs",
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/pagination",
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/popovers",
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/progress",
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/scrollspy",
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/spinners",
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/toasts",
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/tooltips",
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/accordian":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components",
+ "navLabel":"accordian",
+ "children":[
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/alerts":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components",
+ "navLabel":"alerts",
+ "children":[
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/badge":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components",
+ "navLabel":"badge",
+ "children":[
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/breadcrumb":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components",
+ "navLabel":"breadcrumb",
+ "children":[
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/button-group":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components",
+ "navLabel":"button-group",
+ "children":[
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/buttons":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components",
+ "navLabel":"buttons",
+ "children":[
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/card":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components",
+ "navLabel":"card",
+ "children":[
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/carousel":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components",
+ "navLabel":"carousel",
+ "children":[
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/dropdowns":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components",
+ "navLabel":"dropdowns",
+ "children":[
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/list-group":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components",
+ "navLabel":"list-group",
+ "children":[
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/modal":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components",
+ "navLabel":"modal",
+ "children":[
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/navbar":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components",
+ "navLabel":"navbar",
+ "children":[
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/navs":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components",
+ "navLabel":"navs",
+ "children":[
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/pagination":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components",
+ "navLabel":"pagination",
+ "children":[
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/popovers":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components",
+ "navLabel":"popovers",
+ "children":[
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/progress":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components",
+ "navLabel":"progress",
+ "children":[
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/scrollspy":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components",
+ "navLabel":"scrollspy",
+ "children":[
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/spinners":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components",
+ "navLabel":"spinners",
+ "children":[
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/toasts":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components",
+ "navLabel":"toasts",
+ "children":[
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components/tooltips":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/components",
+ "navLabel":"tooltips",
+ "children":[
  ],
 },
 "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/content":{
  "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet",
  "navLabel":"content",
  "children":[
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/content/figures",
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/content/images",
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/content/tables",
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/content/typography",
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/content/figures":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/content",
+ "navLabel":"figures",
+ "children":[
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/content/images":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/content",
+ "navLabel":"images",
+ "children":[
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/content/tables":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/content",
+ "navLabel":"tables",
+ "children":[
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/content/typography":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/content",
+ "navLabel":"typography",
+ "children":[
  ],
 },
 "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/forms":{
  "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet",
  "navLabel":"forms",
+ "children":[
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/forms/disabled-forms",
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/forms/floating-labels",
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/forms/input-group",
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/forms/overview",
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/forms/sizing",
+    "/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/forms/validation",
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/forms/disabled-forms":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/forms",
+ "navLabel":"disabled-forms",
+ "children":[
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/forms/floating-labels":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/forms",
+ "navLabel":"floating-labels",
+ "children":[
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/forms/input-group":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/forms",
+ "navLabel":"input-group",
+ "children":[
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/forms/overview":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/forms",
+ "navLabel":"overview",
+ "children":[
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/forms/sizing":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/forms",
+ "navLabel":"sizing",
+ "children":[
+ ],
+},
+"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/forms/validation":{
+ "parent":"/blogs/kristy/2023/12/01/bootstrap-v5.3-cheatsheet/forms",
+ "navLabel":"validation",
  "children":[
  ],
 },
@@ -777,12 +987,264 @@ export const contentNodes = {
  "parent":"/coding",
  "navLabel":"this-site",
  "children":[
+    "/coding/this-site/bootstrap",
     "/coding/this-site/css",
     "/coding/this-site/github",
     "/coding/this-site/html",
     "/coding/this-site/javascript",
     "/coding/this-site/libraries",
     "/coding/this-site/markdown",
+ ],
+},
+"/coding/this-site/bootstrap":{
+ "parent":"/coding/this-site",
+ "navLabel":"bootstrap",
+ "children":[
+    "/coding/this-site/bootstrap/cheatsheet-v5.3",
+ ],
+},
+"/coding/this-site/bootstrap/ancestor.js":{
+ "parent":"/coding/this-site/bootstrap",
+ "navLabel":"ancestor.js",
+ "children":[
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3":{
+ "parent":"/coding/this-site/bootstrap",
+  "title":`Bootstrap cheatsheet v5.3`,
+ "navLabel":"Bootstrap cheatsheet v5.3",
+ "children":[
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/components",
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/content",
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/forms",
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/components":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3",
+ "navLabel":"components",
+ "children":[
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/components/accordian",
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/components/alerts",
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/components/badge",
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/components/breadcrumb",
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/components/button-group",
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/components/buttons",
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/components/card",
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/components/carousel",
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/components/dropdowns",
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/components/list-group",
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/components/modal",
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/components/navbar",
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/components/navs",
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/components/pagination",
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/components/popovers",
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/components/progress",
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/components/scrollspy",
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/components/spinners",
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/components/toasts",
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/components/tooltips",
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/components/accordian":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3/components",
+ "navLabel":"accordian",
+ "children":[
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/components/alerts":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3/components",
+ "navLabel":"alerts",
+ "children":[
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/components/badge":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3/components",
+ "navLabel":"badge",
+ "children":[
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/components/breadcrumb":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3/components",
+ "navLabel":"breadcrumb",
+ "children":[
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/components/button-group":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3/components",
+ "navLabel":"button-group",
+ "children":[
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/components/buttons":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3/components",
+ "navLabel":"buttons",
+ "children":[
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/components/card":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3/components",
+ "navLabel":"card",
+ "children":[
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/components/carousel":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3/components",
+ "navLabel":"carousel",
+ "children":[
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/components/dropdowns":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3/components",
+ "navLabel":"dropdowns",
+ "children":[
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/components/list-group":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3/components",
+ "navLabel":"list-group",
+ "children":[
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/components/modal":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3/components",
+ "navLabel":"modal",
+ "children":[
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/components/navbar":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3/components",
+ "navLabel":"navbar",
+ "children":[
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/components/navs":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3/components",
+ "navLabel":"navs",
+ "children":[
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/components/pagination":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3/components",
+ "navLabel":"pagination",
+ "children":[
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/components/popovers":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3/components",
+ "navLabel":"popovers",
+ "children":[
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/components/progress":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3/components",
+ "navLabel":"progress",
+ "children":[
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/components/scrollspy":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3/components",
+ "navLabel":"scrollspy",
+ "children":[
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/components/spinners":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3/components",
+ "navLabel":"spinners",
+ "children":[
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/components/toasts":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3/components",
+ "navLabel":"toasts",
+ "children":[
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/components/tooltips":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3/components",
+ "navLabel":"tooltips",
+ "children":[
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/content":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3",
+ "navLabel":"content",
+ "children":[
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/content/figures",
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/content/images",
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/content/tables",
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/content/typography",
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/content/figures":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3/content",
+ "navLabel":"figures",
+ "children":[
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/content/images":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3/content",
+ "navLabel":"images",
+ "children":[
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/content/tables":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3/content",
+ "navLabel":"tables",
+ "children":[
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/content/typography":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3/content",
+ "navLabel":"typography",
+ "children":[
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/forms":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3",
+ "navLabel":"forms",
+ "children":[
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/forms/disabled-forms",
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/forms/floating-labels",
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/forms/input-group",
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/forms/overview",
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/forms/sizing",
+    "/coding/this-site/bootstrap/cheatsheet-v5.3/forms/validation",
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/forms/disabled-forms":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3/forms",
+ "navLabel":"disabled-forms",
+ "children":[
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/forms/floating-labels":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3/forms",
+ "navLabel":"floating-labels",
+ "children":[
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/forms/input-group":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3/forms",
+ "navLabel":"input-group",
+ "children":[
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/forms/overview":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3/forms",
+ "navLabel":"overview",
+ "children":[
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/forms/sizing":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3/forms",
+ "navLabel":"sizing",
+ "children":[
+ ],
+},
+"/coding/this-site/bootstrap/cheatsheet-v5.3/forms/validation":{
+ "parent":"/coding/this-site/bootstrap/cheatsheet-v5.3/forms",
+ "navLabel":"validation",
+ "children":[
  ],
 },
 "/coding/this-site/css":{
