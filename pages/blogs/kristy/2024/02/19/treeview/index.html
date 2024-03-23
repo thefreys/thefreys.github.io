@@ -1,0 +1,396 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/dark.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<!-- This is where scripts with an external source url can be specified from a node's javascript -->
+<script id="scriptSlot1"></script><script id="scriptSlot2"></script><script id="scriptSlot3"></script><script id="scriptSlot4"></script><script id="scriptSlot5"></script><script id="scriptSlot6"></script><script id="scriptSlot7"></script><script id="scriptSlot8"></script><script id="scriptSlot9"></script>
+
+<link href="/assets/css/pages.css?version=20240323110655"  id="pagesCss" rel="stylesheet">
+
+<!-- This is where all the ancestor.css stylesheets are linked followed by the node's css.css in a style element -->
+
+<style id="nodeCss"></style>
+
+<script src="/assets/js/pages.js?version=20240323110655" type="module" id="pagesJs"></script>
+
+
+</head>
+<!-- If _title.txt exists, it will be written into the title -->
+<title>Nested unordered list as a treeview</title>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><span class="site-name"></span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navbarSupportedContentUl">
+
+      </ul>
+      
+      <!--
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      -->
+
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div id="breadcrumb-wrapper">
+<nav aria-label="breadcrumb">
+  <!-- This is populated with the list items created by the buildBreadcrumbs function in /assets/js/index.js -->
+  <ol class="breadcrumb" id="breadcrumbs"></ol>
+</nav>
+</div>
+
+<!-- This is where the node's markdown.md content is placed after it runs through the marked processor -->
+<div id="nodeMarkdown"></div>
+
+<!-- This is where the node's html.html content is placed -->
+<div id="nodeHtml"><div class="tabular-code-compare">
+
+<table class="table">
+<thead>
+<tr>
+<th>bing HTML</th>
+<th>chatgpt HTML</th>
+<th>claude HTML</th>
+<th>gemini HTML</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre><code id="code_bingHTML"></code></pre></td>
+<td><pre><code id="code_chatgptHTML"></code></pre></td>
+<td><pre><code id="code_claudeHTML"></code></pre></td>
+<td><pre><code id="code_geminiHTML"></code></pre></td>
+</tr>
+</tbody>
+</table>
+
+<table class="table">
+<thead>
+<tr>
+<th>bing CSS</th>
+<th>chatgpt CSS</th>
+<th>claude CSS</th>
+<th>gemini CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre><code id="code_bingCSS"></code></pre></td>
+<td><pre><code id="code_chatgptCSS"></code></pre></td>
+<td><pre><code id="code_claudeCSS"></code></pre></td>
+<td><pre><code id="code_geminiCSS"></code></pre></td>
+</tr>
+</tbody>
+</table>
+
+<table class="table">
+<thead>
+<tr>
+<th>bing JavaScript</th>
+<th>chatgpt JavaScript</th>
+<th>claude JavaScript</th>
+<th>gemini JavaScript</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre><code id="code_bingJS"></code></pre></td>
+<td><pre><code id="code_chatgptJS"></code></pre></td>
+<td><pre><code id="code_claudeJS"></code></pre></td>
+<td><pre><code id="code_geminiJS"></code></pre></td>
+</tr>
+</tbody>
+</table>
+
+</div></div>
+
+<!-- This is populated with the ul created by the buildAreaMap function in /assets/js/index.js -->
+<div id="area-map"></div>
+
+</div>
+
+<!-- This is where all the ancestor.js files are imported followed by the node's javascript.js import -->
+<script type="module" id="nodeJavascript">
+import * as ancestorJS6 from '/content/ancestor.js?version=20240323110655';
+
+import hljs from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/highlight.min.js';
+
+document.getElementById('code_bingCSS').innerHTML = hljs.highlight(`
+/* Remove default bullets */
+ul, #myUL {
+  list-style-type: none;
+}
+
+/* Remove margins and padding from the parent ul */
+#myUL {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the caret/arrow */
+.caret {
+  cursor: pointer;
+  user-select: none; /* Prevent text selection */
+}
+
+/* Create the caret/arrow with a unicode, and style it */
+.caret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+.caret-down::before {
+  transform: rotate(90deg);
+}
+
+/* Hide the nested list */
+.nested {
+  display: none;
+}
+
+/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+.active {
+  display: block;
+}
+`, {language: 'css'}).value;
+document.getElementById('code_bingJS').innerHTML = hljs.highlight(`
+var toggler = document.getElementsByClassName("caret");
+var i;
+
+for (i = 0; i < toggler.length; i++) {
+  toggler[i].addEventListener("click", function() {
+    this.parentElement.querySelector(".nested").classList.toggle("active");
+    this.classList.toggle("caret-down");
+  });
+}
+`, {language: 'js'}).value;
+document.getElementById('code_bingHTML').innerHTML = hljs.highlight(`
+<ul id="myUL">
+  <li><span class="caret">Beverages</span>
+    <ul class="nested">
+      <li>Water</li>
+      <li>Coffee</li>
+      <li><span class="caret">Tea</span>
+        <ul class="nested">
+          <li>Black Tea</li>
+          <li>White Tea</li>
+          <li><span class="caret">Green Tea</span>
+            <ul class="nested">
+              <li>Sencha</li>
+              <li>Gyokuro</li>
+              <li>Matcha</li>
+              <li>Pi Lo Chun</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+`, {language: 'html'}).value;
+document.getElementById('code_chatgptCSS').innerHTML = hljs.highlight(`
+/* Style for the treeview */
+.treeview {
+    list-style: none;
+    padding: 0;
+}
+
+/* Style for the treeview items */
+.treeview li {
+    margin: 0;
+    padding: 8px 0 8px 20px;
+    position: relative;
+}
+
+/* Style for the expand/collapse button */
+.treeview li:before {
+    content: "▶"; /* Unicode character for right arrow */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* Style for the expanded state */
+.treeview li.expanded:before {
+    content: "▼"; /* Unicode character for down arrow */
+}
+
+/* Style for nested lists */
+.treeview ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 20px;
+}
+    `, {language: 'css'}).value;
+    document.getElementById('code_chatgptHTML').innerHTML = hljs.highlight(`
+<ul class="treeview" id="myTree">
+  <li>Item 1
+    <ul>
+      <li>Subitem 1.1</li>
+      <li>Subitem 1.2
+        <ul>
+          <li>Subitem 1.2.1</li>
+          <li>Subitem 1.2.2</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Item 2</li>
+  <li>Item 3
+    <ul>
+      <li>Subitem 3.1</li>
+      <li>Subitem 3.2</li>
+    </ul>
+  </li>
+</ul>
+`, {language: 'html'}).value;
+document.getElementById('code_chatgptJS').innerHTML = hljs.highlight(`
+// Add click event listener to each treeview item
+var treeviewItems = document.querySelectorAll('.treeview li');
+treeviewItems.forEach(function(item) {
+item.addEventListener('click', function() {
+    if (item.classList.contains('expanded')) {
+    item.classList.remove('expanded');
+    } else {
+    item.classList.add('expanded');
+    }
+});
+});
+  `, {language: 'js'}).value;
+document.getElementById('code_claudeHTML').innerHTML = hljs.highlight(`
+<ul class="tree">
+  <li>
+    <span class="caret">Parent 1</span> 
+    <ul class="nested">
+      <li>Child 1</li>
+      <li>Child 2</li>
+    </ul>
+  </li>
+  <li>
+    <span class="caret">Parent 2</span>
+    <ul class="nested">
+      <li>Child 1</li> 
+      <li>
+        <span class="caret">Child 2</span>
+        <ul class="nested">
+          <li>Grandchild 1</li>
+          <li>Grandchild 2</li>
+        </ul>  
+      </li>
+    </ul>
+  </li>
+</ul>
+`, {language: 'html'}).value;
+document.getElementById('code_claudeCSS').innerHTML = hljs.highlight(`
+/* Hide nested lists */
+.nested {
+  display: none;
+}
+
+/* Add arrow before parent list items */
+.caret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block; 
+  margin-right: 6px;
+}
+
+/* Rotate caret down when nested list is open */
+.nested:show + .caret::before {
+  transform: rotate(90deg);
+}
+`, {language: 'css'}).value;
+document.getElementById('code_claudeJS').innerHTML = hljs.highlight(`
+// Toggle display of nested lists on click
+const carets = document.getElementsByClassName("caret");
+for(let i = 0; i < carets.length; i++) {
+  carets[i].addEventListener("click", function() {
+    this.parentElement.querySelector(".nested").classList.toggle("show");
+  }); 
+}
+`, {language: 'js'}).value;
+document.getElementById('code_geminiHTML').innerHTML = hljs.highlight(`
+<ul id="tree">
+  <li>
+    Parent 1
+    <ul class="nested">
+      <li>Child 1</li>
+      <li>Child 2</li>
+    </ul>
+  </li>
+  <li>
+    Parent 2
+    <ul class="nested">
+      <li>Child 3</li>
+      <li>Child 4</li>
+    </ul>
+  </li>
+</ul>
+`, {language: 'html'}).value;
+document.getElementById('code_geminiCSS').innerHTML = hljs.highlight(`
+#tree ul {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+#tree li {
+  cursor: pointer;
+}
+
+#tree li.expanded > ul {
+  display: block;
+}
+`, {language: 'css'}).value;
+document.getElementById('code_geminiJS').innerHTML = hljs.highlight(`
+const listItems = document.querySelectorAll('#tree li');
+
+listItems.forEach(listItem => {
+  listItem.addEventListener('click', (event) => {
+    const nestedList = listItem.querySelector('.nested');
+    const isExpanded = listItem.classList.contains('expanded');
+
+    listItem.classList.toggle('expanded');
+    nestedList.style.display = isExpanded ? 'none' : 'block';
+  });
+});
+`, {language: 'js'}).value;    
+</script>
+
+
+<!-- This is where the node's markdown.md content is placed before it runs through the marked processor -->
+<div id="nodeMarkdownRaw"># Nested unordered list as a treeview
+
+This is what I asked: 
+
+> I need css and javascript to turn an unordered listed with nested unordered lists into a collapsible and expandible treeview
+
+Here is the code each gave me:</div>
+
+</body>
+</html>

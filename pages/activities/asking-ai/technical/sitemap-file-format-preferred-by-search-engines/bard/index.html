@@ -1,0 +1,146 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/dark.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<!-- This is where scripts with an external source url can be specified from a node's javascript -->
+<script id="scriptSlot1"></script><script id="scriptSlot2"></script><script id="scriptSlot3"></script><script id="scriptSlot4"></script><script id="scriptSlot5"></script><script id="scriptSlot6"></script><script id="scriptSlot7"></script><script id="scriptSlot8"></script><script id="scriptSlot9"></script>
+
+<link href="/assets/css/pages.css?version=20240323110655"  id="pagesCss" rel="stylesheet">
+
+<!-- This is where all the ancestor.css stylesheets are linked followed by the node's css.css in a style element -->
+
+<style id="nodeCss"></style>
+
+<script src="/assets/js/pages.js?version=20240323110655" type="module" id="pagesJs"></script>
+
+
+</head>
+<!-- If _title.txt exists, it will be written into the title -->
+<title>what Bard said</title>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><span class="site-name"></span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navbarSupportedContentUl">
+
+      </ul>
+      
+      <!--
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      -->
+
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div id="breadcrumb-wrapper">
+<nav aria-label="breadcrumb">
+  <!-- This is populated with the list items created by the buildBreadcrumbs function in /assets/js/index.js -->
+  <ol class="breadcrumb" id="breadcrumbs"></ol>
+</nav>
+</div>
+
+<!-- This is where the node's markdown.md content is placed after it runs through the marked processor -->
+<div id="nodeMarkdown"></div>
+
+<!-- This is where the node's html.html content is placed -->
+<div id="nodeHtml"></div>
+
+<!-- This is populated with the ul created by the buildAreaMap function in /assets/js/index.js -->
+<div id="area-map"></div>
+
+</div>
+
+<!-- This is where all the ancestor.js files are imported followed by the node's javascript.js import -->
+<script type="module" id="nodeJavascript">
+import * as ancestorJS5 from '/content/ancestor.js?version=20240323110655';
+
+    
+</script>
+
+
+<!-- This is where the node's markdown.md content is placed before it runs through the marked processor -->
+<div id="nodeMarkdownRaw"> **Here are the preferred sitemap file formats for major search engines:**
+
+**1. XML Sitemaps:**
+
+- **Supported by:** Google, Bing, Yahoo, Yandex, DuckDuckGo, Ask.com, and most other search engines.
+- **Format:** XML (Extensible Markup Language) file that lists URLs along with optional metadata like:
+    - Last modification date
+    - Change frequency
+    - Priority
+- **Maximum size:** 50MB (uncompressed) or 50,000 URLs
+- **Advantages:**
+    - Versatile, supporting various content types
+    - Can provide rich metadata
+    - Extensible to accommodate specific needs
+
+**2. Text Sitemaps (Rarely Used):**
+
+- **Supported by:** Google, Bing, Yahoo (as a secondary option)
+- **Format:** Plain text file with one URL per line
+- **Maximum size:** 50,000 URLs
+- **Advantages:**
+    - Simple to create
+    - May be suitable for smaller websites
+
+**General Best Practices:**
+
+- **UTF-8 encoding:** Ensure your sitemap files are encoded in UTF-8 for compatibility.
+- **Sitemap index files:** Use these to organize large sitemaps or multiple sitemaps, each with a maximum of 50,000 URLs.
+- **Compression:** Compress sitemap files using gzip to reduce file size and speed up transfers.
+- **Submission:** Submit sitemaps to search engines through their respective webmaster tools or by adding a `<loc>` tag to your robots.txt file.
+- **Regular updates:** Keep sitemaps updated as your website content changes.
+
+**Specific Requirements for Major Search Engines:**
+
+**Google:**
+
+- Supports XML sitemaps (preferred), text sitemaps, RSS/Atom feeds, and sitemap index files.
+- Allows submission through Google Search Console.
+
+**Bing:**
+
+- Supports XML sitemaps (preferred), text sitemaps, RSS/Atom feeds, and sitemap index files.
+- Allows submission through Bing Webmaster Tools.
+
+**Yahoo:**
+
+- Supports XML sitemaps (preferred), text sitemaps, and sitemap index files.
+- Allows submission through Yahoo Site Explorer.
+
+**Yandex:**
+
+- Supports XML sitemaps (preferred) and sitemap index files.
+- Allows submission through Yandex.Webmaster.
+
+**DuckDuckGo:**
+
+- Relies on Bing's index for sitemap data.
+
+**Ask.com:**
+
+- Supports XML sitemaps.
+- No specific submission process; sitemaps are discovered through crawling.</div>
+
+</body>
+</html>

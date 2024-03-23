@@ -1,0 +1,1 @@
+bash scripts for generating static site files

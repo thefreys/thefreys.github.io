@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/dark.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<!-- This is where scripts with an external source url can be specified from a node's javascript -->
+<script id="scriptSlot1"></script><script id="scriptSlot2"></script><script id="scriptSlot3"></script><script id="scriptSlot4"></script><script id="scriptSlot5"></script><script id="scriptSlot6"></script><script id="scriptSlot7"></script><script id="scriptSlot8"></script><script id="scriptSlot9"></script>
+
+<link href="/assets/css/pages.css?version=20240323110655"  id="pagesCss" rel="stylesheet">
+
+<!-- This is where all the ancestor.css stylesheets are linked followed by the node's css.css in a style element -->
+<link href='/content/_test/this-site/css/ancestor-demo/ancestor.css?version=20240323110655' id='ancestorCSS2' rel='stylesheet'>
+<link href='/content/_test/this-site/css/ancestor-demo/demo-child/ancestor.css?version=20240323110655' id='ancestorCSS1' rel='stylesheet'>
+<link href='/content/_test/this-site/css/ancestor-demo/demo-child/demo-grand-child/ancestor.css?version=20240323110655' id='ancestorCSS0' rel='stylesheet'>
+
+<style id="nodeCss"></style>
+
+<script src="/assets/js/pages.js?version=20240323110655" type="module" id="pagesJs"></script>
+
+
+</head>
+<!-- If _title.txt exists, it will be written into the title -->
+<title></title>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><span class="site-name"></span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navbarSupportedContentUl">
+
+      </ul>
+      
+      <!--
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      -->
+
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div id="breadcrumb-wrapper">
+<nav aria-label="breadcrumb">
+  <!-- This is populated with the list items created by the buildBreadcrumbs function in /assets/js/index.js -->
+  <ol class="breadcrumb" id="breadcrumbs"></ol>
+</nav>
+</div>
+
+<!-- This is where the node's markdown.md content is placed after it runs through the marked processor -->
+<div id="nodeMarkdown"></div>
+
+<!-- This is where the node's html.html content is placed -->
+<div id="nodeHtml"></div>
+
+<!-- This is populated with the ul created by the buildAreaMap function in /assets/js/index.js -->
+<div id="area-map"></div>
+
+</div>
+
+<!-- This is where all the ancestor.js files are imported followed by the node's javascript.js import -->
+<script type="module" id="nodeJavascript">
+import * as ancestorJS6 from '/content/ancestor.js?version=20240323110655';
+
+    
+</script>
+
+
+<!-- This is where the node's markdown.md content is placed before it runs through the marked processor -->
+<div id="nodeMarkdownRaw">The breadcrumb divider should be ] on this page (**demo-grand-child**)</div>
+
+</body>
+</html>

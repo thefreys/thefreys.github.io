@@ -1,1 +1,0 @@
-bash scripts for "index" one page site
