@@ -18,7 +18,7 @@
 - 1 tablespoon **table salt**
 - 1/3 cup **mayonnsaise**
  
-## Directions
+## Instructions
 
  1. Peel and cut potatoes in to about 1 inch sections, try to keep the slices about the same size for even cooking
  2. Add all sliced potatoes to the pot, fill pot with water until the potatoes are covered by about one inch of water

@@ -21,7 +21,7 @@
 - 1/2 cup slivered almonds
 - 2 tablespoon powdered sugar (optional)
 
-## Directions
+## Instructions
 
 1. Preheat oven to 325 degrees.  Cut a piece of parchment paper to fit the bottom of the cake pan.  Grease the bottom and sides of the cake pan with butter or cooking spray.  Line the cake pan with the parchment paper, and grease the parchment paper.  
 Dust the pan bottom and sides with flour and discard any excess.

@@ -1,30 +1,30 @@
-# Date balls
+# Date Balls
 
-## Equipment
-
+## Equipment:
 - 4 quart pot
 - Large spoon
 
-## Ingredients
-
-- 1/2 cup **butter**
-- 1 cup **white sugar**
-- 1 **egg**
-- 8 ounces **dates**
-- 1 teaspoon **vanilla extract**
-- 1/2 cup **chopped nuts**
-- 5 to 6 cups **rice krispies**
+## Ingredients:
+- 1/2 cup (115g) butter
+- 1 cup (200g) white sugar
+- 1 egg
+- 8 oz (225g) dates
+- 1 teaspoon (5ml) vanilla extract
+- 1/2 cup (60g) chopped nuts
+- 5 to 6 cups (120-145g) rice krispies
 - Chopped nuts or coconut for rolling (optional)
 
-## Directions
+## Instructions:
+1. In the pot, combine the butter and white sugar. Cook over medium heat, stirring frequently, until the butter is melted and the sugar is dissolved.
 
- 1. Combine butter and sugar in pot, cook on medium heat until butter is melted, and sugar is dissolved
- 2. Add egg, stir constantly until egg is combined
- 3. Add dates, and cook until mixture thickents, 5-8 minutes
- 4. Remove from heat, add vanilla, nuts and rice krispies, stir to combine
- 5. Cool, form in to balls and roll in chopped nuts or coconut
+2. Beat in the egg and continue stirring constantly until the egg is fully incorporated into the mixture.
 
-## Notes
+3. Add the dates and cook for 5-8 minutes, or until the mixture thickens, stirring occasionally.
 
- - Egg is optional(?)
- - Pecans work best as both the added nuts, and nuts for rolling
+4. Remove the pot from the heat and stir in the vanilla extract, chopped nuts, and rice krispies until well combined.
+
+5. Allow the mixture to cool slightly until it's easy to handle. Then, using your hands, form the mixture into bite-sized balls. If desired, roll the balls in chopped nuts or coconut.
+
+Notes:
+- The egg is optional, but it helps bind the mixture together.
+- Pecans work best as the chopped nuts added to the mixture and for rolling the balls in.
