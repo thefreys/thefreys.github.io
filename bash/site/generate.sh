@@ -116,6 +116,8 @@ ${ancestor_css}"
 
     page="${template}"
 
+
+    page="${page//\{\{google_analytics_measurement_id\}\}/${google_analytics_measurement_id}}"
     page="${page//\{\{title\}\}/${title}}"
     page="${page//\{\{html\}\}/${html}}"
     page="${page//\{\{markdown\}\}/${markdown}}"

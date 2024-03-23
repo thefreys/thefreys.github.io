@@ -4,5 +4,6 @@ tmpoutdir="${rootdir}/assets/js/generated.tmp"
 outdir="${rootdir}/assets/js/generated"
 pagedir="${rootdir}/pages"
 xmlsitemap="${rootdir}/sitemap.xml"
+s=G-CCX23ZTMPM
 #xmlsitemapurlprefix='https://thefreys.github.io/index?node='
 xmlsitemapurlprefix='https://thefreys.github.io/pages'
