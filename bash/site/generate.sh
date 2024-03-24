@@ -126,7 +126,7 @@ mv "${tmp_generated_js_dir}" "${generated_js_dir}"
 
 echo "$(date): Remove previously generated page files and replace them with the new ones"
 rm -rf "${page_dir}"
-mv "${tmp_page_dir}" "${tmp_page_dir}"
+mv "${tmp_page_dir}" "${page_dir}"
 
 echo "$(date): Generating the sitemap file for search engines (sitemap.xml)"
 "$(dirname ${BASH_SOURCE[0]})/xmlsitemap.sh"
