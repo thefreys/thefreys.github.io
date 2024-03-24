@@ -2,7 +2,7 @@
 source "$(dirname ${BASH_SOURCE[0]})/config.sh"
 jsvar="$1"
 searchfile="$2"
-tmpoutfile="${tmpoutdir}/${jsvar}.js"
+tmpoutfile="${tmp_generated_js_dir}/${jsvar}.js"
 cd "${rootdir}"
 echo "export const ${jsvar} = [" > "${tmpoutfile}"
 if [[ "${searchfile}" = "" ]]; then

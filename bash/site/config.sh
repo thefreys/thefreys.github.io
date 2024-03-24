@@ -1,9 +1,17 @@
 #!/bin/bash
-rootdir="$(dirname ${BASH_SOURCE[0]})/../.."
-tmpoutdir="${rootdir}/assets/js/generated.tmp"
-outdir="${rootdir}/assets/js/generated"
-pagedir="${rootdir}/pages"
-xmlsitemap="${rootdir}/sitemap.xml"
-s=G-CCX23ZTMPM
-#xmlsitemapurlprefix='https://thefreys.github.io/index?node='
+
 xmlsitemapurlprefix='https://thefreys.github.io/pages'
+google_analytics_measurement_id=G-CCX23ZTMPM
+
+rootdir="$(dirname ${BASH_SOURCE[0]})/../.."
+
+generated_js_dir="${rootdir}/assets/js/generated"
+tmp_generated_js_dir="${generated_js_dir}.tmpdir"
+
+page_dir="${rootdir}/pages"
+tmp_page_dir="${page_dir}.tmpdir"
+
+xmlsitemap="${rootdir}/sitemap.xml"
+
+#xmlsitemapurlprefix='https://thefreys.github.io/index?node='
+

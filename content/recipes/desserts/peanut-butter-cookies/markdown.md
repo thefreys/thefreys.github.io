@@ -1,5 +1,7 @@
 # Peanut Butter Cookies
 
+<img style="float:right;" src="https://drive.google.com/thumbnail?id=1UEN2QUG2-13W0IPeWJF9ykNb_vO6yx3T" alt="Peanut Butter Cookies">
+
 ## Ingredients:
 
 - 10 tablespoons (140g) unsalted butter, brought to room temperature
