@@ -15,9 +15,11 @@ cat "${xmlsitemap}.md" | while read filename; do
     countHidden=0
     while read hidefile
     do
-        hidestring=${hidefile:0:-5}
-        if [[ "$mdstring" == "$hidestring"* ]]; then
-            ((countHidden++))
+        if ! [[ "" = "${hidefile}" ]]; then
+            hidestring=${hidefile:0:-5}
+            if [[ "$mdstring" == "$hidestring"* ]]; then
+                ((countHidden++))
+            fi
         fi
     done <<< "$(cat "${xmlsitemap}.hide")"
     if [[ "0" == "$countHidden" ]]; then

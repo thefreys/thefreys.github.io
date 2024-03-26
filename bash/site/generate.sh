@@ -33,10 +33,10 @@ find content -type d -print | xargs -I {} ls -d {} | sort | while read nodepath;
     echo "\"${node}\":{" >> "${content_nodes_tmp_file}"
 
     if [[ "${node}" = "/" ]]; then
-        echo " \"parent\":null," >> "${content_nodes_tmp_file}"
+        echo "  \"parent\":null," >> "${content_nodes_tmp_file}"
         navLabel="Home"
     else
-        echo " \"parent\":\"$(dirname ${node})\"," >> "${content_nodes_tmp_file}"
+        echo "  \"parent\":\"$(dirname ${node})\"," >> "${content_nodes_tmp_file}"
         navLabel="$(basename ${node})"
     fi
     
@@ -48,7 +48,7 @@ find content -type d -print | xargs -I {} ls -d {} | sort | while read nodepath;
             echo "  \"title\":\`${title}\`," >> "${content_nodes_tmp_file}"
         fi
     fi
-    echo " \"navLabel\":\"${navLabel}\"," >> "${content_nodes_tmp_file}"
+    echo "  \"navLabel\":\"${navLabel}\"," >> "${content_nodes_tmp_file}"
     
     markdown=""
     if [ -f "${nodepath}/markdown.md" ]; then
@@ -87,7 +87,7 @@ ${ancestor_css}"
         ((counter++))
     done
 
-    echo " \"children\":[" >> "${content_nodes_tmp_file}"
+    echo "  \"children\":[" >> "${content_nodes_tmp_file}"
     find ${nodepath} -maxdepth 1 -type d | sort | while read childnodepath; do
         childnode="/${childnodepath}"
         childnode=${childnode:8}
@@ -99,7 +99,7 @@ ${ancestor_css}"
         fi
         
     done
-    echo " ]," >> "${content_nodes_tmp_file}"
+    echo "  ]," >> "${content_nodes_tmp_file}"
 
     echo "}," >> "${content_nodes_tmp_file}"
 
