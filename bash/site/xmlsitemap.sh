@@ -8,22 +8,22 @@ today=$(date '+%Y-%m-%d')
 
 echo '<?xml version="1.0" encoding="UTF-8"?>' > "${xmlsitemapfile}"
 echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> "${xmlsitemapfile}"
-cat "${xmlsitemapfile}.md" | while read filename; do
-    mdstring=${filename:0:-11}
-    node="/${filename:0:-12}"
+cat "${xmlsitemapfile}.md" | while read markdownfile; do
+    node="$(dirname ${markdownfile})"
     node=${node:${#content_dir}}
     countHidden=0
     while read hidefile
     do
         if ! [[ "" = "${hidefile}" ]]; then
-            hidestring=${hidefile:0:-5}
-            if [[ "$mdstring" == "$hidestring"* ]]; then
+            hidenode="$(dirname ${hidefile})"
+            hidenode=${hidenode:${#content_dir}}
+            if [[ "${node}" == "${hidenode}"* ]]; then
                 ((countHidden++))
             fi
         fi
     done <<< "$(cat "${xmlsitemapfile}.hide")"
     if [[ "0" == "$countHidden" ]]; then
-        gitdate="$(git log -1 --format="%ai" -- "$filename")"
+        gitdate="$(git log -1 --format="%ai" -- "${markdownfile}")"
         if [[ "" == "${gitdate}" ]]; then
             lastmod=${today}
         else

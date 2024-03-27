@@ -62,6 +62,9 @@ find "${content_dir}" -type d -print | xargs -I {} ls -d {} | sort | while read 
         
     done
     
+    node_page_dir="${tmp_page_dir}${node}"
+    mkdir -p "${node_page_dir}"
+
     markdown=""
     if [ -f "${nodepath}/markdown.md" ]; then
         markdown=$(<"${nodepath}/markdown.md" )   
@@ -72,13 +75,29 @@ find "${content_dir}" -type d -print | xargs -I {} ls -d {} | sort | while read 
         html=$(<"${nodepath}/html.html" )   
     fi
 
-    node_content_url=${content_url}${nodepath:${#content_dir}}
+    if [ -f "${nodepath}/css.css" ]; then
+        cat "${nodepath}/css.css" > "${node_page_dir}/css.css"
+    fi
+
+    if [ -f "${nodepath}/javascript.js" ]; then
+        cat "${nodepath}/javascript.js" > "${node_page_dir}/javascript.js"
+    fi
+
+    if [ -f "${nodepath}/ancestor.css" ]; then
+        cat "${nodepath}/ancestor.css" > "${node_page_dir}/ancestor.css"
+    fi
+
+    if [ -f "${nodepath}/ancestor.js" ]; then
+        cat "${nodepath}/ancestor.js" > "${node_page_dir}/ancestor.js"
+    fi
+
+    node_page_url=${page_url}${nodepath:${#content_dir}}
     css=""
     javascript=""
     ancestor_path="${nodepath}"
     counter=0
     while ! [[ "/" = "${ancestor_path}" ]]; do
-        ancestor_url=${content_url}${ancestor_path:${#content_dir}}
+        ancestor_url=${page_url}${ancestor_path:${#content_dir}}
         if [ -f "${ancestor_path}/ancestor.js" ]; then
             javascript="import * as ancestorJS${counter} from '${ancestor_url}/ancestor.js?version={{version}}';
 ${javascript}"
@@ -93,11 +112,11 @@ ${css}"
 
     if [ -f "${nodepath}/javascript.js" ]; then
         javascript="${javascript}
-import * as pageJS from '${node_content_url}/javascript.js?version={{version}}';"
+import * as pageJS from '${node_page_url}/javascript.js?version={{version}}';"
     fi
     if [ -f "${nodepath}/css.css" ]; then
         css="${css}
-<link href='${node_content_url}/css.css?version={{version}}' id='pageCSS${counter}' rel='stylesheet'>"
+<link href='${node_page_url}/css.css?version={{version}}' id='pageCSS${counter}' rel='stylesheet'>"
     fi
     echo "  ]," >> "${content_nodes_tmp_file}"
 
@@ -113,8 +132,7 @@ import * as pageJS from '${node_content_url}/javascript.js?version={{version}}';
     page="${page//\{\{assets_url\}\}/${assets_url}}"
     page="${page//\{\{version\}\}/${version}}"
 
-    mkdir -p "${tmp_page_dir}${node}"
-    echo "${page}" > "${tmp_page_dir}${node}/index.html"
+    echo "${page}" > "${node_page_dir}/index.html"
 
 done
 echo "}" >> "${content_nodes_tmp_file}"
