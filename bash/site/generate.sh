@@ -2,7 +2,6 @@
 source "$(dirname ${BASH_SOURCE[0]})/config.sh"
 today=$(date '+%F\ %T')
 version=$(date '+%Y%m%d%H%M%S')
-template=$(<"${rootdir}/template.html")
 
 rm -rf "${tmp_generated_js_dir}"
 mkdir -p "${tmp_generated_js_dir}"
@@ -21,12 +20,12 @@ echo "$(date): Generating javascript array files"
 "$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "taggedNodes" "_tags.txt"
 
 content_nodes_tmp_file="${tmp_generated_js_dir}/contentNodes.js"
-cd "${rootdir}"
+cd "${repo_dir}"
 echo "export const contentNodes = {" > "${content_nodes_tmp_file}"
 echo "$(date): Generating the contentNode javascript object (contentNodes.js)"
-find content -type d -print | xargs -I {} ls -d {} | sort | while read nodepath; do
-    node="/${nodepath}"
-    node=${node:8}
+find "${content_dir}" -type d -print | xargs -I {} ls -d {} | sort | while read nodepath; do
+    node="${nodepath}"
+    node=${node:${#content_dir}}
     if [[ "${node}" = "" ]]; then
         node="/"
     fi
@@ -49,6 +48,19 @@ find content -type d -print | xargs -I {} ls -d {} | sort | while read nodepath;
         fi
     fi
     echo "  \"navLabel\":\"${navLabel}\"," >> "${content_nodes_tmp_file}"
+
+    echo "  \"children\":[" >> "${content_nodes_tmp_file}"
+    find ${nodepath} -maxdepth 1 -type d | sort | while read childnodepath; do
+        childnode="${childnodepath}"
+        childnode=${childnode:${#content_dir}}
+        if [[ "${childnode}" = "" ]]; then
+            childnode="/"
+        fi
+        if [[ "${childnode}" != "${node}" ]]; then
+            echo "    \"${childnode}\"," >> "${content_nodes_tmp_file}"
+        fi
+        
+    done
     
     markdown=""
     if [ -f "${nodepath}/markdown.md" ]; then
@@ -60,58 +72,45 @@ find content -type d -print | xargs -I {} ls -d {} | sort | while read nodepath;
         html=$(<"${nodepath}/html.html" )   
     fi
 
+    node_content_url=${content_url}${nodepath:${#content_dir}}
     css=""
-    if [ -f "${nodepath}/css.css" ]; then
-        css=$(<"${nodepath}/css.css" )   
-    fi
-
     javascript=""
-    if [ -f "${nodepath}/javascript.js" ]; then
-        javascript=$(<"${nodepath}/javascript.js" )   
-    fi
-
-    ancestor_css=""
-    ancestor_js=""
     ancestor_path="${nodepath}"
     counter=0
-    while ! [[ "." = "${ancestor_path}" ]]; do
+    while ! [[ "/" = "${ancestor_path}" ]]; do
+        ancestor_url=${content_url}${ancestor_path:${#content_dir}}
         if [ -f "${ancestor_path}/ancestor.js" ]; then
-            ancestor_js="import * as ancestorJS${counter} from '/${ancestor_path}/ancestor.js?version={{version}}';
-${ancestor_js}"
+            javascript="import * as ancestorJS${counter} from '${ancestor_url}/ancestor.js?version={{version}}';
+${javascript}"
         fi
         if [ -f "${ancestor_path}/ancestor.css" ]; then
-            ancestor_css="<link href='/${ancestor_path}/ancestor.css?version={{version}}' id='ancestorCSS${counter}' rel='stylesheet'>
-${ancestor_css}"
+            css="<link href='${ancestor_url}/ancestor.css?version={{version}}' id='ancestorCSS${counter}' rel='stylesheet'>
+${css}"
         fi
         ancestor_path=$(dirname "${ancestor_path}")
         ((counter++))
     done
 
-    echo "  \"children\":[" >> "${content_nodes_tmp_file}"
-    find ${nodepath} -maxdepth 1 -type d | sort | while read childnodepath; do
-        childnode="/${childnodepath}"
-        childnode=${childnode:8}
-        if [[ "${childnode}" = "" ]]; then
-            childnode="/"
-        fi
-        if [[ "${childnode}" != "${node}" ]]; then
-            echo "    \"${childnode}\"," >> "${content_nodes_tmp_file}"
-        fi
-        
-    done
+    if [ -f "${nodepath}/javascript.js" ]; then
+        javascript="${javascript}
+import * as pageJS from '${node_content_url}/javascript.js?version={{version}}';"
+    fi
+    if [ -f "${nodepath}/css.css" ]; then
+        css="${css}
+<link href='${node_content_url}/css.css?version={{version}}' id='pageCSS${counter}' rel='stylesheet'>"
+    fi
     echo "  ]," >> "${content_nodes_tmp_file}"
 
     echo "}," >> "${content_nodes_tmp_file}"
 
-    page="${template}"
+    page=$(<"${repo_dir}/templates/pages.html")
     page="${page//\{\{google_analytics_measurement_id\}\}/${google_analytics_measurement_id}}"
     page="${page//\{\{title\}\}/${title}}"
     page="${page//\{\{html\}\}/${html}}"
     page="${page//\{\{markdown\}\}/${markdown}}"
-    page="${page//\{\{ancestor_css\}\}/${ancestor_css}}"
     page="${page//\{\{css\}\}/${css}}"
-    page="${page//\{\{ancestor_js\}\}/${ancestor_js}}"
     page="${page//\{\{javascript\}\}/${javascript}}"
+    page="${page//\{\{assets_url\}\}/${assets_url}}"
     page="${page//\{\{version\}\}/${version}}"
 
     mkdir -p "${tmp_page_dir}${node}"

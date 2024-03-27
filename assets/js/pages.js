@@ -158,8 +158,6 @@ function buildAfterContentLoaded() {
     request.markdown = document.getElementById("nodeMarkdownRaw").innerHTML;
     request.markdown_as_html = document.getElementById("nodeMarkdown").innerHTML;
     request.html = document.getElementById("nodeHtml").innerHTML;
-    request.css = document.getElementById("nodeCss").innerHTML;
-    request.javascript = document.getElementById("nodeJavascript").innerHTML;
     
     // THIS IS THE END OF ALL PROCESSING - SET GLOBALS HERE FOR ALL OTHER JS
     window.nodeInformation = {
@@ -180,7 +178,7 @@ function updateExternalLinkTarget(parentContainerSelector) {
         var href = link.getAttribute('href');
 
         // Check if the link is external (starts with http://, https://, or is an absolute URL)
-        if (href && (href.startsWith('http://') || href.startsWith('https://') || new URL(href, ).host !== window.location.host)) {
+        if (href && (href.startsWith('http://') || href.startsWith('https://') || new URL(href, window.location.origin).host !== window.location.host)) {
             link.setAttribute('target', '_blank');
             // Optionally, you can also add rel="noopener noreferrer" for security reasons
             link.setAttribute('rel', 'noopener noreferrer');
@@ -209,12 +207,6 @@ watchElementForChanges('nodeHtml', () => {
 watchElementForChanges('nodeMarkdown', () => {
     console.log('nodeMarkdown changed');
     updateExternalLinkTarget('#nodeMarkdown');
-});
-watchElementForChanges('nodeJavascript', () => {
-    console.log('nodeJavascript changed');
-});
-watchElementForChanges('nodeCss', () => {
-    console.log('nodeCSS changed');
 });
 
 export function init() {

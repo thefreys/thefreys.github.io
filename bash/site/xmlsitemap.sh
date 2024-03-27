@@ -1,17 +1,17 @@
 #!/bin/bash
 source "$(dirname ${BASH_SOURCE[0]})/config.sh"
 
-find content -type f -name ".hide" > "${xmlsitemap}.hide"
-find content -type f -name "markdown.md" > "${xmlsitemap}.md"
+find "${content_dir}" -type f -name ".hide" > "${xmlsitemapfile}.hide"
+find "${content_dir}" -type f -name "markdown.md" > "${xmlsitemapfile}.md"
 
 today=$(date '+%Y-%m-%d')
 
-echo '<?xml version="1.0" encoding="UTF-8"?>' > "${xmlsitemap}"
-echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> "${xmlsitemap}"
-cat "${xmlsitemap}.md" | while read filename; do
+echo '<?xml version="1.0" encoding="UTF-8"?>' > "${xmlsitemapfile}"
+echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> "${xmlsitemapfile}"
+cat "${xmlsitemapfile}.md" | while read filename; do
     mdstring=${filename:0:-11}
     node="/${filename:0:-12}"
-    node=${node:8}
+    node=${node:${#content_dir}}
     countHidden=0
     while read hidefile
     do
@@ -21,7 +21,7 @@ cat "${xmlsitemap}.md" | while read filename; do
                 ((countHidden++))
             fi
         fi
-    done <<< "$(cat "${xmlsitemap}.hide")"
+    done <<< "$(cat "${xmlsitemapfile}.hide")"
     if [[ "0" == "$countHidden" ]]; then
         gitdate="$(git log -1 --format="%ai" -- "$filename")"
         if [[ "" == "${gitdate}" ]]; then
@@ -29,13 +29,13 @@ cat "${xmlsitemap}.md" | while read filename; do
         else
             lastmod=${gitdate:0:10}
         fi
-        echo "  <url>" >> "${xmlsitemap}"
-        echo "    <loc>${xmlsitemapurlprefix}${node}/index.html</loc>" >> "${xmlsitemap}"
-        echo "    <lastmod>${lastmod}</lastmod>" >> "${xmlsitemap}"
-        echo "  </url>" >> "${xmlsitemap}"
+        echo "  <url>" >> "${xmlsitemapfile}"
+        echo "    <loc>${xmlsitemapurlprefix}${node}/index.html</loc>" >> "${xmlsitemapfile}"
+        echo "    <lastmod>${lastmod}</lastmod>" >> "${xmlsitemapfile}"
+        echo "  </url>" >> "${xmlsitemapfile}"
     fi
 done
-echo '</urlset>' >> "${xmlsitemap}"
+echo '</urlset>' >> "${xmlsitemapfile}"
 
-rm -f "${xmlsitemap}.hide"
-rm -f "${xmlsitemap}.md"
+rm -f "${xmlsitemapfile}.hide"
+rm -f "${xmlsitemapfile}.md"

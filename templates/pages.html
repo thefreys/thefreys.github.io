@@ -24,14 +24,17 @@
 <!-- This is where scripts with an external source url can be specified from a node's javascript -->
 <script id="scriptSlot1"></script><script id="scriptSlot2"></script><script id="scriptSlot3"></script><script id="scriptSlot4"></script><script id="scriptSlot5"></script><script id="scriptSlot6"></script><script id="scriptSlot7"></script><script id="scriptSlot8"></script><script id="scriptSlot9"></script>
 
-<link href="/assets/css/pages.css?version={{version}}"  id="pagesCss" rel="stylesheet">
+<link href="{{assets_url}}/css/pages.css?version={{version}}"  id="pagesCss" rel="stylesheet">
 
-<!-- This is where all the ancestor.css stylesheets are linked followed by the node's css.css in a style element -->
-{{ancestor_css}}
-<style id="nodeCss">{{css}}</style>
+<!-- This is where all the ancestor.css stylesheets are linked in order followed by a link to the css.css stylesheet -->
+{{css}}
 
-<script src="/assets/js/pages.js?version={{version}}" type="module" id="pagesJs"></script>
+<script src="{{assets_url}}/js/pages.js?version={{version}}" type="module" id="pagesJs"></script>
 
+<!-- This is where all the ancestor.js files are imported followed by importing javascript.js -->
+<script type="module" id="nodeJavascript">
+{{javascript}}    
+</script>
 
 </head>
 <!-- If _title.txt exists, it will be written into the title -->
@@ -70,25 +73,26 @@
 </div>
 
 <!-- This is where the node's markdown.md content is placed after it runs through the marked processor -->
-<div id="nodeMarkdown"></div>
+<div id="nodeMarkdown">
+<pre>
+{{markdown}}
+</pre>
+</div>
 
 <!-- This is where the node's html.html content is placed -->
-<div id="nodeHtml">{{html}}</div>
+<div id="nodeHtml">
+{{html}}
+</div>
 
 <!-- This is populated with the ul created by the buildAreaMap function in /assets/js/pages.js -->
 <div id="area-map"></div>
 
 </div>
 
-<!-- This is where all the ancestor.js files are imported followed by the node's javascript.js import -->
-<script type="module" id="nodeJavascript">
-{{ancestor_js}}
-{{javascript}}    
-</script>
-
-
 <!-- This is where the node's markdown.md content is placed before it runs through the marked processor -->
-<div id="nodeMarkdownRaw">{{markdown}}</div>
+<div id="nodeMarkdownRaw">
+{{markdown}}
+</div>
 
 </body>
 </html>

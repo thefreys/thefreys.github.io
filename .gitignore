@@ -1,5 +1,6 @@
 pages/
 assets/js/generated/
+assets/css/generated/
 
 *.tmpdir/
 
