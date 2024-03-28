@@ -1,7 +1,5 @@
 pages/
-assets/js/generated/
-assets/css/generated/
+assets/generated/
+assets/generated/
 
 *.tmpdir/
-
-sitemap.xml
