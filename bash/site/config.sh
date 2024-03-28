@@ -1,15 +1,16 @@
 #!/bin/bash
 
+domain='https://thefreys.github.io'
+google_analytics_measurement_id=G-CCX23ZTMPM
+web_root_dir="$(dirname ${BASH_SOURCE[0]})/../.."
+web_root_url=""
 site_name='The Freys'
 hamburger_menu_nodes=('/recipes' '/upcycling' '/blogs' '/sitemap')
-xmlsitemapurlprefix='https://thefreys.github.io/pages'
-google_analytics_measurement_id=G-CCX23ZTMPM
+
+
 
 repo_dir="$(dirname ${BASH_SOURCE[0]})/../.."
-web_root_dir="$(dirname ${BASH_SOURCE[0]})/../.."
 content_dir="$(dirname ${BASH_SOURCE[0]})/../../content"
-
-web_root_url=""
 
 page_dir="${web_root_dir}/pages"
 asset_dir="${web_root_dir}/assets"
