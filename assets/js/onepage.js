@@ -1,13 +1,13 @@
 // JavaScript file for one page site
-import { siteConfig } from '/assets/js/config.js';
-import { markdownNodes } from '/assets/js/generated/markdownNodes.js';
-import { htmlNodes } from '/assets/js/generated/htmlNodes.js';
-import { javascriptNodes } from '/assets/js/generated/javascriptNodes.js';
-import { jsAncestorNodes } from '/assets/js/generated/jsAncestorNodes.js';
-import { cssNodes } from '/assets/js/generated/cssNodes.js';
-import { cssAncestorNodes } from '/assets/js/generated/cssAncestorNodes.js';
-import { hiddenNodes } from '/assets/js/generated/hiddenNodes.js';
-import { contentNodes } from '/assets/js/generated/contentNodes.js';
+import { siteConfig } from '/assets/generated/config.js';
+import { markdownNodes } from '/assets/generated/markdownNodes.js';
+import { htmlNodes } from '/assets/generated/htmlNodes.js';
+import { javascriptNodes } from '/assets/generated/javascriptNodes.js';
+import { jsAncestorNodes } from '/assets/generated/jsAncestorNodes.js';
+import { cssNodes } from '/assets/generated/cssNodes.js';
+import { cssAncestorNodes } from '/assets/generated/cssAncestorNodes.js';
+import { hiddenNodes } from '/assets/generated/hiddenNodes.js';
+import { contentNodes } from '/assets/generated/contentNodes.js';
 import hljs from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/highlight.min.js';
 import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
 

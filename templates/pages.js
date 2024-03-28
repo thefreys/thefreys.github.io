@@ -1,9 +1,9 @@
 // JavaScript file for pages
-import { siteConfig } from '/assets/js/config.js';
-import { markdownNodes } from '/assets/js/generated/markdownNodes.js';
-import { htmlNodes } from '/assets/js/generated/htmlNodes.js';
-import { hiddenNodes } from '/assets/js/generated/hiddenNodes.js';
-import { contentNodes } from '/assets/js/generated/contentNodes.js';
+import { siteConfig } from '/assets/js/config.js?version={{version}}';
+import { markdownNodes } from '/assets/js/generated/markdownNodes.js?version={{version}}';
+import { htmlNodes } from '/assets/js/generated/htmlNodes.js?version={{version}}';
+import { hiddenNodes } from '/assets/js/generated/hiddenNodes.js?version={{version}}';
+import { contentNodes } from '/assets/js/generated/contentNodes.js?version={{version}}';
 import hljs from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/highlight.min.js';
 import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
 

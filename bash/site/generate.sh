@@ -3,8 +3,8 @@ source "$(dirname ${BASH_SOURCE[0]})/config.sh"
 today=$(date '+%F\ %T')
 version=$(date '+%Y%m%d%H%M%S')
 
-rm -rf "${tmp_generated_js_dir}"
-mkdir -p "${tmp_generated_js_dir}"
+rm -rf "${tmp_generated_asset_dir}"
+mkdir -p "${tmp_generated_asset_dir}"
 rm -rf "${tmp_page_dir}"
 mkdir -p "${tmp_page_dir}"
 
@@ -19,7 +19,7 @@ echo "$(date): Generating javascript array files"
 "$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "titledNodes" "_title.txt"
 "$(dirname ${BASH_SOURCE[0]})/nodeArray.sh" "taggedNodes" "_tags.txt"
 
-content_nodes_tmp_file="${tmp_generated_js_dir}/contentNodes.js"
+content_nodes_tmp_file="${tmp_generated_asset_dir}/contentNodes.js"
 cd "${repo_dir}"
 echo "export const contentNodes = {" > "${content_nodes_tmp_file}"
 echo "$(date): Generating the contentNode javascript object (contentNodes.js)"
@@ -137,13 +137,25 @@ import * as pageJS from '${node_page_url}/javascript.js?version={{version}}';"
 done
 echo "}" >> "${content_nodes_tmp_file}"
 
+
+echo "$(date): process pages.css template"
+pagecss=$(<"${repo_dir}/templates/pages.css")
+pagecss="${pagecss//\{\{version\}\}/${version}}"
+echo "${pagecss}" > "${tmp_generated_asset_dir}/pages.css"
+
+echo "$(date): process pages.js template"
+pagejs=$(<"${repo_dir}/templates/pages.js")
+pagejs="${pagejs//\{\{version\}\}/${version}}"
+echo "${pagejs}" > "${tmp_generated_asset_dir}/pages.js"
+
 echo "$(date): Remove previously generated js files and replace them with the new ones"
-rm -rf "${generated_js_dir}"
-mv "${tmp_generated_js_dir}" "${generated_js_dir}"
+rm -rf "${generated_asset_dir}"
+mv "${tmp_generated_asset_dir}" "${generated_asset_dir}"
 
 echo "$(date): Remove previously generated page files and replace them with the new ones"
 rm -rf "${page_dir}"
 mv "${tmp_page_dir}" "${page_dir}"
+
 
 echo "$(date): Generating the sitemap file for search engines (sitemap.xml)"
 "$(dirname ${BASH_SOURCE[0]})/xmlsitemap.sh"

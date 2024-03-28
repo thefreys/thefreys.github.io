@@ -1,1 +1,1 @@
-Sitemap: https://thefreys.github.io/sitemap.xml
+Sitemap: https://thefreys.github.io/pages/sitemap.xml

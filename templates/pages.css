@@ -1,0 +1,18 @@
+#nodeMarkdownRaw {
+    display: none;
+}
+#site-map,
+#area-map {
+    margin-left: 18px;
+}
+#site-map ul,
+#area-map ul {
+    padding-left: 9px;
+}
+
+.tabular-code-compare pre {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    max-width: 250px;
+}
+
