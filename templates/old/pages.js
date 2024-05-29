@@ -105,12 +105,6 @@ function buildMenu() {
     for (var i = 0; i < siteConfig.hamburgerLevelOneItems.length; i++) {
         var level1 = siteConfig.hamburgerLevelOneItems[i];
         var menuItem = templateMenuItem;
-        if ('Sitemap' == level1){
-            menuItem = menuItem.replace(/{{navLabel}}/g, level1);
-            menuItem = menuItem.replace(/{{href}}/g, '/pages' + level1 + '/index.html');
-            menu = menu + menuItem;
-            continue;
-        }
         var sitemapItem = contentNodes[level1];
         if (sitemapItem.children.length > 0) {
             var menuItem = templateMenuItemWithChildren;

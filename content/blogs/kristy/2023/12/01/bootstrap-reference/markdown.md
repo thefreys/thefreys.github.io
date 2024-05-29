@@ -1,1 +1,1 @@
-I've added a [bootstrap](?node=/coding/this-site/bootstrap) section under [/coding/this-site](?node=/coding/this-site). It comes in handy when I need to lookup a snippet of html. I also use it to diagnose if anything has broken how things should display and function properly.
+I've added a [bootstrap](/coding/this-site/bootstrap) section under [/coding/this-site](/coding/this-site). It comes in handy when I need to lookup a snippet of html. I also use it to diagnose if anything has broken how things should display and function properly.
