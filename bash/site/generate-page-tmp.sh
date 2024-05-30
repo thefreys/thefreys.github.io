@@ -99,27 +99,6 @@ if [ -f "${node_dir}/markdown.md" ]; then
 fi
 page="${page//\{\{markdown\}\}/${markdown}}"
 
-# process the ai components
-ai_component_files=('_ai_query.txt')
-for ai in "${ais[@]}"; do ai_component_files+=("_ai_response_${ai}.md"); done
-ai_response_counter=0
-for ai_component_file in "${ai_component_files[@]}"
-do 
-    template_varname="${ai_component_file%.*}"
-    template_varval=""
-    # read ai_component_file into a variable and replace special characters (<,>,&,$) with template variables temporarily
-    [ -f "${node_dir}/${ai_component_file}" ] && template_varval=$(cat "${node_dir}/${ai_component_file}" | sed 's/</{{lt}}/g; s/>/{{gt}}/g; s/&/{{ampersand}}/g; s/\$/{{dollar}}/g')
-    
-    if [ -n "${template_varval}" ]; then
-        if [[ "${ai_component_file:0:13}" == '_ai_response_' ]]; then
-            ((ai_response_counter++))
-            echo ".aiResponses .visibility${template_varname} {display: block;}" >> "${tmp_page_dir}/generated.css"
-        fi
-    fi
-    page="${page//\{\{${template_varname}\}\}/${template_varval}}"
-done   
-[[ "${ai_response_counter}" -gt 0 ]] && echo ".aiResponses {display: block !important;}" >> "${tmp_page_dir}/generated.css"
-
 # replace the rest of the page template variables
 page="${page//\{\{css\}\}/${css}}"
 page="${page//\{\{javascript\}\}/${javascript}}"
@@ -142,12 +121,8 @@ if ! [ -f "${node_dir}/.hide" ]; then
         lastmod=${gitdate:0:10}
     fi
     
-    search_display=""
-    if [ -f "${node_dir}/_ai_query.txt" ]; then
-        search_display=$(<"${node_dir}/_ai_query.txt" )  
-    elif [ -f "${node_dir}/markdown.md" ]; then
-        search_display="${title}"
-    fi
+    search_display="${title}"
+    
     if [ -n "${search_display}" ]; then
         # create the the search csv row for this page, escaping double quotes within values and replacing line breaks with <br>
         echo -n "\"$(echo "$page_url" | sed 's/"/\\"/g' | sed ':a;N;$!ba;s/\n/ <br>/g')\"," >> "${tmp_page_dir}/search_row.csv" 
