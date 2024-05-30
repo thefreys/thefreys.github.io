@@ -32,7 +32,7 @@
 <script src="{{assets_url}}/generated/pages.js?version={{version}}" type="module" id="pagesJs"></script>
 
 <!-- This is where all the ancestor.js files are imported followed by importing javascript.js -->
-<script type="module" id="nodeJavascript">
+<script type="module" id="node-javascript">
 {{javascript}}    
 </script>
 
@@ -73,7 +73,7 @@
 </div>
 
 <!-- This is where the node's markdown.md content is placed after it runs through the marked processor -->
-<div id="nodeMarkdown">
+<div id="node-markdown-processed">
 <pre>
 {{markdown}}
 </pre>
@@ -90,7 +90,7 @@
 </div>
 
 <!-- This is where the node's markdown.md content is placed before it runs through the marked processor -->
-<div id="nodeMarkdownRaw">
+<div id="node-markdown-raw">
 {{markdown}}
 </div>
 

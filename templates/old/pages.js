@@ -149,8 +149,8 @@ function buildAfterContentLoaded() {
     if (document.getElementById("area-map")) {
         buildAreaMap(document.getElementById("area-map"),request.node);
     }
-    request.markdown = document.getElementById("nodeMarkdownRaw").innerHTML;
-    request.markdown_as_html = document.getElementById("nodeMarkdown").innerHTML;
+    request.markdown = document.getElementById("node-markdown-raw").innerHTML;
+    request.markdown_as_html = document.getElementById("node-markdown-processed").innerHTML;
     request.html = document.getElementById("nodeHtml").innerHTML;
     
     // THIS IS THE END OF ALL PROCESSING - SET GLOBALS HERE FOR ALL OTHER JS
@@ -198,9 +198,9 @@ watchElementForChanges('nodeHtml', () => {
     console.log('nodeHtml changed');
     updateExternalLinkTarget('#nodeHtml');
 });
-watchElementForChanges('nodeMarkdown', () => {
-    console.log('nodeMarkdown changed');
-    updateExternalLinkTarget('#nodeMarkdown');
+watchElementForChanges('node-markdown-processed', () => {
+    console.log('node-markdown-processed changed');
+    updateExternalLinkTarget('#node-markdown-processed');
 });
 
 export function init() {
@@ -229,8 +229,8 @@ export function init() {
     }   
     request.breadcrumbs = request.breadcrumbs.reverse();
     
-    var mdHtml = marked.parse(document.getElementById('nodeMarkdownRaw').innerHTML).replace(/<table>/g, '<table class="table table-hover  table-bordered">');
-    document.getElementById('nodeMarkdown').innerHTML = mdHtml;
+    var mdHtml = marked.parse(document.getElementById('node-markdown-raw').innerHTML).replace(/<table>/g, '<table class="table table-hover  table-bordered">');
+    document.getElementById('node-markdown-processed').innerHTML = mdHtml;
 
     // handle when node is not defined
     if (typeof contentNodes[request.node] === 'undefined') {

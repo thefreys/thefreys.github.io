@@ -3,3 +3,4 @@ assets/generated/
 assets/generated/
 
 *.tmpdir/
+*.tmpfile

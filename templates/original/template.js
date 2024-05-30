@@ -149,14 +149,14 @@ function buildAfterContentLoaded() {
         span.textContent = siteConfig.siteName;
     });
     hljs.highlightAll();
-    if (document.getElementById("site-map")) {
-        buildAreaMap(document.getElementById("site-map"),"/",siteConfig.siteName + ' Sitemap');
+    if (document.getElementById("siteMap")) {
+        buildAreaMap(document.getElementById("siteMap"),"/",siteConfig.siteName + ' Sitemap');
     }
-    if (document.getElementById("area-map")) {
-        buildAreaMap(document.getElementById("area-map"),request.node,siteConfig.areaMapTitle);
+    if (document.getElementById("areaMap")) {
+        buildAreaMap(document.getElementById("areaMap"),request.node,siteConfig.areaMapTitle);
     }
     request.markdown = document.getElementById("nodeMarkdownRaw").innerHTML;
-    request.markdown_as_html = document.getElementById("nodeMarkdown").innerHTML;
+    request.markdown_as_html = document.getElementById("nodeMarkdownProcessed").innerHTML;
     
     //Turn every markdown table into a datatable
     var jq=window.jQuery;
@@ -205,9 +205,9 @@ function watchElementForChanges(elemId, callback) {
     // observer.disconnect();
 }
 
-watchElementForChanges('nodeMarkdown', () => {
-    console.log('nodeMarkdown changed');
-    updateExternalLinkTarget('#nodeMarkdown');
+watchElementForChanges('nodeMarkdownProcessed', () => {
+    console.log('nodeMarkdownProcessed changed');
+    updateExternalLinkTarget('#nodeMarkdownProcessed');
 });
 
 export function init() {
@@ -236,7 +236,7 @@ export function init() {
     }   
     request.breadcrumbs = request.breadcrumbs.reverse();
 
-    const mdElements = document.getElementsByClassName("markdown2html");
+    const mdElements = document.getElementsByClassName("markdownToHtml");
     for (let i = 0; i < mdElements.length; i++) {
         const originalContent = mdElements[i].innerHTML.replace(/{{lt}}/g, '<').replace(/{{gt}}/g, '>');
         var modifiedContent = marked.parse(originalContent);
@@ -258,11 +258,11 @@ init();
 
 
 
-let areaSearchDataTable = new DataTable('#area-search-datatable', {
+let areaSearchDataTable = new DataTable('#areaSearchDatatable', {
     ajax: '/assets/generated/datatables_search.json',
     //paging: false,
     //searchBuilder: false,
-    //search: false,
+    search: false,
     columns: [
         {
         title: 'Page',
@@ -276,9 +276,6 @@ let areaSearchDataTable = new DataTable('#area-search-datatable', {
     ],
     layout: {
         topStart: {
-            search: {
-                placeholder: 'Type search here'
-            }
         },
         bottomEnd: {
             paging: {
@@ -294,5 +291,5 @@ areaSearchDataTable.ready(function () {
 });
 
 $(document).ready(function() {
-    $('#area-search-datatable').DataTable();
+    $('#areaSearchDatatable').DataTable();
 });

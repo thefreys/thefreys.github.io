@@ -15,6 +15,7 @@ else
     page_dir="${pages_dir}${node}"
 fi
 
+echo "$(date): Generating tmp node ${tmp_page_dir}"
 mkdir -p "${tmp_page_dir}"
 find "${tmp_page_dir}" -maxdepth 1 -type f -delete
 

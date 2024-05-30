@@ -1,12 +1,12 @@
 #nodeMarkdownRaw {
     display: none;
 }
-#site-map,
-#area-map {
+#siteMap,
+#areaMap {
     margin-left: 18px;
 }
-#site-map ul,
-#area-map ul {
+#siteMap ul,
+#areaMap ul {
     padding-left: 9px;
 }
 
