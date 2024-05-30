@@ -1,7 +1,6 @@
 Each content item (node) is represented by a directory and a few key files within it.
 
 - markdown.md: This is the primary content file. Only nodes containing this file will be included in navigation elements and the sitemap.
-- html.html: In some cases, you may want to include more complex content using HTML after a markdown introduction.
 - javascript.js: Enhance the node with JavaScript.
 - css.css: Style the node with CSS.
 - ancestor.js: Enhance the node and all descendent nodes with this JavaScript.
