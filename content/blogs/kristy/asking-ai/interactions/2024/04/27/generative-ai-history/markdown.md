@@ -1,0 +1,1 @@
+Given that this site is all about asking ai, it's good to know the terminology and history surrounding AI.

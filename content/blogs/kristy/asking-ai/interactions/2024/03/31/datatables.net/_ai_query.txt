@@ -1,0 +1,1 @@
+In javascript, how do I convert every table on a page to use datatables.net?

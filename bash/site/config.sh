@@ -8,7 +8,7 @@ site_name='The Freys'
 hamburger_menu_nodes=('/recipes' '/blogs' '/sitemap')
 google_analytics_measurement_id=G-CCX23ZTMPM
 area_map_title="Browse what's under this area using a nested list / tree"
-
+ais=('bing' 'chatgpt' 'claude' 'gemini' 'perplexity' 'huggingchat' 'meta' 'you')
 template_name='original'
 
 repo_dir="$(dirname ${BASH_SOURCE[0]})/../.."

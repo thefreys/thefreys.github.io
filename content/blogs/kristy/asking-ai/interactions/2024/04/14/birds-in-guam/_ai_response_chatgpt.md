@@ -1,0 +1,5 @@
+The bird population in Guam has been significantly affected by the introduction of the brown tree snake. This invasive species was accidentally introduced to Guam, likely during or shortly after World War II, and has since wreaked havoc on the island's native bird populations.
+
+The brown tree snake, which has no natural predators on Guam, preys on birds and their eggs. This has led to the decline and extinction of several bird species native to Guam, including the Guam flycatcher and the Guam kingfisher. The loss of these birds has had cascading effects on the island's ecosystem, including disruptions to pollination and seed dispersal.
+
+Efforts to control the brown tree snake population and protect remaining bird species on Guam continue, but the damage caused by this invasive predator has been severe.

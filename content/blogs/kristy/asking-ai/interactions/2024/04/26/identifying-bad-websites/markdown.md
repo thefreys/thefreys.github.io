@@ -1,0 +1,7 @@
+Be cautious of the vast amount of information circulating online and on social media platforms. Not all sources are trustworthy or accurate. Some individuals and groups may intentionally spread misinformation, disinformation, or propaganda to manipulate public opinion or advance particular agendas.
+
+Develop strong media literacy skills to identify and combat the spread of false or misleading information. Approach online content with a critical eye, fact-check claims against reputable and reliable sources, and be wary of sensationalized headlines, lack of evidence, or content that plays on emotions rather than presenting objective facts.
+
+By staying vigilant and questioning the credibility of information, we can protect ourselves and others from falling victim to manipulation tactics. It's our responsibility to raise awareness about the importance of media literacy and to encourage others to verify information before sharing or believing it.
+
+Rather than contributing to the problem by inadvertently spreading misinformation or disinformation, we can be part of the solution by promoting critical thinking, sharing reliable information from trustworthy sources, and fostering a culture of fact-checking and media literacy within our communities.

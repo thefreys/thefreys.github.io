@@ -1,0 +1,1 @@
+The plural of "AI" (which stands for "Artificial Intelligence") is "AIs." So, if you're referring to multiple instances or systems of artificial intelligence, you would say "AIs."

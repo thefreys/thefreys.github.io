@@ -1,0 +1,1 @@
+In bash, I have a string variable (title) which contains only alphanumeric and dash character in lowercase. How can I transform it so the dashes become a space and the words are capitalized properly?

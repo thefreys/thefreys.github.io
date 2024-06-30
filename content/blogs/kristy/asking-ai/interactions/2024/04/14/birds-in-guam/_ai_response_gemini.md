@@ -1,0 +1,3 @@
+Most of the native birds in Guam were wiped out by an invasive predator – the brown tree snake. This snake, accidentally introduced to the island after World War II, had no natural enemies in Guam and the island's bird population lacked any defenses against it. As a result, 10 out of 12 forest bird species on Guam are now extinct. 
+
+There are some glimmers of hope though. Conservation efforts are underway to reintroduce some of the bird species that were saved through captive breeding programs. One such example is the Guam Rail, which is being reintroduced to areas where the brown tree snake populations are being controlled. 

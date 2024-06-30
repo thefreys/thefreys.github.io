@@ -1,0 +1,1 @@
+In bash, is it possible to subtract one array from another?

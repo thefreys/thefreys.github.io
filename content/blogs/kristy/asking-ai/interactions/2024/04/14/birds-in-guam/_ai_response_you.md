@@ -1,0 +1,11 @@
+#### The Decline of Birds in Guam
+
+The decline of bird species in Guam is largely attributed to the introduction of the brown tree snake, which is not native to the island. The snake, believed to have arrived in Guam as a stowaway on military ships after World War II, has had a devastating impact on the native bird population. The loss of these birds is believed to be largely a result of habitat alteration and the effects of the introduced brown treesnake. The brown tree snake has caused the extinction of nearly every native bird species on the island, leading to a significant decline in the bird population [[6]].
+
+#### Impact on Bird Species
+The impact of the brown tree snake on the bird population has been severe. The sihek, or the Guam kingfisher, along with 10 out of 12 native bird species, rapidly declined after the introduction of the invasive brown tree snake. The loss of these birds is believed to be largely a result of habitat alteration and the effects of the introduced brown treesnake. Three species are still living in the wild, while three species are being held in captive breeding programs on Guam and zoos in the United States mainland. Efforts have been made to reintroduce the Guam rail to other islands, such as Rota and Cocos Island, to help preserve the species [[7]].
+
+#### Conservation Efforts
+Conservation efforts have been underway to address the decline of bird species in Guam. The Smithsonian Conservation Biology Institute, in partnership with the American Zoo Association and the Guam Division of Aquatic and Wildlife Resources, has been involved in captive breeding programs for the Guam rail. The successful breeding of Guam rails has led to their reintroduction to the wild, marking a significant achievement in conservation efforts. The recovery of the Guam rail is considered a testament to the effectiveness of targeted conservation action [[8]].
+
+In conclusion, the decline of bird species in Guam is primarily attributed to the introduction of the brown tree snake, which has had a devastating impact on the native bird population. Efforts to conserve and reintroduce bird species, particularly the Guam rail, have shown promising results, offering hope for the preservation of these species in the future.
