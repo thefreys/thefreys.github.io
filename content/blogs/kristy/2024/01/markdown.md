@@ -1,1 +1,0 @@
-![January Calendar](https://openclipart.org/image/400px/282668)

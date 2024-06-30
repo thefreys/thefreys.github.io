@@ -21,8 +21,7 @@ echo "export const siteConfig = {" > "${config_tmp_file}"
 echo "    siteName: '${site_name}'," >> "${config_tmp_file}"
 echo "    areaMapTitle: '${area_map_title}'," >> "${config_tmp_file}"
 echo "    hamburgerLevelOneItems: [" >> "${config_tmp_file}"
-for hamburger_menu_node in "${hamburger_menu_nodes[@]}"
-do
+for hamburger_menu_node in "${hamburger_menu_nodes[@]}"; do
     echo "    '${hamburger_menu_node}'," >> "${config_tmp_file}"
 done
 echo "    ]," >> "${config_tmp_file}"
@@ -43,10 +42,8 @@ find "${nodes_dir}" -type d -print | xargs -I {} ls -d {} | sort | while read no
     echo "\"${node}\":{" >> "${content_nodes_tmp_file}"
     cat "${tmp_pages_dir}${node}/nodeObject.inner" >> "${content_nodes_tmp_file}"
     echo "}," >> "${content_nodes_tmp_file}"
-    
 done
 echo "}" >> "${content_nodes_tmp_file}"
-
 
 echo "$(date): Remove previously generated js files and replace them with the new ones"
 rm -rf "${generated_assets_dir}"
@@ -64,6 +61,5 @@ echo "$(date): Generating the search file"
 
 echo "$(date): Generating the sitemap file for search engines (sitemap.xml)"
 "$(dirname ${BASH_SOURCE[0]})/generate-xmlsitemap.sh"
-
 
 echo "$(date): Generating complete"
