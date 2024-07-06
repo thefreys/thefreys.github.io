@@ -1,1 +1,0 @@
-The breadcrumb divider should be | on this page (**ancestor-demo**)

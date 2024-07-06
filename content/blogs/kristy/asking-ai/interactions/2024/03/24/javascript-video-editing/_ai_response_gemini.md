@@ -1,9 +1,0 @@
-Yes, there are a few JavaScript libraries that can be used for video editing in the browser. Here are a couple of options:
-
-* **Etro.js:** This is a TypeScript framework specifically designed for programmatic video editing in web applications. It allows you to combine video content, write custom effects, and even stream with WebRTC  all within the browser. Etro - TypeScript video-editing framework for the web: [https://github.com/etro-js](https://github.com/etro-js)
-
-* **Creatomate:** While not strictly a library, Creatomate offers a JavaScript SDK that can be used to integrate video editing functionality into your web applications. It provides a modular component for rendering video previews and building features like dynamic video players or even full-fledged video editors. JavaScript Video Editor SDK - Creatomate: [https://creatomate.com/javascript-video-sdk](https://creatomate.com/javascript-video-sdk)
-
-It's also worth mentioning that some video editing tools offer Node.js libraries for server-side video editing. For instance, Shotstack provides a Node.js SDK that allows you to perform basic editing tasks like cutting, trimming, adding transitions and effects, all through familiar JavaScript syntax. Node.js Video Editor - Shotstack: [https://shotstack.io/product/sdk/node/](https://shotstack.io/product/sdk/node/)
-
-The best option for you will depend on the specific needs of your project. If you're looking for a powerful framework for programmatic video editing, Etro.js is a great choice. If you want a simpler solution for integrating basic editing features into your web app, Creatomate's SDK might be a better fit.

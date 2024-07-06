@@ -1,1 +1,0 @@
-DO NOT TAKE THESE RESULTS AS FACT! As someone who has been using the Monash FODMAP app since 2018, I recognize many errors in these results.

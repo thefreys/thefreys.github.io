@@ -1,1 +1,0 @@
-In bash, I have a string variable containing single quotes. How do I escape them?

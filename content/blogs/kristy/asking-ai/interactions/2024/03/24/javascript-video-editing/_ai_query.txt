@@ -1,1 +1,0 @@
-Is there a javascript library for video editing?

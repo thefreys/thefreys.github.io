@@ -1,5 +1,0 @@
-Inflammation is a natural process by which the body's white blood cells protect it from infection by outside invaders, such as bacteria and viruses ¹. Treatment options for inflammatory diseases may include ¹:
-Medications: Many drugs can ease pain, swelling, and inflammation. They may also prevent or slow inflammatory disease.
-Home remedies: Some ways to ease long-term inflammation include quitting smoking, limiting alcohol consumption, maintaining a healthy weight, managing stress, getting regular physical activity, and taking supplements like omega-3 fatty acids, white willow bark, curcumin, green tea, or capsaicin.
-Surgery: You may need surgery if inflammation has severely damaged your joints. Common procedures include arthroscopy, osteotomy, synovectomy, arthrodesis, and joint replacement.
-Anti-inflammatory diet: The things you eat and drink can also play a role in inflammation. For an anti-inflammatory diet, include foods like tomatoes, olive oil, leafy green vegetables, nuts, fatty fish, and fruits. Avoid refined carbohydrates, fried foods, sugary drinks, red and processed meats, and margarine.

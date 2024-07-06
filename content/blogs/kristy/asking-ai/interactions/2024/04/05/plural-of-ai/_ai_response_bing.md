@@ -1,1 +1,0 @@
-The plural of **AI** is **AIs**. It's a straightforward formation where we simply add an **"s"** to the acronym to indicate multiple instances of artificial intelligence. So, when discussing more than one AI system, we refer to them as **AIs**. 🤖🤖

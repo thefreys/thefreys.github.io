@@ -1,1 +1,0 @@
-So much of what people share today is propaganda. We all need to work together to combat this. One way we can do this is to recognize nefarious websites and stop sharing them. To that end, can you list the top 100 (or as many as you can) most notorious websites known for spreading fake news, misinformation, disinformation, and conspiracy theories?

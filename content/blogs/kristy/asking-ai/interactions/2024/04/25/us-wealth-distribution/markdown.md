@@ -1,1 +1,0 @@
-Tax cuts on the rich never trickle down. Tax cuts on the rich flood up.

@@ -1,1 +1,0 @@
-The most common term for writing computer code is "programming." This term encompasses the process of designing, writing, testing, debugging, and maintaining the source code of computer programs. Other related terms include "coding" and "software development," but "programming" is the most widely used term to describe the process of creating computer software.
