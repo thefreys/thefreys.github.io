@@ -21,10 +21,7 @@
 }
 
 @media print {
-    * { 
-        visibility: hidden;
-    }
-    #nodeMarkdownProcessed {
-        visibility: visible;
-    }
+  #nodeMarkdownRaw, nav, #breadbrumb-wrapper, #areaMap, #areaSearchDatatable {
+    display: none;
+  }
 }
