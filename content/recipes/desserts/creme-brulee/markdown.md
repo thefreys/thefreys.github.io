@@ -5,6 +5,7 @@
 - 1/2 cup sugar
 - 6 egg yolks
 - 1 tbsp vanilla extract
+- 8 cups of hot water
 - 1/2 cup sugar (for topping, optional)
   
 
