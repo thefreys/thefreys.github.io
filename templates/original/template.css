@@ -19,3 +19,9 @@
 .hide {
     display: none;
 }
+
+@media print {
+  :not(#nodeMarkdownProcessed) {
+    display: none;
+  }
+}
