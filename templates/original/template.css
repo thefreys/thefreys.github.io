@@ -21,7 +21,10 @@
 }
 
 @media print {
-  :not(#nodeMarkdownProcessed) {
-    display: none;
-  }
+    * { 
+        visibility: hidden;
+    }
+    #nodeMarkdownProcessed {
+        visibility: visible;
+    }
 }
