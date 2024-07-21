@@ -7,7 +7,7 @@ web_root_dir="$(dirname ${BASH_SOURCE[0]})/../.."
 site_name='The Freys'
 hamburger_menu_nodes=('/recipes' '/sitemap' '/about')
 google_analytics_measurement_id=G-CCX23ZTMPM
-area_map_title="Browse what's under this area using a nested list / tree"
+area_map_title="Everything here:"
 ais=('bing' 'chatgpt' 'claude' 'gemini' 'perplexity' 'huggingchat' 'meta' 'you')
 template_name='original'
 

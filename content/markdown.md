@@ -1,1 +1,1 @@
-This is the Frey Family Archive.
+This is the Frey Family Archive. Nothing fancy.
