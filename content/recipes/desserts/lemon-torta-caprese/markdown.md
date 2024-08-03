@@ -1,16 +1,26 @@
-# Lemon Torta Caprese
+# Torta Caprese
 
-## Ingredients
+## Ingredients (lemon)
 
  - 3/4 cup unsalted butter
  - 6 oz white chocolate chips
  - 5 eggs, separated
  - 1/4 tsp salt
  - 2/3 cup granulated sugar
- - 1 1/2 cup almond flour
+ - 1 1/2 cups almond flour
  - 1/4 cup lemon juice
  - 4 tsp lemon zest
 
+## Ingredients (chocolate)
+
+ - 1 cup unsalted butter
+ - 1 1/2 cups semi-sweet chocolate chips
+ - 5 eggs, separated
+ - 1/4 tsp salt
+ - 1 cup granulated sugar
+ - 1 1/2 cups almond flour
+ - 1 tsp vanilla extract
+ 
 ## Instructions
 
   1.  Place the butter and chocolate in the top of a double boiler and melt until smooth. Cool slightly until just warm to the touch.
