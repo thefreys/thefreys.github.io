@@ -14,15 +14,6 @@
     max-width: 250px;
   }
 
-@media print {
-  body * {
-   display: none;
-  }
-  body .container #nodeMarkdownProcessed {
-    display: block !important;
-  }
-}
-
 /*
 li.sitemap-level-0 {
     list-style-type: bullet0;
