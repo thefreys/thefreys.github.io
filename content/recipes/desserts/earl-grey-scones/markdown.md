@@ -3,7 +3,8 @@
 ## Ingredients
 
 ### For the scones
-- 1/3 Cup granulated sugar
+- 3 cups flour
+- 1/3 cup granulated sugar
 - 1 teaspoon salt
 - 1 tablespoon baking powder﻿
 - 2 tablespoons of loose Earl Grey Tea
