@@ -1,2 +1,3 @@
-<h1>Sitemap</h1>
+# Sitemap
+
 <div id="site-map"></div>

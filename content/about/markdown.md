@@ -1,4 +1,4 @@
-<h1>About</h1>
+# About
 
 This simple website displays content maintained separate from code. Each content item (node) is represented by a directory and a few key files within it. Content is primarily written in markdown to facilitate quick creation without needing to know HTML. For more information on what files go into a node, see the [README.md](https://github.com/thefreys/thefreys.github.io/blob/main/content/README.md) in the [content directory](https://github.com/thefreys/thefreys.github.io/blob/main/content) of the github repository.
 

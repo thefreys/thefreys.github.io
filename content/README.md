@@ -1,3 +1,5 @@
+# Content file types
+
 Each content item (node) is represented by a directory and a few key files within it.
 
 - markdown.md: This is the primary content file. Only nodes containing this file will be included in navigation elements and the sitemap.
