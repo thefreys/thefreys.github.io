@@ -98,6 +98,13 @@ if [ -f "${node_dir}/markdown.md" ]; then
 fi
 page="${page//\{\{markdown\}\}/${markdown}}"
 
+# Add a Git blame link to the bottom of the page
+if [ -f "${node_dir}/markdown.md" ]; then
+    git_blame_url="https://github.com/thefreys/thefreys.github.io/blame/main/content${node}/markdown.md"
+    git_blame_link="<a href='${git_blame_url}' target='_blank'>View Git History</a>"
+    page="${page}<footer>${git_blame_link}</footer>"
+fi
+
 # process the ai components
 ai_component_files=('_ai_query.txt')
 for ai in "${ais[@]}"; do ai_component_files+=("_ai_response_${ai}.md"); done
@@ -127,12 +134,7 @@ page="${page//\{\{title\}\}/${title}}"
 page="${page//\{\{google_analytics_measurement_id\}\}/${google_analytics_measurement_id}}"
 page="${page//\{\{version\}\}/${version}}"
 
-# Add a Git blame link to the bottom of the page
-if [ -f "${node_dir}/markdown.md" ]; then
-    git_blame_url="${domain}/repos/github/thefreys/thefreys.github.io/blame/main/content${node}/markdown.md"
-    git_blame_link="<a href='${git_blame_url}' target='_blank'>View Git History</a>"
-    page="${page}\n<footer>${git_blame_link}</footer>"
-fi
+
 
 # complete the index.html and nodeObject.js file
 echo "${page}" | sed 's/{{ampersand}}/\&/g; s/{{dollar}}/\$/g' > "${tmp_page_dir}/index.html"
