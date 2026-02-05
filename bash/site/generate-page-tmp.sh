@@ -127,6 +127,13 @@ page="${page//\{\{title\}\}/${title}}"
 page="${page//\{\{google_analytics_measurement_id\}\}/${google_analytics_measurement_id}}"
 page="${page//\{\{version\}\}/${version}}"
 
+# Add a Git blame link to the bottom of the page
+if [ -f "${node_dir}/markdown.md" ]; then
+    git_blame_url="${domain}/repos/github/thefreys/thefreys.github.io/blame/main/content${node}/markdown.md"
+    git_blame_link="<a href='${git_blame_url}' target='_blank'>View Git History</a>"
+    page="${page}\n<footer>${git_blame_link}</footer>"
+fi
+
 # complete the index.html and nodeObject.js file
 echo "${page}" | sed 's/{{ampersand}}/\&/g; s/{{dollar}}/\$/g' > "${tmp_page_dir}/index.html"
 echo "nodeObject={" > "${tmp_node_object_file}"
