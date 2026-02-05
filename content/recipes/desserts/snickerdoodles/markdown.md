@@ -31,4 +31,4 @@
 
 ## Notes
 
-- Subsitiue butter for shortening for softer cookies
+- Substitute butter for shortening for softer cookies
