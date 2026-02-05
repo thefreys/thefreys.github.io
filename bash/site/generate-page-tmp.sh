@@ -95,15 +95,15 @@ markdown=""
 if [ -f "${node_dir}/markdown.md" ]; then
     # read markdown.md into markdown variable and replace special characters (<,>,&,$) with template variables temporarily
     markdown=$(cat "${node_dir}/markdown.md" | sed 's/</{{lt}}/g; s/>/{{gt}}/g; s/&/{{ampersand}}/g; s/\$/{{dollar}}/g')
+    # Add a Git blame link to the bottom of the page
+    git_blame="
+    
+[View Git History](https://github.com/thefreys/thefreys.github.io/blame/main/content${node}/markdown.md)"
+    markdown="${markdown}${git_blame}"
 fi
+
 page="${page//\{\{markdown\}\}/${markdown}}"
 
-# Add a Git blame link to the bottom of the page
-if [ -f "${node_dir}/markdown.md" ]; then
-    git_blame_url="https://github.com/thefreys/thefreys.github.io/blame/main/content${node}/markdown.md"
-    git_blame_link="<a href='${git_blame_url}' target='_blank'>View Git History</a>"
-    page="${page}<footer>${git_blame_link}</footer>"
-fi
 
 # process the ai components
 ai_component_files=('_ai_query.txt')
@@ -163,6 +163,15 @@ if ! [ -f "${node_dir}/.hide" ]; then
         echo -n "\"$(echo "$tags" | sed 's/"/\\"/g' | sed ':a;N;$!ba;s/\n/ <br>/g')\"," >> "${tmp_page_dir}/search_row.csv" 
         echo "\"$(echo "$lastmod" | sed 's/"/\\"/g' | sed ':a;N;$!ba;s/\n/ <br>/g')\"" >> "${tmp_page_dir}/search_row.csv" 
         
+        # Fetch the creation date (first commit date) of the markdown.md file
+        created_at=""
+        if [ -f "${node_dir}/markdown.md" ]; then
+            created_at=$(git log --diff-filter=A --format="%ai" -- "${node_dir}/markdown.md" | head -n 1 | cut -d ' ' -f 1)
+        fi
+
+        # Add the creation date to the search CSV row
+        echo -n "\"$(echo "$created_at" | sed 's/\"/\\\"/g' | sed ':a;N;$!ba;s/\n/ <br>/g')\"," >> "${tmp_page_dir}/search_row.csv"
+
         echo "  <url>" > "${tmp_page_dir}/sitemap_row.xml"
         echo "    <loc>${domain}${page_url}/index.html</loc>" >> "${tmp_page_dir}/sitemap_row.xml"
         echo "    <lastmod>${lastmod}</lastmod>" >> "${tmp_page_dir}/sitemap_row.xml"

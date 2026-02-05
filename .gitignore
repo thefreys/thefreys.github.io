@@ -4,3 +4,4 @@ assets/generated/
 
 *.tmpdir/
 *.tmpfile
+sitemap.xml
