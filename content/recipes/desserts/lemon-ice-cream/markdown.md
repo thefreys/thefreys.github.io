@@ -1,6 +1,6 @@
 # Lemon Ice Cream
 
-## Ingredients:
+## Ingredients
 
 - 1 1/2 tbsp lemopn zest
 - 1/2 cup fresh lemon juicer
@@ -11,7 +11,7 @@
 - 1 tsp vanilla extract
 - 1/8 tbsp salt
 
-## Instructions:
+## Instructions
 
 1. In a heatproof bowl, whisk together the egg yolks and 1/4 cup sugar.
 

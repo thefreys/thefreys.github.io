@@ -2,7 +2,7 @@
 
 <img style="float:right;" src="https://drive.google.com/thumbnail?id=1UEN2QUG2-13W0IPeWJF9ykNb_vO6yx3T" alt="Peanut Butter Cookies">
 
-## Ingredients:
+## Ingredients
 
 - 10 tablespoons (140g) unsalted butter, brought to room temperature
 - 1/2 cup (128g) peanut butter  
@@ -17,13 +17,13 @@
 - 1 cup (140g) peanut butter chips (optional)
 - Additional granulated sugar for rolling
 
-## Equipment:
+## Equipment
 - 1 1/2 tablespoon-sized cookie scoop
 - Electric mixer
 - Glass mixing bowls
 - Spatulas
 
-## Instructions:
+## Instructions
 
 1. In a large mixing bowl, combine softened butter, peanut butter, brown sugar, and 1/4 cup granulated sugar. Beat until the mixture is creamy and thoroughly combined.
 2. Add the egg and vanilla extract to the mixture, stirring until fully incorporated.

@@ -1,10 +1,10 @@
 # Date Balls
 
-## Equipment:
+## Equipment
 - 4 quart pot
 - Large spoon
 
-## Ingredients:
+## Ingredients
 - 1/2 cup (115g) butter
 - 1 cup (200g) white sugar
 - 1 egg
@@ -14,7 +14,7 @@
 - 5 to 6 cups (120-145g) rice krispies
 - Chopped nuts or coconut for rolling (optional)
 
-## Instructions:
+## Instructions
 1. In the pot, combine the butter and white sugar. Cook over medium heat, stirring frequently, until the butter is melted and the sugar is dissolved.
 
 2. Beat in the egg and continue stirring constantly until the egg is fully incorporated into the mixture.
@@ -25,6 +25,6 @@
 
 5. Allow the mixture to cool slightly until it's easy to handle. Then, using your hands, form the mixture into bite-sized balls. If desired, roll the balls in chopped nuts or coconut.
 
-Notes:
+Notes
 - The egg is optional, but it helps bind the mixture together.
 - Pecans work best as the chopped nuts added to the mixture and for rolling the balls in.

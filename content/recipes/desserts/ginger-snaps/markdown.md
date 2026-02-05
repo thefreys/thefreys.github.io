@@ -1,6 +1,6 @@
 # Ginger Snaps
 
-## Equipment:
+## Equipment
 - Stand mixer or hand mixer with a medium to large bowl
 - Medium bowl for dry ingredients
 - Small bowl for rolling dough in sugar
@@ -8,7 +8,7 @@
 - Cookie sheets and parchment paper or Silpat mats
 - Cooling racks
 
-## Ingredients:
+## Ingredients
 - 3/4 cup (170g) **vegetable shortening**
 - 1 cup (200g) **white sugar**
 - 1 **egg**
@@ -21,7 +21,7 @@
 - 1/2 teaspoon (2.5ml) **table salt**
 - 1/3 cup (65g) **white sugar** for rolling
 
-## Instructions:
+## Instructions
 1. Preheat the oven to 350°F (175°C).
 2. In a stand mixer or using a hand mixer with a medium to large bowl, cream together the vegetable shortening and white sugar until smooth. Add the egg and molasses, and beat until smooth.
 3. In a separate medium bowl, combine the all-purpose flour, ground ginger, ground cinnamon, baking powder, baking soda, and salt. Stir until thoroughly combined.
@@ -31,7 +31,7 @@
 7. Bake the cookies in the preheated oven for 8 to 10 minutes, or until they are slightly browned around the edges.
 8. After removing the cookies from the oven, allow them to cool on the baking sheet for 5 minutes before transferring them to wire cooling racks to cool completely.
 
-## Notes:
+## Notes
 - You can fit 6 cookies on a smaller cookie sheet; avoid overcrowding.
 - For chewier cookies, you can replace some or all of the shortening with butter.
 - For puffier cookies, use 1 teaspoon of baking powder and omit the baking soda.

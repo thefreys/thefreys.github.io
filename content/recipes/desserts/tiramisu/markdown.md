@@ -1,6 +1,6 @@
 # Tiramisu
 
-## Ingredients:
+## Ingredients
 
 - 6 large egg yolks
 - 3/4 cup granulated sugar
@@ -13,7 +13,7 @@
 - Cocoa powder, for dusting
 - Dark chocolate shavings, for garnish (optional)
 
-## Instructions:
+## Instructions
 
 1. In a heatproof bowl, whisk together the egg yolks and sugar. Place the bowl over a pot of simmering water (double boiler method) and whisk constantly until the mixture thickens and becomes pale in color, about 8-10 minutes. Remove from heat and let it cool slightly.
 
