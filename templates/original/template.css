@@ -21,10 +21,21 @@
 }
 
 @media print {
+  /* Hide everything by default */
   body * {
-    display: none !important;
+    visibility: hidden;
   }
+
+  /* Show only the specific div and its contents */
+  #nodeMarkdownProcessed, #nodeMarkdownProcessed * {
+    visibility: visible;
+  }
+
+  /* Position the printable div at the top-left of the page */
   #nodeMarkdownProcessed {
-    display: block !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
   }
 }
