@@ -31,6 +31,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch full Git history to enable git log commands
       #Begin custom build script
       #.sh scripts must have execute permission set: git update-index --chmod=+x *.sh
       - name: Custom build
