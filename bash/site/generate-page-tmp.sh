@@ -92,14 +92,12 @@ css="${css}
 page=$(sed 's/&/{{ampersand}}/g; s/\$/{{dollar}}/g' < "${repo_dir}/templates/${template_name}/template.html")  
 
 markdown=""
+git_blame=""
 if [ -f "${node_dir}/markdown.md" ]; then
     # read markdown.md into markdown variable and replace special characters (<,>,&,$) with template variables temporarily
     markdown=$(cat "${node_dir}/markdown.md" | sed 's/</{{lt}}/g; s/>/{{gt}}/g; s/&/{{ampersand}}/g; s/\$/{{dollar}}/g')
     # Add a Git blame link to the bottom of the page
-    git_blame="
-    
-[View Git History](https://github.com/thefreys/thefreys.github.io/blame/main/content${node}/markdown.md)"
-    markdown="${markdown}${git_blame}"
+    git_blame="<a href='https://github.com/thefreys/thefreys.github.io/blame/main/content${node}/markdown.md'>View Git History</a>"
 fi
 
 page="${page//\{\{markdown\}\}/${markdown}}"
@@ -133,6 +131,7 @@ page="${page//\{\{assets_url\}\}/${assets_url}}"
 page="${page//\{\{title\}\}/${title}}"
 page="${page//\{\{google_analytics_measurement_id\}\}/${google_analytics_measurement_id}}"
 page="${page//\{\{version\}\}/${version}}"
+page="${page//\{\{git_blame\}\}/${git_blame}}"
 
 
 
