@@ -42,8 +42,8 @@
 
 1. Add sugar and milk to a medium saucepan over medium heat.  Whisk well to combine. Bring mixture to a simmer, whisking frequently.
 2. Meanwhile, add the egg yolks and cornstarch to a bowl and whisk until smooth.
-3. Once the milk mixture begins to bubble, remove from heat.  Slowly add the hot milk mixture to the egg and cornstarch mixture, stirring the egg mixture constantly.  Continue stirring until the milk mixture is fully incorporated.
-4. Rturn the mixture to the saucepan and bring to a comes to a very gently boil (big bubbles begin to break the surface), whisk constantly until the mixture thickens, about 2 minutes.
+3. Once the milk mixture begins to bubble, remove from heat. Slowly add the hot milk mixture to the egg and cornstarch mixture, stirring the egg mixture constantly.  Continue stirring until the milk mixture is fully incorporated.
+4. Return the mixture to the saucepan and bring to a comes to a very gently boil (big bubbles begin to break the surface), whisk constantly until the mixture thickens, about 2 minutes.
 5. Remove pan from the heat and whisk in the butter, chopped chocolate, and vanilla extract. Stir until completely smooth.
 6. Pour filling into the cooled cookie crust and smooth into an even layer. Place a piece of plastic wrap gently on top and refrigerate until filling is set, about 4–6 hours or overnight, if desired.
 
