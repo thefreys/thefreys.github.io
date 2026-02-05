@@ -21,10 +21,11 @@ This repository generates and hosts a static site. The site content is organized
 ### Bash Scripts
 - **Location**: `bash/site/`
 - **Purpose**: Automates the generation of static site files.
-- **Key Script**: `generate-page-tmp.sh`
-  - Reads node files and generates `index.html`, `nodeObject.js`, and other assets.
-  - Handles AI components, search rows, and sitemap entries.
-  - Processes templates and replaces placeholders with node-specific data.
+- **Key Scripts**:
+  - `generate-page-tmp.sh`: Reads node files and generates `index.html`, `nodeObject.js`, and other assets. Handles AI components, search rows, and sitemap entries. Processes templates and replaces placeholders with node-specific data.
+  - `generate.sh`: High-level script to build the entire site.
+  - `generate-xmlsitemap.sh`: Creates the `sitemap.xml` for the site.
+  - `generate-template-assets.sh`: Processes and prepares shared template assets.
 
 ## Developer Workflows
 
@@ -35,6 +36,10 @@ This repository generates and hosts a static site. The site content is organized
    ./generate-page-tmp.sh /path/to/node
    ```
    Replace `/path/to/node` with the desired node path.
+3. To build the entire site, use:
+   ```bash
+   ./generate.sh
+   ```
 
 ### Adding Content
 1. Create a new directory under `content/`.
@@ -44,11 +49,13 @@ This repository generates and hosts a static site. The site content is organized
 ### Debugging
 - Check the `tmp_pages_dir` for generated files to verify output.
 - Use `git log` to inspect the last modification date for content files.
+- Review the `nodeObject.js` and `index.html` in the `pages/` directory for correctness.
 
 ## Project-Specific Conventions
 - **File Naming**: Use lowercase and hyphens for directory and file names.
 - **Title Formatting**: Titles are auto-capitalized unless `_title.txt` is provided.
 - **AI Components**: AI-related files (e.g., `_ai_query.txt`) are processed to generate dynamic content.
+- **Content Inheritance**: Files like `ancestor.js` and `ancestor.css` allow parent nodes to pass down styles and scripts to their descendants.
 
 ## External Dependencies
 - **Git**: Used to fetch the last modification date for content files.
@@ -67,6 +74,8 @@ This repository generates and hosts a static site. The site content is organized
 - `content/`: Stores all content nodes.
 - `bash/site/`: Contains Bash scripts for site generation.
 - `templates/`: HTML templates used for generating pages.
+- `assets/generated/`: Stores dynamically generated assets like `contentNodes.js` and `search.csv`.
+- `pages/`: Contains the final generated static site files.
 
 ---
 
