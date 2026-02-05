@@ -148,6 +148,11 @@ if ! [ -f "${node_dir}/.hide" ]; then
     if ! [[ "" == "${gitdate}" ]]; then
         lastmod=${gitdate:0:10}
     fi
+    firstmod=${today}
+    gitdate=$(git log --diff-filter=A --format="%ai" -- "${node_dir}/markdown.md" | head -n 1 | cut -d ' ' -f 1)
+    if ! [[ "" == "${gitdate}" ]]; then
+        firstmod=${gitdate:0:10}
+    fi
     
     search_display=""
     if [ -f "${node_dir}/_ai_query.txt" ]; then
@@ -160,17 +165,9 @@ if ! [ -f "${node_dir}/.hide" ]; then
         echo -n "\"$(echo "$page_url" | sed 's/"/\\"/g' | sed ':a;N;$!ba;s/\n/ <br>/g')\"," >> "${tmp_page_dir}/search_row.csv" 
         echo -n "\"$(echo "$search_display" | sed 's/"/\\"/g' | sed ':a;N;$!ba;s/\n/ <br>/g')\"," >> "${tmp_page_dir}/search_row.csv" 
         echo -n "\"$(echo "$tags" | sed 's/"/\\"/g' | sed ':a;N;$!ba;s/\n/ <br>/g')\"," >> "${tmp_page_dir}/search_row.csv" 
+        echo -n "\"$(echo "$firstmod" | sed 's/"/\\"/g' | sed ':a;N;$!ba;s/\n/ <br>/g')\"," >> "${tmp_page_dir}/search_row.csv" 
         echo "\"$(echo "$lastmod" | sed 's/"/\\"/g' | sed ':a;N;$!ba;s/\n/ <br>/g')\"" >> "${tmp_page_dir}/search_row.csv" 
         
-        # Fetch the creation date (first commit date) of the markdown.md file
-        created_at=""
-        if [ -f "${node_dir}/markdown.md" ]; then
-            created_at=$(git log --diff-filter=A --format="%ai" -- "${node_dir}/markdown.md" | head -n 1 | cut -d ' ' -f 1)
-        fi
-
-        # Add the creation date to the search CSV row
-        echo -n "\"$(echo "$created_at" | sed 's/\"/\\\"/g' | sed ':a;N;$!ba;s/\n/ <br>/g')\"," >> "${tmp_page_dir}/search_row.csv"
-
         echo "  <url>" > "${tmp_page_dir}/sitemap_row.xml"
         echo "    <loc>${domain}${page_url}/index.html</loc>" >> "${tmp_page_dir}/sitemap_row.xml"
         echo "    <lastmod>${lastmod}</lastmod>" >> "${tmp_page_dir}/sitemap_row.xml"

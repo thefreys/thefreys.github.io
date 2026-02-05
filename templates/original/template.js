@@ -272,6 +272,7 @@ let areaSearchDataTable = new DataTable('#areaSearchDatatable', {
         }, 
         { title: 'Title',visible: false }, 
         { title: 'Tags',visible: false }, 
+        { title: 'First Modified',visible: true },
         { title: 'Last Modified',visible: true },
     ],
     layout: {
