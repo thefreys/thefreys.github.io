@@ -1,12 +1,81 @@
-# Content file types
+# README
 
-Each content item (node) is represented by a directory and a few key files within it.
+## Project Overview
 
-- markdown.md: This is the primary content file. Only nodes containing this file will be included in navigation elements and the sitemap. The contents of this file should be markdown and/or html.
-- javascript.js: Enhance the node with JavaScript.
-- css.css: Style the node with CSS.
-- ancestor.js: Enhance the node and all descendent nodes with this JavaScript.
-- ancestor.css: Style the node and all descendent nodes with this CSS.
-- _title.txt: If included, the content of this file will be used as the page title and as the label for this node in navigation elements and the sitemap. It will also be used in the site search. If not included, the directory name will be used instead.
-- _tags.txt: If included, the site will use the list of tags (one per line) in the site search and in tag based navigation elements.
-- .hide: The presence of this file will suppress the node and all descendent nodes (directories within a node) from showing in navigation elements and the sitemap.
+This repository generates and hosts a static site. The site content is organized into "nodes," each represented by a directory under the `content/` folder. Nodes contain specific files that define their content, styling, and behavior. The site is built using Bash scripts, which automate the generation of static files like `index.html` and `sitemap.xml`.
+
+## Key Components
+
+### Content Nodes
+
+- **Location**: `content/`
+- **Purpose**: Each directory represents a node, which corresponds to a page or section of the site.
+- **Key Files**:
+  - `markdown.md`: Primary content file (Markdown/HTML).
+  - `javascript.js`: Node-specific JavaScript.
+  - `css.css`: Node-specific CSS.
+  - `ancestor.js`: JavaScript inherited by descendant nodes.
+  - `ancestor.css`: CSS inherited by descendant nodes.
+  - `_title.txt`: Custom title and navigation label.
+  - `_tags.txt`: Tags for search and navigation.
+  - `.hide`: Suppresses the node and its descendants from navigation and sitemap.
+
+### Bash Scripts
+
+- **Location**: `bash/site/`
+- **Purpose**: Automates the generation of static site files.
+- **Key Script**: `generate-page-tmp.sh`
+  - Reads node files and generates `index.html`, `nodeObject.js`, and other assets.
+  - Handles AI components, search rows, and sitemap entries.
+  - Processes templates and replaces placeholders with node-specific data.
+
+## Developer Workflows
+
+### Building the Site
+
+1. Navigate to the `bash/site/` directory.
+2. Run the `generate-page-tmp.sh` script:
+
+   ```bash
+   ./generate-page-tmp.sh /path/to/node
+   ```
+
+   Replace `/path/to/node` with the desired node path.
+
+### Adding Content
+
+1. Create a new directory under `content/`.
+2. Add the required files (e.g., `markdown.md`, `css.css`).
+3. Run the build script to generate the static files.
+
+### Debugging
+
+- Check the `tmp_pages_dir` for generated files to verify output.
+- Use `git log` to inspect the last modification date for content files.
+
+## Project-Specific Conventions
+
+- **File Naming**: Use lowercase and hyphens for directory and file names.
+- **Title Formatting**: Titles are auto-capitalized unless `_title.txt` is provided.
+- **AI Components**: AI-related files (e.g., `_ai_query.txt`) are processed to generate dynamic content.
+
+## External Dependencies
+
+- **Git**: Used to fetch the last modification date for content files.
+- **Bash**: Scripts rely on Bash for file operations and templating.
+
+## Examples
+
+- **Node Directory**: `content/example-node/`
+  - Contains `markdown.md`, `css.css`, and `_title.txt`.
+  - Generates `example-node/index.html` with the specified content and styling.
+
+- **Generated Files**:
+  - `index.html`: Main HTML file for the node.
+  - `nodeObject.js`: JavaScript object representing the node's metadata.
+
+## Key Files and Directories
+
+- `content/`: Stores all content nodes.
+- `bash/site/`: Contains Bash scripts for site generation.
+- `templates/`: HTML templates used for generating pages.
