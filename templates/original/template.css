@@ -28,7 +28,7 @@
 
   /* Show only the specific div and its contents */
   #nodeMarkdownProcessed, #nodeMarkdownProcessed * {
-    visibility: visible;
+    visibility: visible !important;
   }
 
   /* Position the printable div at the top-left of the page */
