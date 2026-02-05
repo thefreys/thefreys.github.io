@@ -97,7 +97,7 @@ if [ -f "${node_dir}/markdown.md" ]; then
     # read markdown.md into markdown variable and replace special characters (<,>,&,$) with template variables temporarily
     markdown=$(cat "${node_dir}/markdown.md" | sed 's/</{{lt}}/g; s/>/{{gt}}/g; s/&/{{ampersand}}/g; s/\$/{{dollar}}/g')
     # Add a Git blame link to the bottom of the page
-    git_blame="<a href='https://github.com/thefreys/thefreys.github.io/blame/main/content${node}/markdown.md'>View Git History</a>"
+    git_blame="<a href='https://github.com/thefreys/thefreys.github.io/blame/main/content${node}/markdown.md' target='_blank'>View Git History</a>"
 fi
 
 page="${page//\{\{markdown\}\}/${markdown}}"

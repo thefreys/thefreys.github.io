@@ -21,7 +21,10 @@
 }
 
 @media print {
-  #nodeMarkdownRaw, nav, #breadbrumb-wrapper, #areaMap, #areaSearchDatatable, #areaSearchDatatable_wrapper, #areaMap + h2 {
+  body * {
     display: none;
+  }
+  body * #nodeMarkdownProcessed {
+    display: block !important;
   }
 }
