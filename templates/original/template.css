@@ -22,9 +22,9 @@
 
 @media print {
   body * {
-    display: none;
+    display: none !important;
   }
-  body * #nodeMarkdownProcessed {
+  #nodeMarkdownProcessed {
     display: block !important;
   }
 }
