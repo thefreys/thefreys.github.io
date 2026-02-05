@@ -24,7 +24,7 @@
 ## Instructions
 
   1.  Place the butter and chocolate in the top of a double boiler and melt until smooth. Cool slightly until just warm to the touch.
-  2.  Preheat oven to 35o degrees
+  2.  Preheat oven to 35o°F
   3.  Butter the inside of a 9 inch springform pan
   4.  Place the egg whites in a medium bowl with the salt. Place the yolks in a slightly larger bowl with the sugar. Using a handheld mixer beat the whites on medium speed until stiff peaks form, about 2 minutes.
   5.  Transfer the mixer to the yolk bowl and beat on medium speed until light, pale and fluffy, about 1 1/2 minutes. Using a rubber spatula, stir the chocolate mixture, almond flour, lemon juice and lemon zest into the yolks.

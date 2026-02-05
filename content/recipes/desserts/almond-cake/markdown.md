@@ -23,7 +23,7 @@
 
 ## Instructions
 
-1. Preheat oven to 325 degrees.  Cut a piece of parchment paper to fit the bottom of the cake pan.  Grease the bottom and sides of the cake pan with butter or cooking spray.  Line the cake pan with the parchment paper, and grease the parchment paper.  
+1. Preheat oven to 325°F.  Cut a piece of parchment paper to fit the bottom of the cake pan.  Grease the bottom and sides of the cake pan with butter or cooking spray.  Line the cake pan with the parchment paper, and grease the parchment paper.  
 Dust the pan bottom and sides with flour and discard any excess.
 2. Place the almond paste and butter in the bowl of a stand mixer, cream on medium speed until butter is light and fluffy and almond paste is fully incorporated, about 3 minutes.
 3. Add sugar and lemon zest, continue mixing until well combined.

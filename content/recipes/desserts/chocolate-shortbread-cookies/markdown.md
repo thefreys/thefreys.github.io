@@ -16,5 +16,5 @@
 3. Add flour and mix until smooth, scraping the sides and bottom of the bowl (especially down in the bottom of the stand mixer bowl where things get caught) once during mixing.
 4. Lay out a piece of plastic wrap on a clean work surface. Scoop the dough onto the plastic and use your hands to form it into a log. Wrap up the log and roll to make into a uniform size. How long your roll is determines how many cookies you'll get (or if you want small bite size cookies, make two rolls).
 5. Chill the rolls at least 1 hour, or until firm, before slicing and baking (or as long as overnight). To help the roll stay round, place it standing up in a tall drinking glass to chill in (this way it won't flatten on one side).
-6. Preheat oven to 350 degrees. Line 2 cookie sheets with parchment paper or silicone baking mats.
+6. Preheat oven to 350°F. Line 2 cookie sheets with parchment paper or silicone baking mats.
 7. Slice log into 1/4-inch thick slices and place 2-inches apart on cookie sheets. Bake for 14-17 minutes or until they just loose their glossy sheen. Cool completely before removing from cookie sheets.

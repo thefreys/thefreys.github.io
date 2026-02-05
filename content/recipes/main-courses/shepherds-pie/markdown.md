@@ -20,7 +20,7 @@
 
 ## Instructions
 
-1. Preheat oven to 400 degrees.
+1. Preheat oven to 400°F.
 2. Add vegetable oil to a large saute pan set over medium high heat. Once the oil shimmers, add the onion and carrots and saute just until they begin to take on color, approximately 3 to 4 minutes. Add the garlic and stir to combine. 
 3. Add the lamb, salt and pepper and cook until browned and cooked through, approximately 3 minutes. Sprinkle the meat with the flour and toss to coat, continuing to cook for another minute. 
 4. Add the tomato paste, chicken broth, Worcestershire, rosemary, thyme, and stir to combine. Bring to a boil, reduce the heat to low, cover and simmer slowly 10 to 12 minutes or until the sauce is thickened slightly.

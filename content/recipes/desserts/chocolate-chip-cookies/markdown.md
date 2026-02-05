@@ -22,7 +22,7 @@
 
 ## Instructions
 
-1. Preheat oven to 350 degrees.  
+1. Preheat oven to 350°F.  
 2. Beat butter, white sugar, and brown sugar with an electric mixer in a large bowl until smooth.
 3. Beat in eggs, one at a time, then stir in vanilla.
 4. Dissolve baking soda in hot water. Add to batter along with salt.

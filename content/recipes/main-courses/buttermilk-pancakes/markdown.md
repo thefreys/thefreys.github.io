@@ -16,5 +16,5 @@
 1. Whisk flour, sugar, baking powder, baking soda and kosher salt together in a bowl.
 2. In a separate bowl, combine buttermilk, eggs and melted butter. 
 3. Add buttermilk mixture to flour mixture; mix until combined.  Do not over-mix, the batter should have some lumps.
-4. Heat a pan over low heat, or an electric skillet to about 350 degrees.  If using a pan, add butter or oil to the pan to prevent sticking.
+4. Heat a pan over low heat, or an electric skillet to about 350°F.  If using a pan, add butter or oil to the pan to prevent sticking.
 5. Add about 1/3 cup of batter to pan or skillet.  Flip pancakes after bubbles rise to surface and bottoms brown, about 2 to 4 minutes. Cook until the other sides are lightly browned. 

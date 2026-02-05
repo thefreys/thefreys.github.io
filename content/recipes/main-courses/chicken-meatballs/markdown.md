@@ -15,7 +15,7 @@
 
 ## Instructions
 
-1. Preheat oven to 400 degrees
+1. Preheat oven to 400°F
 2. Combine all ingredients except chicken in a large bowl, sitr to combine thoroughly
 3. Incorporate chicken until completely combined
 4. Using a small scoop or large spoon, shape 1 to 1 1/2 inch balls, place on a lined baking sheet

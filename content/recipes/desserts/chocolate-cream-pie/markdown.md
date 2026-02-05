@@ -30,7 +30,7 @@
 ## Instructions
 
 ### For the crust
-1. Preheat oven to 350 degrees
+1. Preheat oven to 350°F
 2. Add the whole Oreo cookies to a food processor and pulse into fine crumbs.  Pour the crumbs into a bowl and stir in melted butter. 
 3. Press mixture evenly and formly into the bottom and up the sides of a 9 inch pie dish.  Bake for 10-12 minutes, set aside to cool.
 
