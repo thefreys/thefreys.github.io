@@ -2,8 +2,8 @@
 
 ## Ingredients
 
-- 1 1/2 tbsp lemopn zest
-- 1/2 cup fresh lemon juicer
+- 1 1/2 tbsp lemon zest
+- 1/2 cup fresh lemon juice
 - 1 cup sugar, divided (1/4 cup, 3/4 cup)
 - 3 egg yolks
 - 1 1/2 cups heavy whipping cream
@@ -21,7 +21,7 @@
 
 4. Stirring the yolk mixture constantly, Slowly add about 1 cup of the mixture to the egg yolks.
 
-5. Return the yolk mixture to the pan, cook until the mixture comes to a boil, stirring constantly.  Continue cooking for tweo minuutes, remove from heat.
+5. Return the yolk mixture to the pan, cook until the mixture comes to a boil, stirring constantly.  Continue cooking for two minutes, remove from heat.
 
 6. Strain the mixture through a sieve, stir in heavy cream.
 
