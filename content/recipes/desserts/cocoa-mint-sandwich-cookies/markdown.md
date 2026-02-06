@@ -36,7 +36,7 @@
 
 1. Beat the softened butter until creamy, about 1-2 minutes.
 2. Gradually add the powdered sugar, 1/2 cup at a time, beating until combined. After each 1/2 cup, add a little milk to keep the mixture smooth. Beat well to ensure there are no lumps.
-3. Add the mint extract and a pinch of salt (if using) to the mixture. Beat to incorporate. 
+3. Add the mint extract and a pinch of salt (if using) to the mixture. Beat to incorporate.
 4. If you're using food coloring, add a few drops at a time until you reach your desired shade of green.
 
 ### Assembly

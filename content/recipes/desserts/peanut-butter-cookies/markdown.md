@@ -5,7 +5,7 @@
 ## Ingredients
 
 - 10 tablespoons (140g) unsalted butter, brought to room temperature
-- 1/2 cup (128g) peanut butter  
+- 1/2 cup (128g) peanut butter 
 - 2/3 cup (150g) tightly packed light brown sugar
 - 1/2 cup (100g) granulated sugar (1/4 cup/50g for mixing, 1/4 cup/50g for rolling)
 - 1 large egg

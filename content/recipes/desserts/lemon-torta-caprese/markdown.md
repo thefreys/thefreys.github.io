@@ -20,7 +20,7 @@
  - 1 cup granulated sugar
  - 1 1/2 cups almond flour
  - 1 tsp vanilla extract
- 
+
 ## Instructions
 
   1.  Place the butter and chocolate in the top of a double boiler and melt until smooth. Cool slightly until just warm to the touch.
