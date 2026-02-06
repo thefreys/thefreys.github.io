@@ -1,3 +1,0 @@
-# Chicken Cutlets
-
-Coming Soon
