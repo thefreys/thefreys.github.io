@@ -23,15 +23,15 @@
 
 ## Instructions
 
-1. Preheat oven to 325°F.  Cut a piece of parchment paper to fit the bottom of the cake pan.  Grease the bottom and sides of the cake pan with butter or cooking spray.  Line the cake pan with the parchment paper, and grease the parchment paper. 
+1. Preheat oven to 325°F. Cut a piece of parchment paper to fit the bottom of the cake pan. Grease the bottom and sides of the cake pan with butter or cooking spray. Line the cake pan with the parchment paper, and grease the parchment paper.
 Dust the pan bottom and sides with flour and discard any excess.
 2. Place the almond paste and butter in the bowl of a stand mixer, cream on medium speed until butter is light and fluffy and almond paste is fully incorporated, about 3 minutes.
 3. Add sugar and lemon zest, continue mixing until well combined.
-4. Add eggs one at a time, stopping between each one to make sure that it is fully blended in.  Scrape the sides and bottom of the bowl if necessary.  Add the almond extract and continue mixing until combined.
+4. Add eggs one at a time, stopping between each one to make sure that it is fully blended in. Scrape the sides and bottom of the bowl if necessary. Add the almond extract and continue mixing until combined.
 5. In a separate bowl, stir together the almond flour, baking powder and salt.
-6. Add the flour mixture to the butter and egg mixture, mix on low speed until just completely combined.  Pour in to the prepared cake pan.
+6. Add the flour mixture to the butter and egg mixture, mix on low speed until just completely combined. Pour in to the prepared cake pan.
 7. Sprinkle the almonds on the top of the batter, bake for 35 minutes or until a toothpick insered in the center of the cake comes out clean.
-8. Remove the cake from the oven and let it cool for 10-15 minutes.  The cake should pull away from the sides of the pan.  Remove the cake from the pan and place on a cooling rack.  When completely cool, optionally dust with powdered sugar.
+8. Remove the cake from the oven and let it cool for 10-15 minutes. The cake should pull away from the sides of the pan. Remove the cake from the pan and place on a cooling rack. When completely cool, optionally dust with powdered sugar.
 
 ## Notes
 
